@@ -1,0 +1,27 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: modul-finding
+canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-finding
+title: "IG MII Modul Symptome/klinischer Phänotyp"
+name: IG_MII_Finding
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2022+
+releaseLabel: ci-build
+publisher:
+  name: Medizininformatik Initiative
+  url: https://www.medizininformatik-initiative.de/
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   Home: index.html
+#   Artifacts: artifacts.html
+dependencies:
+  de.medizininformatikinitiative.kerndatensatz.meta: 
+    uri: de.medizininformatikinitiative.kerndatensatz.meta
+    version: 1.0.3

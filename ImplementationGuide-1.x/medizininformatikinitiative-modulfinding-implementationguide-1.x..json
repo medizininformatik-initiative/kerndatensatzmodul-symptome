@@ -1,0 +1,81 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ig-mii-finding-version-1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/ImplementationGuide/ig-version-1.0",
+  "version": "0.9.0",
+  "name": "[DE] Medizininformatik Initiative - Modul Finding - Implementierungsleitfaden - Version 1.0",
+  "status": "draft",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "page": {
+      "nameUrl": "ImplementationGuide-1.x/IGMIIKDSModulFinding-1.x.md",
+      "title": "IG MII KDS Modul Symptome/klinischer Phänotyp",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "ImplementationGuide-1.x/BeschreibungModul-1.x.md",
+          "title": "Beschreibung Modul",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/KontextimGesamtprojektBezgezuanderenModulen-1.x.md",
+          "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/Referenzen-1.x.md",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/AnwendungsflleInformationsmodell-1.x.md",
+          "title": "Anwendungsfälle / Informationsmodell",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide-1.x/BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.md",
+              "title": "Beschreibung von Szenarien für die Anwendung der Module",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide-1.x/Datenstzeinkl.Beschreibungen-1.x.md",
+              "title": "Datensätze inkl. Beschreibungen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide-1.x/UML-1.x.md",
+              "title": "UML",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/TechnischeImplementierung-1.x.md",
+          "title": "Technische Implementierung",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/FHIR-Profile-1.x.md",
+              "title": "FHIR-Profile",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Observation-1.x.md",
+                  "title": "Medication",
+                  "generation": "markdown"
+                }
+              ]
+            },
+            {
+              "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Terminologien-1.x.md",
+              "title": "Terminologien",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

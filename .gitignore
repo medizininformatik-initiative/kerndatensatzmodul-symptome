@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+/input-cache
+/output
+/temp
+/template
+ImplementationGuide-modul-finding.json
+menu.xml
+_genonce*
+_updatePublisher*
+ig.ini 
