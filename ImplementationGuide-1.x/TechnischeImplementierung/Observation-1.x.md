@@ -37,5 +37,5 @@ https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefi
 
 Beispiel einer Observation-Ressource:
 
-{{json:}}
+{{json:ex-mii-finding-arachnodactyly}}
 <br>
