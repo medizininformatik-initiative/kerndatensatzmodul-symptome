@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/sd-mii-finding-observation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/finding-observation",
   "version": "0.1.0",
   "name": "SD_MII_Finding_Observation",
   "status": "active",

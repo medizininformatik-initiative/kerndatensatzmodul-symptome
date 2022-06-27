@@ -1,4 +1,4 @@
-# Kerndatensatz Modul Medikation
+# Kerndatensatz Modul Symptome/klinischer Phänotyp
 
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz-Moduls 'Symptom/klinischer Phänotyp' der Medizinformatik-Initative.
 Im Folgenden werden die Use Cases des Moduls, sowie die dazuhegörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
