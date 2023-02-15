@@ -65,6 +65,11 @@
                   "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Observation-1.x.md",
                   "title": "Observation",
                   "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Condition-1.x.md",
+                  "title": "Condition",
+                  "generation": "markdown"
                 }
               ]
             },
