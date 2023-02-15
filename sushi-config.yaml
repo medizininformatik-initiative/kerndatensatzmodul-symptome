@@ -25,3 +25,6 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.meta: 
     uri: de.medizininformatikinitiative.kerndatensatz.meta
     version: 1.0.3
+  de.basisprofil.r4:
+    uri: de.basisprofil.r4
+    version: 1.4.0
