@@ -1,20 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-finding-condition",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Summary"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/finding-condition",
-  "version": "0.1.0",
-  "name": "MII_PR_Finding_Condition",
-  "status": "active",
+  "id": "mii-pr-symptom-condition",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition",
+  "name": "MII_PR_Symptom_Condition",
+  "status": "draft",
   "description": "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -130,20 +119,6 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.start.extension",
-        "path": "Condition.onset[x].start.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
         "path": "Condition.onset[x].start.extension",
         "sliceName": "lebensphase-von",
@@ -158,20 +133,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Condition.onset[x]:onsetPeriod.end.extension",
-        "path": "Condition.onset[x].end.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis",

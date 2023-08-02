@@ -9,3 +9,6 @@ menu.xml
 _genonce*
 _updatePublisher*
 ig.ini 
+_gencontinuous.bat
+_gencontinuous.sh
+fsh-generated/resources/ImplementationGuide-modul-symptom.json
