@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "mii-vs-symptom-glasgow-coma-score-verbal",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/ValueSet/glasgow-coma-score-verbal",
+  "status": "draft",
+  "name": "MII_VS_Symptom_GlasgowComaScore_Verbal",
+  "title": "MII VS Symptom Glasgow Coma Score Verbal",
+  "description": "Values for verbal component of Glasgow Coma Score",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6557-8",
+            "display": "No verbal response (>2 yrs); no vocal response (<=2 yrs)",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 1
+              }
+            ]
+          },
+          {
+            "code": "LA6558-6",
+            "display": "Incomprehensible sounds",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 2
+              }
+            ]
+          },
+          {
+            "code": "LA6559-4",
+            "display": "Inappropriate words",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 3
+              }
+            ]
+          },
+          {
+            "code": "LA6560-2",
+            "display": "Confused",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 4
+              }
+            ]
+          },
+          {
+            "code": "LA6561-0",
+            "display": "Oriented",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

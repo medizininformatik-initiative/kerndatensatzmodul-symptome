@@ -1,0 +1,78 @@
+{
+  "resourceType": "ValueSet",
+  "id": "mii-vs-symptom-glasgow-coma-score-motor",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/ValueSet/glasgow-coma-score-motor",
+  "status": "draft",
+  "name": "MII_VS_Symptom_GlasgowComaScore_Motor",
+  "title": "MII VS Symptom Glasgow Coma Score Motor",
+  "description": "Values for motor component of Glasgow Coma Score",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6562-8",
+            "display": "No motor response",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 1
+              }
+            ]
+          },
+          {
+            "code": "LA6563-6",
+            "display": "Extension to pain",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 2
+              }
+            ]
+          },
+          {
+            "code": "LA6564-4",
+            "display": "Flexion to pain",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 3
+              }
+            ]
+          },
+          {
+            "code": "LA6565-1",
+            "display": "Withdrawal from pain",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 4
+              }
+            ]
+          },
+          {
+            "code": "LA6566-9",
+            "display": "Localizing pain",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 5
+              }
+            ]
+          },
+          {
+            "code": "LA6567-7",
+            "display": "Obeys commands",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 6
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
