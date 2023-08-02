@@ -2,10 +2,10 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: modul-finding
-canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-finding
-title: "IG MII Modul Symptome/klinischer Phänotyp"
-name: IG_MII_Finding
+id: modul-symptom
+canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom
+title: "IG MII Modul Symptom"
+name: IG_MII_Symptom
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1

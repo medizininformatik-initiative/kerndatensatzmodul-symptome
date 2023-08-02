@@ -1,8 +1,8 @@
-Profile: MII_PR_Finding_Observation
+Profile: MII_PR_Symptom_Observation
 Parent: Observation
-Id: mii-pr-finding-observation
+Id: mii-pr-symptom-observation
 Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/finding-observation"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation"
 * identifier MS
 * category MS
 * status MS
@@ -24,18 +24,18 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * component MS
 
 Instance: mii-ex-finding-arachnodactyly
-InstanceOf: mii-pr-finding-observation
+InstanceOf: mii-pr-symptom-observation
 Description: "Phänotyp Example für Arachnodactyly"
 * status = #final "final"
 * subject = Reference(Patient/example)
-* code = HPO#HP:0001166 "Arachnodactyly"
-* valueCodeableConcept = LOINC#LA9633-4 "Present"
+* code = $HPO#HP:0001166 "Arachnodactyly"
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
-Profile: MII_PR_Finding_Condition
+Profile: MII_PR_Symptom_Condition
 Parent: Condition
-Id: mii-pr-finding-condition
+Id: mii-pr-symptom-condition
 Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom)."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/finding-condition"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition"
 * identifier MS
 * clinicalStatus MS
 * verificationStatus MS
@@ -59,8 +59,8 @@ Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse un
 * stage.type MS
 
 Instance: mii-ex-condition-vitreoretinochoroidopathy
-InstanceOf: mii-pr-finding-condition
+InstanceOf: mii-pr-symptom-condition
 Usage: #example
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
-* code = http://snomed.info/sct#711162004 "Autosomal dominant vitreoretinochoroidopathy (disorder)"
+* code = $SCT#711162004 "Autosomal dominant vitreoretinochoroidopathy (disorder)"
 * subject = Reference(Patient/example-patient)
