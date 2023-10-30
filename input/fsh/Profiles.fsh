@@ -3,6 +3,8 @@ Parent: Observation
 Id: mii-pr-symptom-observation
 Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation"
+* insert PR_CS_VS_Version
+* insert Publisher
 * identifier MS
 * category MS
 * status MS
@@ -36,6 +38,9 @@ Parent: Condition
 Id: mii-pr-symptom-condition
 Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom)."
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition"
+* insert PR_CS_VS_Version
+* insert Publisher
+* extension contains $assertedDate named assertedDate 0..1 MS
 * identifier MS
 * clinicalStatus MS
 * verificationStatus MS
@@ -61,6 +66,8 @@ Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse un
 Instance: mii-ex-condition-vitreoretinochoroidopathy
 InstanceOf: mii-pr-symptom-condition
 Usage: #example
+* extension[0].url = $assertedDate
+* extension[=].valueDateTime = "2023-10-30"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
 * code = $SCT#711162004 "Autosomal dominant vitreoretinochoroidopathy (disorder)"
 * subject = Reference(Patient/example-patient)

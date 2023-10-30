@@ -4,10 +4,11 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: modul-symptom
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom
-title: "IG MII Modul Symptom"
-name: IG_MII_Symptom
-status: draft
-version: 0.1.0
+title: "MII IG Symptom"
+name: MII_IG_Symptom
+status: active
+version: 2024.0.0-ballot
+packageId: de.medizininformatikinitiative.kerndatensatz.symptom
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: ci-build

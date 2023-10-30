@@ -2,9 +2,21 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-symptom-glasgow-coma-score",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score",
+  "version": "2024.0.0-ballot",
   "name": "MII_PR_Symptom_GlasgowComaScore",
   "title": "MII PR Symptom Glasgow Coma Score",
-  "status": "draft",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "Profil für Glasgow Coma Score",
   "fhirVersion": "4.0.1",
   "mapping": [

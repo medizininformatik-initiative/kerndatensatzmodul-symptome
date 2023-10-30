@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.page.md
+- name: Beschreibung Modul
+  filename: BeschreibungModul-1.x.page.md
+- name: Kontext im Gesamtprojekt / Bezüge zu anderen Modulen
+  filename: KontextimGesamtprojektBezgezuanderenModulen-1.x.page.md
+- name: Referenzen
+  filename: Referenzen-1.x.page.md
+- name: Anwendungsfälle / Informationsmodell
+  filename: AnwendungsflleInformationsmodell-1.x
+- name: Technische Implementierung
+  filename: TechnischeImplementierung-1.x

@@ -4,3 +4,4 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $lebensphase = http://fhir.de/StructureDefinition/lebensphase
 Alias: $ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $assertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate

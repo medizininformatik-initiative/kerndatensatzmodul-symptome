@@ -1,3 +1,6 @@
+---
+parent: 
+---
 ## Kontext im Gesamtprojekt / Bezüge zu anderen Modulen
 
 Die Vielfalt zusammenfassender klinischer Angaben zu Befunden, Messungen und zum Status von Patienten, wie Untersuchungsergebnisse, aktuelle und historische Krankheiten, Symptome und ggf. auch Krankheitsveranlagungen, kann nicht allein mit dem Modul Diagnose oder spezifischen Erweiterungsmodulen repräsentiert werden. Die zusammenfassenden Angaben/Bezeichnungen zu Zuständen stammen aus unterschiedlichen Quellen wie Beobachtungen, Untersuchungen und Eigen- oder Fremd-Anamnesen. Weitere Quellen können mittels NLP oder mathematischer Modelle algorithmisch abgeleitete Beobachtungen und Klinische Zustände sein.

@@ -2,6 +2,18 @@
   "resourceType": "ValueSet",
   "id": "mii-vs-symptom-glasgow-coma-score-eye",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/ValueSet/glasgow-coma-score-eye",
+  "version": "2024.0.0-ballot",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "status": "draft",
   "name": "MII_VS_Symptom_GlasgowComaScore_Eye",
   "title": "MII VS Symptom Glasgow Coma Score Eye",

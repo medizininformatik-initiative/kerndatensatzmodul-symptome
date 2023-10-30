@@ -4,6 +4,8 @@ Id: mii-pr-symptom-glasgow-coma-score
 Title: "MII PR Symptom Glasgow Coma Score"
 Description: "Profil für Glasgow Coma Score"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score"
+* insert PR_CS_VS_Version
+* insert Publisher
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -50,6 +52,8 @@ Description: "Profil für Glasgow Coma Score"
 Instance: mii-vs-symptom-glasgow-coma-score-eye
 InstanceOf: ValueSet
 Usage: #definition
+* insert Version
+* insert SP_Publisher
 * status = #draft
 * name = "MII_VS_Symptom_GlasgowComaScore_Eye"
 * title = "MII VS Symptom Glasgow Coma Score Eye"
@@ -76,6 +80,8 @@ Usage: #definition
 Instance: mii-vs-symptom-glasgow-coma-score-verbal
 InstanceOf: ValueSet
 Usage: #definition
+* insert Version
+* insert SP_Publisher
 * status = #draft
 * name = "MII_VS_Symptom_GlasgowComaScore_Verbal"
 * title = "MII VS Symptom Glasgow Coma Score Verbal"
@@ -106,6 +112,8 @@ Usage: #definition
 Instance: mii-vs-symptom-glasgow-coma-score-motor
 InstanceOf: ValueSet
 Usage: #definition
+* insert Version
+* insert SP_Publisher
 * status = #draft
 * name = "MII_VS_Symptom_GlasgowComaScore_Motor"
 * title = "MII VS Symptom Glasgow Coma Score Motor"

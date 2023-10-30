@@ -1,0 +1,619 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-symptom",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom",
+  "version": "2024.0.0-ballot",
+  "name": "MII_LM_Symptom",
+  "title": "MII LM Symptom",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "FHIR",
+      "name": "Symptom LogicalModel FHIR Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Symptom",
+        "path": "Symptom",
+        "short": "MII LM Symptom",
+        "definition": "Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp"
+      },
+      {
+        "id": "Symptom.Condition",
+        "path": "Symptom.Condition",
+        "short": "Im Sinne einer FHIR Condition: klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).",
+        "definition": "Im Sinne einer FHIR Condition: klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Code",
+        "path": "Symptom.Condition.Code",
+        "short": "Code für ein Symptom, Phänomen, Erkrankung, Disposition: SNOMED CT (Findings), ICD-10, OrphaCodes, HPO, MedDRA",
+        "definition": "Code für ein Symptom, Phänomen, Erkrankung, Disposition: SNOMED CT (Findings), ICD-10, OrphaCodes, HPO, MedDRA",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Identifikator",
+        "path": "Symptom.Condition.Identifikator",
+        "short": "Externer Identifikator für die Condition",
+        "definition": "Externer Identifikator für die Condition",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.identifier"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Bezeichnung",
+        "path": "Symptom.Condition.Bezeichnung",
+        "short": "Natürlichsprachige Bezeichnung für ein Symptom, Diagnose, Erkrankung, Phänotyp, Disposition",
+        "definition": "Natürlichsprachige Bezeichnung für ein Symptom, Diagnose, Erkrankung, Phänotyp, Disposition",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.coding.display"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Beschreibung",
+        "path": "Symptom.Condition.Beschreibung",
+        "short": "Natürlichsprachige Beschreibung für ein Symptom, eine Erkrankung, eine Diagnose oder eine Disposition.",
+        "definition": "Natürlichsprachige Beschreibung für ein Symptom, eine Erkrankung, eine Diagnose oder eine Disposition.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.code.text"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Kategorie",
+        "path": "Symptom.Condition.Kategorie",
+        "short": "Kategorien der Condition (z.B. problem-list-item | encounter-diagnosis)",
+        "definition": "Kategorien der Condition (z.B. problem-list-item | encounter-diagnosis)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.category"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Lokalisation",
+        "path": "Symptom.Condition.Lokalisation",
+        "short": "Lokalisation eines Symptoms etc. Körperstellen (Lokalisationen) werden SNOMED CT kodiert.",
+        "definition": "Lokalisation eines Symptoms etc. Körperstellen (Lokalisationen) werden SNOMED CT kodiert.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Conditon.bodySite"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum",
+        "short": "Zeitspanne des Vorhandenseins des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
+        "definition": "Zeitspanne des Vorhandenseins des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Conditon.onset[x]"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Conditon.abatement[x]"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum",
+        "short": "Klinisch relevanter Zeitraum als Zeitintervall mit von/am und bis.",
+        "definition": "Klinisch relevanter Zeitraum als Zeitintervall mit von/am und bis.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Conditon.onsetPeriod"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Conditon.abatementPeriod"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.vonAm",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.vonAm",
+        "short": "Startzeitpunkt: Zeitpunkt des Beginns des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
+        "definition": "Startzeitpunkt: Zeitpunkt des Beginns des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Conditon.onsetPeriod.start"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Conditon.abatementPeriod.start"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.bis",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.bis",
+        "short": " Endzeitpunkt: Zeitpunkt des Verschwindens des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
+        "definition": " Endzeitpunkt: Zeitpunkt des Verschwindens des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Conditon.onsetPeriod.end"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Conditon.abatementPeriod.end"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase",
+        "short": "Zusätzlich zu einem Zeitraum ist die Angabe der Lebensphase, zu der eine Krankheit vorlag/vorliegt, möglich. Hiermit lässt sich beispielsweise angeben, dass eine Person eine Krankheit bereits als Säugling gehabt hat. Das entsprechende ValueSet ist derzeit noch in Arbeit.",
+        "definition": "Zusätzlich zu einem Zeitraum ist die Angabe der Lebensphase, zu der eine Krankheit vorlag/vorliegt, möglich. Hiermit lässt sich beispielsweise angeben, dass eine Person eine Krankheit bereits als Säugling gehabt hat. Das entsprechende ValueSet ist derzeit noch in Arbeit.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetPeriod.start.extension.where(url='http://fhir.de/StructureDefinition/lebensphase')"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetPeriod.end.extension.where(url='http://fhir.de/StructureDefinition/lebensphase')"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.von",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.von",
+        "short": "Lebensphase Start",
+        "definition": "Lebensphase Start",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetPeriod.start.extension.where(url='http://fhir.de/StructureDefinition/lebensphase').valueCodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.bis",
+        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.bis",
+        "short": "Lebensphase Ende",
+        "definition": "Lebensphase Ende",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.onsetPeriod.end.extension.where(url='http://fhir.de/StructureDefinition/lebensphase').valueCodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Beobachtungszeitpunkt",
+        "path": "Symptom.Condition.Beobachtungszeitpunkt",
+        "short": "Zeitpunkt der Beobachtung/Feststellung des Symptoms, Erkrankung, Diagnose, Disposition.",
+        "definition": "Zeitpunkt der Beobachtung/Feststellung des Symptoms, Erkrankung, Diagnose, Disposition.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Conditon.extension.where(url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate')"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Dokumentationszeitpunkt",
+        "path": "Symptom.Condition.Dokumentationszeitpunkt",
+        "short": "Zeitpunkt der Dokumentation das Symptoms, Erkrankung, Diagnose, Disposition",
+        "definition": "Zeitpunkt der Dokumentation das Symptoms, Erkrankung, Diagnose, Disposition",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.recordedDate"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Status",
+        "path": "Symptom.Condition.Status",
+        "short": "Status des Symptoms, Erkrankung, Diagnose, Disposition: \"Aktiv\", \"Zustand nach\", \"in Remission\", \"beseitigt/geheilt\"). Codiert z. B. mit ValueSet aus FHIR oder SNOMED CT.",
+        "definition": "Status des Symptoms, Erkrankung, Diagnose, Disposition: \"Aktiv\", \"Zustand nach\", \"in Remission\", \"beseitigt/geheilt\"). Codiert z. B. mit ValueSet aus FHIR oder SNOMED CT.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.clinicalStatus"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Schweregrad",
+        "path": "Symptom.Condition.Schweregrad",
+        "short": "Schweregrad des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
+        "definition": "Schweregrad des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.severity"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Verifikationsstatus",
+        "path": "Symptom.Condition.Verifikationsstatus",
+        "short": "Empirische, epistemologische, algorithmische, diagnostische Gewissheit  des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
+        "definition": "Empirische, epistemologische, algorithmische, diagnostische Gewissheit  des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.verificationStatus"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz",
+        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz",
+        "short": "Die dem Symptom, Erkrankung, Diagnose, Disposition zugrundeliegend Beobachtung",
+        "definition": "Die dem Symptom, Erkrankung, Diagnose, Disposition zugrundeliegend Beobachtung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.evidence"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.BeschreibungZugrundeliegendeBeobachtung",
+        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.BeschreibungZugrundeliegendeBeobachtung",
+        "short": "Natürlichsprachige Beschreibung einer dem Symptom zugrundeliegenden Beobachtung,  Symptoms, Erkrankung, Diagnose, Disposition",
+        "definition": "Natürlichsprachige Beschreibung einer dem Symptom zugrundeliegenden Beobachtung,  Symptoms, Erkrankung, Diagnose, Disposition",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.evidence.code.text"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.CodeZugrundeliegendeBeobachtung",
+        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.CodeZugrundeliegendeBeobachtung",
+        "short": "Code der zugrundeliegenden Beobachtung des  Symptoms, Erkrankung, Diagnose, Disposition: SNOMED CT, LOINC",
+        "definition": "Code der zugrundeliegenden Beobachtung des  Symptoms, Erkrankung, Diagnose, Disposition: SNOMED CT, LOINC",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.evidence.code"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.LinkAufZugrundeliegendeBeobachtung",
+        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.LinkAufZugrundeliegendeBeobachtung",
+        "short": "Link auf die dem Symptom zugrundeliegenden Beobachtung für das  Symptoms, Erkrankung, Diagnose, Disposition",
+        "definition": "Link auf die dem Symptom zugrundeliegenden Beobachtung für das  Symptoms, Erkrankung, Diagnose, Disposition",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.evidence.detail"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Stadium",
+        "path": "Symptom.Condition.Stadium",
+        "short": "Stadium der Condition",
+        "definition": "Stadium der Condition",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.stage"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Stadium.Zusammenfassung",
+        "path": "Symptom.Condition.Stadium.Zusammenfassung",
+        "short": "Einfache Zusammenfassung des Stadiums",
+        "definition": "Einfache Zusammenfassung des Stadiums",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.stage.summary"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Stadium.Einschaetzung",
+        "path": "Symptom.Condition.Stadium.Einschaetzung",
+        "short": "Referenz auf eine formale Einschätzung des Stadiums (ClinicalImpression, DiagnosticReport, Observation)",
+        "definition": "Referenz auf eine formale Einschätzung des Stadiums (ClinicalImpression, DiagnosticReport, Observation)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.stage.assessment"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Stadium.ArtDerStadieneinteilung",
+        "path": "Symptom.Condition.Stadium.ArtDerStadieneinteilung",
+        "short": "Art der Stadieneinteilung",
+        "definition": "Art der Stadieneinteilung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.stage.type"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Patient",
+        "path": "Symptom.Condition.Patient",
+        "short": "Link auf Patient",
+        "definition": "Link auf Patient",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.subject"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Condition.Fall",
+        "path": "Symptom.Condition.Fall",
+        "short": "Link auf Behandlungsfall",
+        "definition": "Link auf Behandlungsfall",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Condition.encounter"
+          }
+        ]
+      }
+    ]
+  }
+}
