@@ -1,9 +1,10 @@
+[MII_LM_Symptom]: StructureDefinition-mii-lm-symptom.html
 [MII_PR_Symptom_GlasgowComaScore]: StructureDefinition-mii-pr-symptom-glasgow-coma-score.html
-[mii-ex-condition-vitreoretinochoroidopathy]: Condition-mii-ex-condition-vitreoretinochoroidopathy.html
-[mii-ex-finding-arachnodactyly]: Observation-mii-ex-finding-arachnodactyly.html
-[mii-exa-symptom-glasgow-coma-score]: Observation-mii-exa-symptom-glasgow-coma-score.html
 [mii-vs-symptom-glasgow-coma-score-eye]: ValueSet-mii-vs-symptom-glasgow-coma-score-eye.html
 [mii-vs-symptom-glasgow-coma-score-motor]: ValueSet-mii-vs-symptom-glasgow-coma-score-motor.html
 [mii-vs-symptom-glasgow-coma-score-verbal]: ValueSet-mii-vs-symptom-glasgow-coma-score-verbal.html
+[mii-ex-condition-vitreoretinochoroidopathy]: Condition-mii-ex-condition-vitreoretinochoroidopathy.html
+[mii-ex-finding-arachnodactyly]: Observation-mii-ex-finding-arachnodactyly.html
+[mii-exa-symptom-glasgow-coma-score]: Observation-mii-exa-symptom-glasgow-coma-score.html
 [MII_PR_Symptom_Condition]: StructureDefinition-mii-pr-symptom-condition.html
 [MII_PR_Symptom_Observation]: StructureDefinition-mii-pr-symptom-observation.html

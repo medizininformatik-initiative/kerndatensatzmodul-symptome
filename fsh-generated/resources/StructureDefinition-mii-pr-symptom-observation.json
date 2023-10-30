@@ -2,8 +2,20 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-symptom-observation",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation",
+  "version": "2024.0.0-ballot",
   "name": "MII_PR_Symptom_Observation",
-  "status": "draft",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.",
   "fhirVersion": "4.0.1",
   "mapping": [

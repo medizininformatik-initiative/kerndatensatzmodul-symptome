@@ -1,0 +1,35 @@
+{
+  "name": "de.medizininformatikinitiative.kerndatensatz.symptom",
+  "version": "2024.0.0-ballot",
+  "description": "Medizininformatik Initiative - Modul Symptom",
+  "author": "juliansass",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "keywords": [
+    "MII",
+    "KDS",
+    "Symptom",
+    "Phaenotyp"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "https://www.medizininformatik-initiative.de/",
+  "directories" : {
+    "lib" : "package",
+    "example" : "examples"
+  },
+  "title": "MII IG Symptom",
+  "maintainers" : [
+    {
+      "name" : "Medizininformatik Initiative",
+      "url" : "https://www.medizininformatik-initiative.de/"
+    }
+  ],
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-symptom-de-v2024",
+  "url": "https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Symptom/MIIIGModulSymptom.html",
+  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
+  "dependencies": {
+    "de.basisprofil.r4": "1.4.0",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3"
+  }
+}

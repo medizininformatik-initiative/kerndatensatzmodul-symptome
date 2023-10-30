@@ -1,3 +1,6 @@
+---
+parent: 
+---
 ## Datensätze inkl. Beschreibungen
 
 Die offizielle und abgenommene Version des Informationsmodells für das Modul Symptome/klinischer Phänotyp findet sich auf [ArtDecor](https://art-decor.org/art-decor/decor-datasets--mide-). Zur Vereinheitlichung der Repräsentation wurde das Informationsmodell zusätzlich als FHIR Logical Model abgebildet:

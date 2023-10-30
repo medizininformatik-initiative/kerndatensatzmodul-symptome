@@ -1,0 +1,185 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mii-ig-symptom-de-v2024",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
+  "version": "2024.0.0-ballot",
+  "name": "[DE] Medizininformatik Initiative - Modul Symptom - Implementierungsleitfaden - Version 2024.0.0",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "name": "Medizininformatik Initiative",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "packageId": "de.medizininformatikinitiative.kerndatensatz.symptom",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "1.0.3",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    },
+    {
+      "packageId": "de.basisprofil.r4",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "version": "1.4.0",
+      "id": "de_basisprofil_r4"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-symptom-glasgow-coma-score"
+        },
+        "name": "MII PR Symptom Glasgow Coma Score",
+        "description": "Profil für Glasgow Coma Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-symptom-glasgow-coma-score-eye"
+        },
+        "name": "MII VS Symptom Glasgow Coma Score Eye",
+        "description": "Values for eye component of Glasgow Coma Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-symptom-glasgow-coma-score-motor"
+        },
+        "name": "MII VS Symptom Glasgow Coma Score Motor",
+        "description": "Values for motor component of Glasgow Coma Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-symptom-glasgow-coma-score-verbal"
+        },
+        "name": "MII VS Symptom Glasgow Coma Score Verbal",
+        "description": "Values for verbal component of Glasgow Coma Score",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-ex-condition-vitreoretinochoroidopathy"
+        },
+        "name": "mii-ex-condition-vitreoretinochoroidopathy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-ex-finding-arachnodactyly"
+        },
+        "name": "mii-ex-finding-arachnodactyly",
+        "description": "Phänotyp Example für Arachnodactyly",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-symptom-glasgow-coma-score"
+        },
+        "name": "mii-exa-symptom-glasgow-coma-score",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-symptom-condition"
+        },
+        "name": "MII_PR_Symptom_Condition",
+        "description": "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-symptom-observation"
+        },
+        "name": "MII_PR_Symptom_Observation",
+        "description": "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "ImplementationGuide-1.x/IGMIIKDSModulFinding-1.x.md",
+      "title": "IG MII KDS Modul Symptome/klinischer Phänotyp",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "ImplementationGuide-1.x/BeschreibungModul-1.x.md",
+          "title": "Beschreibung Modul",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/KontextimGesamtprojektBezgezuanderenModulen-1.x.md",
+          "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/Referenzen-1.x.md",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/AnwendungsflleInformationsmodell-1.x.md",
+          "title": "Anwendungsfälle / Informationsmodell",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide-1.x/BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.md",
+              "title": "Beschreibung von Szenarien für die Anwendung der Module",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide-1.x/Datenstzeinkl.Beschreibungen-1.x.md",
+              "title": "Datensätze inkl. Beschreibungen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide-1.x/UML-1.x.md",
+              "title": "UML",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/TechnischeImplementierung-1.x.md",
+          "title": "Technische Implementierung",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/FHIR-Profile-1.x.md",
+              "title": "FHIR-Profile",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Observation-1.x.md",
+                  "title": "Observation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Condition-1.x.md",
+                  "title": "Condition",
+                  "generation": "markdown"
+                }
+              ]
+            },
+            {
+              "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Terminologien-1.x.md",
+              "title": "Terminologien",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
