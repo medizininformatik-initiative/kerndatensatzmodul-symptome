@@ -1,3 +1,4 @@
+[mii-cps-symptom-capabilitystatement]: CapabilityStatement-mii-cps-symptom-capabilitystatement.html
 [MII_LM_Symptom]: StructureDefinition-mii-lm-symptom.html
 [MII_PR_Symptom_GlasgowComaScore]: StructureDefinition-mii-pr-symptom-glasgow-coma-score.html
 [mii-vs-symptom-glasgow-coma-score-eye]: ValueSet-mii-vs-symptom-glasgow-coma-score-eye.html
