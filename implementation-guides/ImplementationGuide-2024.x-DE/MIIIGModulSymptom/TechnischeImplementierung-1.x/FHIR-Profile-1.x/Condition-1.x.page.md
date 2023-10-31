@@ -82,5 +82,5 @@ select
 
 Beispiel einer Condition-Ressource:
 
-{{json:mii-ex-condition-vitreoretinochoroidopathy}}
+{{json:mii-exa-symptom-vitreoretinochoroidopathy}}
 <br>

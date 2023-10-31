@@ -71,5 +71,5 @@ select
 
 Beispiel einer Observation-Ressource:
 
-{{json:mii-ex-finding-arachnodactyly}}
+{{json:mii-exa-symptom-arachnodactyly}}
 <br>
