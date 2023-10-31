@@ -613,6 +613,515 @@
             "map": "Condition.encounter"
           }
         ]
+      },
+      {
+        "id": "Symptom.Observation",
+        "path": "Symptom.Observation",
+        "short": "Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.",
+        "definition": "Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Identifikator",
+        "path": "Symptom.Observation.Identifikator",
+        "short": "Eindeutiger Identifier der Observation",
+        "definition": "Eindeutiger Identifier der Observation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.identifier"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Bezeichnung",
+        "path": "Symptom.Observation.Bezeichnung",
+        "short": "Natürlichsprachige Bezeichnung der Observation",
+        "definition": "Natürlichsprachige Bezeichnung der Observation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.coding.display"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Beschreibung",
+        "path": "Symptom.Observation.Beschreibung",
+        "short": "Natürlichsprachige Beschreibung der Beobachtung",
+        "definition": "Natürlichsprachige Beschreibung der Beobachtung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code.text"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Kategorie",
+        "path": "Symptom.Observation.Kategorie",
+        "short": "Kategorie der Observation",
+        "definition": "Kategorie der Observation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.category"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Status",
+        "path": "Symptom.Observation.Status",
+        "short": "Status der Observation",
+        "definition": "Status der Observation",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.status"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Code",
+        "path": "Symptom.Observation.Code",
+        "short": "Code der Observation: z. B. LOINC, SNOMED CT, HPO",
+        "definition": "Code der Observation: z. B. LOINC, SNOMED CT, HPO",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.code"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Zeitspanne",
+        "path": "Symptom.Observation.Zeitspanne",
+        "short": "Klinisch relevante Zeitpunkte/Zeitspanne",
+        "definition": "Klinisch relevante Zeitpunkte/Zeitspanne",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectiveDateTime"
+          },
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectivePeriod"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Zeitspanne.Startzeitpunkt",
+        "path": "Symptom.Observation.Zeitspanne.Startzeitpunkt",
+        "short": "Klinisch relevanter (Start-)Zeitpunkt einer Observation",
+        "definition": "Klinisch relevanter (Start-)Zeitpunkt einer Observation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectivePeriod.start"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Zeitspanne.Endzeitpunkt",
+        "path": "Symptom.Observation.Zeitspanne.Endzeitpunkt",
+        "short": "Klinisch relevanter Endzeitpunkt einer Observation",
+        "definition": "Klinisch relevanter Endzeitpunkt einer Observation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.effectivePeriod.end"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Dokumentationsdatum",
+        "path": "Symptom.Observation.Dokumentationsdatum",
+        "short": "Zeitpunkt der Dokumentation der Observation.",
+        "definition": "Zeitpunkt der Dokumentation der Observation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.issued"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Wert[x]",
+        "path": "Symptom.Observation.Wert[x]",
+        "short": "Wert der Observation",
+        "definition": "Wert der Observation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.value[x]"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.ReferenzIntervall",
+        "path": "Symptom.Observation.ReferenzIntervall",
+        "short": "Referenz-Intervall entsprechend des eingebetteten komplexen Typs (Observation.referenceRange)",
+        "definition": "Referenz-Intervall entsprechend des eingebetteten komplexen Typs (Observation.referenceRange)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.referenceRange"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.GrundNichtVorhandenerDaten",
+        "path": "Symptom.Observation.GrundNichtVorhandenerDaten",
+        "short": "Grund für nicht vorhandene Daten der Observation",
+        "definition": "Grund für nicht vorhandene Daten der Observation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.dataAbesentReason"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Interpretation",
+        "path": "Symptom.Observation.Interpretation",
+        "short": "Interpretation einer Observation",
+        "definition": "Interpretation einer Observation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.interpretation"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Kommentar",
+        "path": "Symptom.Observation.Kommentar",
+        "short": "Natürlichsprachiger Kommentar zur Observation.",
+        "definition": "Natürlichsprachiger Kommentar zur Observation.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.note"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Lokalisation",
+        "path": "Symptom.Observation.Lokalisation",
+        "short": "Lokalisation der Observation als SNOMED CT Body Structure codiert.",
+        "definition": "Lokalisation der Observation als SNOMED CT Body Structure codiert.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.bodySite"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Patient",
+        "path": "Symptom.Observation.Patient",
+        "short": "Link auf Patient",
+        "definition": "Link auf Patient",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.subject"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Fall",
+        "path": "Symptom.Observation.Fall",
+        "short": "Fall der Observation",
+        "definition": "Fall der Observation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.encounter"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Probe",
+        "path": "Symptom.Observation.Probe",
+        "short": "Referenz auf die Probe, auf der die Observation basiert",
+        "definition": "Referenz auf die Probe, auf der die Observation basiert",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.specimen"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Messgeraet",
+        "path": "Symptom.Observation.Messgeraet",
+        "short": "Referenz auf das verwendete Mess-/Untersuchungsgerät",
+        "definition": "Referenz auf das verwendete Mess-/Untersuchungsgerät",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.device"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Methode",
+        "path": "Symptom.Observation.Methode",
+        "short": "Methode der Untersuchung",
+        "definition": "Methode der Untersuchung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.method"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.BezugZuHatTeil",
+        "path": "Symptom.Observation.BezugZuHatTeil",
+        "short": "Bezug zu Ressourcen, die zu dieser Observation gehören (Observation, QuestionnaireResponse, MolecularSequence)",
+        "definition": "Bezug zu Ressourcen, die zu dieser Observation gehören (Observation, QuestionnaireResponse, MolecularSequence)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.hasMember"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.BezugVonIstTeilVon",
+        "path": "Symptom.Observation.BezugVonIstTeilVon",
+        "short": "Referenz auf Messunger/Beobachtungen, aus denen diese Observation hervorgeht.",
+        "definition": "Referenz auf Messunger/Beobachtungen, aus denen diese Observation hervorgeht.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.derivedFrom"
+          }
+        ]
+      },
+      {
+        "id": "Symptom.Observation.Komponente",
+        "path": "Symptom.Observation.Komponente",
+        "short": "Komponente einer Observation mit mehreren Komponenten (z. B. Blutdruck) entsprechend des komplexen Typs (Observation.component) mit .code, .value, .dataAbsentReason, .interpretation, .referenceRange (alle wie oben beschrieben)",
+        "definition": "Komponente einer Observation mit mehreren Komponenten (z. B. Blutdruck) entsprechend des komplexen Typs (Observation.component) mit .code, .value, .dataAbsentReason, .interpretation, .referenceRange (alle wie oben beschrieben)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "FHIR",
+            "map": "Observation.component"
+          }
+        ]
       }
     ]
   }
