@@ -25,7 +25,7 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * derivedFrom MS
 * component MS
 
-Instance: mii-ex-finding-arachnodactyly
+Instance: mii-exa-symptom-arachnodactyly
 InstanceOf: mii-pr-symptom-observation
 Description: "Phänotyp Example für Arachnodactyly"
 * status = #final "final"
@@ -63,7 +63,7 @@ Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse un
 * stage.assessment MS
 * stage.type MS
 
-Instance: mii-ex-condition-vitreoretinochoroidopathy
+Instance: mii-exa-symptom-vitreoretinochoroidopathy
 InstanceOf: mii-pr-symptom-condition
 Usage: #example
 * extension[0].url = $assertedDate

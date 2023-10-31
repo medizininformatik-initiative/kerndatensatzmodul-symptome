@@ -3,7 +3,8 @@
   "id": "mii-ig-symptom-de-v2024",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
   "version": "2024.0.0-ballot",
-  "name": "[DE] Medizininformatik Initiative - Modul Symptom - Implementierungsleitfaden - Version 2024.0.0",
+  "name": "MII_IG_Symptom_DE_v2024",
+  "description": "[DE] Medizininformatik Initiative - Modul Symptom - Implementierungsleitfaden - Version 2024.0.0",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -39,6 +40,22 @@
     "resource": [
       {
         "reference": {
+          "reference": "CapabilityStatement/mii-cps-symptom-capabilitystatement"
+        },
+        "name": "MII CPS Symptom CapabilityStatement",
+        "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Symptom/klinischer Phänotyp der Medizininformatik Initiative zu implementieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-symptom"
+        },
+        "name": "MII LM Symptom",
+        "description": "Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-pr-symptom-glasgow-coma-score"
         },
         "name": "MII PR Symptom Glasgow Coma Score",
@@ -71,16 +88,9 @@
       },
       {
         "reference": {
-          "reference": "Condition/mii-ex-condition-vitreoretinochoroidopathy"
+          "reference": "Observation/mii-exa-symptom-arachnodactyly"
         },
-        "name": "mii-ex-condition-vitreoretinochoroidopathy",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-ex-finding-arachnodactyly"
-        },
-        "name": "mii-ex-finding-arachnodactyly",
+        "name": "mii-exa-symptom-arachnodactyly",
         "description": "Phänotyp Example für Arachnodactyly",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation"
       },
@@ -90,6 +100,13 @@
         },
         "name": "mii-exa-symptom-glasgow-coma-score",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-symptom-vitreoretinochoroidopathy"
+        },
+        "name": "mii-exa-symptom-vitreoretinochoroidopathy",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition"
       },
       {
         "reference": {

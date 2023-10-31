@@ -68,13 +68,15 @@ select
 
 ---
 
-| FHIR-Element | Erklärung |
-|--------------|-----------|
-
-
----
-| FHIR-Element | Logischer Datensatz |
-|---|---|
+@```
+from StructureDefinition 
+where url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom'
+    for differential.element where id.contains('Symptom.Condition') 
+    select 
+        FHIR: mapping[0].map,
+        Datensatz: path, 
+        Erklaerung: definition 
+```
 
 ---
 
@@ -82,5 +84,5 @@ select
 
 Beispiel einer Condition-Ressource:
 
-{{json:mii-ex-condition-vitreoretinochoroidopathy}}
+{{json:mii-exa-symptom-vitreoretinochoroidopathy}}
 <br>
