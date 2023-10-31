@@ -8,8 +8,8 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazuhegörigen FHIR-Prof
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 27.06.2022  |
-| Version | 0.9.0       |
+| Datum   | 31.10.2023  |
+| Version | 1.0.0-ballot (2024.0.0-ballot) |
 | Status  | draft      |
 | Realm   | DE          | 
 
@@ -21,8 +21,8 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazuhegörigen FHIR-Prof
 Dieser Leitfaden ist im Rahmen der Medizininformatik-Initative erstellt wurden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
 
 ## Ansprechpartner
-* Martin Boeker, Med. Fakultät und Universitätsklinikum der Universität Freiburg
-* Julian Saß, Berlin Institute of Health (BIH)
+* Martin Boeker, Klinikum rechts der Isar, Technische Universität München
+* Julian Saß, Berlin Institute of Health at Charité (BIH)
 * Karoline Buckow, TMF – Technologie- und Methodenplattform
 für die vernetzte medizinische Forschung e.V.
 * Sylvia Thun, Berlin Institute of Health (BIH), Charité Universitätsmedizin
@@ -34,10 +34,10 @@ Anmerkungen und Kritik werden in Form von 'Issues' auf GitHub stets gern entgege
 
 ## Autoren (in alphabetischer Reihenfolge)
 
-* Martin Boeker (MIRACUM)
-* Karoline Buckow (TMF e.V.)
-* Thomas Ganslandt (MIRACUM)
-* Julian Saß (HiGHmed)
+* Martin Boeker (Klinikum rechts der Isar, Technische Universität München)
+* Karoline Buckow (TMF – Technologie- und Methodenplattform für die vernetzte medizinische Forschung e.V.)
+* Thomas Ganslandt (Friedrich-Alexander-Universität Erlangen-Nürnberg)
+* Julian Saß (Berlin Institute of Health at Charité (BIH))
 
 ## Copyright-Hinweis, Nutzungshinweise
 Copyright © 2022+: TMF e. V., Charlottenstraße 42, 10117 Berlin
