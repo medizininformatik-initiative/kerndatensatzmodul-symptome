@@ -69,5 +69,6 @@ Usage: #example
 * extension[0].url = $assertedDate
 * extension[=].valueDateTime = "2023-10-30"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * code = $SCT#711162004 "Autosomal dominant vitreoretinochoroidopathy (disorder)"
 * subject = Reference(Patient/example-patient)
