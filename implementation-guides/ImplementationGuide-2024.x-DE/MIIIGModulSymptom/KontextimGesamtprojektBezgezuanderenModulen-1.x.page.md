@@ -15,4 +15,4 @@ a.	Das Modul Symptome/klinischer Phänotyp ist gegenüber spezifischen Modulen i
 
 ### Beziehung zum Modul Person
 
-Die Zuordnung von Symptomen/Phänotypen zu einem Patienten bzw. einer Patientin erfolgt über Referenzen vom Modul Symptome/klinischer Phänotyp zum MODUL [PERSON](https://simplifier.net/guide/medizininformatikinitiative-modulperson-implementationguide/igmiikdsmodulperson).
+Die Zuordnung von Symptomen/Phänotypen zu einem Patienten bzw. einer Patientin erfolgt über Referenzen vom Modul Symptome/klinischer Phänotyp zum MODUL [PERSON](https://simplifier.net/mii-basismodul-person-2024).

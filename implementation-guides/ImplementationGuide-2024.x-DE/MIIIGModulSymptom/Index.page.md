@@ -18,7 +18,7 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazuhegörigen FHIR-Prof
 {{index:root}}
 
 ## Impressum
-Dieser Leitfaden ist im Rahmen der Medizininformatik-Initative erstellt wurden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
+Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt wurden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
 
 ## Ansprechpartner
 * Martin Boeker, Klinikum rechts der Isar, Technische Universität München
@@ -27,7 +27,7 @@ Dieser Leitfaden ist im Rahmen der Medizininformatik-Initative erstellt wurden u
 für die vernetzte medizinische Forschung e.V.
 * Sylvia Thun, Berlin Institute of Health (BIH), Charité Universitätsmedizin
 
-Fragen zu der vorliegenden Publikation können unter [chat.fhir.org](chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
+Fragen zu der vorliegenden Publikation können unter [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179307-german.2Fmi-initiative) im Stream 'german/mi-initiative' gestellt werden.
 
 Anmerkungen und Kritik werden in Form von 'Issues' auf GitHub stets gern entgegengenommen.
 
