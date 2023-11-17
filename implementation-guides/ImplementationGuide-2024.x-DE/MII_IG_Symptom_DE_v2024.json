@@ -56,50 +56,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-symptom-glasgow-coma-score"
-        },
-        "name": "MII PR Symptom Glasgow Coma Score",
-        "description": "Profil für Glasgow Coma Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-symptom-glasgow-coma-score-eye"
-        },
-        "name": "MII VS Symptom Glasgow Coma Score Eye",
-        "description": "Values for eye component of Glasgow Coma Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-symptom-glasgow-coma-score-motor"
-        },
-        "name": "MII VS Symptom Glasgow Coma Score Motor",
-        "description": "Values for motor component of Glasgow Coma Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-symptom-glasgow-coma-score-verbal"
-        },
-        "name": "MII VS Symptom Glasgow Coma Score Verbal",
-        "description": "Values for verbal component of Glasgow Coma Score",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-symptom-arachnodactyly"
         },
         "name": "mii-exa-symptom-arachnodactyly",
         "description": "Phänotyp Example für Arachnodactyly",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-symptom-glasgow-coma-score"
-        },
-        "name": "mii-exa-symptom-glasgow-coma-score",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score"
       },
       {
         "reference": {
@@ -126,71 +87,76 @@
       }
     ],
     "page": {
-      "nameUrl": "ImplementationGuide-1.x/IGMIIKDSModulFinding-1.x.md",
-      "title": "IG MII KDS Modul Symptome/klinischer Phänotyp",
-      "generation": "markdown",
+      "nameUrl": "MIIIGModulSymptom",
+      "title": "MII IG Modul Symptom",
+      "generation": "generated",
       "page": [
         {
-          "nameUrl": "ImplementationGuide-1.x/BeschreibungModul-1.x.md",
+          "nameUrl": "MIIIGModulSymptom/BeschreibungModul-1.x.page.md",
           "title": "Beschreibung Modul",
           "generation": "markdown"
         },
         {
-          "nameUrl": "ImplementationGuide-1.x/KontextimGesamtprojektBezgezuanderenModulen-1.x.md",
+          "nameUrl": "MIIIGModulSymptom/KontextimGesamtprojektBezgezuanderenModulen-1.x.page.md",
           "title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
           "generation": "markdown"
         },
         {
-          "nameUrl": "ImplementationGuide-1.x/Referenzen-1.x.md",
+          "nameUrl": "MIIIGModulSymptom/Referenzen-1.x.page.md",
           "title": "Referenzen",
           "generation": "markdown"
         },
         {
-          "nameUrl": "ImplementationGuide-1.x/AnwendungsflleInformationsmodell-1.x.md",
+          "nameUrl": "MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x",
           "title": "Anwendungsfälle / Informationsmodell",
-          "generation": "markdown",
+          "generation": "generated",
           "page": [
             {
-              "nameUrl": "ImplementationGuide-1.x/BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.md",
+              "nameUrl": "MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md",
               "title": "Beschreibung von Szenarien für die Anwendung der Module",
               "generation": "markdown"
             },
             {
-              "nameUrl": "ImplementationGuide-1.x/Datenstzeinkl.Beschreibungen-1.x.md",
+              "nameUrl": "MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md",
               "title": "Datensätze inkl. Beschreibungen",
               "generation": "markdown"
             },
             {
-              "nameUrl": "ImplementationGuide-1.x/UML-1.x.md",
+              "nameUrl": "MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/UML-1.x.page.md",
               "title": "UML",
               "generation": "markdown"
             }
           ]
         },
         {
-          "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/TechnischeImplementierung-1.x.md",
+          "nameUrl": "MIIIGModulSymptom/TechnischeImplementierung-1.x",
           "title": "Technische Implementierung",
-          "generation": "markdown",
+          "generation": "generated",
           "page": [
             {
-              "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/FHIR-Profile-1.x.md",
+              "nameUrl": "MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x",
               "title": "FHIR-Profile",
-              "generation": "markdown",
+              "generation": "generated",
               "page": [
                 {
-                  "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Observation-1.x.md",
+                  "nameUrl": "MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md",
                   "title": "Observation",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Condition-1.x.md",
+                  "nameUrl": "MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md",
                   "title": "Condition",
                   "generation": "markdown"
                 }
               ]
             },
             {
-              "nameUrl": "ImplementationGuide-1.x/TechnischeImplementierung/Terminologien-1.x.md",
+              "nameUrl": "MIIIGModulSymptom/TechnischeImplementierung-1.x/CapabilityStatement.page.md",
+              "title": "CapabilityStatement",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "MIIIGModulSymptom/TechnischeImplementierung-1.x/Terminologien-1.x.page.md",
               "title": "Terminologien",
               "generation": "markdown"
             }
