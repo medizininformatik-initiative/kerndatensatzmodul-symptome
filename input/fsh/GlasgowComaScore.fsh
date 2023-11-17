@@ -6,6 +6,7 @@ Description: "Profil für Glasgow Coma Score"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score"
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^status = #draft
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
