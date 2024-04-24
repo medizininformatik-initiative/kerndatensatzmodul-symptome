@@ -13,3 +13,5 @@ ig.ini
 _gencontinuous.bat
 _gencontinuous.sh
 fsh-generated/resources/ImplementationGuide-modul-symptom.json
+fsh-index.json
+fsh-index.txt
