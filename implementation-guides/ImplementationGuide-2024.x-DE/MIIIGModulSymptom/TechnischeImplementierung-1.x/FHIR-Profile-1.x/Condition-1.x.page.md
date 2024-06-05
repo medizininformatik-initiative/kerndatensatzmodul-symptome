@@ -23,7 +23,7 @@ Folgende Kombinationen aus `clinicalStatus` und `verificationStatus` sind notwen
 * V (Verdacht auf / zum Ausschluss von) => clinicalStatus = "active", verificationStatus="provisional" oder "differential"
 * Z (Zustand nach) => clinicalStatus = "resolved", verificationStatus="confirmed" 
 
-Siehe dazu auch Diagnosesicherheit in den [FHIR Basisprofilen](https://ig.fhir.de/basisprofile-de/1.4.0/Ressourcen-DiagnosenCondition.html) und im [MII Modul Diagnose](https://simplifier.net/mii-basismodul-person-2024).
+Siehe dazu auch Diagnosesicherheit in den [FHIR Basisprofilen](https://ig.fhir.de/basisprofile-de/1.4.0/Ressourcen-DiagnosenCondition.html) und im [MII Modul Diagnose](https://simplifier.net/mii-basismodul-diagnose-2024).
 
 @```
 from 
