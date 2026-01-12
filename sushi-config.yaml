@@ -29,6 +29,9 @@ dependencies:
   de.basisprofil.r4:
     uri: de.basisprofil.r4
     version: 1.5.4
+  hl7.fhir.eu.base:
+    uri: http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base
+    version: 0.1.0
 
 extension:
   - url: https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable

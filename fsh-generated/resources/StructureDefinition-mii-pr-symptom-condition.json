@@ -88,7 +88,38 @@
       {
         "id": "Condition.bodySite",
         "path": "Condition.bodySite",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
+      },
+      {
+        "id": "Condition.bodySite.extension:bodySite",
+        "path": "Condition.bodySite.extension",
+        "sliceName": "bodySite",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/bodySite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.bodySite.extension:bodySite.value[x]",
+        "path": "Condition.bodySite.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core"
+            ]
+          }
+        ]
       },
       {
         "id": "Condition.subject",

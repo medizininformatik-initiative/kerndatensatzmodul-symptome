@@ -17,6 +17,9 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * value[x] MS
 * dataAbsentReason MS
 * interpretation MS
+* bodySite from $SNOMEDCTBodyStructures (preferred)
+* bodySite.extension contains $bodySite-reference named bodySite 0..1
+* bodySite.extension[bodySite].valueReference only Reference($BodyStructureEuCore)
 * method MS
 * specimen MS
 * device MS
@@ -48,6 +51,9 @@ Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse un
 * severity MS
 * code MS
 * bodySite MS
+* bodySite from $SNOMEDCTBodyStructures (preferred)
+* bodySite.extension contains $bodySite-reference named bodySite 0..1
+* bodySite.extension[bodySite].valueReference only Reference($BodyStructureEuCore)
 * subject MS
 * encounter MS
 * onset[x] MS
