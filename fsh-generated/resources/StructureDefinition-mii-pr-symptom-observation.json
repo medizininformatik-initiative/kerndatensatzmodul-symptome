@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-symptom-observation",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation",
-  "version": "2024.0.0-ballot",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation",
+  "version": "2026.0.0-rc.1",
   "name": "MII_PR_Symptom_Observation",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
