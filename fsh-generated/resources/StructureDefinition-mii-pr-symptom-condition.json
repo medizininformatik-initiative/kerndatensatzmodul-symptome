@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-symptom-condition",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition",
-  "version": "2024.0.0-ballot",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
+  "version": "2026.0.0-rc.1",
   "name": "MII_PR_Symptom_Condition",
   "status": "active",
   "publisher": "Medizininformatik Initiative",

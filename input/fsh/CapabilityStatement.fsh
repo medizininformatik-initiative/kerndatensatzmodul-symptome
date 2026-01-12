@@ -5,10 +5,10 @@ RuleSet: SupportResource (resource, expectation)
 * rest.resource[=].extension[0].url = $exp
 * rest.resource[=].extension[0].valueCode = {expectation}
 
-RuleSet: Profile (profile, expectation)
+RuleSet: Profile (profile)
 * rest.resource[=].profile[+] = "{profile}"
-* rest.resource[=].profile[=].extension[0].url = $exp
-* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
+//* rest.resource[=].profile[=].extension[0].url = $exp
+//* rest.resource[=].profile[=].extension[0].valueCode = {expectation}
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
@@ -51,8 +51,8 @@ Usage: #definition
 
 // Observation requirements
 * insert SupportResource(Observation, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation|2024.0.0-ballot, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Observation)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2026.0.0-rc.1, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -93,8 +93,8 @@ Usage: #definition
 
 // Condition requirements
 * insert SupportResource(Condition, #SHALL)
-* insert Profile(http://hl7.org/fhir/StructureDefinition/Condition, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition|2024.0.0-ballot, #SHALL)
+* insert Profile(http://hl7.org/fhir/StructureDefinition/Condition)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2026.0.0-rc.1, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

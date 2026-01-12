@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-lm-symptom",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom",
-  "version": "2024.0.0-ballot",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom",
+  "version": "2026.0.0-rc.1",
   "name": "MII_LM_Symptom",
   "title": "MII LM Symptom",
   "status": "active",
@@ -27,20 +27,20 @@
   ],
   "kind": "logical",
   "abstract": false,
-  "type": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom",
+  "type": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "Symptom",
-        "path": "Symptom",
+        "id": "mii-lm-symptom",
+        "path": "mii-lm-symptom",
         "short": "MII LM Symptom",
         "definition": "Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp"
       },
       {
-        "id": "Symptom.Condition",
-        "path": "Symptom.Condition",
+        "id": "mii-lm-symptom.Condition",
+        "path": "mii-lm-symptom.Condition",
         "short": "Im Sinne einer FHIR Condition: klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).",
         "definition": "Im Sinne einer FHIR Condition: klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).",
         "min": 0,
@@ -58,8 +58,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Code",
-        "path": "Symptom.Condition.Code",
+        "id": "mii-lm-symptom.Condition.Code",
+        "path": "mii-lm-symptom.Condition.Code",
         "short": "Code für ein Symptom, Phänomen, Erkrankung, Disposition: SNOMED CT (Findings), ICD-10, OrphaCodes, HPO, MedDRA",
         "definition": "Code für ein Symptom, Phänomen, Erkrankung, Disposition: SNOMED CT (Findings), ICD-10, OrphaCodes, HPO, MedDRA",
         "min": 0,
@@ -77,8 +77,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Identifikator",
-        "path": "Symptom.Condition.Identifikator",
+        "id": "mii-lm-symptom.Condition.Identifikator",
+        "path": "mii-lm-symptom.Condition.Identifikator",
         "short": "Externer Identifikator für die Condition",
         "definition": "Externer Identifikator für die Condition",
         "min": 0,
@@ -96,8 +96,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Bezeichnung",
-        "path": "Symptom.Condition.Bezeichnung",
+        "id": "mii-lm-symptom.Condition.Bezeichnung",
+        "path": "mii-lm-symptom.Condition.Bezeichnung",
         "short": "Natürlichsprachige Bezeichnung für ein Symptom, Diagnose, Erkrankung, Phänotyp, Disposition",
         "definition": "Natürlichsprachige Bezeichnung für ein Symptom, Diagnose, Erkrankung, Phänotyp, Disposition",
         "min": 0,
@@ -115,8 +115,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Beschreibung",
-        "path": "Symptom.Condition.Beschreibung",
+        "id": "mii-lm-symptom.Condition.Beschreibung",
+        "path": "mii-lm-symptom.Condition.Beschreibung",
         "short": "Natürlichsprachige Beschreibung für ein Symptom, eine Erkrankung, eine Diagnose oder eine Disposition.",
         "definition": "Natürlichsprachige Beschreibung für ein Symptom, eine Erkrankung, eine Diagnose oder eine Disposition.",
         "min": 0,
@@ -134,8 +134,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Kategorie",
-        "path": "Symptom.Condition.Kategorie",
+        "id": "mii-lm-symptom.Condition.Kategorie",
+        "path": "mii-lm-symptom.Condition.Kategorie",
         "short": "Kategorien der Condition (z.B. problem-list-item | encounter-diagnosis)",
         "definition": "Kategorien der Condition (z.B. problem-list-item | encounter-diagnosis)",
         "min": 0,
@@ -153,8 +153,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Lokalisation",
-        "path": "Symptom.Condition.Lokalisation",
+        "id": "mii-lm-symptom.Condition.Lokalisation",
+        "path": "mii-lm-symptom.Condition.Lokalisation",
         "short": "Lokalisation eines Symptoms etc. Körperstellen (Lokalisationen) werden SNOMED CT kodiert.",
         "definition": "Lokalisation eines Symptoms etc. Körperstellen (Lokalisationen) werden SNOMED CT kodiert.",
         "min": 0,
@@ -172,8 +172,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum",
         "short": "Zeitspanne des Vorhandenseins des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
         "definition": "Zeitspanne des Vorhandenseins des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
         "min": 0,
@@ -195,8 +195,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Zeitraum",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Zeitraum",
         "short": "Klinisch relevanter Zeitraum als Zeitintervall mit von/am und bis.",
         "definition": "Klinisch relevanter Zeitraum als Zeitintervall mit von/am und bis.",
         "min": 0,
@@ -218,8 +218,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.start",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.start",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.start",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.start",
         "short": "Startzeitpunkt: Zeitpunkt des Beginns des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
         "definition": "Startzeitpunkt: Zeitpunkt des Beginns des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
         "min": 0,
@@ -241,8 +241,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.end",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.end",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.end",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Zeitraum.end",
         "short": " Endzeitpunkt: Zeitpunkt des Verschwindens des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
         "definition": " Endzeitpunkt: Zeitpunkt des Verschwindens des Symptoms, der Erkrankung, der Diagnose, der Disposition, des Phänotyps",
         "min": 0,
@@ -264,8 +264,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Lebensphase",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Lebensphase",
         "short": "Zusätzlich zu einem Zeitraum ist die Angabe der Lebensphase, zu der eine Krankheit vorlag/vorliegt, möglich. Hiermit lässt sich beispielsweise angeben, dass eine Person eine Krankheit bereits als Säugling gehabt hat. Das entsprechende ValueSet ist derzeit noch in Arbeit.",
         "definition": "Zusätzlich zu einem Zeitraum ist die Angabe der Lebensphase, zu der eine Krankheit vorlag/vorliegt, möglich. Hiermit lässt sich beispielsweise angeben, dass eine Person eine Krankheit bereits als Säugling gehabt hat. Das entsprechende ValueSet ist derzeit noch in Arbeit.",
         "min": 0,
@@ -287,8 +287,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.von",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.von",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.von",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.von",
         "short": "Lebensphase Start",
         "definition": "Lebensphase Start",
         "min": 0,
@@ -306,8 +306,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.bis",
-        "path": "Symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.bis",
+        "id": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.bis",
+        "path": "mii-lm-symptom.Condition.KlinischRelevanterZeitraum.Lebensphase.bis",
         "short": "Lebensphase Ende",
         "definition": "Lebensphase Ende",
         "min": 0,
@@ -325,8 +325,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Beobachtungszeitpunkt",
-        "path": "Symptom.Condition.Beobachtungszeitpunkt",
+        "id": "mii-lm-symptom.Condition.Beobachtungszeitpunkt",
+        "path": "mii-lm-symptom.Condition.Beobachtungszeitpunkt",
         "short": "Zeitpunkt der Beobachtung/Feststellung des Symptoms, Erkrankung, Diagnose, Disposition.",
         "definition": "Zeitpunkt der Beobachtung/Feststellung des Symptoms, Erkrankung, Diagnose, Disposition.",
         "min": 0,
@@ -344,8 +344,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Dokumentationszeitpunkt",
-        "path": "Symptom.Condition.Dokumentationszeitpunkt",
+        "id": "mii-lm-symptom.Condition.Dokumentationszeitpunkt",
+        "path": "mii-lm-symptom.Condition.Dokumentationszeitpunkt",
         "short": "Zeitpunkt der Dokumentation das Symptoms, Erkrankung, Diagnose, Disposition",
         "definition": "Zeitpunkt der Dokumentation das Symptoms, Erkrankung, Diagnose, Disposition",
         "min": 0,
@@ -363,8 +363,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Status",
-        "path": "Symptom.Condition.Status",
+        "id": "mii-lm-symptom.Condition.Status",
+        "path": "mii-lm-symptom.Condition.Status",
         "short": "Status des Symptoms, Erkrankung, Diagnose, Disposition: \"Aktiv\", \"Zustand nach\", \"in Remission\", \"beseitigt/geheilt\"). Codiert z. B. mit ValueSet aus FHIR oder SNOMED CT.",
         "definition": "Status des Symptoms, Erkrankung, Diagnose, Disposition: \"Aktiv\", \"Zustand nach\", \"in Remission\", \"beseitigt/geheilt\"). Codiert z. B. mit ValueSet aus FHIR oder SNOMED CT.",
         "min": 1,
@@ -382,8 +382,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Schweregrad",
-        "path": "Symptom.Condition.Schweregrad",
+        "id": "mii-lm-symptom.Condition.Schweregrad",
+        "path": "mii-lm-symptom.Condition.Schweregrad",
         "short": "Schweregrad des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
         "definition": "Schweregrad des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
         "min": 0,
@@ -401,8 +401,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Verifikationsstatus",
-        "path": "Symptom.Condition.Verifikationsstatus",
+        "id": "mii-lm-symptom.Condition.Verifikationsstatus",
+        "path": "mii-lm-symptom.Condition.Verifikationsstatus",
         "short": "Empirische, epistemologische, algorithmische, diagnostische Gewissheit  des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
         "definition": "Empirische, epistemologische, algorithmische, diagnostische Gewissheit  des Symptoms, Erkrankung, Diagnose, Disposition. Codesystem: SNOMED CT.",
         "min": 0,
@@ -420,8 +420,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz",
-        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz",
+        "id": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz",
+        "path": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz",
         "short": "Die dem Symptom, Erkrankung, Diagnose, Disposition zugrundeliegend Beobachtung",
         "definition": "Die dem Symptom, Erkrankung, Diagnose, Disposition zugrundeliegend Beobachtung",
         "min": 0,
@@ -439,8 +439,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.BeschreibungZugrundeliegendeBeobachtung",
-        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.BeschreibungZugrundeliegendeBeobachtung",
+        "id": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.BeschreibungZugrundeliegendeBeobachtung",
+        "path": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.BeschreibungZugrundeliegendeBeobachtung",
         "short": "Natürlichsprachige Beschreibung einer dem Symptom zugrundeliegenden Beobachtung,  Symptoms, Erkrankung, Diagnose, Disposition",
         "definition": "Natürlichsprachige Beschreibung einer dem Symptom zugrundeliegenden Beobachtung,  Symptoms, Erkrankung, Diagnose, Disposition",
         "min": 0,
@@ -458,8 +458,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.CodeZugrundeliegendeBeobachtung",
-        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.CodeZugrundeliegendeBeobachtung",
+        "id": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.CodeZugrundeliegendeBeobachtung",
+        "path": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.CodeZugrundeliegendeBeobachtung",
         "short": "Code der zugrundeliegenden Beobachtung des  Symptoms, Erkrankung, Diagnose, Disposition: SNOMED CT, LOINC",
         "definition": "Code der zugrundeliegenden Beobachtung des  Symptoms, Erkrankung, Diagnose, Disposition: SNOMED CT, LOINC",
         "min": 0,
@@ -477,8 +477,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.LinkAufZugrundeliegendeBeobachtung",
-        "path": "Symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.LinkAufZugrundeliegendeBeobachtung",
+        "id": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.LinkAufZugrundeliegendeBeobachtung",
+        "path": "mii-lm-symptom.Condition.ZugrundeliegendeBeobachtungEvidenz.LinkAufZugrundeliegendeBeobachtung",
         "short": "Link auf die dem Symptom zugrundeliegenden Beobachtung für das  Symptoms, Erkrankung, Diagnose, Disposition",
         "definition": "Link auf die dem Symptom zugrundeliegenden Beobachtung für das  Symptoms, Erkrankung, Diagnose, Disposition",
         "min": 0,
@@ -496,8 +496,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Stadium",
-        "path": "Symptom.Condition.Stadium",
+        "id": "mii-lm-symptom.Condition.Stadium",
+        "path": "mii-lm-symptom.Condition.Stadium",
         "short": "Stadium der Condition",
         "definition": "Stadium der Condition",
         "min": 0,
@@ -515,8 +515,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Stadium.Zusammenfassung",
-        "path": "Symptom.Condition.Stadium.Zusammenfassung",
+        "id": "mii-lm-symptom.Condition.Stadium.Zusammenfassung",
+        "path": "mii-lm-symptom.Condition.Stadium.Zusammenfassung",
         "short": "Einfache Zusammenfassung des Stadiums",
         "definition": "Einfache Zusammenfassung des Stadiums",
         "min": 0,
@@ -534,8 +534,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Stadium.Einschaetzung",
-        "path": "Symptom.Condition.Stadium.Einschaetzung",
+        "id": "mii-lm-symptom.Condition.Stadium.Einschaetzung",
+        "path": "mii-lm-symptom.Condition.Stadium.Einschaetzung",
         "short": "Referenz auf eine formale Einschätzung des Stadiums (ClinicalImpression, DiagnosticReport, Observation)",
         "definition": "Referenz auf eine formale Einschätzung des Stadiums (ClinicalImpression, DiagnosticReport, Observation)",
         "min": 0,
@@ -553,8 +553,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Stadium.ArtDerStadieneinteilung",
-        "path": "Symptom.Condition.Stadium.ArtDerStadieneinteilung",
+        "id": "mii-lm-symptom.Condition.Stadium.ArtDerStadieneinteilung",
+        "path": "mii-lm-symptom.Condition.Stadium.ArtDerStadieneinteilung",
         "short": "Art der Stadieneinteilung",
         "definition": "Art der Stadieneinteilung",
         "min": 0,
@@ -572,8 +572,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Patient",
-        "path": "Symptom.Condition.Patient",
+        "id": "mii-lm-symptom.Condition.Patient",
+        "path": "mii-lm-symptom.Condition.Patient",
         "short": "Link auf Patient",
         "definition": "Link auf Patient",
         "min": 1,
@@ -591,8 +591,8 @@
         ]
       },
       {
-        "id": "Symptom.Condition.Fall",
-        "path": "Symptom.Condition.Fall",
+        "id": "mii-lm-symptom.Condition.Fall",
+        "path": "mii-lm-symptom.Condition.Fall",
         "short": "Link auf Behandlungsfall",
         "definition": "Link auf Behandlungsfall",
         "min": 0,
@@ -610,8 +610,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation",
-        "path": "Symptom.Observation",
+        "id": "mii-lm-symptom.Observation",
+        "path": "mii-lm-symptom.Observation",
         "short": "Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.",
         "definition": "Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.",
         "min": 0,
@@ -629,8 +629,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Identifikator",
-        "path": "Symptom.Observation.Identifikator",
+        "id": "mii-lm-symptom.Observation.Identifikator",
+        "path": "mii-lm-symptom.Observation.Identifikator",
         "short": "Eindeutiger Identifier der Observation",
         "definition": "Eindeutiger Identifier der Observation",
         "min": 0,
@@ -648,8 +648,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Bezeichnung",
-        "path": "Symptom.Observation.Bezeichnung",
+        "id": "mii-lm-symptom.Observation.Bezeichnung",
+        "path": "mii-lm-symptom.Observation.Bezeichnung",
         "short": "Natürlichsprachige Bezeichnung der Observation",
         "definition": "Natürlichsprachige Bezeichnung der Observation",
         "min": 0,
@@ -667,8 +667,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Beschreibung",
-        "path": "Symptom.Observation.Beschreibung",
+        "id": "mii-lm-symptom.Observation.Beschreibung",
+        "path": "mii-lm-symptom.Observation.Beschreibung",
         "short": "Natürlichsprachige Beschreibung der Beobachtung",
         "definition": "Natürlichsprachige Beschreibung der Beobachtung",
         "min": 0,
@@ -686,8 +686,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Kategorie",
-        "path": "Symptom.Observation.Kategorie",
+        "id": "mii-lm-symptom.Observation.Kategorie",
+        "path": "mii-lm-symptom.Observation.Kategorie",
         "short": "Kategorie der Observation",
         "definition": "Kategorie der Observation",
         "min": 0,
@@ -705,8 +705,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Status",
-        "path": "Symptom.Observation.Status",
+        "id": "mii-lm-symptom.Observation.Status",
+        "path": "mii-lm-symptom.Observation.Status",
         "short": "Status der Observation",
         "definition": "Status der Observation",
         "min": 1,
@@ -724,8 +724,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Code",
-        "path": "Symptom.Observation.Code",
+        "id": "mii-lm-symptom.Observation.Code",
+        "path": "mii-lm-symptom.Observation.Code",
         "short": "Code der Observation: z. B. LOINC, SNOMED CT, HPO",
         "definition": "Code der Observation: z. B. LOINC, SNOMED CT, HPO",
         "min": 1,
@@ -743,8 +743,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Zeitspanne",
-        "path": "Symptom.Observation.Zeitspanne",
+        "id": "mii-lm-symptom.Observation.Zeitspanne",
+        "path": "mii-lm-symptom.Observation.Zeitspanne",
         "short": "Klinisch relevante Zeitpunkte/Zeitspanne",
         "definition": "Klinisch relevante Zeitpunkte/Zeitspanne",
         "min": 0,
@@ -766,8 +766,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Zeitspanne.start",
-        "path": "Symptom.Observation.Zeitspanne.start",
+        "id": "mii-lm-symptom.Observation.Zeitspanne.start",
+        "path": "mii-lm-symptom.Observation.Zeitspanne.start",
         "short": "Klinisch relevanter (Start-)Zeitpunkt einer Observation",
         "definition": "Klinisch relevanter (Start-)Zeitpunkt einer Observation",
         "min": 0,
@@ -785,8 +785,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Zeitspanne.end",
-        "path": "Symptom.Observation.Zeitspanne.end",
+        "id": "mii-lm-symptom.Observation.Zeitspanne.end",
+        "path": "mii-lm-symptom.Observation.Zeitspanne.end",
         "short": "Klinisch relevanter Endzeitpunkt einer Observation",
         "definition": "Klinisch relevanter Endzeitpunkt einer Observation",
         "min": 0,
@@ -804,8 +804,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Dokumentationsdatum",
-        "path": "Symptom.Observation.Dokumentationsdatum",
+        "id": "mii-lm-symptom.Observation.Dokumentationsdatum",
+        "path": "mii-lm-symptom.Observation.Dokumentationsdatum",
         "short": "Zeitpunkt der Dokumentation der Observation.",
         "definition": "Zeitpunkt der Dokumentation der Observation.",
         "min": 0,
@@ -823,8 +823,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Wert[x]",
-        "path": "Symptom.Observation.Wert[x]",
+        "id": "mii-lm-symptom.Observation.Wert[x]",
+        "path": "mii-lm-symptom.Observation.Wert[x]",
         "short": "Wert der Observation",
         "definition": "Wert der Observation",
         "min": 0,
@@ -872,8 +872,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.ReferenzIntervall",
-        "path": "Symptom.Observation.ReferenzIntervall",
+        "id": "mii-lm-symptom.Observation.ReferenzIntervall",
+        "path": "mii-lm-symptom.Observation.ReferenzIntervall",
         "short": "Referenz-Intervall entsprechend des eingebetteten komplexen Typs (Observation.referenceRange)",
         "definition": "Referenz-Intervall entsprechend des eingebetteten komplexen Typs (Observation.referenceRange)",
         "min": 0,
@@ -891,8 +891,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.GrundNichtVorhandenerDaten",
-        "path": "Symptom.Observation.GrundNichtVorhandenerDaten",
+        "id": "mii-lm-symptom.Observation.GrundNichtVorhandenerDaten",
+        "path": "mii-lm-symptom.Observation.GrundNichtVorhandenerDaten",
         "short": "Grund für nicht vorhandene Daten der Observation",
         "definition": "Grund für nicht vorhandene Daten der Observation",
         "min": 0,
@@ -910,8 +910,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Interpretation",
-        "path": "Symptom.Observation.Interpretation",
+        "id": "mii-lm-symptom.Observation.Interpretation",
+        "path": "mii-lm-symptom.Observation.Interpretation",
         "short": "Interpretation einer Observation",
         "definition": "Interpretation einer Observation",
         "min": 0,
@@ -929,8 +929,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Kommentar",
-        "path": "Symptom.Observation.Kommentar",
+        "id": "mii-lm-symptom.Observation.Kommentar",
+        "path": "mii-lm-symptom.Observation.Kommentar",
         "short": "Natürlichsprachiger Kommentar zur Observation.",
         "definition": "Natürlichsprachiger Kommentar zur Observation.",
         "min": 0,
@@ -948,8 +948,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Lokalisation",
-        "path": "Symptom.Observation.Lokalisation",
+        "id": "mii-lm-symptom.Observation.Lokalisation",
+        "path": "mii-lm-symptom.Observation.Lokalisation",
         "short": "Lokalisation der Observation als SNOMED CT Body Structure codiert.",
         "definition": "Lokalisation der Observation als SNOMED CT Body Structure codiert.",
         "min": 0,
@@ -967,8 +967,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Patient",
-        "path": "Symptom.Observation.Patient",
+        "id": "mii-lm-symptom.Observation.Patient",
+        "path": "mii-lm-symptom.Observation.Patient",
         "short": "Link auf Patient",
         "definition": "Link auf Patient",
         "min": 0,
@@ -986,8 +986,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Fall",
-        "path": "Symptom.Observation.Fall",
+        "id": "mii-lm-symptom.Observation.Fall",
+        "path": "mii-lm-symptom.Observation.Fall",
         "short": "Fall der Observation",
         "definition": "Fall der Observation",
         "min": 0,
@@ -1005,8 +1005,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Probe",
-        "path": "Symptom.Observation.Probe",
+        "id": "mii-lm-symptom.Observation.Probe",
+        "path": "mii-lm-symptom.Observation.Probe",
         "short": "Referenz auf die Probe, auf der die Observation basiert",
         "definition": "Referenz auf die Probe, auf der die Observation basiert",
         "min": 0,
@@ -1024,8 +1024,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Messgeraet",
-        "path": "Symptom.Observation.Messgeraet",
+        "id": "mii-lm-symptom.Observation.Messgeraet",
+        "path": "mii-lm-symptom.Observation.Messgeraet",
         "short": "Referenz auf das verwendete Mess-/Untersuchungsgerät",
         "definition": "Referenz auf das verwendete Mess-/Untersuchungsgerät",
         "min": 0,
@@ -1043,8 +1043,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Methode",
-        "path": "Symptom.Observation.Methode",
+        "id": "mii-lm-symptom.Observation.Methode",
+        "path": "mii-lm-symptom.Observation.Methode",
         "short": "Methode der Untersuchung",
         "definition": "Methode der Untersuchung",
         "min": 0,
@@ -1062,8 +1062,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.BezugZuHatTeil",
-        "path": "Symptom.Observation.BezugZuHatTeil",
+        "id": "mii-lm-symptom.Observation.BezugZuHatTeil",
+        "path": "mii-lm-symptom.Observation.BezugZuHatTeil",
         "short": "Bezug zu Ressourcen, die zu dieser Observation gehören (Observation, QuestionnaireResponse, MolecularSequence)",
         "definition": "Bezug zu Ressourcen, die zu dieser Observation gehören (Observation, QuestionnaireResponse, MolecularSequence)",
         "min": 0,
@@ -1081,8 +1081,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.BezugVonIstTeilVon",
-        "path": "Symptom.Observation.BezugVonIstTeilVon",
+        "id": "mii-lm-symptom.Observation.BezugVonIstTeilVon",
+        "path": "mii-lm-symptom.Observation.BezugVonIstTeilVon",
         "short": "Referenz auf Messunger/Beobachtungen, aus denen diese Observation hervorgeht.",
         "definition": "Referenz auf Messunger/Beobachtungen, aus denen diese Observation hervorgeht.",
         "min": 0,
@@ -1100,8 +1100,8 @@
         ]
       },
       {
-        "id": "Symptom.Observation.Komponente",
-        "path": "Symptom.Observation.Komponente",
+        "id": "mii-lm-symptom.Observation.Komponente",
+        "path": "mii-lm-symptom.Observation.Komponente",
         "short": "Komponente einer Observation mit mehreren Komponenten (z. B. Blutdruck) entsprechend des komplexen Typs (Observation.component) mit .code, .value, .dataAbsentReason, .interpretation, .referenceRange (alle wie oben beschrieben)",
         "definition": "Komponente einer Observation mit mehreren Komponenten (z. B. Blutdruck) entsprechend des komplexen Typs (Observation.component) mit .code, .value, .dataAbsentReason, .interpretation, .referenceRange (alle wie oben beschrieben)",
         "min": 0,

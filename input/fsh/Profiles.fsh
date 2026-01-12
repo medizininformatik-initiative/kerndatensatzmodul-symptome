@@ -2,7 +2,7 @@ Profile: MII_PR_Symptom_Observation
 Parent: Observation
 Id: mii-pr-symptom-observation
 Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation"
 * insert PR_CS_VS_Version
 * insert Publisher
 * identifier MS
@@ -37,7 +37,7 @@ Profile: MII_PR_Symptom_Condition
 Parent: Condition
 Id: mii-pr-symptom-condition
 Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom)."
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition"
 * insert PR_CS_VS_Version
 * insert Publisher
 * extension contains $assertedDate named assertedDate 0..1 MS
