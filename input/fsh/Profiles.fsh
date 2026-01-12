@@ -10,7 +10,7 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * status MS
 * code MS
 * subject MS
-* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference
+//* subject only https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference
 * subject only Reference(Patient or Group)
 * effective[x] MS
 * issued MS
