@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "mii-cps-symptom-capabilitystatement",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata",
   "version": "2026.0.0-rc.1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -18,7 +18,7 @@
   "title": "MII CPS Symptom CapabilityStatement",
   "status": "active",
   "experimental": false,
-  "date": "2023-10-31",
+  "date": "2026-01-14",
   "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Symptom/klinischer Phänotyp der Medizininformatik Initiative zu implementieren.",
   "jurisdiction": [
     {
