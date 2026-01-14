@@ -1,5 +1,7 @@
 - name: Index
   filename: Index.page.md
+- name: Observation-Condition-Zusammenhang
+  filename: Observation-Condition-Relationship.page.md
 - name: Observation
   filename: Observation-1.x.page.md
 - name: Condition

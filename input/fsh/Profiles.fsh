@@ -6,6 +6,9 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^abstract = true
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptomOrCondition 0..*
+* extension[associatedSymptomOrCondition].valueReference only Reference(Observation or Condition)
+* extension[associatedSymptomOrCondition] ^short = "Other symptoms or conditions that are associated with this symptom"
 * identifier MS
 * category MS
 * status MS
