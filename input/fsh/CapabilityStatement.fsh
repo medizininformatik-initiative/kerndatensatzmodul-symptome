@@ -33,14 +33,14 @@ RuleSet: SupportSearchParam (name, canonical, type, expectation)
 Instance: mii-cps-symptom-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata"
+* url = "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata"
 * insert Version
 * insert SP_Publisher
 * name = "MII_CPS_Symptom_CapabilityStatement"
 * title = "MII CPS Symptom CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2023-10-31"
+* date = "2026-01-14"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Symptom/klinischer Phänotyp der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements

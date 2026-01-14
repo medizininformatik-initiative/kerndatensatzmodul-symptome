@@ -1,8 +1,8 @@
 ---
 parent: 
 topic: FindingObservation
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition
-canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition
+subject: https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition
+canonical: https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition
 expand: 1
 ---
 
@@ -12,7 +12,9 @@ expand: 1
 
 Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom).
 
-{{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}**Hinweis**: Diese StructureDefinition ist als abstrakt markiert und kann nicht direkt instanziiert werden. Sie dient ausschließlich als Grundlage für konkrete Profile, die von ihr ableiten. In Instanzen muss immer ein konkreter Sub-Typ verwendet werden.
+| Hinweis |  |
+|---------|---------------------|
+| {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}} | Diese StructureDefinition ist als abstrakt markiert und kann nicht direkt instanziiert werden. Sie dient ausschließlich als Grundlage für konkrete Profile, die von ihr ableiten. In Instanzen muss immer ein konkreter Sub-Typ verwendet werden. |
 
 **Diagnosesicherheit**
 
