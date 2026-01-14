@@ -5,6 +5,7 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * ^url = "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation"
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^abstract = true
 * identifier MS
 * category MS
 * status MS
@@ -29,7 +30,7 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 * component MS
 
 Instance: mii-exa-symptom-arachnodactyly
-InstanceOf: mii-pr-symptom-observation
+InstanceOf: Observation
 Description: "Phänotyp Example für Arachnodactyly"
 * status = #final "final"
 * subject = Reference(Patient/example)
@@ -43,6 +44,7 @@ Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse un
 * ^url = "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition"
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^abstract = true
 * extension contains $assertedDate named assertedDate 0..1 MS
 * identifier MS
 * clinicalStatus MS
@@ -70,7 +72,7 @@ Description: "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse un
 * stage.type MS
 
 Instance: mii-exa-symptom-vitreoretinochoroidopathy
-InstanceOf: mii-pr-symptom-condition
+InstanceOf: Condition
 Usage: #example
 * extension[0].url = $assertedDate
 * extension[=].valueDateTime = "2023-10-30"
