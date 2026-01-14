@@ -3,7 +3,7 @@ Parent: Element
 Id: mii-lm-symptom
 Title: "MII LM Symptom"
 Description: "Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom"
+//* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/LogicalModel/Symptom"
 * insert PR_CS_VS_Version
 * insert Publisher
 * Condition 0..* BackboneElement "Im Sinne einer FHIR Condition: klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom)."

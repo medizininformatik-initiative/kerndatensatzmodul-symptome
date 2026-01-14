@@ -5,3 +5,6 @@ Alias: $UCUM = http://unitsofmeasure.org
 Alias: $lebensphase = http://fhir.de/StructureDefinition/lebensphase
 Alias: $ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $assertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
+Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $BodyStructureEuCore = http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core
+Alias: $SNOMEDCTBodyStructures = http://hl7.org/fhir/ValueSet/body-site

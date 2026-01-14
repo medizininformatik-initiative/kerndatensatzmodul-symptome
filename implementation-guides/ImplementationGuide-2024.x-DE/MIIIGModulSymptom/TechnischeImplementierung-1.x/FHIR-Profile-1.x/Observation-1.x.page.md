@@ -14,13 +14,15 @@ expand: 1
 
 Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.
 
+{{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}**Hinweis**: Diese StructureDefinition ist als abstrakt markiert und kann nicht direkt instanziiert werden. Sie dient ausschließlich als Grundlage für konkrete Profile, die von ihr ableiten. In Instanzen muss immer ein konkreter Sub-Typ verwendet werden.
+
 @```
 from 
     StructureDefinition 
 where 
     url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation' 
 select 
-    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
+    Name: name, Status: status, Version: version, Abstract: abstract, Canonical: url, Basis: baseDefinition
 ```
 
 ### Inhalt

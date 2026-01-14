@@ -1,9 +1,11 @@
+/*
+
 Profile: MII_PR_Symptom_GlasgowComaScore
 Parent: MII_PR_Symptom_Observation
 Id: mii-pr-symptom-glasgow-coma-score
 Title: "MII PR Symptom Glasgow Coma Score"
 Description: "Profil für Glasgow Coma Score"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-finding/StructureDefinition/glasgow-coma-score"
+//* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-finding/StructureDefinition/glasgow-coma-score"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #draft
@@ -161,3 +163,5 @@ Usage: #example
 * component[verbal].valueCodeableConcept = $LOINC#LA6561-0
 * component[motor].code = $LOINC#9268-4
 * component[motor].valueCodeableConcept = $LOINC#LA6564-4
+
+*/

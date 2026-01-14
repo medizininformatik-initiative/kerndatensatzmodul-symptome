@@ -25,11 +25,12 @@
       "url" : "https://www.medizininformatik-initiative.de/"
     }
   ],
-  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de",
   "url": "https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Symptom/MIIIGModulSymptom.html",
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
-    "de.basisprofil.r4": "1.4.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3"
+    "de.basisprofil.r4": "1.5.4",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",
+    "hl7.fhir.eu.base": "0.1.0"
   }
 }

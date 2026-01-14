@@ -1,10 +1,25 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "mii-ig-symptom-de-v2024",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom-de-v2024",
-  "version": "2024.0.0-ballot",
-  "name": "MII_IG_Symptom_DE_v2024",
-  "description": "[DE] Medizininformatik Initiative - Modul Symptom - Implementierungsleitfaden - Version 2024.0.0",
+    "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://spdx.org/licenses/",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International License"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "mii-ig-symptom",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/ImplementationGuide/mii-ig-symptom",
+  "version": "2026.0.0",
+  "name": "MII_IG_Symptom",
+    "title": "MII IG Symptom v2026",
+  "description": "Modul Symptom - Version 2026 -IG",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -25,14 +40,14 @@
   "dependsOn": [
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
-      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.meta/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.meta",
-      "version": "1.0.3",
+      "uri": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "2026.0.x",
       "id": "de_medizininformatikinitiative_kerndatensatz_meta"
     },
     {
       "packageId": "de.basisprofil.r4",
-      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
-      "version": "1.4.0",
+      "uri": "de.basisprofil.r4",
+      "version": "1.5.4",
       "id": "de_basisprofil_r4"
     }
   ],
