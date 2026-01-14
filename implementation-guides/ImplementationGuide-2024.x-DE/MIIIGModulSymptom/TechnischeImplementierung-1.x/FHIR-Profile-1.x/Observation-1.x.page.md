@@ -22,7 +22,7 @@ Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind ei
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation' 
 select 
     Name: name, Status: status, Version: version, Abstract: abstract, Canonical: url, Basis: baseDefinition
 ```
@@ -36,7 +36,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation'
         select
 	        Beschreibung: description
         with
@@ -46,7 +46,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-observation' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation' 
         for 
             differential.element 
             where 
@@ -63,7 +63,7 @@ select
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom'
+where url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom'
     for differential.element where id.contains('Symptom.Observation') 
     select 
         FHIR: mapping[0].map,

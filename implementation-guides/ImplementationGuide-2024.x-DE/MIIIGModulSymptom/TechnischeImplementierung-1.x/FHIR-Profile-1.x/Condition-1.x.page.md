@@ -27,13 +27,13 @@ Folgende Kombinationen aus `clinicalStatus` und `verificationStatus` sind notwen
 * V (Verdacht auf / zum Ausschluss von) => clinicalStatus = "active", verificationStatus="provisional" oder "differential"
 * Z (Zustand nach) => clinicalStatus = "resolved", verificationStatus="confirmed" 
 
-Siehe dazu auch Diagnosesicherheit in den [FHIR Basisprofilen](https://ig.fhir.de/basisprofile-de/1.4.0/Ressourcen-DiagnosenCondition.html) und im [MII Modul Diagnose](https://simplifier.net/mii-basismodul-diagnose-2024).
+Siehe dazu auch Diagnosesicherheit in den [FHIR Basisprofilen](https://ig.fhir.de/basisprofile-de/1.5.4/ig-markdown-Ressourcen-DiagnosenCondition.html) und im [MII Modul Diagnose](https://medizininformatik-initiative.github.io/kerndatensatz-basis/2026.0.0).
 
 @```
 from 
     StructureDefinition 
 where 
-    url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition' 
+    url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition' 
 select 
     Name: name, Status: status, Version: version, Abstract: abstract, Canonical: url, Basis: baseDefinition
 ```
@@ -47,7 +47,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition'
+	        url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition'
         select
 	        Beschreibung: description
         with
@@ -57,7 +57,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition' 
+            url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition' 
         for 
             differential.element 
             where 
@@ -74,7 +74,7 @@ select
 
 @```
 from StructureDefinition 
-where url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom'
+where url = 'https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom'
     for differential.element where id.contains('Symptom.Condition') 
     select 
         FHIR: mapping[0].map,
