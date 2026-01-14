@@ -1,7 +1,7 @@
 ---
 topic: SymptomCapabilityStatement
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata
-canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata
+subject: https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata
+canonical: https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata
 expand: 1
 ---
 
@@ -11,8 +11,8 @@ Um eine dezentrale Datenauswertung mittel des Deutsche Forschungsdatenportal fü
 
 Nachfolgend wird aufgelistet weleche Inhalte verpflichtend im CapabilityStatement angegeben werden MÜSSEN. Darüber hinaus MUSS eine Konformität zu dem nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement Instanz unter [```CapabilityStatement.instantiates```](https://www.hl7.org/fhir/R4/capabilitystatement-definitions.html#CapabilityStatement.instantiates) angegeben werden.
 
-Canonical: ```https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata```
+Canonical: ```https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata```
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.symptom@2024.0.0-ballot)
+[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.symptom@2026.0.0)
 
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/CapabilityStatement/metadata}}
+{{render:https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata}}
