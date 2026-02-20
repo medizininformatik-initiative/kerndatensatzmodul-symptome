@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.symptom",
-  "version": "2024.0.0-ballot",
+  "version": "2026.0.0",
   "description": "Medizininformatik Initiative - Modul Symptom",
   "author": "juliansass",
   "fhirVersions": [
@@ -12,7 +12,7 @@
     "Symptom",
     "Phaenotyp"
   ],
-  "license": "CC0-1.0",
+  "license": "CC-BY-4.0",
   "homepage": "https://www.medizininformatik-initiative.de/",
   "directories" : {
     "lib" : "package",
@@ -25,9 +25,8 @@
       "url" : "https://www.medizininformatik-initiative.de/"
     }
   ],
-  "canonical": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/ImplementationGuide/mii-ig-symptom-de",
-  "url": "https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Symptom/MIIIGModulSymptom.html",
-  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/modul-symptom",
+  "jurisdiction": "urn:iso:std:iso:3166#DE",
   "dependencies": {
     "de.basisprofil.r4": "1.5.4",
     "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",

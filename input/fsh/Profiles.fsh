@@ -34,11 +34,20 @@ Description: "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobach
 
 Instance: mii-exa-symptom-arachnodactyly
 InstanceOf: Observation
-Description: "Phänotyp Example für Arachnodactyly"
+Description: "Observation Phänotyp Arachnodactyly"
 * status = #final "final"
 * subject = Reference(Patient/example)
 * code = $HPO#HP:0001166 "Arachnodactyly"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
+
+Instance: mii-exa-symptom-chestpain
+InstanceOf: Observation
+Description: "Observation Symptom Chest Pain"
+* status = #final "final"
+* subject = Reference(Patient/example)
+* code = $LOINC#75325-1 "Symptom"
+* valueCodeableConcept = $SCT#22253000
+* bodySite = $SCT#51185008
 
 Profile: MII_PR_Symptom_Condition
 Parent: Condition
