@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-symptom-chestpain",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "75325-1",
+        "system": "http://loinc.org",
+        "display": "Symptom"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "22253000",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "bodySite": {
+    "coding": [
+      {
+        "code": "51185008",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  }
+}
