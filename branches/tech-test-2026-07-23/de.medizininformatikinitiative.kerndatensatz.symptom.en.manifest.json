@@ -1,0 +1,6 @@
+{
+  "version" : "2026.0.0-rc.1",
+  "fhirVersion" : ["4.0.1"],
+  "date" : "20260723124353",
+  "name" : "de.medizininformatikinitiative.kerndatensatz.symptom"
+}

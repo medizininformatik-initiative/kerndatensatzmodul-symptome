@@ -1,0 +1,15 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	translate	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json	4550	-	0	0	0	0	0	0	11	55	0	0	0	0	0	0	0	1	0	0	0	119	95	0	0	0	2	0	2
+fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement.json	27801	11	0	0	2	0	0	0	5	58	0	0	0	0	1	0	0	0	0	0	0	97	88	0	1	0	2	0	1
+fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy.json	910	3	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	0	15	25	0	0	0	0	0	1
+fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly.json	516	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	14	18	0	0	0	0	0	0
+fsh-generated/resources/Observation-mii-exa-symptom-chestpain.json	570	1	0	0	0	0	0	0	0	1538	0	0	0	0	0	0	0	0	0	0	0	12	12	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-mii-lm-symptom.json	35465	13	0	51	0	0	0	1	0	112	0	0	1	0	0	0	0	2	0	0	0	419	1452	0	0	0	9	0	2
+fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition.json	6922	6	0	54	0	0	0	0	1	57	0	0	0	0	0	0	0	1	0	0	0	349	1533	0	0	0	7	0	3
+fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation.json	5513	5	0	53	0	0	1	0	0	80	0	0	0	0	1	0	0	0	0	0	0	299	833	0	0	0	8	0	1
+/fsh-generated/includes/fsh-link-references.md	573	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/fsh-generated/includes/menu.xml	1043	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/index.md	90	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	6871	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	0	0	0	0	0	0	0

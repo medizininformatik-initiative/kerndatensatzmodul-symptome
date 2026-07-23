@@ -1,0 +1,889 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/mii-cps-symptom-capabilitystatement> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cps-symptom-capabilitystatement"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement mii-cps-symptom-capabilitystatement</b></p><a name=\"mii-cps-symptom-capabilitystatement\"> </a><a name=\"hcmii-cps-symptom-capabilitystatement\"> </a><h2 id=\"title\">MII CPS Symptom CapabilityStatement</h2><ul><li>Implementation Guide Version: 2026.0.0-rc.1 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>xml</code>, <code>json</code></li><li>Published on: 2026-01-14 </li><li>Published by: Medizininformatik Initiative </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"/></div><h3 id=\"resourcesCap1\">Capabilities by Resource/Profile</h3><h4 id=\"resourcesSummary1\">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class=\"text-center\"><b title=\"GET a resource (read interaction)\">R</b></th><th class=\"text-center\"><b title=\"GET all set of resources of the type (search interaction)\">S</b></th><th class=\"text-center\"><b title=\"PUT a new resource version (update interaction)\">U</b></th><th class=\"text-center\"><b title=\"POST a new resource (create interaction)\">C</b></th><th><b title=\"Required and recommended search parameters\">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href=\"#Observation1-1\">Observation</a></td><td><a href=\"http://hl7.org/fhir/R4/observation.html\">http://hl7.org/fhir/StructureDefinition/Observation</a><br/><em>Additional supported profiles:</em><br/>  <a href=\"StructureDefinition-mii-pr-symptom-observation.html\">MII_PR_Symptom_Observationversion: 2026.0.0-rc.1)</a></td><td class=\"text-center\"><span title=\"SHALL\"><b>Y</b></span></td><td class=\"text-center\"><span title=\"SHALL\"><b>Y</b></span></td><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, _profile, based-on, category, code, code-value-concept, code-value-date, code-value-quantity, code-value-string, component-code, component-code-value-concept, component-code-value-quantity, component-data-absent-reason, component-value-concept, component-value-quantity, data-absent-reason, date, derived-from, device, encounter, focus, has-member, identifier, method, part-of, patient, performer, specimen, status, subject, value-concept, value-date, value-quantity, value-string</td><td/><td/><td/></tr><tr><td><a href=\"#Condition1-2\">Condition</a></td><td><a href=\"http://hl7.org/fhir/R4/condition.html\">http://hl7.org/fhir/StructureDefinition/Condition</a><br/><em>Additional supported profiles:</em><br/>  <a href=\"StructureDefinition-mii-pr-symptom-condition.html\">MII_PR_Symptom_Conditionversion: 2026.0.0-rc.1)</a></td><td class=\"text-center\"><span title=\"SHALL\"><b>Y</b></span></td><td class=\"text-center\"><span title=\"SHALL\"><b>Y</b></span></td><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, _profile, abatement-age, abatement-date, abatement-string, body-site, category, clinical-status, code, encounter, evidence, evidence-detail, identifier, onset-age, onset-date, onset-info, patient, recorded-date, severity, stage, subject, verification-status</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Observation1-1\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Observation</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"http://hl7.org/fhir/R4/observation.html\">Observation</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-mii-pr-symptom-observation.html\">MII_PR_Symptom_Observationversion: 2026.0.0-rc.1)</a></p></div><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-concept</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-date</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-quantity</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-string</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">component-code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">component-code-value-concept</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">component-code-value-quantity</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">component-data-absent-reason</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">component-value-concept</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">component-value-quantity</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">data-absent-reason</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">derived-from</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">device</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">focus</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">has-member</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">method</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">part-of</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-concept</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-quantity</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-string</a></td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Condition1-2\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Condition</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"http://hl7.org/fhir/R4/condition.html\">Condition</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-mii-pr-symptom-condition.html\">MII_PR_Symptom_Conditionversion: 2026.0.0-rc.1)</a></p></div><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">abatement-age</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">abatement-date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">abatement-string</a></td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">body-site</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">clinical-status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">evidence</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">evidence-detail</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">onset-age</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">onset-date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">onset-info</a></td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">recorded-date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">severity</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">stage</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/condition.html#search\">verification-status</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div></div>"
+  ] ;
+  fhir:CapabilityStatement.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata"] ;
+  fhir:CapabilityStatement.version [ fhir:value "2026.0.0-rc.1"] ;
+  fhir:CapabilityStatement.name [ fhir:value "MII_CPS_Symptom_CapabilityStatement"] ;
+  fhir:CapabilityStatement.title [ fhir:value "MII CPS Symptom CapabilityStatement"] ;
+  fhir:CapabilityStatement.status [ fhir:value "active"] ;
+  fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CapabilityStatement.date [ fhir:value "2026-01-14"^^xsd:date] ;
+  fhir:CapabilityStatement.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CapabilityStatement.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CapabilityStatement.description [ fhir:value "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Symptom/klinischer Phänotyp der Medizininformatik Initiative zu implementieren."] ;
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"] ;
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:CapabilityStatement.format [
+     fhir:value "xml" ;
+     fhir:index -1
+  ], [
+     fhir:value "json" ;
+     fhir:index -1
+  ] ;
+  fhir:CapabilityStatement.rest [
+     fhir:index -1 ;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ] ;
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Observation" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/StructureDefinition/Observation" ;
+         fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2026.0.0-rc.1" ;
+         fhir:index -1 ;
+         fhir:link <https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2026.0.0-rc.1> ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_profile" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-profile" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-profile>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "uri" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "based-on" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-based-on" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-based-on>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "category" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-category" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-category>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-code" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-code>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code-value-concept" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-code-value-concept" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-code-value-concept>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code-value-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-code-value-date" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-code-value-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code-value-quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code-value-string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-code-value-string" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-code-value-string>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "component-code" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-component-code" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-component-code>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "component-code-value-concept" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-component-code-value-concept" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-component-code-value-concept>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "component-code-value-quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-component-code-value-quantity" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-component-code-value-quantity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "component-data-absent-reason" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-component-data-absent-reason" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-component-data-absent-reason>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "component-value-concept" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-component-value-concept" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-component-value-concept>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "component-value-quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-component-value-quantity" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-component-value-quantity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "data-absent-reason" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-date" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "derived-from" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-derived-from" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-derived-from>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "device" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-device" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-device>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "encounter" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-encounter" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-encounter>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "focus" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-focus" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-focus>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "has-member" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-has-member" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-has-member>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "method" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-method" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-method>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "part-of" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-part-of" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-part-of>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-patient" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-patient>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "performer" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-performer" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-performer>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "specimen" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-specimen" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-specimen>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "status" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-status" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-status>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "subject" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-subject" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-subject>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "value-concept" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-value-concept" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-value-concept>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "value-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-value-date" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-value-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "value-quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-value-quantity" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-value-quantity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "value-string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Observation-value-string" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Observation-value-string>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Condition" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/StructureDefinition/Condition" ;
+         fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2026.0.0-rc.1" ;
+         fhir:index -1 ;
+         fhir:link <https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2026.0.0-rc.1> ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_profile" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-profile" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-profile>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "uri" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "abatement-age" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-abatement-age" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-abatement-age>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "abatement-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-abatement-date" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-abatement-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "abatement-string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-abatement-string" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-abatement-string>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "body-site" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-body-site" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-body-site>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "category" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-category" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-category>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "clinical-status" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-clinical-status" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-clinical-status>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "code" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-code" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-code>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "encounter" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-encounter" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-encounter>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "evidence" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-evidence" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-evidence>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "evidence-detail" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-evidence-detail" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-evidence-detail>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "onset-age" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-onset-age" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-onset-age>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "onset-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-onset-date" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-onset-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "onset-info" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-onset-info" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-onset-info>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/clinical-patient" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/clinical-patient>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "recorded-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-recorded-date" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-recorded-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "severity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-severity" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-severity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "stage" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-stage" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-stage>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "subject" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-subject" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-subject>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "verification-status" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Condition-verification-status" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Condition-verification-status>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/mii-cps-symptom-capabilitystatement.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

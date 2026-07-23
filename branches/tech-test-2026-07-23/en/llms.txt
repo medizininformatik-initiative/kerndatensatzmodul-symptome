@@ -1,0 +1,31 @@
+# de.medizininformatikinitiative.kerndatensatz.symptom#2026.0.0-rc.1: MII IG Symptom(en)
+
+## Pages
+
+* [Home](index.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### Logicals
+
+* [MII LM Symptom](StructureDefinition-mii-lm-symptom.md)
+
+### Resource Profiles
+
+* [MII_PR_Symptom_Condition](StructureDefinition-mii-pr-symptom-condition.md)
+* [MII_PR_Symptom_Observation](StructureDefinition-mii-pr-symptom-observation.md)
+
+### CapabilityStatements
+
+* [MII CPS Symptom CapabilityStatement](CapabilityStatement-mii-cps-symptom-capabilitystatement.md)
+
+### ImplementationGuides
+
+* [MII IG Symptom](ImplementationGuide-mii-ig-symptom.md)
+
+### Examples
+
+* [mii-exa-symptom-vitreoretinochoroidopathy (Condition)](Condition-mii-exa-symptom-vitreoretinochoroidopathy.md)
+* [mii-exa-symptom-arachnodactyly (Observation)](Observation-mii-exa-symptom-arachnodactyly.md)
+* [mii-exa-symptom-chestpain (Observation)](Observation-mii-exa-symptom-chestpain.md)

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-symptom-arachnodactyly"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-symptom-arachnodactyly</b></p><a name="mii-exa-symptom-arachnodactyly"> </a><a name="hcmii-exa-symptom-arachnodactyly"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://github.com/phenopackets/core-ig/CodeSystem/hpo HP:0001166}">Arachnodactyly</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/Patient/example">Patient/example</a></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA9633-4}">Present</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <code value="HP:0001166"/>
+      <display value="Arachnodactyly"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA9633-4"/>
+      <display value="Present"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

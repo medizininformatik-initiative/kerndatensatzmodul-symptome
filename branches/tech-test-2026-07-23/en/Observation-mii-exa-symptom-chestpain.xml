@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-symptom-chestpain"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-symptom-chestpain</b></p><a name="mii-exa-symptom-chestpain"> </a><a name="hcmii-exa-symptom-chestpain"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 75325-1}">Symptom</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/Patient/example">Patient/example</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 22253000}">Pain</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 51185008}">Thoracic structure</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="75325-1"/>
+      <display value="Symptom"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="22253000"/>
+    </coding>
+  </valueCodeableConcept>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="51185008"/>
+    </coding>
+  </bodySite>
+</Observation>

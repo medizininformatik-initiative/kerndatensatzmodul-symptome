@@ -1,0 +1,35 @@
+[{
+  "id" : "mii-cps-symptom-capabilitystatement",
+  "type" : "CapabilityStatement",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata",
+  "version" : "2026.0.0-rc.1",
+  "name" : "MII_CPS_Symptom_CapabilityStatement"
+},
+{
+  "id" : "mii-ig-symptom",
+  "type" : "ImplementationGuide",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/ImplementationGuide/mii-ig-symptom",
+  "version" : "2026.0.0-rc.1",
+  "name" : "MII_IG_Symptom"
+},
+{
+  "id" : "mii-pr-symptom-condition",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
+  "version" : "2026.0.0-rc.1",
+  "name" : "MII_PR_Symptom_Condition"
+},
+{
+  "id" : "mii-pr-symptom-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation",
+  "version" : "2026.0.0-rc.1",
+  "name" : "MII_PR_Symptom_Observation"
+},
+{
+  "id" : "mii-lm-symptom",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom",
+  "version" : "2026.0.0-rc.1",
+  "name" : "MII_LM_Symptom"
+}]
