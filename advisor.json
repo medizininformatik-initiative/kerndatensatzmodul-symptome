@@ -7,6 +7,7 @@
     "UNABLE_TO_INFER_CODESYSTEM@StructureDefinition.*",
     "Terminology_TX_NoValid_16@StructureDefinition.*",
     "UNABLE_TO_INFER_CODESYSTEM@ImplementationGuide.definition.parameter.code",
-    "IG_DEPENDENCY_CLASH_CANONICAL@ImplementationGuide.dependsOn"
+    "IG_DEPENDENCY_CLASH_CANONICAL@ImplementationGuide.dependsOn",
+    "Unknown_Code_in_Version@ImplementationGuide.extension"
   ]
 }
