@@ -147,7 +147,13 @@ jobs:
       # (verified at the pinned SHA); without this the advisor.json shipped at
       # the repo root would be read by NOTHING and the "suppressed via
       # advisor.json" contract in this file's header would be false.
-      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json"
+      # MIGRATION EDIT: "-output validation.json" added — the reusable at the
+      # pinned SHA never writes the bundle its own renderer step reads
+      # (validation-outcome-markdown-renderer ENOENTs on ./validation.json even
+      # when the validator reports 0 errors); the options are passed verbatim
+      # to validator_cli, so the validator writes the bundle itself.
+      # Upstream fix candidate for kerndatensatz-meta ci_java_validation.yml.
+      JAVA_VALIDATION_OPTIONS: "-advisor-file advisor.json -output validation.json"
       VALIDATION_REPORT_FILTERS: |
         filename | messageId | detailsWildcard | location
     # Secret-name reconciliation: the MII reusable workflow declares
