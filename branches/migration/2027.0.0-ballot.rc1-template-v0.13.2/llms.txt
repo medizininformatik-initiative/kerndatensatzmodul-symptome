@@ -1,0 +1,47 @@
+# de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1: MII IG Symptom(de)
+
+## Pages
+
+* [Startseite](de/index.md)
+* [Beispiele](de/examples.md)
+* [Versionierung](de/version-history.md)
+* [Anleitung für Implementierende](de/implementer-guidance.md)
+* [Profile](de/profiles.md)
+* [Artefaktübersicht](de/artifacts.md)
+* [Hinweise zur Übersetzung](de/translationinfo.md)
+* [Änderungshistorie](de/changes.md)
+* [Logische Modelle](de/logical-models.md)
+* [Anleitung](de/guidance.md)
+* [Downloads](de/downloads.md)
+* [Sicherheit und Datenschutz](de/security-and-privacy.md)
+* [CapabilityStatements](de/capability-statements.md)
+* [UML-Diagramme](de/uml-diagrams.md)
+
+## Resources
+
+### Logicals
+
+* [MII LM Symptom](de/StructureDefinition-mii-lm-symptom.md)
+
+### Resource Profiles
+
+* [MII_PR_Symptom_Condition](de/StructureDefinition-mii-pr-symptom-condition.md)
+* [MII_PR_Symptom_Observation](de/StructureDefinition-mii-pr-symptom-observation.md)
+
+### CapabilityStatements
+
+* [MII CPS Symptom CapabilityStatement](de/CapabilityStatement-mii-cps-symptom-capabilitystatement.md)
+
+### ImplementationGuides
+
+* [MII IG Symptom](de/ImplementationGuide-mii-ig-symptom.md)
+
+### Parameters
+
+* [mii-param-symptom-manifest](de/Parameters-mii-param-symptom-manifest.md)
+
+### Examples
+
+* [mii-exa-symptom-vitreoretinochoroidopathy (Condition)](de/Condition-mii-exa-symptom-vitreoretinochoroidopathy.md)
+* [mii-exa-symptom-arachnodactyly (Observation)](de/Observation-mii-exa-symptom-arachnodactyly.md)
+* [mii-exa-symptom-chestpain (Observation)](de/Observation-mii-exa-symptom-chestpain.md)

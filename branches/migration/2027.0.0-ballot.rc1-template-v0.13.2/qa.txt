@@ -1,0 +1,560 @@
+MII_IG_Symptom : Validation Results
+=========================================
+
+err = 34, warn = 168, info = 331
+IG Publisher Version: 2.3.2 Out of date - current version is 2.3.3
+Generated Mon Aug 31 20:42:49 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
+ Build Errors : 0 / 4 / 0
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement : 0 / 1 / 62
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy : 2 / 0 / 1
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/ImplementationGuide-mii-ig-symptom : 30 / 9 / 47
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly : 1 / 3 / 2
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-chestpain : 1 / 2 / 1
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/StructureDefinition-mii-lm-symptom : 0 / 137 / 46
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition : 0 / 6 / 90
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation : 0 / 6 / 93
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/input/resources/Parameters-expansion-manifest : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be de.medizininformatikinitiative.kerndatensatz.symptom
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/mii-exa-symptom-vitreoretinochoroidopathy.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Parameters/mii-param-symptom-manifest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 5: An HTML fragment from the set [expansion-params.xhtml, expansion-params.xhtml] is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement.json ==
+INFORMATION: CapabilityStatement.rest[0].resource[0].profile: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[0].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-id to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[1].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-lastUpdated to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[2].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-profile to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[3].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-based-on to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[4].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-category to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[5].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-code to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[6].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-code-value-concept to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[7].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-code-value-date to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[8].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[9].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-code-value-string to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[10].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-component-code to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[11].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-component-code-value-concept to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[12].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-component-code-value-quantity to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[13].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-component-data-absent-reason to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[14].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-component-value-concept to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[15].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-component-value-quantity to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[16].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[17].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-date to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[18].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-derived-from to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[19].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-device to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[20].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-encounter to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[21].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-focus to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[22].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-has-member to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[23].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-identifier to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[24].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-method to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[25].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-part-of to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[26].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-patient to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[27].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-performer to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[28].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-specimen to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[29].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-status to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[30].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-subject to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[31].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-value-concept to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[32].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-value-date to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[33].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-value-quantity to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[0].searchParam[34].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Observation-value-string to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].profile: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[0].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-id to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[1].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-lastUpdated to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[2].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Resource-profile to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[3].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-abatement-age to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[4].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-abatement-date to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[5].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-abatement-string to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[6].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-body-site to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[7].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-category to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[8].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-clinical-status to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[9].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-code to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[10].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-encounter to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[11].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-evidence to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[12].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-evidence-detail to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[13].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-identifier to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[14].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-onset-age to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[15].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-onset-date to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[16].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-onset-info to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[17].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/clinical-patient to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[18].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-recorded-date to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[19].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-severity to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[20].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-stage to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[21].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-subject to 4.0.1
+INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[22].definition: Pinned the version of http://hl7.org/fhir/SearchParameter/Condition-verification-status to 4.0.1
+WARNING: CapabilityStatement/mii-cps-symptom-capabilitystatement: CapabilityStatement.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
+INFORMATION: Resource: The resource CapabilityStatement/mii-cps-symptom-capabilitystatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy.json ==
+ERROR: Condition/mii-exa-symptom-vitreoretinochoroidopathy: Condition.code.coding[0].display: Wrong Display Name 'Autosomal dominant vitreoretinochoroidopathy (disorder)' for http://snomed.info/sct#711162004. There are no valid display names found for language(s) 'de'. Default display is 'Autosomal dominant vitreoretinochoroidopathy'
+ERROR: Condition/mii-exa-symptom-vitreoretinochoroidopathy: Condition.subject: Ressource 'Patient/example-patient' nicht auffindbar
+== fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json ==
+INFORMATION: ImplementationGuide.meta.profile[0]: Pinned the version of http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide to 2.0.0
+INFORMATION: ImplementationGuide.meta.profile[1]: Pinned the version of http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide to 2.0.0
+INFORMATION: ImplementationGuide.meta.profile[2]: Pinned the version of http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide to 2.0.0
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.language: A definition for CodeSystem 'urn:ietf:bcp:47' could not be found, so the code cannot be validated
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://spdx.org/licenses/' could not be found, so the code cannot be validated
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0].value.ofType(CodeableConcept): Keiner der angegebenen Codes ist im Valueset 'SPDXLicense' (http://hl7.org/fhir/ValueSet/spdx-license|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://spdx.org/licenses/#CC-BY-4.0)
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0].value.ofType(CodeableConcept).coding[0]: Das CodeSystem http://spdx.org/licenses/ ist unbekannt
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[4].value.ofType(CodeableConcept).coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes#package for language(s) 'de'. The display is 'Package' which is a valid display for the default language
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[5].extension[2].value.ofType(uri): URL-Wert 'https://www.medizininformatik-initiative.de/fhir/modul-symptom' löst nicht auf
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[17].value.ofType(CodeableConcept): Reference to experimental CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl|25.6.0-e
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[1].uri: Canonical URL 'http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4' kann nicht aufgelöst werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[0].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[0].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[1].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[1].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[1].page[0].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[1].page[0].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[1].page[1].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[1].page[1].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[2].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[2].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[3].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[3].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[4].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[4].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[5].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[5].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[6].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[6].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[7].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[7].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[8].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[8].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[9].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[9].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[10].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[10].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[11].title.extension[0].extension[0].value.ofType(code): Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden
+ERROR: ImplementationGuide/mii-ig-symptom: ImplementationGuide.definition.page.page[11].title.extension[0].extension[0].value.ofType(code): Der angegebene Wert ('en') ist nicht im ValueSet 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), und ein Code aus diesem Valueset ist erforderlich) (error message = Der angegebene Code '#en' befindet sich nicht im ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; Die System-URI konnte für den Code en im ValueSet http://hl7.org/fhir/ValueSet/all-languages|4.0.1 nicht ermittelt werden)
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[1]: The canonical URL http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4 doesn't point to an actual ImplementationGuide resource
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.eu.base#0.1.0 released on 2025-10-26, but the most recent appropriate version is 2.0.0. This reference is getting old and the more recent version should be considered
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[5]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[6]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[7]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[8]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[9]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[10]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[11]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[12]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[13]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[15]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[16]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[17]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.language: Das CodeSystem null ist unbekannt
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[4]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[5]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[13]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[14]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[2]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[3]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[4]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[5]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[6]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[7]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[8]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[9]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[10]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[11]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[12]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[14]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[15]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[16]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[17]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0 überein.
+INFORMATION: Resource: The resource ImplementationGuide/mii-ig-symptom could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly.json ==
+WARNING: Observation/mii-exa-symptom-arachnodactyly: Observation.code.coding[0].system: A definition for CodeSystem 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' could not be found, so the code cannot be validated
+ERROR: Observation/mii-exa-symptom-arachnodactyly: Observation.subject: Ressource 'Patient/example' nicht auffindbar
+INFORMATION: Observation/mii-exa-symptom-arachnodactyly: Observation.value.ofType(CodeableConcept).coding[0].display: 'Present' is the default display; the code system http://loinc.org has no Display Names for the language de
+WARNING: Observation/mii-exa-symptom-arachnodactyly: Observation: Alle Observations sollten einen Performer haben
+WARNING: Observation/mii-exa-symptom-arachnodactyly: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
+== fsh-generated/resources/Observation-mii-exa-symptom-chestpain.json ==
+ERROR: Observation/mii-exa-symptom-chestpain: Observation.subject: Ressource 'Patient/example' nicht auffindbar
+WARNING: Observation/mii-exa-symptom-chestpain: Observation: Alle Observations sollten einen Performer haben
+WARNING: Observation/mii-exa-symptom-chestpain: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
+== fsh-generated/resources/StructureDefinition-mii-lm-symptom.json ==
+INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[2].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[2].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[3].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[5].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[5].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[6].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[6].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[13].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[15].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[15].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[16].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[16].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[17].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[19].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[19].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[20].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[21].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[22].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[24].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[24].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[25].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[25].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[33].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[36].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[36].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[40].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[42].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[42].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[43].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[43].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[49].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[51].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[51].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[52].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[52].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[59].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[61].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[61].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[62].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[63].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[0]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[1]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[2]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[3]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[4]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[5]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[6]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[7]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[8]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[9]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[10]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[11]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[12]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[13]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[14]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[15]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[16]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[17]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[18]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[19]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[20]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[21].short: Wert sollte nicht mit Leerzeichen beginnen oder enden
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[21]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[22]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[23]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[24]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[25]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[26]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[27]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[28]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[29]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[30]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[31]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[32]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[33]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[34]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[35]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[36]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[37]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[38]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[39]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[40]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[41]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[42]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[43]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[44]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[45]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[46]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[47]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[48]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[49]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[50]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[51]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[52]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[53]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[54]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[55]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[56]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[57]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[58]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[59]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[60]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[61]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[62]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[63]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[64]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[65]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[66]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[67]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[68]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[69]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[70]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[71]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[72]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[73]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[74]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[75]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[76]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[77]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.snapshot.element[78]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[0]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[1]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[2]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[3]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[4]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[5]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[6]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[7]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[8]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[9]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[10]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[11].short: Wert sollte nicht mit Leerzeichen beginnen oder enden
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[11]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[12]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[13]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[14]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[15]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[16]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[17]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[18]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[19]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[20]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[21]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[22]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[23]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[24]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[25]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[26]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[27]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[28]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[29]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[30]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[31]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[32]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[33]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[34]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[35]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[36]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[37]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[38]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[39]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[40]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[41]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[42]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[43]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[44]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[45]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[46]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[47]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[48]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[49]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[50]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[51]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[52]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[53]: Regel eld-20 fehlgeschlagen
+WARNING: StructureDefinition/mii-lm-symptom: StructureDefinition.differential.element[54]: Regel eld-20 fehlgeschlagen
+INFORMATION: Resource: The resource StructureDefinition/mii-lm-symptom could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition.json ==
+INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[2].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[3].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[4].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[5].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[6].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[7].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[2].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[3].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[4].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[4].binding.extension[0].value[x]: Pinned the version of http://hl7.org/fhir/ValueSet/all-languages to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[5].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[7].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[7].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[8].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-assertedDate to 5.3.0
+INFORMATION: StructureDefinition.snapshot.element[8].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[8].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[9].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[9].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[10].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[11].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[12].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[13].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[14].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[15].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[16].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[16].binding.valueSet: Pinned the version of http://hl7.org/fhir/ValueSet/body-site to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[18].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[18].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[19].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0
+INFORMATION: StructureDefinition.snapshot.element[19].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[19].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[21].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[21].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[23].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+INFORMATION: StructureDefinition.snapshot.element[23].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[24].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[25].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[26].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[27].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[28].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[29].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[31].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[31].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[32].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[34].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[34].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[37].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[39].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[39].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[40].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+INFORMATION: StructureDefinition.snapshot.element[40].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[40].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[42].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[43].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[44].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[45].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[46].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[46].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[48].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[48].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[49].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[49].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[50].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[51].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[52].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[53].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[53].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[55].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[55].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[56].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[56].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[57].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[58].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[59].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.differential.element[2].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-assertedDate to 5.3.0
+INFORMATION: StructureDefinition.differential.element[9].binding.valueSet: Pinned the version of http://hl7.org/fhir/ValueSet/body-site to 4.0.1
+INFORMATION: StructureDefinition.differential.element[10].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0
+INFORMATION: StructureDefinition.differential.element[11].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+INFORMATION: StructureDefinition.differential.element[17].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+INFORMATION: StructureDefinition.differential.element[19].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
+INFORMATION: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate' to 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.snapshot.element[19].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0'
+INFORMATION: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.snapshot.element[36].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.differential.element[2].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate' to 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.differential.element[10].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition: Condition is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+INFORMATION: Resource: The resource StructureDefinition/mii-pr-symptom-condition could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation.json ==
+INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[2].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[3].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[4].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/DomainResource to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[5].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[0].constraint[6].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[2].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[3].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[4].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[4].binding.extension[0].value[x]: Pinned the version of http://hl7.org/fhir/ValueSet/all-languages to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[5].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[7].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[7].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[8].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo to 5.3.0
+INFORMATION: StructureDefinition.snapshot.element[8].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[8].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[10].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[10].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[12].type[0].targetProfile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[12].type[0].targetProfile[1]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[12].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[13].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[13].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[14].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[15].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[16].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[17].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[18].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[19].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[20].type[0].targetProfile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Patient to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[20].type[0].targetProfile[1]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Group to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[20].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[21].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[22].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[23].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[24].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[25].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[26].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[27].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[28].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[29].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[30].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[30].binding.valueSet: Pinned the version of http://hl7.org/fhir/ValueSet/body-site to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[32].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[32].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[33].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0
+INFORMATION: StructureDefinition.snapshot.element[33].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[33].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[37].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+INFORMATION: StructureDefinition.snapshot.element[37].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[38].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[39].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[40].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[41].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[42].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[43].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[43].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[45].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[45].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[46].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[46].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[47].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[48].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[49].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[50].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[51].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[52].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[53].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[54].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[55].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[57].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[57].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[58].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[58].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[59].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[60].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[61].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[62].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[63].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
+INFORMATION: StructureDefinition.differential.element[2].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo to 5.3.0
+INFORMATION: StructureDefinition.differential.element[3].type[0].targetProfile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Observation to 4.0.1
+INFORMATION: StructureDefinition.differential.element[3].type[0].targetProfile[1]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.differential.element[8].type[0].targetProfile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Patient to 4.0.1
+INFORMATION: StructureDefinition.differential.element[8].type[0].targetProfile[1]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Group to 4.0.1
+INFORMATION: StructureDefinition.differential.element[14].binding.valueSet: Pinned the version of http://hl7.org/fhir/ValueSet/body-site to 4.0.1
+INFORMATION: StructureDefinition.differential.element[15].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0
+INFORMATION: StructureDefinition.differential.element[16].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo' to 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.snapshot.element[33].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.differential.element[2].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo' to 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.differential.element[15].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0'
+WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition: Observation is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+INFORMATION: Resource: The resource StructureDefinition/mii-pr-symptom-observation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== input/resources/Parameters-expansion-manifest.json ==
