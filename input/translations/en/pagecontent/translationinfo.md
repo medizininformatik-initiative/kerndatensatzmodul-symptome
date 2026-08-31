@@ -1,17 +1,22 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Source: kerndatensatz-basis input/pagecontent/translationinfo.md; the
-     mechanism is documented in docs/recipes/add-translation.md. German mirror:
-     input/translations/de/pagecontent/translationinfo.md. -->
+<!-- TODO:REVIEW — MACHINE TRANSLATION of input/pagecontent/translationinfo.md
+     (DE-first migration 2026-08-31). Review at Gate C before release. -->
+### Translation information
 
-This guide is written in **English** (the default language); **German** is the
-translation. English is therefore both the base rendering of the guide and the
-`/en/` rendering; use the language switcher at the top right to move between
-`/en/` and `/de/`.
+This guide is **German-language** (default language); **English** is the
+translation. German is thus both the base rendering of the guide and the
+`/de/` rendering; use the language switcher at the top right to switch
+between `/de/` and `/en/`.
 
-Translated pages live under `input/translations/de/pagecontent/` (same file name
-as the English page); resource translations are `.po` files under
-`input/translations/de/`. Details:
-[`docs/recipes/add-translation.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/blob/main/docs/recipes/add-translation.md) in this repository.
+Translated pages live under `input/translations/en/pagecontent/` (same file
+name as the German page); the translation of the page titles as a `.po` file
+under `input/translations/en/`.
 
-> [TODO: Record which parts of your module are already translated into German.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- DERIVED:summary source=none gate=C -->
+> **Written during migration - review before release.** **Translation
+> status:** The German pages are the source, authored and answered for by the
+> module authors (taken over from the Simplifier guide "MII IG Symptom
+> v2026"). The English pages were **machine-translated** during the migration
+> and are individually marked `TODO:REVIEW` until they have been reviewed
+> (migration review gate C).
+{: .ig-highlight .ig-highlight-blue}

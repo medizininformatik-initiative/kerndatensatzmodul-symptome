@@ -28,7 +28,7 @@ Stelle auf die entsprechenden
 verwiesen, die auch für diesen ImplementationGuide gelten.</p>
 </div>
 
-<!-- DERIVED:overview source=none gate=B -->
+<!-- DERIVED:summary source=none gate=B -->
 > **Written during migration - review before release.** Die Profile dieses
 > Moduls:
 > **[MII PR Symptom Observation](StructureDefinition-mii-pr-symptom-observation.html)**

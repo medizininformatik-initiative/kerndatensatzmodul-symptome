@@ -81,7 +81,7 @@ werden können.</p>
 
 ---
 
-<!-- DERIVED:overview source=none gate=B -->
+<!-- DERIVED:summary source=none gate=B -->
 > **Written during migration - review before release.** Die folgenden Einträge
 > wurden bei der Migration aus der Git- und Registry-Historie des Moduls
 > rekonstruiert (v2026-Zyklus Jan–Feb 2026, Ballot-Paket 2023-11-17).

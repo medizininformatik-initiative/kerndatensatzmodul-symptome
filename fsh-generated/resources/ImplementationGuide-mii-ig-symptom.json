@@ -321,11 +321,6 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "researcher-guidance.html",
-              "title": "Anleitung für Forschende",
-              "generation": "markdown"
-            },
-            {
               "nameUrl": "implementer-guidance.html",
               "title": "Anleitung für Implementierende",
               "generation": "markdown"
@@ -348,38 +343,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "extensions.html",
-          "title": "Extensions",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "capability-statements.html",
           "title": "CapabilityStatements",
           "generation": "markdown"
         },
         {
-          "nameUrl": "search-parameters.html",
-          "title": "Suchparameter",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "operations.html",
-          "title": "Operationen",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "logical-models.html",
           "title": "Logische Modelle",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "value-sets.html",
-          "title": "ValueSets",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "code-systems.html",
-          "title": "CodeSystems",
           "generation": "markdown"
         },
         {
@@ -398,11 +368,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "metadata.html",
-          "title": "Metadaten-Übersicht",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "version-history.html",
           "title": "Versionierung",
           "generation": "markdown"
@@ -415,11 +380,6 @@
         {
           "nameUrl": "translationinfo.html",
           "title": "Hinweise zur Übersetzung",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "rendering-artifacts.html",
-          "title": "Artefakt-Rendering (Demo)",
           "generation": "markdown"
         }
       ]

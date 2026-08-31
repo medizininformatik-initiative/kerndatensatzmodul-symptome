@@ -1,8 +1,17 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Source: kerndatensatz-basis input/pagecontent/uml-diagrams.md.
-     German mirror: input/translations/de/pagecontent/uml-diagrams.md. -->
+<!-- TODO:REVIEW — MACHINE TRANSLATION of input/pagecontent/uml-diagrams.md
+     (DE-first migration 2026-08-31). Review at Gate C before release. -->
 
-UML overviews of the data models of the **Symptom** module and their relationships. Editable sources (e.g. PlantUML) belong in `input/images-source/`, the rendered images in `input/images/`.
+### UML
 
-> [TODO: Add your module's UML diagrams, or delete this page if there are none.]
-{: .ig-highlight .ig-highlight-grey}
+As a more abstract version of an information model and to better illustrate
+the relationships of the subject-matter concepts to one another, a UML class
+diagram was created based on the specifications in ART-DECOR. Concepts
+represented as groups in ART-DECOR are modeled as separate classes that have
+association relationships to one another here. This logical model serves only
+to represent the data elements and their descriptions. The data types and
+cardinalities used are not to be regarded as binding. This is finally
+determined by the FHIR profiles. The assignment of the FHIR elements to the
+ART-DECOR specification is described in the comment field in ART-DECOR.
+
+![UML class diagram of the Symptoms module](ig_bilder_UML.png)

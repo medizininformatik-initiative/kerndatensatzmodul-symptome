@@ -1,0 +1,21 @@
+2026-08-31T20:00:45Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/changes.md:84  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/examples.md:6  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/profiles.md:31  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/translationinfo.md:17  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/changes.md:76  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/examples.md:5  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/profiles.md:28  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/translationinfo.md:15  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  INFO   11  derived-scan  result  files=32 markers=10 gates=A:0,B:10,C:0 kinds=bridge:10 langs=default,en findings=8 (malformed=8) out=./migration-log/derived-content.tsv exit=1
+2026-08-31T20:00:45Z  WARN   11  derived-scan  derived-scan: 8 finding(s) -- a marker that does not parse, renders no box, or is missing from a language mirror is derived content that is NOT marked where it counts.
+    Every finding above names its file:line and its exact action.
+    The TSV was still written: it is the artefact, not the verdict.

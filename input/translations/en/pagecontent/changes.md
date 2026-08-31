@@ -73,7 +73,7 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
-<!-- DERIVED:overview source=none gate=B -->
+<!-- DERIVED:summary source=none gate=B -->
 > **Written during migration - review before release.** The entries below were
 > reconstructed during migration from the module's git and registry history
 > (v2026 cycle Jan–Feb 2026, ballot package 2023-11-17).

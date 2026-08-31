@@ -14,7 +14,7 @@ Sie zwischen `/de/` und `/en/`.
 Dateiname wie die deutsche Seite); die Übersetzung der Seitentitel als
 `.po`-Datei unter `input/translations/en/`.
 
-<!-- DERIVED:overview source=none gate=C -->
+<!-- DERIVED:summary source=none gate=C -->
 > **Written during migration - review before release.** **Stand der
 > Übersetzung:** Die deutschen Seiten sind die von den Modul-Autor:innen
 > verantwortete Quelle (übernommen aus dem Simplifier-Leitfaden „MII IG

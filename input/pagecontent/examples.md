@@ -3,7 +3,7 @@
      scaffold example (example-patient); replaced with this module's real examples
      (source: input/fsh/Profiles.fsh instances; Studie-migration lesson). -->
 
-<!-- DERIVED:overview source=none gate=B -->
+<!-- DERIVED:summary source=none gate=B -->
 > **Written during migration - review before release.** Dieses Modul enthält
 > die folgenden Beispielinstanzen. Da die beiden Profile dieses Moduls als
 > **abstrakt** markiert sind, sind die Beispiele Instanzen der

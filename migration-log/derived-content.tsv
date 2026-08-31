@@ -1,6 +1,19 @@
 page	lang	kind	source	gate	line	excerpt
 capability-statements	default	bridge	TechnischeImplementierung-1.x/CapabilityStatement.page.md	B	28	**Written during migration - review before release.** Das CapabilityStatement dieses Moduls mit allen verpflichtenden In
+capability-statements	en	bridge	TechnischeImplementierung-1.x/CapabilityStatement.page.md	B	23	**Written during migration - review before release.** This module's CapabilityStatement with all mandatory interactions,
+changes	default	summary	none	B	84	**Written during migration - review before release.** Die folgenden Einträge wurden bei der Migration aus der Git- und R
+changes	en	summary	none	B	76	**Written during migration - review before release.** The entries below were reconstructed during migration from the mod
+examples	default	summary	none	B	6	**Written during migration - review before release.** Dieses Modul enthält die folgenden Beispielinstanzen. Da die beide
+examples	en	summary	none	B	5	**Written during migration - review before release.** This module contains the following example instances. Since this m
 guidance	default	bridge	none	B	6	**Written during migration - review before release.** Diese Seite beschreibt Szenarien für die Anwendung des Moduls Symp
+guidance	en	bridge	none	B	5	**Written during migration - review before release.** This page describes scenarios for applying the Symptoms/clinical p
 index	default	bridge	none	B	92	**Written during migration - review before release.** Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sus
+index	en	bridge	none	B	88	**Written during migration - review before release.** Formal dependencies of this module (see `dependencies` in `sushi-c
 logical-models	default	bridge	AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md	B	20	**Written during migration - review before release.** Das Logical Model dieses Moduls ist **[MII LM Symptom](StructureDe
 logical-models	default	bridge	none	B	36	**Written during migration - review before release.** Die Zuordnung der Datensatz-Elemente zu den FHIR-Elementen der bei
+logical-models	en	bridge	AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md	B	13	**Written during migration - review before release.** This module's Logical Model is **[MII LM Symptom](StructureDefinit
+logical-models	en	bridge	none	B	28	**Written during migration - review before release.** The assignment of the dataset elements to the FHIR elements of the
+profiles	default	summary	none	B	31	**Written during migration - review before release.** Die Profile dieses Moduls: **[MII PR Symptom Observation](Structur
+profiles	en	summary	none	B	28	**Written during migration - review before release.** This module's profiles: **[MII PR Symptom Observation](StructureDe
+translationinfo	default	summary	none	C	17	**Written during migration - review before release.** **Stand der Übersetzung:** Die deutschen Seiten sind die von den M
+translationinfo	en	summary	none	C	15	**Written during migration - review before release.** **Translation status:** The German pages are the source, authored 

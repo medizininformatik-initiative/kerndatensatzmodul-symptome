@@ -274,3 +274,60 @@ page-structure-advice: 15 source pages (from guide-tree) + 1 union, 22 target pa
 2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/intro-notes  kind=dir  files=2
 2026-08-31T19:56:07Z  INFO   5.4  fql-scan  result  mapped=0 unknown=0 files=31  exit=0  no directives found
 2026-08-31T19:56:07Z  INFO   5.4  fql-scan-migrated  done  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  exit=0 raw_log=migration-log/fql-scan-migrated.log raw_log_lines=5
+2026-08-31T19:59:54Z  INFO   5.6  sushi-build  start  cmd=`npx --yes fsh-sushi@3.20.1 .`  raw_log=migration-log/sushi-build.log
+2026-08-31T20:00:00Z  INFO   5.6  sushi-build  done  cmd=`npx --yes fsh-sushi@3.20.1 .`  exit=0 raw_log=migration-log/sushi-build.log raw_log_lines=46
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json migration-log/menu-titles-en-seed.txt en input/translations/en/ImplementationGuide-mii-ig-symptom.po`  raw_log=migration-log/gen-page-title-po.log
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  params  ig=fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json seed=migration-log/menu-titles-en-seed.txt lang=en out=input/translations/en/ImplementationGuide-mii-ig-symptom.po
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  seed  path=migration-log/menu-titles-en-seed.txt  lines=24 entries=24 matched=14 applied=14 unused=10
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Anleitung für Forschende'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Artefakt-Rendering (Demo)'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='CodeSystems'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Extensions'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Inhaltsverzeichnis'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='MII IG Symptom'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Metadaten-Übersicht'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Operationen'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Suchparameter'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='ValueSets'
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  written  out=input/translations/en/ImplementationGuide-mii-ig-symptom.po pages=15 units=15 translated=14 untranslated=1 carried_over=0 preserved_foreign=0 header_preserved=False
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  silent-partial-success: 1 of 15 page-title unit(s) have an empty msgstr and fall back to de
+    UNTRANSLATED: Table of Contents
+    Translate these msgstr by hand -- they are pages the seed did not
+    cover (typically pages that are not menu entries), and they belong
+    in the report's ② review queue.
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  result  exit=1  written with 1 untranslated unit(s)
+2026-08-31T20:00:17Z  ERROR  5.5  gen-page-title-po  failed  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json migration-log/menu-titles-en-seed.txt en input/translations/en/ImplementationGuide-mii-ig-symptom.po`  exit=1 raw_log=migration-log/gen-page-title-po.log raw_log_lines=19
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/gen-page-title-po.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T20:00:45Z  INFO   5.5  gen-page-title-po  hand-filled the 1 untranslated unit: msgid 'Table of Contents' -> msgstr 'Table of Contents' (SUSHI writes the toc title in English even in a German IG; the EN translation is the identity); 14/15 seeded; 10 unused seed entries = M9-removed pages (expected)
+2026-08-31T20:00:45Z  INFO   5.4d  derived-scan-post  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  raw_log=migration-log/derived-scan-post.log
+2026-08-31T20:00:45Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/changes.md:84  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/examples.md:6  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/profiles.md:31  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/translationinfo.md:17  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/changes.md:76  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/examples.md:5  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/profiles.md:28  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/translationinfo.md:15  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  INFO   11  derived-scan  result  files=32 markers=10 gates=A:0,B:10,C:0 kinds=bridge:10 langs=default,en findings=8 (malformed=8) out=./migration-log/derived-content.tsv exit=1
+2026-08-31T20:00:45Z  WARN   11  derived-scan  derived-scan: 8 finding(s) -- a marker that does not parse, renders no box, or is missing from a language mirror is derived content that is NOT marked where it counts.
+    Every finding above names its file:line and its exact action.
+    The TSV was still written: it is the artefact, not the verdict.
+2026-08-31T20:00:45Z  ERROR  5.4d  derived-scan-post  failed  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  exit=1 raw_log=migration-log/derived-scan-post.log raw_log_lines=21
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/derived-scan-post.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T20:01:11Z  INFO   5.4d  derived-scan-post  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  raw_log=migration-log/derived-scan-post.log prev_raw_log=migration-log/derived-scan-post.prev.log
+2026-08-31T20:01:11Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T20:01:11Z  INFO   11  derived-scan  result  files=32 markers=18 gates=A:0,B:16,C:2 kinds=bridge:10,summary:8 langs=default,en findings=0 (none) out=./migration-log/derived-content.tsv exit=0
+2026-08-31T20:01:11Z  INFO   5.4d  derived-scan-post  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  exit=0 raw_log=migration-log/derived-scan-post.log raw_log_lines=2
