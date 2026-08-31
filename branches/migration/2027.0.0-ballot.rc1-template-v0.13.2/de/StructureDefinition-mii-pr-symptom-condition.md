@@ -160,7 +160,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-sympt
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Symptom_Condition",
   "status" : "active",
-  "date" : "2026-08-31T20:40:21+00:00",
+  "date" : "2026-08-31T20:52:19+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
