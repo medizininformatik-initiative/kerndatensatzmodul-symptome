@@ -38,6 +38,8 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 
 | | |
 | :--- | :--- |
+| [ Beispiel-Patient (synthetisch)  ](Patient-example.md) | Synthetischer Minimal-Patient, auf den die Beispiel-Observations dieses Moduls verweisen. Kein realer Patientenbezug. |
+| [ Beispiel-Patientin (synthetisch)  ](Patient-example-patient.md) | Synthetische Minimal-Patientin, auf die das Beispiel der Condition dieses Moduls verweist. Kein realer Patientenbezug. |
 | [ mii-exa-symptom-arachnodactyly  ](Observation-mii-exa-symptom-arachnodactyly.md) | Observation Phänotyp Arachnodactyly |
 | [ mii-exa-symptom-chestpain  ](Observation-mii-exa-symptom-chestpain.md) | Observation Symptom Chest Pain |
 | [ mii-exa-symptom-vitreoretinochoroidopathy  ](Condition-mii-exa-symptom-vitreoretinochoroidopathy.md) |  |

@@ -948,6 +948,28 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/example"/>
+      </reference>
+      <name value="Beispiel-Patient (synthetisch)"/>
+      <description value="Synthetischer Minimal-Patient, auf den die Beispiel-Observations dieses Moduls verweisen. Kein realer Patientenbezug."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/example-patient"/>
+      </reference>
+      <name value="Beispiel-Patientin (synthetisch)"/>
+      <description value="Synthetische Minimal-Patientin, auf die das Beispiel der Condition dieses Moduls verweist. Kein realer Patientenbezug."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>

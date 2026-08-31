@@ -45,3 +45,5 @@
 * [mii-exa-symptom-vitreoretinochoroidopathy (Condition)](Condition-mii-exa-symptom-vitreoretinochoroidopathy.md)
 * [mii-exa-symptom-arachnodactyly (Observation)](Observation-mii-exa-symptom-arachnodactyly.md)
 * [mii-exa-symptom-chestpain (Observation)](Observation-mii-exa-symptom-chestpain.md)
+* [example-patient (Patient)](Patient-example-patient.md)
+* [example (Patient)](Patient-example.md)

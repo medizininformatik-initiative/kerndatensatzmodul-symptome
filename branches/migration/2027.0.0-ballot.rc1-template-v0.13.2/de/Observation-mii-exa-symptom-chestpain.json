@@ -4,7 +4,7 @@
   "language" : "de",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-symptom-chestpain</b></p><a name=\"mii-exa-symptom-chestpain\"> </a><a name=\"hcmii-exa-symptom-chestpain\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 75325-1}\">Symptom</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/Patient/example\">Patient/example</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 22253000}\">Pain</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 51185008}\">Thoracic structure</span></p></div>"
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-symptom-chestpain</b></p><a name=\"mii-exa-symptom-chestpain\"> </a><a name=\"hcmii-exa-symptom-chestpain\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 75325-1}\">Symptom</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Max Mustermann-Testpatient  (no stated gender), DoB: 1970-01-01</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 22253000}\">Pain</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 51185008}\">Thoracic structure</span></p></div>"
   },
   "status" : "final",
   "code" : {

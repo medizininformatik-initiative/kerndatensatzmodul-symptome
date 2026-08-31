@@ -1,15 +1,17 @@
 MII_IG_Symptom : Validation Results
 =========================================
 
-err = 34, warn = 168, info = 331
+err = 30, warn = 168, info = 332
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.3
-Generated Mon Aug 31 21:34:27 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
+Generated Mon Aug 31 21:52:04 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
  Build Errors : 0 / 4 / 0
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement : 0 / 1 / 62
- /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy : 2 / 0 / 1
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy : 0 / 0 / 2
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/ImplementationGuide-mii-ig-symptom : 30 / 9 / 47
- /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly : 1 / 3 / 2
- /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-chestpain : 1 / 2 / 1
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly : 0 / 3 / 2
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-chestpain : 0 / 2 / 1
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Patient-example : 0 / 0 / 1
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Patient-example-patient : 0 / 0 / 1
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/StructureDefinition-mii-lm-symptom : 0 / 137 / 46
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition : 0 / 6 / 90
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation : 0 / 6 / 93
@@ -84,8 +86,7 @@ INFORMATION: CapabilityStatement.rest[0].resource[1].searchParam[22].definition:
 WARNING: CapabilityStatement/mii-cps-symptom-capabilitystatement: CapabilityStatement.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: Resource: The resource CapabilityStatement/mii-cps-symptom-capabilitystatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy.json ==
-ERROR: Condition/mii-exa-symptom-vitreoretinochoroidopathy: Condition.code.coding[0].display: Wrong Display Name 'Autosomal dominant vitreoretinochoroidopathy (disorder)' for http://snomed.info/sct#711162004. There are no valid display names found for language(s) 'de'. Default display is 'Autosomal dominant vitreoretinochoroidopathy'
-ERROR: Condition/mii-exa-symptom-vitreoretinochoroidopathy: Condition.subject: Ressource 'Patient/example-patient' nicht auffindbar
+INFORMATION: Condition/mii-exa-symptom-vitreoretinochoroidopathy: Condition.code.coding[0].display: 'Autosomal dominant vitreoretinochoroidopathy' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 == fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json ==
 INFORMATION: ImplementationGuide.meta.profile[0]: Pinned the version of http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide to 2.0.0
 INFORMATION: ImplementationGuide.meta.profile[1]: Pinned the version of http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide to 2.0.0
@@ -171,14 +172,14 @@ INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1
 INFORMATION: Resource: The resource ImplementationGuide/mii-ig-symptom could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly.json ==
 WARNING: Observation/mii-exa-symptom-arachnodactyly: Observation.code.coding[0].system: A definition for CodeSystem 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' could not be found, so the code cannot be validated
-ERROR: Observation/mii-exa-symptom-arachnodactyly: Observation.subject: Ressource 'Patient/example' nicht auffindbar
 INFORMATION: Observation/mii-exa-symptom-arachnodactyly: Observation.value.ofType(CodeableConcept).coding[0].display: 'Present' is the default display; the code system http://loinc.org has no Display Names for the language de
 WARNING: Observation/mii-exa-symptom-arachnodactyly: Observation: Alle Observations sollten einen Performer haben
 WARNING: Observation/mii-exa-symptom-arachnodactyly: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
 == fsh-generated/resources/Observation-mii-exa-symptom-chestpain.json ==
-ERROR: Observation/mii-exa-symptom-chestpain: Observation.subject: Ressource 'Patient/example' nicht auffindbar
 WARNING: Observation/mii-exa-symptom-chestpain: Observation: Alle Observations sollten einen Performer haben
 WARNING: Observation/mii-exa-symptom-chestpain: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
+== fsh-generated/resources/Patient-example.json ==
+== fsh-generated/resources/Patient-example-patient.json ==
 == fsh-generated/resources/StructureDefinition-mii-lm-symptom.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[0].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1

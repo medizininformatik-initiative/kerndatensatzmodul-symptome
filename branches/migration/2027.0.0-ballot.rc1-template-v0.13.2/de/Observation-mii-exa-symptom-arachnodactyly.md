@@ -16,7 +16,7 @@
 
 **code**: Arachnodactyly
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/Patient/example)
+**subject**: [Max Mustermann-Testpatient (no stated gender), DoB: 1970-01-01](Patient-example.md)
 
 **value**: Present
 

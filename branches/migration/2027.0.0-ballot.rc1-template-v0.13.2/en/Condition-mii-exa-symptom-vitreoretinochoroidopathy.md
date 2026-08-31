@@ -18,9 +18,9 @@
 
 **verificationStatus**: Confirmed
 
-**code**: Autosomal dominant vitreoretinochoroidopathy (disorder)
+**code**: Autosomal dominant vitreoretinochoroidopathy
 
-**subject**: [Patient/example-patient](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/Patient/example-patient)
+**subject**: [Erika Musterfrau-Testpatientin (no stated gender), DoB: 1970-01-01](Patient-example-patient.md)
 
 
 
@@ -52,7 +52,7 @@
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "711162004",
-      "display" : "Autosomal dominant vitreoretinochoroidopathy (disorder)"
+      "display" : "Autosomal dominant vitreoretinochoroidopathy"
     }]
   },
   "subject" : {

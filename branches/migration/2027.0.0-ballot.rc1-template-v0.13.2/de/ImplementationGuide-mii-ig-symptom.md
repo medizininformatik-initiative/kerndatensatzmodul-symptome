@@ -1326,6 +1326,38 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-example.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/example"
+      },
+      "name" : "Beispiel-Patient (synthetisch)",
+      "description" : "Synthetischer Minimal-Patient, auf den die Beispiel-Observations dieses Moduls verweisen. Kein realer Patientenbezug.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-example-patient.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/example-patient"
+      },
+      "name" : "Beispiel-Patientin (synthetisch)",
+      "description" : "Synthetische Minimal-Patientin, auf die das Beispiel der Condition dieses Moduls verweist. Kein realer Patientenbezug.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       },
       {

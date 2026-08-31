@@ -498,58 +498,64 @@ from it. Instances must always use a concrete sub-type.</p>
 <!-- GENERATED from fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation.json
      (differential elements with mustSupport=true; source directive: Simplifier FQL). -->
 
-<p>| Feldname | Kurzbeschreibung | Hinweise |
-|—|—|—|
-| <code class="language-plaintext highlighter-rouge">Observation.identifier</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.status</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.category</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.code</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.subject</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.effective[x]</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.issued</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.value[x]</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.interpretation</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.method</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.specimen</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.device</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.referenceRange</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.hasMember</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.derivedFrom</code> |  |  |
-| <code class="language-plaintext highlighter-rouge">Observation.component</code> |  |  |</p>
+<table class="grid">
+<thead><tr><th>Feldname</th><th>Kurzbeschreibung</th><th>Hinweise</th></tr></thead>
+<tbody>
+<tr><td><code>Observation.identifier</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.status</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.category</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.code</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.subject</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.effective[x]</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.issued</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.value[x]</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.dataAbsentReason</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.interpretation</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.method</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.specimen</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.device</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.referenceRange</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.hasMember</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.derivedFrom</code></td><td></td><td></td></tr>
+<tr><td><code>Observation.component</code></td><td></td><td></td></tr>
+</tbody>
+</table>
 <h4 id="mapping-to-the-logical-model">Mapping to the Logical Model</h4>
 
 <!-- GENERATED from fsh-generated/resources/StructureDefinition-mii-lm-symptom.json
      (differential elements mii-lm-symptom.Observation.*; source directive: Simplifier FQL
      against the legacy LM canonical). -->
 
-<p>| FHIR | Datensatz | Erklärung |
-|—|—|—|
-| <code class="language-plaintext highlighter-rouge">Observation</code> | mii-lm-symptom.Observation | Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein. |
-| <code class="language-plaintext highlighter-rouge">Observation.identifier</code> | mii-lm-symptom.Observation.Identifikator | Eindeutiger Identifier der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.code.coding.display</code> | mii-lm-symptom.Observation.Bezeichnung | Natürlichsprachige Bezeichnung der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.code.text</code> | mii-lm-symptom.Observation.Beschreibung | Natürlichsprachige Beschreibung der Beobachtung |
-| <code class="language-plaintext highlighter-rouge">Observation.category</code> | mii-lm-symptom.Observation.Kategorie | Kategorie der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.status</code> | mii-lm-symptom.Observation.Status | Status der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.code</code> | mii-lm-symptom.Observation.Code | Code der Observation: z. B. LOINC, SNOMED CT, HPO |
-| <code class="language-plaintext highlighter-rouge">Observation.effectiveDateTime</code> | mii-lm-symptom.Observation.Zeitspanne | Klinisch relevante Zeitpunkte/Zeitspanne |
-| <code class="language-plaintext highlighter-rouge">Observation.effectivePeriod.start</code> | mii-lm-symptom.Observation.Zeitspanne.start | Klinisch relevanter (Start-)Zeitpunkt einer Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.effectivePeriod.end</code> | mii-lm-symptom.Observation.Zeitspanne.end | Klinisch relevanter Endzeitpunkt einer Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.issued</code> | mii-lm-symptom.Observation.Dokumentationsdatum | Zeitpunkt der Dokumentation der Observation. |
-| <code class="language-plaintext highlighter-rouge">Observation.value[x]</code> | mii-lm-symptom.Observation.Wert[x] | Wert der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.referenceRange</code> | mii-lm-symptom.Observation.ReferenzIntervall | Referenz-Intervall entsprechend des eingebetteten komplexen Typs (Observation.referenceRange) |
-| <code class="language-plaintext highlighter-rouge">Observation.dataAbesentReason</code> | mii-lm-symptom.Observation.GrundNichtVorhandenerDaten | Grund für nicht vorhandene Daten der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.interpretation</code> | mii-lm-symptom.Observation.Interpretation | Interpretation einer Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.note</code> | mii-lm-symptom.Observation.Kommentar | Natürlichsprachiger Kommentar zur Observation. |
-| <code class="language-plaintext highlighter-rouge">Observation.bodySite</code> | mii-lm-symptom.Observation.Lokalisation | Lokalisation der Observation als SNOMED CT Body Structure codiert. |
-| <code class="language-plaintext highlighter-rouge">Observation.subject</code> | mii-lm-symptom.Observation.Patient | Link auf Patient |
-| <code class="language-plaintext highlighter-rouge">Observation.encounter</code> | mii-lm-symptom.Observation.Fall | Fall der Observation |
-| <code class="language-plaintext highlighter-rouge">Observation.specimen</code> | mii-lm-symptom.Observation.Probe | Referenz auf die Probe, auf der die Observation basiert |
-| <code class="language-plaintext highlighter-rouge">Observation.device</code> | mii-lm-symptom.Observation.Messgeraet | Referenz auf das verwendete Mess-/Untersuchungsgerät |
-| <code class="language-plaintext highlighter-rouge">Observation.method</code> | mii-lm-symptom.Observation.Methode | Methode der Untersuchung |
-| <code class="language-plaintext highlighter-rouge">Observation.hasMember</code> | mii-lm-symptom.Observation.BezugZuHatTeil | Bezug zu Ressourcen, die zu dieser Observation gehören (Observation, QuestionnaireResponse, MolecularSequence) |
-| <code class="language-plaintext highlighter-rouge">Observation.derivedFrom</code> | mii-lm-symptom.Observation.BezugVonIstTeilVon | Referenz auf Messunger/Beobachtungen, aus denen diese Observation hervorgeht. |
-| <code class="language-plaintext highlighter-rouge">Observation.component</code> | mii-lm-symptom.Observation.Komponente | Komponente einer Observation mit mehreren Komponenten (z. B. Blutdruck) entsprechend des komplexen Typs (Observation.component) mit .code, .value, .dataAbsentReason, .interpretation, .referenceRange (alle wie oben beschrieben) |</p>
+<table class="grid">
+<thead><tr><th>FHIR</th><th>Datensatz</th><th>Erklärung</th></tr></thead>
+<tbody>
+<tr><td><code>Observation</code></td><td>mii-lm-symptom.Observation</td><td>Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein.</td></tr>
+<tr><td><code>Observation.identifier</code></td><td>mii-lm-symptom.Observation.Identifikator</td><td>Eindeutiger Identifier der Observation</td></tr>
+<tr><td><code>Observation.code.coding.display</code></td><td>mii-lm-symptom.Observation.Bezeichnung</td><td>Natürlichsprachige Bezeichnung der Observation</td></tr>
+<tr><td><code>Observation.code.text</code></td><td>mii-lm-symptom.Observation.Beschreibung</td><td>Natürlichsprachige Beschreibung der Beobachtung</td></tr>
+<tr><td><code>Observation.category</code></td><td>mii-lm-symptom.Observation.Kategorie</td><td>Kategorie der Observation</td></tr>
+<tr><td><code>Observation.status</code></td><td>mii-lm-symptom.Observation.Status</td><td>Status der Observation</td></tr>
+<tr><td><code>Observation.code</code></td><td>mii-lm-symptom.Observation.Code</td><td>Code der Observation: z. B. LOINC, SNOMED CT, HPO</td></tr>
+<tr><td><code>Observation.effectiveDateTime</code></td><td>mii-lm-symptom.Observation.Zeitspanne</td><td>Klinisch relevante Zeitpunkte/Zeitspanne</td></tr>
+<tr><td><code>Observation.effectivePeriod.start</code></td><td>mii-lm-symptom.Observation.Zeitspanne.start</td><td>Klinisch relevanter (Start-)Zeitpunkt einer Observation</td></tr>
+<tr><td><code>Observation.effectivePeriod.end</code></td><td>mii-lm-symptom.Observation.Zeitspanne.end</td><td>Klinisch relevanter Endzeitpunkt einer Observation</td></tr>
+<tr><td><code>Observation.issued</code></td><td>mii-lm-symptom.Observation.Dokumentationsdatum</td><td>Zeitpunkt der Dokumentation der Observation.</td></tr>
+<tr><td><code>Observation.value[x]</code></td><td>mii-lm-symptom.Observation.Wert[x]</td><td>Wert der Observation</td></tr>
+<tr><td><code>Observation.referenceRange</code></td><td>mii-lm-symptom.Observation.ReferenzIntervall</td><td>Referenz-Intervall entsprechend des eingebetteten komplexen Typs (Observation.referenceRange)</td></tr>
+<tr><td><code>Observation.dataAbesentReason</code></td><td>mii-lm-symptom.Observation.GrundNichtVorhandenerDaten</td><td>Grund für nicht vorhandene Daten der Observation</td></tr>
+<tr><td><code>Observation.interpretation</code></td><td>mii-lm-symptom.Observation.Interpretation</td><td>Interpretation einer Observation</td></tr>
+<tr><td><code>Observation.note</code></td><td>mii-lm-symptom.Observation.Kommentar</td><td>Natürlichsprachiger Kommentar zur Observation.</td></tr>
+<tr><td><code>Observation.bodySite</code></td><td>mii-lm-symptom.Observation.Lokalisation</td><td>Lokalisation der Observation als SNOMED CT Body Structure codiert.</td></tr>
+<tr><td><code>Observation.subject</code></td><td>mii-lm-symptom.Observation.Patient</td><td>Link auf Patient</td></tr>
+<tr><td><code>Observation.encounter</code></td><td>mii-lm-symptom.Observation.Fall</td><td>Fall der Observation</td></tr>
+<tr><td><code>Observation.specimen</code></td><td>mii-lm-symptom.Observation.Probe</td><td>Referenz auf die Probe, auf der die Observation basiert</td></tr>
+<tr><td><code>Observation.device</code></td><td>mii-lm-symptom.Observation.Messgeraet</td><td>Referenz auf das verwendete Mess-/Untersuchungsgerät</td></tr>
+<tr><td><code>Observation.method</code></td><td>mii-lm-symptom.Observation.Methode</td><td>Methode der Untersuchung</td></tr>
+<tr><td><code>Observation.hasMember</code></td><td>mii-lm-symptom.Observation.BezugZuHatTeil</td><td>Bezug zu Ressourcen, die zu dieser Observation gehören (Observation, QuestionnaireResponse, MolecularSequence)</td></tr>
+<tr><td><code>Observation.derivedFrom</code></td><td>mii-lm-symptom.Observation.BezugVonIstTeilVon</td><td>Referenz auf Messunger/Beobachtungen, aus denen diese Observation hervorgeht.</td></tr>
+<tr><td><code>Observation.component</code></td><td>mii-lm-symptom.Observation.Komponente</td><td>Komponente einer Observation mit mehreren Komponenten (z. B. Blutdruck) entsprechend des komplexen Typs (Observation.component) mit .code, .value, .dataAbsentReason, .interpretation, .referenceRange (alle wie oben beschrieben)</td></tr>
+</tbody>
+</table>
 <h4 id="examples">Examples</h4>
 
 <ul>
@@ -865,7 +871,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Type of component observation (code / type)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-observation-codes.html" title="http://hl7.org/fhir/ValueSet/observation-codes" class="binding">LOINCCodes</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes identifying names of simple observations.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b23d5a6e-d37f-499e-95c5-24fa37d704da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6080a110-8a12-49c4-bfbe-070d3638e295
 document.getElementById('cbmii-pr-symptom-observationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-symptom-observationK'), 'binding', document.getElementById('cbmii-pr-symptom-observationK-binding').checked, document.getElementById('ppmii-pr-symptom-observationK'));
 document.getElementById('cbmii-pr-symptom-observationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1276,7 +1282,7 @@ filterDesc(document.getElementById('mii-pr-symptom-observationK'), 'obligation',
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Component results</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b23d5a6e-d37f-499e-95c5-24fa37d704da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6080a110-8a12-49c4-bfbe-070d3638e295
 document.getElementById('cbmii-pr-symptom-observationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-symptom-observationD'), 'binding', document.getElementById('cbmii-pr-symptom-observationD-binding').checked, document.getElementById('ppmii-pr-symptom-observationD'));
 document.getElementById('cbmii-pr-symptom-observationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1799,7 +1805,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b23d5a6e-d37f-499e-95c5-24fa37d704da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6080a110-8a12-49c4-bfbe-070d3638e295
 document.getElementById('cbmii-pr-symptom-observationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-symptom-observationS'), 'binding', document.getElementById('cbmii-pr-symptom-observationS-binding').checked, document.getElementById('ppmii-pr-symptom-observationS'));
 document.getElementById('cbmii-pr-symptom-observationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2560,7 +2566,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Type of component observation (code / type)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/valueset-observation-codes.html" title="http://hl7.org/fhir/ValueSet/observation-codes" class="binding">LOINCCodes</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#example" title="Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included." class="binding">example</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Codes identifying names of simple observations.</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b23d5a6e-d37f-499e-95c5-24fa37d704da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6080a110-8a12-49c4-bfbe-070d3638e295
 document.getElementById('cbmii-pr-symptom-observationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-symptom-observationKA'), 'binding', document.getElementById('cbmii-pr-symptom-observationKA-binding').checked, document.getElementById('ppmii-pr-symptom-observationKA'));
 document.getElementById('cbmii-pr-symptom-observationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2970,7 +2976,7 @@ filterDesc(document.getElementById('mii-pr-symptom-observationKA'), 'obligation'
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Component results</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b23d5a6e-d37f-499e-95c5-24fa37d704da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6080a110-8a12-49c4-bfbe-070d3638e295
 document.getElementById('cbmii-pr-symptom-observationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-symptom-observationDA'), 'binding', document.getElementById('cbmii-pr-symptom-observationDA-binding').checked, document.getElementById('ppmii-pr-symptom-observationDA'));
 document.getElementById('cbmii-pr-symptom-observationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3490,7 +3496,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b23d5a6e-d37f-499e-95c5-24fa37d704da
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6080a110-8a12-49c4-bfbe-070d3638e295
 document.getElementById('cbmii-pr-symptom-observationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-symptom-observationSA'), 'binding', document.getElementById('cbmii-pr-symptom-observationSA-binding').checked, document.getElementById('ppmii-pr-symptom-observationSA'));
 document.getElementById('cbmii-pr-symptom-observationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4025,7 +4031,7 @@ Summary
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Aug 31, 2026 21:32+0000">2026-08-31</span>
+          Generated <span title="Mon, Aug 31, 2026 21:46+0000">2026-08-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
