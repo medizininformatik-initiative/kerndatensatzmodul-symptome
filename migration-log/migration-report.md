@@ -337,3 +337,57 @@ One checkbox per open obligation, from the machine ledgers. Ticking a box assert
      Add ONE checkbox per DEC-n / REV-n / QA-n block of this report,
      under the gate that owns it, in the form:
      - [ ] **DEC-1** <its one-line what> - *<its next action>*  -->
+
+---
+
+## Post-delivery addendum (2026-08-31, after PR #33 opened — full re-verification)
+
+Everything that happened after the PR was opened, so nothing is unreported:
+
+**Delivery + versioning.** Owner decisions applied at delivery: version **2027.0.0-ballot.rc1**
+(cascade incl. the CapabilityStatement's versioned supported-profile refs, publication-request,
+narrative tables/changelog both languages), branch renamed to
+`migration/2027.0.0-ballot.rc1-template-v0.13.2`. The org's FSH-to-FHIR bot auto-commits its own
+SUSHI regeneration on every push (serializer delta, semantically neutral) — accepted and rebased
+onto each time.
+
+**CI hardening (all checks GREEN as of `4732b46`).** Three advisor.json extensions
+(IG-Publisher parameter codes / upstream crmi 2.0.0 package-canonical defect / template
+versionPolicy code vs tx CS state — matcher lesson: suppressions need the full de-indexed leaf
+path); `package.json` dependencies mirrored to sushi-config (the MII reusable derives the
+validator's `-ig` list from it — floating `meta#2026.0.x` crashed the validator);
+`-output validation.json` added to the validator options (the pinned reusable never writes the
+file its own renderer step reads). **Upstream candidates:** both reusable defects
+(swallowed error-exit under `bash -e`, missing `-output`), the verifier's blindness to the
+package.json mirror, and the two rendering items below.
+
+**QA errors (owner-directed repairs).** Local pinned build now **err = 0** (was 14 in the
+baseline): the 3 dangling `Patient/example(-patient)` references repaired by two minimal
+synthetic Patient examples carrying the exact referenced ids (sanctioned +2 artifact additions;
+qc id-convention exclusions); the Condition example's SNOMED display corrected FSN → preferred
+term. The CI/SU-TermServ build retains exactly one class: 30× BCP-47 `'en'` inference failures
+on the `.po`-injected page-title translation extensions — a terminology-server capability gap
+(tx.fhir.org validates them clean; not module-fixable).
+
+**Rendered-page check (216 pages, both languages: mechanical sweep + 4-agent content review).**
+Fixed: intro-note tables re-emitted as raw HTML (the publisher's intro-note markdown pipeline has
+no tables extension — pipe tables rendered literal); version-history's missed version spot +
+template-demo paragraph removed (both languages). Documented classes (not migration-fixable):
+publisher-own translation-notice banner renders a literal markdown link on every translated page;
+`en/toc.html` lists German page titles and `de/` breadcrumbs keep English "Table of Contents" /
+"Germany" (publisher localizes breadcrumbs/titles via `.po` but not the toc body; the DE-first
+default-language toc title is SUSHI's English literal — ecosystem gap); IG page `&reg;`
+double-escape + dependency-table tree-line background URL concatenation; CS narrative garbles
+versioned supported-profile labels; searchform/qa-ipreview/ttl chrome links; template-wide
+security-and-privacy heading double numbering. Source-inherent (Gate-B queue): LM mapping content
+typos (`dataAbesentReason`, `Conditon.bodySite`, "Messunger"), capability-statements prose typos,
+condition description duplicated by the intro note's first paragraph, `en/profiles.html` missing
+the translation banner (publisher inconsistency). Root `translations/` (publisher-written
+per-resource translation stubs) is tracked — keep-or-ignore is a Gate-D tidiness row.
+
+**Final verification state.** Repo checks: census clean, scoped fql-scan 0 findings (33 files),
+derived-scan 18 markers/0 findings, tests 107/107, convention-check dev+release PASS, DE-first
+guard green. `verify-migration` final: **86 IDENTISCH / 11 DIVERGIERT (all adjudicated: 7 C4
+narrative classes, F2 meta pin, P4 unpinnable guide, 2 R2 publisher chrome) / 20 NICHT PRÜFBAR
+(conditions did not hold)**. Post-re-version measurements show the version field + the +2 example
+additions as the two owner-signed deltas; artifact canonicals remain identical.

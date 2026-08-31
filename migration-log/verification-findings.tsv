@@ -1,7 +1,7 @@
 id	layer	check	verdict	subject	evidence	autofix	action
 C1-8fc50e	conservation	C1	IDENTISCH	7 source artefacts	all present in fsh-generated, matched by id or canonical url (source: fsh-generated/resources)	-	-
-C2-9a6634	conservation	C2	IDENTISCH	output/de (7 artefacts)	every generated resource is rendered and listed in artifacts.html	-	-
-C2-9503fd	conservation	C2	IDENTISCH	output/en (7 artefacts)	every generated resource is rendered and listed in artifacts.html	-	-
+C2-1cd094	conservation	C2	IDENTISCH	output/de (9 artefacts)	every generated resource is rendered and listed in artifacts.html	-	-
+C2-636927	conservation	C2	IDENTISCH	output/en (9 artefacts)	every generated resource is rendered and listed in artifacts.html	-	-
 C3-2e311d	conservation	C3	IDENTISCH	index.md	migrated -> input/pagecontent/index.md (input/pagecontent/index.md)	-	-
 C3-c7f22b	conservation	C3	IDENTISCH	BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md	migrated -> input/pagecontent/guidance.md (input/pagecontent/guidance.md)	-	-
 C3-e80f21	conservation	C3	IDENTISCH	Datenstzeinkl.Beschreibungen-1.x.page.md	migrated -> input/pagecontent/logical-models.md (input/pagecontent/logical-models.md)	-	-
@@ -55,7 +55,7 @@ C7-aef73c	conservation	C7	IDENTISCH	18 derived-content marker(s)	source= resolve
 F1-093008	fidelity	F1	IDENTISCH	id	mii-ig-symptom (identical to the source)	-	-
 F1-bacf3c	fidelity	F1	IDENTISCH	packageId	de.medizininformatikinitiative.kerndatensatz.symptom (identical to the source)	-	-
 F1-489e82	fidelity	F1	IDENTISCH	canonical	https://www.medizininformatik-initiative.de/fhir/modul-sympt… (identical to the source)	-	-
-F1-6cbfea	fidelity	F1	IDENTISCH	version	2026.0.0-rc.1 (identical to the source)	-	-
+F1-6cbfea	fidelity	F1	NICHT PRUEFBAR	version	target 2027.0.0-ballot.rc1 vs source 2026.0.0-rc.1 -- the target version is a human decision (spec 2.1)	-	confirm the target version at Gate A and record it
 F1-8a3995	fidelity	F1	IDENTISCH	status	active (identical to the source)	-	-
 F1-b5b102	fidelity	F1	IDENTISCH	title	MII IG Symptom (identical to the source)	-	-
 F1-7bae24	fidelity	F1	IDENTISCH	license	CC-BY-4.0 (identical to the source)	-	-
@@ -69,7 +69,7 @@ F2-047205	fidelity	F2	NICHT PRUEFBAR	hl7.fhir.uv.extensions.r4	target-only depen
 F2-8f9355	fidelity	F2	NICHT PRUEFBAR	hl7.terminology.r4	target-only dependency 7.3.0 (not in the source)	-	confirm at Gate A that this is template machinery (hl7.fhir.uv.crmi is) and not an accidental addition
 F3-1a29c4	fidelity	F3	IDENTISCH	license	CC-BY-4.0 asserted from tier package.json+meta-license-extension (package.json:license + sushi-config.yaml:36-42 (no license: …)	-	-
 F3-ce21cb	fidelity	F3	IDENTISCH	LICENSE file	the file text is CC-BY-4.0 (header: 'attribution 4.0 international'), matching the declared scalar	-	-
-F4-2ff1aa	fidelity	F4	IDENTISCH	16 FSH files	no fhir_comments rules, no whitespace-bearing code references	-	-
+F4-c4767f	fidelity	F4	IDENTISCH	17 FSH files	no fhir_comments rules, no whitespace-bearing code references	-	-
 P1-fded0e	provenance	P1	IDENTISCH	template	rendered de.medizininformatikinitiative.template#1.3.4 == recorded template release v1.3.4 (URL reference)	-	-
 P2-27e398	provenance	P2	IDENTISCH	scaffold template ref	v0.13.2 == latest release v0.13.2	-	-
 P3-a28a47	provenance	P3	IDENTISCH	IG Publisher version	2.3.2 == the workflow pin	-	-
@@ -84,7 +84,7 @@ R1-76f413	rendering	R1	NICHT PRUEFBAR	source-versus-target rendering	no harveste
 R3-c3bc54	rendering	R3	IDENTISCH	output/de	all 14 narrative pages differ from the default language	-	-
 R4-84ad62	rendering	R4	IDENTISCH	template example links	none, over 1 token(s) from template-artifacts-v0.13.2.tsv (verified against template package 1.3.3)	-	-
 R5-22d113	rendering	R5	IDENTISCH	input/translations/en/ImplementationGuide-mii-ig-symptom.po	a translated unit for every one of the 15 page titles	-	-
-L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	243 parsed lines, 1 runs	-	-
+L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	313 parsed lines, 1 runs	-	-
 L1-d341a1	log	L1	IDENTISCH	5.5/gen-page-title-po @ 2026-08-31T20:00:17Z	silent-partial-success WARN, later resolved in the log	-	-
 L2-0e48db	log	L2	IDENTISCH	1 preflight-analysis	present in the log	-	-
 L2-5e1c48	log	L2	IDENTISCH	pre.2 classify-source-shape	present in the log	-	-
@@ -115,4 +115,4 @@ L3-d86477	log	L3	IDENTISCH	open identity contradictions	the log records no `iden
 L3-8766f8	log	L3	IDENTISCH	identity ledger	migration-log/identity-claims.tsv present, 12 claim(s)	-	-
 L4-106e61	log	L4	NICHT PRUEFBAR	conversion count	no `gofsh-convert … actual=` line in the log	-	shape B only; for shape A there is nothing to convert
 L4-f17740	log	L4	NICHT PRUEFBAR	page count	no harvested count in the log and/or no harvest manifest	-	harvest the guide (step 2c) where the narrative is not in the repo
-L4-40cf60	log	L4	IDENTISCH	artifact count	artifacts.html lists 7 for 7 generated resources	-	-
+L4-40cf60	log	L4	IDENTISCH	artifact count	artifacts.html lists 9 for 9 generated resources	-	-

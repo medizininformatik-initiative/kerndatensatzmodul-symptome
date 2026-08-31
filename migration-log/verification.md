@@ -1,6 +1,6 @@
 ## Verification (generated — do not retype)
 
-Produced by `verify-migration.py` from the target tree AND `migration-log/run.log`, the two oracles. **87 IDENTISCH · 11 DIVERGIERT · 19 NICHT PRÜFBAR.**
+Produced by `verify-migration.py` from the target tree AND `migration-log/run.log`, the two oracles. **86 IDENTISCH · 11 DIVERGIERT · 20 NICHT PRÜFBAR.**
 
 Verdicts: **IDENTISCH** = matches the source · **DIVERGIERT** = differs, named below · **NICHT PRÜFBAR** = could not be checked, which is **not** a pass and owes a named human an action.
 
@@ -13,7 +13,7 @@ Verdicts: **IDENTISCH** = matches the source · **DIVERGIERT** = differs, named 
 | conservation | C5 | menus lead somewhere, and every page is in a menu | 4 | 0 | 0 |
 | conservation | C6 | each text passage landed on the page the page map promised | 11 | 0 | 0 |
 | conservation | C7 | content the migration wrote is marked as such in the guide | 1 | 0 | 2 |
-| fidelity | F1 | module identity is unchanged (id, canonical, version, licence, ...) | 9 | 0 | 0 |
+| fidelity | F1 | module identity is unchanged (id, canonical, version, licence, ...) | 8 | 0 | 1 |
 | fidelity | F2 | dependency versions are pinned exactly as the source pinned them | 2 | 1 | 3 |
 | fidelity | F3 | the licence is asserted from evidence, never defaulted | 2 | 0 | 0 |
 | fidelity | F4 | no mechanical FSH conversion residue is left | 1 | 0 | 0 |
@@ -61,6 +61,7 @@ Verdicts: **IDENTISCH** = matches the source · **DIVERGIERT** = differs, named 
 | `C4-66cb7a` | C4 | the source's narrative text is present somewhere in the target | Terminologien-1.x.page.md | the source page carries NO prose -- 0 generated table row(s) only | conservation of a generated view is not a text question; confirm the artefact page replaces it (R1) |
 | `C7-3cfb4d` | C7 | content the migration wrote is marked as such in the guide | Condition-1.x.page.md | C4 could not tell this page's prose from its embedded element-tree rendering, so whether anything was rewritten here is not measured | read the page against its target (the same human action C4 asks for) and mark whatever the migration wrote per spec section 9d |
 | `C7-da081c` | C7 | content the migration wrote is marked as such in the guide | Observation-1.x.page.md | C4 could not tell this page's prose from its embedded element-tree rendering, so whether anything was rewritten here is not measured | read the page against its target (the same human action C4 asks for) and mark whatever the migration wrote per spec section 9d |
+| `F1-6cbfea` | F1 | module identity is unchanged (id, canonical, version, licence, ...) | version | target 2027.0.0-ballot.rc1 vs source 2026.0.0-rc.1 -- the target version is a human decision (spec 2.1) | confirm the target version at Gate A and record it |
 | `F2-fd0e73` | F2 | dependency versions are pinned exactly as the source pinned them | hl7.fhir.uv.crmi | target-only dependency 2.0.0 (not in the source) | confirm at Gate A that this is template machinery (hl7.fhir.uv.crmi is) and not an accidental addition |
 | `F2-047205` | F2 | dependency versions are pinned exactly as the source pinned them | hl7.fhir.uv.extensions.r4 | target-only dependency 5.3.0 (not in the source) | confirm at Gate A that this is template machinery (hl7.fhir.uv.crmi is) and not an accidental addition |
 | `F2-8f9355` | F2 | dependency versions are pinned exactly as the source pinned them | hl7.terminology.r4 | target-only dependency 7.3.0 (not in the source) | confirm at Gate A that this is template machinery (hl7.fhir.uv.crmi is) and not an accidental addition |

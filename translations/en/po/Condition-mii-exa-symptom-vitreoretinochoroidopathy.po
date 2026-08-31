@@ -11,6 +11,6 @@ msgstr ""
 
 # Coding.display
 #: Coding.display
-msgid "Autosomal dominant vitreoretinochoroidopathy (disorder)"
+msgid "Autosomal dominant vitreoretinochoroidopathy"
 msgstr ""
 

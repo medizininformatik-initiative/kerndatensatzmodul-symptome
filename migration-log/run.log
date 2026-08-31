@@ -541,3 +541,71 @@ Vergleich -> migration-log/same-module-compare.md
 2026-08-31T21:39:32Z  INFO   gate-B  intro-table-fix-2  blank-line fix insufficient: the publisher renders intro-notes with its OWN markdown pipeline where the TABLES extension is not active (prose/headings/quotes render; pipe tables stay literal; typography turns --- separators into em-dashes) - affects all 4 intro files both languages; FIX: the 4 generated tables re-emitted as raw HTML tables (class=grid, cells html-escaped) which pass through every pipeline; upstream candidates: skill crosswalk should mandate HTML tables in intro-notes, publisher intro pipeline should enable the tables extension
 2026-08-31T21:39:32Z  WARN   7  final-delta-adjudication  FINAL post-re-version measurements: same-module compare identity 1 field DIVERGENT (version 2026.0.0-rc.1 -> 2027.0.0-ballot.rc1) + prepost-delta 2 REGRESSIONs (identity.version + licence normalization echo) = BOTH the OWNER-SIGNED re-version (D-2a) and the accepted echo showing up in a post-re-version re-measurement; the MEASURED-WINDOW runs (pre-re-version, archived in run.log + prev logs) were clean (identity 10/10 IDENTISCH, delta 1 accepted echo only); artifact set 12/12 + canonicals 4/4 remain IDENTISCH in the final measurement
 2026-08-31T21:43:20Z  INFO   gate-A  qa-error-repairs  USER-DIRECTED QA repairs (supersede D-5 'leave source-inherent'): (1) +2 SYNTHETIC Patient examples with the EXACT referenced ids example/example-patient (Max Mustermann-Testpatient/Erika Musterfrau-Testpatientin, minimal, Usage example) -> the 3 dangling-reference errors resolve; artifact set grows by 2 SANCTIONED additions (final same-module compare will show the set delta as adjudicated); qc naming-convention-id gains 2 file exclusions (ids must match the refs, cannot match the mii-*-symptom convention); (2) Condition example display 'Autosomal dominant vitreoretinochoroidopathy (disorder)' -> preferred term without semantic tag (validator-guided FSN-vs-PT repair, SU-TermServ-path error). Remaining CI-only error class: 30x bcp47 'en' inference on .po-injected page-title translation extensions = SU-TermServ capability gap, not module-fixable (publisher reads no advisor; ignoreWarnings cannot suppress ERRORs)
+2026-08-31T21:54:56Z  INFO   11  verify-migration-final  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  raw_log=migration-log/verify-migration-final.log
+2026-08-31T21:54:56Z  INFO   11  verify-migration  params  target=. source=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine guide_tree=ImplementationGuide-2024.x-DE rendered=output log=./migration-log/run.log layers=conservation,fidelity,provenance,rendering,log
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C2  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C3  identisch=16 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C4  identisch=3 divergiert=7 nicht_pruefbar=6
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: conservation C4  count=7 subjects=BeschreibungModul-1.x.page.md, BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md, CapabilityStatement.page.md …
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: conservation C4  count=6 subjects=AnwendungsflleInformationsmodell-1.x/Index.page.md, Condition-1.x.page.md, Observation-1.x.page.md …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C5  identisch=4 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C6  identisch=11 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C7  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: conservation C7  count=2 subjects=Condition-1.x.page.md, Observation-1.x.page.md
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F1  identisch=8 divergiert=0 nicht_pruefbar=1
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: fidelity F1  count=1 subjects=version
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F2  identisch=2 divergiert=1 nicht_pruefbar=3
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: fidelity F2  count=1 subjects=de.medizininformatikinitiative.kerndatensatz.meta
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: fidelity F2  count=3 subjects=hl7.fhir.uv.crmi, hl7.fhir.uv.extensions.r4, hl7.terminology.r4
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P2  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P3  identisch=1 divergiert=0 nicht_pruefbar=1
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: provenance P3  count=1 subjects=IG Publisher currency
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P4  identisch=0 divergiert=1 nicht_pruefbar=0
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: provenance P4  count=1 subjects=source guide version
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R1  identisch=2 divergiert=0 nicht_pruefbar=1
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: rendering R1  count=1 subjects=source-versus-target rendering
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R2  identisch=0 divergiert=2 nicht_pruefbar=0
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: rendering R2  count=2 subjects=output/de id="ig-status" [{{], output/en id="ig-status" [{{]
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R3  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L0  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L2  identisch=21 divergiert=0 nicht_pruefbar=4
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: log L2  count=4 subjects=2.1 package-identity, 2.1 repo-identity, 5.1c simplifier-discover …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L4  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: log L4  count=2 subjects=conversion count, page count
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  WARN   11  verify-migration  result  identisch=86 divergiert=11 nicht_pruefbar=20 findings=./migration-log/verification-findings.tsv markdown=./migration-log/verification.md exit=1
+    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
+    because a check could not be mechanised. Neither is a pass.
+2026-08-31T21:54:56Z  WARN   11  verify-migration-final  anticipated-nonzero-exit: adjudicated rows expected (owner-signed re-version, sanctioned Patient additions, unpinnable guide, publisher-own chrome)  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  exit=1 raw_log=migration-log/verify-migration-final.log raw_log_lines=62
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
