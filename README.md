@@ -1,45 +1,102 @@
-## Medizininformatik Initiative - Kerndatensatz - Modul Symptome/klinischer Phänotyp
+# mii-kds-module-template
 
-[![FHIR Project on GitHub.com](https://img.shields.io/badge/FHIR_project_on_GitHub.com-kerndatensatzmodul--symptom-green)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome) 
+A **GitHub template repository** for building an **MII Kerndatensatz (KDS) module
+Implementation Guide**. Click *Use this template* and you get a working IG project
+— FHIR tooling, CI, bilingual previews and the MII release process already wired
+up — so you can start with profiles and content instead of setup.
 
-[![CI (FHIR Validation)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-person/actions/workflows/main.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/actions/workflows/main.yml)
+The MII look comes from the separate IG template
+[`ig-template-mii-kds`](https://github.com/medizininformatik-initiative/ig-template-mii-kds),
+which this scaffold references (and keeps up to date automatically).
 
-### Übersicht
-Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Symptome/klinischer Phänotyp'. Die hier veröffentlichten FHIR Profile und Implemenation Guide dienen als zentrale und verbindliche Spezifikation für die synatkatische und semantische Kodierung der Modulinhalte.
+See what it renders as before you start:
+<https://medizininformatik-initiative.github.io/mii-kds-module-template/> — the
+demo module of the current release, plus two real MII KDS modules migrated onto
+this template.
 
-### Status:
+> **Status: prototype.** Usable and released, but pending discussion in the MII
+> Taskforce Kerndatensatz — see [docs/org-move.md](docs/org-move.md).
 
-Aktuelle draft Version: 1.0.0-ballot [Link zum Implementation Guide](https://simplifier.net/guide/mii-ig-modul-symptom-2024-de)
+> **⚠️ When you click *Use this template*, tick “Include all branches”.**
+> Otherwise you get `main` only, without the `dev` branch this scaffold works
+> with. The first-run bootstrap in step 2 creates `dev` for you if you forgot.
 
-<!-- Reifegrad: -->
+## Quickstart
 
-Alle veröffentlichen FHIR Artefakte innerhalb des Projektes verfügen über einen Status durch welchen der jeweilige Reifegard abgeleitet werden kann.
-Profile mit dem Status 'Draft' wurden noch nicht ballotiert und können noch diversen und substantiellen Änderungen unterliegen. Verpflichtende und ballotierte Ergebnisse sind unter dem Tab 'Packages' zu finden.
+1. **Create your repo** — *Use this template*, tick *Include all branches*.
+2. **Run the first-run bootstrap** — `bash scripts/first-run-bootstrap.sh` (dry
+   run), then `--apply`. It protects both branches and removes the template's
+   own SemVer release automation, which a CalVer module must not carry. Run it
+   even if you ticked *Include all branches*.
+3. **Open it in the dev container** (VS Code → *Reopen in Container*). It brings
+   Java, Node, SUSHI, Jekyll and Graphviz.
+   → [details](docs/recipes/first-build-in-devcontainer.md)
+4. **Fill in your module's values** — start in `sushi-config.yaml`, whose header
+   lists all 19 placeholders and the files each one occurs in, then work through
+   `ig.ini`, `publication-request.json`, `.github/workflows/go-publish.yml`,
+   `qc/custom.rules.yaml`, `tests/`, the pages and the FSH sources. **Also rename the three
+   placeholder-NAMED files** to your IG's id — the IG-level catalogue
+   `input/translations/de/ImplementationGuide-mii-ig-symptom.po` (the
+   publisher ignores it silently if it does not match) and the
+   ImplementationGuide intro page `ImplementationGuide-mii-ig-symptom.md`
+   in `input/pagecontent/` and its German mirror (the build fails on the
+   `pages:` entry if they do not match).
+   [Create a new module](docs/recipes/create-a-new-module.md) step 5 has the two
+   sweeps that prove you missed none.
+5. **Write a profile** in `input/fsh/` (an example is included to copy) and
+   replace the English starter pages in `input/pagecontent/` (and their German
+   counterparts in `input/translations/de/pagecontent/`).
+   → [add a profile](docs/recipes/add-a-profile.md)
+6. **Build it**: `sushi .`, then run the IG Publisher, then read `output/qa.html`.
+   Or push a branch — CI builds it and comments the preview URL on your PR
+   (one-time: enable GitHub Pages and set `PAGES_ACTIONS_ENABLED` to match the
+   Pages mode you chose — [first-run setup](docs/recipes/first-run-setup.md),
+   checklist item 2 — else every preview URL 404s).
+7. **Release** with CalVer via the MII Module Release Workflow.
+   → [cut a release](docs/recipes/cut-a-release.md)
 
-### Mitwirkungs- und Kommentierungsmöglichkeiten
+The full walkthrough is [create a new module](docs/recipes/create-a-new-module.md).
+Unfamiliar terms are in the [glossary](docs/glossary.md).
 
-* Kommentareinreichung via [GitHub](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome)
-* Diskussionsforum im int. [FHIR-Chat](https://chat.fhir.org/#narrow/stream/179307-german.2Fmi-initiative)
-* Teilnahme am [Interoperabilitätsforum](https://wiki.hl7.de/index.php?title=Interoperabilitätsforum)
+## Where things live
 
-### Kurzzusammenfassung
+| Path | What it is |
+| --- | --- |
+| `sushi-config.yaml` | Your module's metadata — the file you edit first |
+| `input/fsh/` | Profiles, extensions, value sets (FHIR Shorthand) |
+| `input/pagecontent/` | The narrative pages — English, the IG's default language |
+| `input/translations/de/` | German translations of pages, menu and resources |
+| `input/includes/menu.xml` | The navigation menu (one file per language) |
+| `qc/custom.rules.yaml`, `advisor.json` | What the MII reusable validation reads: naming-convention rules and tolerated validator messages |
+| `ig-template/` | The MII IG template, mirrored automatically as the offline/reproducibility fallback (builds default to the template repository URL in `ig.ini`) — don't edit |
+| `docs/` | Guides and step-by-step recipes |
+| `tests/` | FHIR validation test cases the build runs — see [tests/README.md](tests/README.md) |
+| `scripts/` | Helper scripts (first-run bootstrap, template sync, convention check, …) — see [scripts/README.md](scripts/README.md) |
+| `skills/` | Reusable instructions for recurring maintenance tasks — see [`AGENTS.md`](AGENTS.md) |
+| `.github/workflows/` | CI: build, preview, validation, release — see [docs/workflows.md](docs/workflows.md) |
 
-Das Erweiterungsmodul Symptome/klinischer Zustand ermöglicht Repräsentationen klinischer Zustände bzw. klinischer Beobachtungen, wie sie in der klinischen Dokumentation entweder als Symptome, klinische Probleme, Erkrankungen und Dispositionen oder als Befunde, Beobachtungen und Messungen angegeben sind. Dabei sollen diese zusammenfassend als Zustand (Condition) bzw. Beobachtung (Observation) repräsentiert werden. Zusammenhängende Darstellungen aus Beobachtungen und daraus abgeleiteten Interpretationen sind möglich und können hierarchisch zu komplexen Aggregaten (klinische Phänotypen) aufgebaut werden. Dieses Modul kann immer dann eingesetzt werden, wenn es keine spezifischen Repräsentationen in bereits vorhandenen dedizierten Modulen wie z. B. Diagnose oder Labor gibt oder wenn diese aus verschiedensten Gründen nicht anwendbar sind. Es ist jeweils im Kontext einer spezifischen Anwendung zu prüfen, ob dieses Erweiterungsmodul eingesetzt werden kann und soll. Innerhalb einer Condition erfolgt keine Unterscheidung zwischen Symptomen, Erkrankungen und Dispositionen, da sie schwierig und ambivalent ist und daher in der klinischen Medizin kaum eine Bedeutung hat. Die Unterscheidung zwischen Zustand (Condition) und Beobachtung (Observation) hingegen ist von praktischer Bedeutung. Charakteristisch für Observations ist, vereinfacht formuliert, die Repräsentation von Messungen oder Befragungen über Attribut-Wert- oder Frage-Antwort-Paare. Es sei an dieser Stelle auf die Beschreibung der FHIR Ressourcen Condition und Observation hingewiesen, auf die wir uns auch im Folgenden beziehen. (Krankheits-) Zustände können von den zugrundeliegenden Beobachtungen eindeutig abgegrenzt werden: Zustände sind zusammenfassende/beurteilende Feststellungen (z. B. Anämie) oder anamnestische Auskünfte über zugrundeliegende Beobachtungen oder Messungen (Hämoglobin-Gehalt mit einem Wert/Quantität).
+## Documentation
 
-### Wichtige Dokumente und Links
-* [Beschreibung des MII-Kerndatensatzes in der Version 1.0 vom 10.3.2017 (PDF)](https://www.medizininformatik-initiative.de/sites/default/files/inline-files/MII_04_Kerndatensatz_1-0.pdf)
-* [Datenmodellbeschreibung des MII-Kerndatensatzes in ART-DECOR](https://art-decor.org/art-decor/decor-project--mide-)
-* [GitHub Repository](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome)
-* [Implementation Guide](https://simplifier.net/guide/mii-ig-modul-symptom-2024-de)
+**[docs/](docs/README.md) is the index** — every guide, with a reading order for
+newcomers. The three you are most likely to want first:
 
+- [Recipes](docs/recipes/) — step-by-step for the common tasks
+- [Create a new module](docs/recipes/create-a-new-module.md) — the path from *Use this template* to a module that builds
+- [Org move & governance status](docs/org-move.md) — the repository's home, and which decisions are still open
 
-### Autoren und Ansprechpartner
+Contributing and policies: [CONTRIBUTING.md](CONTRIBUTING.md) ·
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
 
-Leitung des Moduls:
+## Getting help
 
-* Martin Boeker
+- **FHIR and profiling questions** — HL7 FHIR Zulip <https://chat.fhir.org>,
+  stream `german/mi-initiative`. Free to join; this is where the MII KDS IGs
+  point their readers.
+- **MII coordination** — MII Zulip <https://mii.zulipchat.com/>, stream
+  `MII-Kerndatensatz`. Access via the MII Geschäftsstelle
+  (<office@medizininformatik-initiative.de>).
+- **Problems with this template** — open an [issue](../../issues).
 
-Technische Umsetzung:
+## Licence
 
-* Martin Boeker (Implementation Guide und Logical Models)
-* Julian Saß (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
+[CC-BY-4.0](LICENSE), matching MII IG content.

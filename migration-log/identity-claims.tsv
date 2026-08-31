@@ -1,0 +1,12 @@
+2026-08-31T19:20:52Z	id	sushi-config	sushi-config.yaml:5	mii-ig-symptom	2.1	read-identity
+2026-08-31T19:20:52Z	canonical	sushi-config	sushi-config.yaml:6	https://www.medizininformatik-initiative.de/fhir/modul-symptom	2.1	read-identity
+2026-08-31T19:20:52Z	title	sushi-config	sushi-config.yaml:7	MII IG Symptom	2.1	read-identity
+2026-08-31T19:20:52Z	name	sushi-config	sushi-config.yaml:8	MII_IG_Symptom	2.1	read-identity
+2026-08-31T19:20:52Z	status	sushi-config	sushi-config.yaml:9	active	2.1	read-identity
+2026-08-31T19:20:52Z	version	sushi-config	sushi-config.yaml:10	2026.0.0-rc.1	2.1	read-identity
+2026-08-31T19:20:52Z	packageId	sushi-config	sushi-config.yaml:11	de.medizininformatikinitiative.kerndatensatz.symptom	2.1	read-identity
+2026-08-31T19:20:52Z	fhirVersion	sushi-config	sushi-config.yaml:12	4.0.1	2.1	read-identity
+2026-08-31T19:20:52Z	copyrightYear	sushi-config	sushi-config.yaml:13	2022+	2.1	read-identity
+2026-08-31T19:20:52Z	releaseLabel	sushi-config	sushi-config.yaml:14	ci-build	2.1	read-identity
+2026-08-31T19:20:52Z	publisher	sushi-config	sushi-config.yaml:15-17	Medizininformatik Initiative (https://www.medizininformatik-initiative.de/)	2.1	read-identity
+2026-08-31T19:20:52Z	license	package.json+meta-license-extension	package.json:license + sushi-config.yaml:36-42 (no license: key in sushi-config)	CC-BY-4.0	2.1	read-identity

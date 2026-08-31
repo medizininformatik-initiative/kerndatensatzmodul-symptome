@@ -1,0 +1,42 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: mii-ig-symptom
+canonical: https://www.medizininformatik-initiative.de/fhir/modul-symptom
+title: "MII IG Symptom"
+name: MII_IG_Symptom
+status: active
+version: 2026.0.0-rc.1
+packageId: de.medizininformatikinitiative.kerndatensatz.symptom
+fhirVersion: 4.0.1
+copyrightYear: 2022+
+releaseLabel: ci-build
+publisher:
+  name: Medizininformatik Initiative
+  url: https://www.medizininformatik-initiative.de/
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+dependencies:
+  de.medizininformatikinitiative.kerndatensatz.meta: 
+    uri: https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta
+    version: 2026.0.x
+  de.basisprofil.r4:
+    uri: de.basisprofil.r4
+    version: 1.5.4
+  hl7.fhir.eu.base:
+    uri: http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base
+    version: 0.1.0
+
+extension:
+  - url: https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable
+    valueCodeableConcept:
+      coding:
+        - system: http://spdx.org/licenses/
+          code: CC-BY-4.0
+          display: Creative Commons Attribution 4.0 International License
