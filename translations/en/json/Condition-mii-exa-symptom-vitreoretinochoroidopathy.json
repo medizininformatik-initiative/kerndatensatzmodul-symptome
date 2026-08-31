@@ -1,0 +1,25 @@
+{
+  "id" : "Condition-mii-exa-symptom-vitreoretinochoroidopathy",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Active",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Confirmed",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Autosomal dominant vitreoretinochoroidopathy",
+      "target" : null
+    }]
+  }]
+}

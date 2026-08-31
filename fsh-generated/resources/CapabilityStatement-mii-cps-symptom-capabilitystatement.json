@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "mii-cps-symptom-capabilitystatement",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata",
-  "version": "2026.0.0-rc.1",
+  "version": "2027.0.0-ballot.rc1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -51,7 +51,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Observation",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2026.0.0-rc.1"
+            "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2027.0.0-ballot.rc1"
           ],
           "_supportedProfile": [
             {
@@ -481,7 +481,7 @@
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Condition",
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2026.0.0-rc.1"
+            "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2027.0.0-ballot.rc1"
           ],
           "_supportedProfile": [
             {

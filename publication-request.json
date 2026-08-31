@@ -1,0 +1,17 @@
+{
+   "package-id" : "de.medizininformatikinitiative.kerndatensatz.symptom",
+   "version" : "2027.0.0-ballot.rc1",
+   "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot.rc1",
+   "mode" : "milestone",
+   "status" : "release",
+   "sequence" : "2026",
+   "desc" : "Migration of the MII KDS module Symptome onto the IG-Publisher module template",
+   "first" : true,
+   "title" : "MII Implementation Guide Symptom",
+   "ci-build" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/dev/",
+   "category" : "Research",
+   "introduction" : "Medizininformatik Initiative - Modul Symptom",
+   "registry-description" : "MII KDS Modul Symptome/klinischer Zustand",
+   "registry-country" : "de",
+   "registry-authority" : "Medical Informatics Initiative (MII)"
+}

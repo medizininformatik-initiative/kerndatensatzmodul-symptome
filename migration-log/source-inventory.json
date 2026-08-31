@@ -1,0 +1,296 @@
+{
+ "generated": "2026-08-31",
+ "source_commit": "d4ef9de39db68c77d1589f62e1aa23f8727b2b6b",
+ "artifacts": [
+  {
+   "file": "fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement.json",
+   "resourceType": "CapabilityStatement",
+   "id": "mii-cps-symptom-capabilitystatement",
+   "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata",
+   "abstract": null
+  },
+  {
+   "file": "fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy.json",
+   "resourceType": "Condition",
+   "id": "mii-exa-symptom-vitreoretinochoroidopathy",
+   "url": null,
+   "abstract": null
+  },
+  {
+   "file": "fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly.json",
+   "resourceType": "Observation",
+   "id": "mii-exa-symptom-arachnodactyly",
+   "url": null,
+   "abstract": null
+  },
+  {
+   "file": "fsh-generated/resources/Observation-mii-exa-symptom-chestpain.json",
+   "resourceType": "Observation",
+   "id": "mii-exa-symptom-chestpain",
+   "url": null,
+   "abstract": null
+  },
+  {
+   "file": "fsh-generated/resources/StructureDefinition-mii-lm-symptom.json",
+   "resourceType": "StructureDefinition",
+   "id": "mii-lm-symptom",
+   "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom",
+   "abstract": false
+  },
+  {
+   "file": "fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition.json",
+   "resourceType": "StructureDefinition",
+   "id": "mii-pr-symptom-condition",
+   "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
+   "abstract": true
+  },
+  {
+   "file": "fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation.json",
+   "resourceType": "StructureDefinition",
+   "id": "mii-pr-symptom-observation",
+   "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation",
+   "abstract": true
+  }
+ ],
+ "narrative": [
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/BeschreibungModul-1.x.page.md",
+   "lines": 9
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/Index.page.md",
+   "lines": 55
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/KontextimGesamtprojektBezgezuanderenModulen-1.x.page.md",
+   "lines": 24
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/Referenzen-1.x.page.md",
+   "lines": 7
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/CapabilityStatement.page.md",
+   "lines": 18
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/Index.page.md",
+   "lines": 6
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/Terminologien-1.x.page.md",
+   "lines": 6
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md",
+   "lines": 92
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Index.page.md",
+   "lines": 12
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md",
+   "lines": 126
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-Condition-Relationship.page.md",
+   "lines": 70
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md",
+   "lines": 72
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md",
+   "lines": 21
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Index.page.md",
+   "lines": 6
+  },
+  {
+   "file": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/UML-1.x.page.md",
+   "lines": 6
+  }
+ ],
+ "other_narrative_bearing": [
+  {
+   "file": "README.md",
+   "lines": 45,
+   "disposition": "README stays repo landing (updated at step 9); input/pagecontent/index.md = SUSHI boilerplate, superseded by template index"
+  },
+  {
+   "file": "input/pagecontent/index.md",
+   "lines": 3,
+   "disposition": "README stays repo landing (updated at step 9); input/pagecontent/index.md = SUSHI boilerplate, superseded by template index"
+  }
+ ],
+ "fsh_declarations": [
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$HPO"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$LOINC"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$SCT"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$UCUM"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$lebensphase"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$ObsCat"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$assertedDate"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$bodySite-reference"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$BodyStructureEuCore"
+  },
+  {
+   "file": "input/fsh/Aliase.fsh",
+   "kind": "Alias",
+   "name": "$SNOMEDCTBodyStructures"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "Alias",
+   "name": "$exp"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "RuleSet",
+   "name": "SupportResource"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "RuleSet",
+   "name": "Profile"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "RuleSet",
+   "name": "SupportProfile"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "RuleSet",
+   "name": "SupportInteraction"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "RuleSet",
+   "name": "SupportSearchParam"
+  },
+  {
+   "file": "input/fsh/CapabilityStatement.fsh",
+   "kind": "Instance",
+   "name": "mii-cps-symptom-capabilitystatement"
+  },
+  {
+   "file": "input/fsh/GlasgowComaScore.fsh",
+   "kind": "Profile",
+   "name": "MII_PR_Symptom_GlasgowComaScore"
+  },
+  {
+   "file": "input/fsh/GlasgowComaScore.fsh",
+   "kind": "Instance",
+   "name": "mii-vs-symptom-glasgow-coma-score-eye"
+  },
+  {
+   "file": "input/fsh/GlasgowComaScore.fsh",
+   "kind": "Instance",
+   "name": "mii-vs-symptom-glasgow-coma-score-verbal"
+  },
+  {
+   "file": "input/fsh/GlasgowComaScore.fsh",
+   "kind": "Instance",
+   "name": "mii-vs-symptom-glasgow-coma-score-motor"
+  },
+  {
+   "file": "input/fsh/GlasgowComaScore.fsh",
+   "kind": "Instance",
+   "name": "mii-exa-symptom-glasgow-coma-score"
+  },
+  {
+   "file": "input/fsh/LogicalModel.fsh",
+   "kind": "Logical",
+   "name": "MII_LM_Symptom"
+  },
+  {
+   "file": "input/fsh/LogicalModel.fsh",
+   "kind": "Mapping",
+   "name": "Symptom-LogicalModel"
+  },
+  {
+   "file": "input/fsh/Profiles.fsh",
+   "kind": "Profile",
+   "name": "MII_PR_Symptom_Observation"
+  },
+  {
+   "file": "input/fsh/Profiles.fsh",
+   "kind": "Instance",
+   "name": "mii-exa-symptom-arachnodactyly"
+  },
+  {
+   "file": "input/fsh/Profiles.fsh",
+   "kind": "Instance",
+   "name": "mii-exa-symptom-chestpain"
+  },
+  {
+   "file": "input/fsh/Profiles.fsh",
+   "kind": "Profile",
+   "name": "MII_PR_Symptom_Condition"
+  },
+  {
+   "file": "input/fsh/Profiles.fsh",
+   "kind": "Instance",
+   "name": "mii-exa-symptom-vitreoretinochoroidopathy"
+  },
+  {
+   "file": "input/fsh/rulesets/publisher.fsh",
+   "kind": "RuleSet",
+   "name": "Publisher"
+  },
+  {
+   "file": "input/fsh/rulesets/publisher.fsh",
+   "kind": "RuleSet",
+   "name": "SP_Publisher"
+  },
+  {
+   "file": "input/fsh/rulesets/version.fsh",
+   "kind": "RuleSet",
+   "name": "Version"
+  },
+  {
+   "file": "input/fsh/rulesets/version.fsh",
+   "kind": "RuleSet",
+   "name": "PR_CS_VS_Version"
+  }
+ ]
+}
