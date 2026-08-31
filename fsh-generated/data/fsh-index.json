@@ -1,0 +1,58 @@
+[
+  {
+    "outputFile": "CapabilityStatement-mii-cps-symptom-capabilitystatement.json",
+    "fshName": "mii-cps-symptom-capabilitystatement",
+    "fshType": "Instance",
+    "fshFile": "CapabilityStatement.fsh",
+    "startLine": 33,
+    "endLine": 122
+  },
+  {
+    "outputFile": "Condition-mii-exa-symptom-vitreoretinochoroidopathy.json",
+    "fshName": "mii-exa-symptom-vitreoretinochoroidopathy",
+    "fshType": "Instance",
+    "fshFile": "Profiles.fsh",
+    "startLine": 86,
+    "endLine": 94
+  },
+  {
+    "outputFile": "Observation-mii-exa-symptom-arachnodactyly.json",
+    "fshName": "mii-exa-symptom-arachnodactyly",
+    "fshType": "Instance",
+    "fshFile": "Profiles.fsh",
+    "startLine": 35,
+    "endLine": 41
+  },
+  {
+    "outputFile": "Observation-mii-exa-symptom-chestpain.json",
+    "fshName": "mii-exa-symptom-chestpain",
+    "fshType": "Instance",
+    "fshFile": "Profiles.fsh",
+    "startLine": 43,
+    "endLine": 50
+  },
+  {
+    "outputFile": "StructureDefinition-mii-lm-symptom.json",
+    "fshName": "MII_LM_Symptom",
+    "fshType": "Logical",
+    "fshFile": "LogicalModel.fsh",
+    "startLine": 1,
+    "endLine": 62
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-symptom-condition.json",
+    "fshName": "MII_PR_Symptom_Condition",
+    "fshType": "Profile",
+    "fshFile": "Profiles.fsh",
+    "startLine": 52,
+    "endLine": 84
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-symptom-observation.json",
+    "fshName": "MII_PR_Symptom_Observation",
+    "fshType": "Profile",
+    "fshFile": "Profiles.fsh",
+    "startLine": 1,
+    "endLine": 33
+  }
+]

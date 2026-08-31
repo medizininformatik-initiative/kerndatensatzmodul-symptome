@@ -1,0 +1,17 @@
+	input/fsh/README.md
+	input/fsh/aliases.fsh
+	input/fsh/capabilitystatements/.gitkeep
+	input/fsh/codesystems/.gitkeep
+	input/fsh/extensions/.gitkeep
+	input/fsh/invariants/.gitkeep
+	input/fsh/logicals/.gitkeep
+	input/fsh/parameters/manifest.fsh
+	input/fsh/rulesets/README.md
+	input/fsh/rulesets/crmi.fsh
+	input/fsh/rulesets/extension-context.fsh
+	input/fsh/rulesets/license-terms.fsh
+	input/fsh/rulesets/license.fsh
+	input/fsh/rulesets/meta-profile.fsh
+	input/fsh/rulesets/test-data-label.fsh
+	input/fsh/rulesets/translation.fsh
+	input/fsh/valuesets/.gitkeep
