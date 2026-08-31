@@ -3,7 +3,7 @@ MII_IG_Symptom : Validation Results
 
 err = 34, warn = 168, info = 331
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.3
-Generated Mon Aug 31 21:21:30 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
+Generated Mon Aug 31 21:26:20 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
  Build Errors : 0 / 4 / 0
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement : 0 / 1 / 62
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy : 2 / 0 / 1
