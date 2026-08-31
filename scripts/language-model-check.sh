@@ -53,7 +53,14 @@ PATTERNS=(
 )
 
 # Reviewed exceptions: "<path>|<substring of the offending line>", one per line.
-ALLOW=''
+ALLOW='scripts/publication-url-consistency.template-test.mjs|is English-default
+scripts/publication-url-consistency.template-test.mjs|i18n-default-lang: en
+scripts/self-check-substitute.sh|input/translations/de/ImplementationGuide
+skills/wiki-consistency-check/references/check-matrix.md|i18n-default-lang'
+# Reasons: the .template-test.mjs runs ONLY on the template repo (endsWith guard)
+# and asserts the TEMPLATE's en-default; self-check-substitute documents the
+# template's rename mechanics; the check-matrix documents the template-wide
+# reading and explicitly defers to the module's own setting.
 
 args=()
 for pattern in "${PATTERNS[@]}"; do

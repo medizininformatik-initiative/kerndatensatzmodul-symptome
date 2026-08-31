@@ -1,8 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- TODO:REVIEW — MACHINE TRANSLATION of input/pagecontent/translationinfo.md
      (DE-first migration 2026-08-31). Review at Gate C before release. -->
-### Translation information
-
 This guide is **German-language** (default language); **English** is the
 translation. German is thus both the base rendering of the guide and the
 `/de/` rendering; use the language switcher at the top right to switch

@@ -1,102 +1,60 @@
-# mii-kds-module-template
+# Kerndatensatzmodul Symptome / klinischer Phänotyp
 
-A **GitHub template repository** for building an **MII Kerndatensatz (KDS) module
-Implementation Guide**. Click *Use this template* and you get a working IG project
-— FHIR tooling, CI, bilingual previews and the MII release process already wired
-up — so you can start with profiles and content instead of setup.
+FHIR-Spezifikation des Kerndatensatz-Moduls **Symptom/klinischer Phänotyp**
+der Medizininformatik-Initiative (MII).
 
-The MII look comes from the separate IG template
-[`ig-template-mii-kds`](https://github.com/medizininformatik-initiative/ig-template-mii-kds),
-which this scaffold references (and keeps up to date automatically).
+- **Canonical:** `https://www.medizininformatik-initiative.de/fhir/modul-symptom`
+- **Package:** `de.medizininformatikinitiative.kerndatensatz.symptom`
+- **Lizenz:** [CC BY 4.0](LICENSE) — Copyright © 2022+ TMF e. V.
 
-See what it renders as before you start:
-<https://medizininformatik-initiative.github.io/mii-kds-module-template/> — the
-demo module of the current release, plus two real MII KDS modules migrated onto
-this template.
+> **Hinweis zur Migration (2026-08-31):** Dieser Implementierungsleitfaden
+> wurde von Simplifier auf den **HL7 IG Publisher** mit dem
+> [MII-KDS-Modul-Template](https://github.com/medizininformatik-initiative/mii-kds-module-template)
+> (v0.13.2) migriert — **deutschsprachig führend** (Deutsch ist die
+> Standardsprache, Englisch die Übersetzung). Der vollständige
+> Migrationsbericht liegt im zugehörigen Pull Request; die Evidenz in
+> [`migration-log/`](migration-log/). Die bisherige Simplifier-Projektstruktur
+> (`implementation-guides/`, altes CI) bleibt bis zur Abnahme (Gate D)
+> unangetastet im Repository. Das alte README:
+> [README.simplifier-legacy.md](README.simplifier-legacy.md).
 
-> **Status: prototype.** Usable and released, but pending discussion in the MII
-> Taskforce Kerndatensatz — see [docs/org-move.md](docs/org-move.md).
+## Leitfaden
 
-> **⚠️ When you click *Use this template*, tick “Include all branches”.**
-> Otherwise you get `main` only, without the `dev` branch this scaffold works
-> with. The first-run bootstrap in step 2 creates `dev` for you if you forgot.
+Der Leitfaden wird aus diesem Repository mit SUSHI + HL7 IG Publisher gebaut:
 
-## Quickstart
+```sh
+npx fsh-sushi .            # FSH → FHIR-Ressourcen (fsh-generated/)
+# IG Publisher (Version/Pins siehe .github/workflows/ig-publisher.yml):
+java -jar publisher.jar -ig ig.ini
+```
 
-1. **Create your repo** — *Use this template*, tick *Include all branches*.
-2. **Run the first-run bootstrap** — `bash scripts/first-run-bootstrap.sh` (dry
-   run), then `--apply`. It protects both branches and removes the template's
-   own SemVer release automation, which a CalVer module must not carry. Run it
-   even if you ticked *Include all branches*.
-3. **Open it in the dev container** (VS Code → *Reopen in Container*). It brings
-   Java, Node, SUSHI, Jekyll and Graphviz.
-   → [details](docs/recipes/first-build-in-devcontainer.md)
-4. **Fill in your module's values** — start in `sushi-config.yaml`, whose header
-   lists all 19 placeholders and the files each one occurs in, then work through
-   `ig.ini`, `publication-request.json`, `.github/workflows/go-publish.yml`,
-   `qc/custom.rules.yaml`, `tests/`, the pages and the FSH sources. **Also rename the three
-   placeholder-NAMED files** to your IG's id — the IG-level catalogue
-   `input/translations/de/ImplementationGuide-mii-ig-symptom.po` (the
-   publisher ignores it silently if it does not match) and the
-   ImplementationGuide intro page `ImplementationGuide-mii-ig-symptom.md`
-   in `input/pagecontent/` and its German mirror (the build fails on the
-   `pages:` entry if they do not match).
-   [Create a new module](docs/recipes/create-a-new-module.md) step 5 has the two
-   sweeps that prove you missed none.
-5. **Write a profile** in `input/fsh/` (an example is included to copy) and
-   replace the English starter pages in `input/pagecontent/` (and their German
-   counterparts in `input/translations/de/pagecontent/`).
-   → [add a profile](docs/recipes/add-a-profile.md)
-6. **Build it**: `sushi .`, then run the IG Publisher, then read `output/qa.html`.
-   Or push a branch — CI builds it and comments the preview URL on your PR
-   (one-time: enable GitHub Pages and set `PAGES_ACTIONS_ENABLED` to match the
-   Pages mode you chose — [first-run setup](docs/recipes/first-run-setup.md),
-   checklist item 2 — else every preview URL 404s).
-7. **Release** with CalVer via the MII Module Release Workflow.
-   → [cut a release](docs/recipes/cut-a-release.md)
+CI baut jeden Branch und veröffentlicht eine Vorschau unter
+`gh-pages/branches/<branch>/` (Deutsch unter `/`, Englisch unter `/en/`).
 
-The full walkthrough is [create a new module](docs/recipes/create-a-new-module.md).
-Unfamiliar terms are in the [glossary](docs/glossary.md).
+Die bisher veröffentlichte Fassung:
+[MII IG Symptom v2026 auf Simplifier](https://simplifier.net/guide/mii-ig-modul-symptom-2024-de?version=current).
 
-## Where things live
+## Struktur
 
-| Path | What it is |
+| Pfad | Inhalt |
 | --- | --- |
-| `sushi-config.yaml` | Your module's metadata — the file you edit first |
-| `input/fsh/` | Profiles, extensions, value sets (FHIR Shorthand) |
-| `input/pagecontent/` | The narrative pages — English, the IG's default language |
-| `input/translations/de/` | German translations of pages, menu and resources |
-| `input/includes/menu.xml` | The navigation menu (one file per language) |
-| `qc/custom.rules.yaml`, `advisor.json` | What the MII reusable validation reads: naming-convention rules and tolerated validator messages |
-| `ig-template/` | The MII IG template, mirrored automatically as the offline/reproducibility fallback (builds default to the template repository URL in `ig.ini`) — don't edit |
-| `docs/` | Guides and step-by-step recipes |
-| `tests/` | FHIR validation test cases the build runs — see [tests/README.md](tests/README.md) |
-| `scripts/` | Helper scripts (first-run bootstrap, template sync, convention check, …) — see [scripts/README.md](scripts/README.md) |
-| `skills/` | Reusable instructions for recurring maintenance tasks — see [`AGENTS.md`](AGENTS.md) |
-| `.github/workflows/` | CI: build, preview, validation, release — see [docs/workflows.md](docs/workflows.md) |
+| `sushi-config.yaml` | Metadaten des Moduls (Identität, Abhängigkeiten, Seitenbaum) |
+| `input/fsh/` | Profile, Logical Model, CapabilityStatement, Beispiele (FHIR Shorthand) |
+| `input/pagecontent/` | Die narrativen Seiten — **Deutsch, die Standardsprache** |
+| `input/translations/en/` | Englische Übersetzungen (Seiten, Menü, Seitentitel-`.po`) |
+| `input/intro-notes/` | Einführungstexte, die auf den Artefakt-Seiten rendern |
+| `input/includes/menu.xml` | Navigationsmenü (eine Datei je Sprache) |
+| `qc/custom.rules.yaml`, `advisor.json` | Regeln/Toleranzen der MII-Validierung |
+| `migration-log/` | Evidenz der Template-Migration (run.log, Ledger, Bericht) |
+| `implementation-guides/` | **Legacy:** Simplifier-Leitfaden-Quelle (Rückbau nach Gate D) |
+| `docs/` | Anleitungen und Rezepte des Modul-Templates |
+| `scripts/`, `tests/` | Konventions-Checks und Validierungs-Testfälle |
 
-## Documentation
+## Ansprechpartner
 
-**[docs/](docs/README.md) is the index** — every guide, with a reading order for
-newcomers. The three you are most likely to want first:
+- Martin Boeker (Klinikum rechts der Isar, TU München) — Modulverantwortlicher
+- Julian Saß (Berlin Institute of Health at Charité)
+- Karoline Buckow (TMF e. V.)
 
-- [Recipes](docs/recipes/) — step-by-step for the common tasks
-- [Create a new module](docs/recipes/create-a-new-module.md) — the path from *Use this template* to a module that builds
-- [Org move & governance status](docs/org-move.md) — the repository's home, and which decisions are still open
-
-Contributing and policies: [CONTRIBUTING.md](CONTRIBUTING.md) ·
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
-
-## Getting help
-
-- **FHIR and profiling questions** — HL7 FHIR Zulip <https://chat.fhir.org>,
-  stream `german/mi-initiative`. Free to join; this is where the MII KDS IGs
-  point their readers.
-- **MII coordination** — MII Zulip <https://mii.zulipchat.com/>, stream
-  `MII-Kerndatensatz`. Access via the MII Geschäftsstelle
-  (<office@medizininformatik-initiative.de>).
-- **Problems with this template** — open an [issue](../../issues).
-
-## Licence
-
-[CC-BY-4.0](LICENSE), matching MII IG content.
+Fragen: [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179307-german.2Fmi-initiative)
+Stream `german/mi-initiative` · Anmerkungen gern als GitHub-Issue.

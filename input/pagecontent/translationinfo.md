@@ -3,8 +3,6 @@
      Standardsprache dieses Moduls, Englisch die Übersetzung — die Richtung des
      Template-Gerüsts ist invertiert. Mechanik: docs/recipes/add-translation.md
      (dort mit vertauschten Rollen lesen). -->
-### Hinweise zur Übersetzung
-
 Dieser Leitfaden ist **deutschsprachig** (Standardsprache); **Englisch** ist
 die Übersetzung. Deutsch ist damit sowohl die Basis-Darstellung des Leitfadens
 als auch die `/de/`-Darstellung; über den Sprachumschalter oben rechts wechseln

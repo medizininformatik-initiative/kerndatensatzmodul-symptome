@@ -81,8 +81,8 @@ Author identity is the configured human committer.
   `scripts/convention-check.mjs` (placeholder-aware). Do not add a second
   metadata linter. `convention-check.yml` also runs `scripts/language-model-check.sh`
   — a separate concern (see below), not a second metadata linter.
-- **English is the IG's default language, German the translation**
-  (`i18n-default-lang: en`, sources under `input/translations/de/`) — the same
+- **German is this module's default language, English the translation** (DE-first migration decision 2026-08-31)
+  (`i18n-default-lang: de`, translations under `input/translations/en/`) — inverted from the template default; otherwise the same
   model as `kerndatensatz-basis`, so "deviates from basis" is never true. Prose
   asserting the reverse fails `scripts/language-model-check.sh` in CI — fix the
   prose, never the guard.
