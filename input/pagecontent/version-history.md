@@ -13,7 +13,7 @@ Das Modul **Symptom** folgt dem KDS-Schema der Kalender-Versionierung
 (CalVer) in einer SemVer-kompatiblen numerischen Form:
 
 * Format **`JJJJ.MINOR.PATCH[-label]`** — die aktuelle Version ist
-  `2026.0.0-rc.1`;
+  `2027.0.0-ballot.rc1`;
 * **`JJJJ`** — das Jahr, in dem der Leitfaden gilt und genutzt werden soll; es
   tritt an die Stelle der Major-Version;
 * **`MINOR`** — wird für nicht brechende Ergänzungen und Präzisierungen erhöht;
@@ -79,12 +79,4 @@ Publikationshistorie an der kanonischen URL und ein ladbares
 Vorversions-Paket). Fehlt der Parameter, gilt der Standard `{last}`; der
 Wert `n/a` ist der dokumentierte Weg, den Vergleich abzuschalten.
 
-**Die Demonstration unten** (nur in der Vorschau dieses
-Vorlagen-Repositories) zeigt dieselbe Art Bericht, bevor eine formale
-Publikation existiert: Der Build vergleicht sich mit der vorherigen
-`dev`-Vorschau über das `-compare`-Kommando des FHIR-Validators und
-veröffentlicht das Ergebnis unter `comparison-demo/index.html`.
-Die Repository-Variable `ENABLE_VERSION_COMPARISON=false` schaltet das
-gesamte Feature ab — den Publisher-Vergleich in allen Build-Workflows ebenso
-wie diese Demonstration; ein erstelltes Modul rendert die Demonstration nie.
 

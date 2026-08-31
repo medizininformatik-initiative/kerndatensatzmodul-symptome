@@ -40,6 +40,7 @@ and in the [MII Diagnosis module](https://medizininformatik-initiative.github.io
 
 <!-- GENERATED from fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition.json
      (differential elements with mustSupport=true; source directive: Simplifier FQL). -->
+
 | Feldname | Kurzbeschreibung | Hinweise |
 |---|---|---|
 | `Condition.extension:assertedDate` |  |  |
@@ -69,6 +70,7 @@ and in the [MII Diagnosis module](https://medizininformatik-initiative.github.io
 <!-- GENERATED from fsh-generated/resources/StructureDefinition-mii-lm-symptom.json
      (differential elements mii-lm-symptom.Condition.*; source directive: Simplifier FQL
      against the legacy LM canonical). -->
+
 | FHIR | Datensatz | Erklärung |
 |---|---|---|
 | `Condition` | mii-lm-symptom.Condition | Im Sinne einer FHIR Condition: klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom). |
