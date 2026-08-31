@@ -6,7 +6,7 @@
 > **DRAFT — nothing is published.** Merging this PR publishes the new tree to the default branch;
 > that decision belongs to Gate D (TF KDS / module owners), not to this migration.
 > Owner decisions applied (2026-08-31): **DE-first** (German default, English translation),
-> **target version 2027.0.0-ballot** (applied as a separate re-version commit AFTER the measured
+> **target version 2027.0.0-ballot.rc1** (applied as a separate re-version commit AFTER the measured
 > migration window), **licence CC-BY-4.0**, in-place delivery in this repository.
 
 ## Summary — read this first
@@ -17,7 +17,7 @@ template, **in place**, preserving identity byte-for-byte and every artifact:
 - **Identity:** id / canonical / packageId / name / title / publisher / licence carried unchanged
   (same-module comparison: 10/10 fields, published artifact set 12/12, canonical URLs 4/4 —
   all **IDENTISCH**). The version was `2026.0.0-rc.1` through the whole measured window; the
-  **re-version to `2027.0.0-ballot`** (owner decision, matching the merged sibling
+  **re-version to `2027.0.0-ballot.rc1`** (owner decision, matching the merged sibling
   `kerndatensatz-lungenfunktion`) is the separate, final commit with its own rebuild proof, and it
   resolves the source's 3-way version self-contradiction (sushi-config/version.fsh said
   `2026.0.0-rc.1`, package.json/qc said `2026.0.0` — never released).
@@ -59,7 +59,7 @@ replaced), and the generated aids pasted below. Local renders: `output/` (gitign
 | FIX-6 | DE-first CI patch: `language-model-check.sh` patterns inverted; `convention-check.mjs`+test path swap; go-publish language order | owner decision D-1; template hard-codes EN-default (issue candidate) | yes (1 commit) |
 | FIX-7 | Workflow branch filters += `master`/`migration/**`; secret fallback `SU_TERMSERV_* \|\| CDS_DEV_*` | default branch here is `master` (template assumes dev/main); GenetischeTests #52 trap | yes |
 | FIX-8 | `.gitignore`: `fsh-generated/` tracked (menu include excluded), `!migration-log/` | wave requirement (#51); evidence must be committed | yes |
-| FIX-9 | Re-version `2026.0.0-rc.1` → `2027.0.0-ballot` in all version-bearing files (incl. CapabilityStatement's versioned profile refs, publication-request.json) | owner decision D-2(a); applied after the measured window | yes (1 commit) |
+| FIX-9 | Re-version `2026.0.0-rc.1` → `2027.0.0-ballot.rc1` in all version-bearing files (incl. CapabilityStatement's versioned profile refs, publication-request.json) | owner decision D-2(a); applied after the measured window | yes (1 commit) |
 
 ## ① Decision queue (Gate A/D — someone must confirm)
 
@@ -69,7 +69,7 @@ replaced), and the generated aids pasted below. Local renders: `output/` (gitign
 | D2 | `prepost-delta`'s single regression `licence.contradictory` = **normalization echo**: config `CC-BY-4.0`, LICENSE title "Attribution 4.0 International", index prose "Creative Commons …" are three spellings of ONE licence; source read "uncontradicted" only because it shipped no LICENSE file | accept (Dokument precedent) | delta report keeps one explained regression row | Gate A reviewer |
 | D3 | The 3 residual QA errors (unresolved `Patient/example(-patient)` subject refs) left **source-inherent**, baseline-proven | leave; content fix is out of migration scope (follow-up candidate: add a synthetic Patient) | qa stays at err=3 | owners |
 | D4 | FIX-3/FIX-4 dependency adjudications | confirm | pins stand as applied | Gate A reviewer |
-| D5 | Re-version supersedes the stuck 2026 "Freigabe" (2026.0.0 was never tagged/published; wiki still lists "in Freigabe") | confirm the 2027-ballot line supersedes it | version stands at 2027.0.0-ballot per user decision | owners/TF KDS |
+| D5 | Re-version supersedes the stuck 2026 "Freigabe" (2026.0.0 was never tagged/published; wiki still lists "in Freigabe") | confirm the 2027-ballot line supersedes it | version stands at 2027.0.0-ballot.rc1 per user decision | owners/TF KDS |
 | D6 | Retirement set (post-merge): `implementation-guides/` tree, legacy `main.yml` (fires on this PR — duplicate validation runs are expected and pre-announced here; on v-tags it double-fires beside `module-release.yml` until retired), Renovate PR #26 + `renovate/configure`, `tech-test-2026-07-23` branch + its gh-pages build under `branches/tech-test-2026-07-23/`, `README.simplifier-legacy.md` | execute after Gate D as a follow-up PR | legacy machinery keeps running beside the new CI | owners |
 | D7 | GitHub Pages is **disabled** on this repo — previews 404 until an admin enables Pages (source: gh-pages) | enable at review time (one click) | reviewers use CI artifacts / local `output/` | repo admin |
 

@@ -15,7 +15,7 @@
 # MII" — prefixes PR, EX, LM, VS, CS, CM, SM, NS, SP, CPS, OD, IG, QST, OBSDEF,
 # MSR, EXA, PARAM.
 #
-# PLACEHOLDERS: symptom, Symptom and 2027.0.0-ballot are
+# PLACEHOLDERS: symptom, Symptom and 2027.0.0-ballot.rc1 are
 # replaced when you create your module — see the header of sushi-config.yaml.
 #
 # STARTER: the shipped example profile and its example instance deliberately
@@ -72,7 +72,7 @@
 - name: version-filled
   status: "Checking that every conformance resource carries the release version"
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
-  predicate: version.exists() and (version in ('2027.0.0-ballot'))
+  predicate: version.exists() and (version in ('2027.0.0-ballot.rc1'))
   error-message: "version missing, or not equal to the module's CalVer version"
   files:
     - /**/*.xml

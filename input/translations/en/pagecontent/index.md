@@ -13,7 +13,7 @@ resources are described below in their binding form.
 | Publication |               |
 |------------------|---------------|
 | Date             | 2026-08-31 |
-| Version          | 2027.0.0-ballot (CalVer `YYYY.n.n`) |
+| Version          | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 

@@ -15,7 +15,7 @@ name: MII_IG_Symptom
 title: "MII IG Symptom"
 description: "Medizininformatik Initiative - Modul Symptom"
 status: active
-version: 2027.0.0-ballot
+version: 2027.0.0-ballot.rc1
 packageId: de.medizininformatikinitiative.kerndatensatz.symptom
 fhirVersion: 4.0.1
 copyrightYear: 2022+
@@ -59,7 +59,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.symptom
       - url: version
-        valueString: "2027.0.0-ballot"
+        valueString: "2027.0.0-ballot.rc1"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/modul-symptom
   - url: http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod
