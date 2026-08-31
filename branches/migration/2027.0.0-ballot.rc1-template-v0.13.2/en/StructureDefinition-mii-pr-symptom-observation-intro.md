@@ -66,6 +66,7 @@ from it. Instances must always use a concrete sub-type.</p>
 
 <!-- GENERATED from fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation.json
      (differential elements with mustSupport=true; source directive: Simplifier FQL). -->
+
 | Feldname | Kurzbeschreibung | Hinweise |
 |---|---|---|
 | `Observation.identifier` |  |  |
@@ -90,6 +91,7 @@ from it. Instances must always use a concrete sub-type.</p>
 <!-- GENERATED from fsh-generated/resources/StructureDefinition-mii-lm-symptom.json
      (differential elements mii-lm-symptom.Observation.*; source directive: Simplifier FQL
      against the legacy LM canonical). -->
+
 | FHIR | Datensatz | Erklärung |
 |---|---|---|
 | `Observation` | mii-lm-symptom.Observation | Observation i. S. einer FHIR Observation: Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein. |

@@ -11,7 +11,7 @@
 
 The **Symptom** module follows the KDS calendar-versioning (CalVer) scheme in a SemVer-compatible numeric form:
 
-* format **`YYYY.MINOR.PATCH[-label]`** — the current version is `2026.0.0-rc.1`;
+* format **`YYYY.MINOR.PATCH[-label]`** — the current version is `2027.0.0-ballot.rc1`;
 * **`YYYY`** — the year in which the guide applies and is intended to be used; it takes the place of the major version;
 * **`MINOR`** — incremented for non-breaking additions and refinements;
 * **`PATCH`** — incremented for corrections and bug fixes;
@@ -40,6 +40,4 @@ From the second **formal publication** on, this guide also publishes a **machine
 **Where it lives.** The report is part of the published site itself: `comparison-v<previous>/index.html` next to the guide's pages, linked from the QA report. The index lists the compared artifact pairs; each pair links a detail page with three views — the **difference** analysis (what changed element by element), the **union** (everything either version allows) and the **intersection** (only what both versions allow).
 
 **How it is performed.** The IG Publisher's previous-version comparator loads the previous release's package, pairs every profile, value set and code system with its counterpart by canonical URL, compares the pairs, and renders the report into the build output — so it publishes with the site, with no extra deployment step. It is enabled by the `version-comparison` parameter — an official IG Publisher parameter from the [ig-parameters registry](https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html), passed through `sushi-config.yaml` (the commented block there explains the setup and its two prerequisites: a publication history at the canonical, and a loadable previous package). Absent, it defaults to `{last}`; the value `n/a` is the documented way to switch the comparison off.
-
-**The demonstration below** (this template repository's preview only) shows the same kind of report before any formal publication exists: the build compares itself against the previous `dev` preview using the FHIR validator's `-compare` command and publishes the result at `comparison-demo/index.html`. The repository variable `ENABLE_VERSION_COMPARISON=false` switches the whole feature off — the publisher's comparison in every build workflow and this demonstration alike; a created module never renders the demonstration.
 
