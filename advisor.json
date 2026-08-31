@@ -8,6 +8,6 @@
     "Terminology_TX_NoValid_16@StructureDefinition.*",
     "UNABLE_TO_INFER_CODESYSTEM@ImplementationGuide.definition.parameter.code",
     "IG_DEPENDENCY_CLASH_CANONICAL@ImplementationGuide.dependsOn",
-    "Unknown_Code_in_Version@ImplementationGuide.extension"
+    "Unknown_Code_in_Version@ImplementationGuide.extension.value.ofType(CodeableConcept).coding.code"
   ]
 }
