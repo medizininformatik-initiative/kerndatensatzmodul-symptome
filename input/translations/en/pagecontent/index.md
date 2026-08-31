@@ -84,7 +84,7 @@ Questions about this publication can be asked on the HL7 FHIR Zulip
 on the MII Zulip [mii.zulipchat.com](https://mii.zulipchat.com/) in the
 `MII-Kerndatensatz` stream.
 Comments and issues are welcome as *Issues* on
-[GitHub](https://github.com/forschungsgruppe-digital-health/mii-kds-symptome-ig-inoffiziell/issues).
+[GitHub](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/issues).
 
 > [TODO: Name your module's domain contacts.]
 {: .ig-highlight .ig-highlight-grey}

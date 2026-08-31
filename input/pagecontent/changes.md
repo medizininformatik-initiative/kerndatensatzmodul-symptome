@@ -81,21 +81,40 @@ werden können.</p>
 
 ---
 
+<!-- DERIVED:overview source=none gate=B -->
+> **Written during migration - review before release.** Die folgenden Einträge
+> wurden bei der Migration aus der Git- und Registry-Historie des Moduls
+> rekonstruiert (v2026-Zyklus Jan–Feb 2026, Ballot-Paket 2023-11-17).
+{: .ig-highlight .ig-highlight-blue}
+
 #### Version 2026.0.0-rc.1
 
-**Datum:** 2026-08-31
+**Datum:** 2026-08-31 (Arbeitsstand; als Paket nicht veröffentlicht)
+
+##### Geändert
+
+* **Migration des Implementierungsleitfadens von Simplifier auf den HL7 IG
+  Publisher** mit dem MII-KDS-Modul-Template (2026-08-31; Details im
+  Migrationsbericht des zugehörigen Pull Requests).
+* Kanonische URL des Moduls von `.../fhir/ext/modul-symptom` auf
+  `.../fhir/modul-symptom` umgestellt (v2026-Zyklus).
+* Beide Profile (`MII_PR_Symptom_Observation`, `MII_PR_Symptom_Condition`) als
+  **abstrakt** markiert.
+* Deutsche Basisprofile von 1.4.0 auf 1.5.4 angehoben; `hl7.fhir.eu.base`
+  (EU-Core-BodyStructure) ergänzt.
+* Beispiel `mii-exa-symptom-chestpain` ergänzt.
+
+##### Entfernt
+
+* Glasgow-Coma-Score-Profil samt ValueSets und Beispiel (auskommentiert im
+  FSH-Quelltext erhalten).
+
+#### Version 2024.0.0-ballot
+
+**Datum:** 2023-11-17
 
 ##### Hinzugefügt
 
-* Erstveröffentlichung des Moduls **Symptom**.
-
-> [TODO: Ersetzen Sie diesen Abschnitt durch die echten Einträge Ihres ersten
-> Releases und ergänzen Sie für jede weitere Version oben einen neuen Abschnitt.
-> Bei einem Modul mit mehreren Teilbereichen gruppiert `kerndatensatz-basis` die
-> Einträge einer Version thematisch (etwa *Dokumentation*,
-> *Terminologie-Aktualisierungen* und je eine Überschrift pro Teilmodul) und
-> stellt jedem Stichpunkt **Hinzugefügt:** / **Geändert:** / **Entfernt:**
-> voran — nutzen Sie die für Ihr Modul passende der beiden Gruppierungen,
-> bleiben Sie dabei aber über alle Versionen hinweg und in beiden Sprachen
-> einheitlich.]
-{: .ig-highlight .ig-highlight-grey}
+* Ballot-Erstveröffentlichung des Moduls **Symptom/klinischer Phänotyp**
+  (Simplifier-Paket `de.medizininformatikinitiative.kerndatensatz.symptom`
+  2024.0.0-ballot).

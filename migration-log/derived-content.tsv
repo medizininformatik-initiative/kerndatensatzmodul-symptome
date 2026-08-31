@@ -1,0 +1,6 @@
+page	lang	kind	source	gate	line	excerpt
+capability-statements	default	bridge	TechnischeImplementierung-1.x/CapabilityStatement.page.md	B	28	**Written during migration - review before release.** Das CapabilityStatement dieses Moduls mit allen verpflichtenden In
+guidance	default	bridge	none	B	6	**Written during migration - review before release.** Diese Seite beschreibt Szenarien für die Anwendung des Moduls Symp
+index	default	bridge	none	B	92	**Written during migration - review before release.** Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sus
+logical-models	default	bridge	AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md	B	20	**Written during migration - review before release.** Das Logical Model dieses Moduls ist **[MII LM Symptom](StructureDe
+logical-models	default	bridge	none	B	36	**Written during migration - review before release.** Die Zuordnung der Datensatz-Elemente zu den FHIR-Elementen der bei

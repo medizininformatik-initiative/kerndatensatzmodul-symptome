@@ -73,19 +73,40 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 
 ---
 
+<!-- DERIVED:overview source=none gate=B -->
+> **Written during migration - review before release.** The entries below were
+> reconstructed during migration from the module's git and registry history
+> (v2026 cycle Jan–Feb 2026, ballot package 2023-11-17).
+{: .ig-highlight .ig-highlight-blue}
+
 #### Version 2026.0.0-rc.1
 
-**Date:** 2026-08-31
+**Date:** 2026-08-31 (working state; not published as a package)
+
+##### Changed
+
+* **Migration of the implementation guide from Simplifier to the HL7 IG
+  Publisher** using the MII KDS module template (2026-08-31; details in the
+  migration report of the corresponding pull request).
+* Module canonical URL moved from `.../fhir/ext/modul-symptom` to
+  `.../fhir/modul-symptom` (v2026 cycle).
+* Both profiles (`MII_PR_Symptom_Observation`, `MII_PR_Symptom_Condition`)
+  marked **abstract**.
+* German base profiles raised from 1.4.0 to 1.5.4; `hl7.fhir.eu.base`
+  (EU core BodyStructure) added.
+* Example `mii-exa-symptom-chestpain` added.
+
+##### Removed
+
+* Glasgow Coma Score profile with its ValueSets and example (kept commented
+  out in the FSH sources).
+
+#### Version 2024.0.0-ballot
+
+**Date:** 2023-11-17
 
 ##### Added
 
-* First publication of the **Symptom** module.
-
-> [TODO: Replace this section with the real entries of your first release, and
-> add a new section on top for every subsequent version. For a module with
-> several sub-domains, `kerndatensatz-basis` groups the entries of a version by
-> topic (for example *Documentation*, *Terminology updates*, and one heading per
-> sub-module) and prefixes each bullet with **Added:** / **Changed:** /
-> **Removed:** — use whichever of the two groupings suits your module, but keep
-> it the same across versions and identical in both languages.]
-{: .ig-highlight .ig-highlight-grey}
+* Initial ballot publication of the **Symptom/clinical phenotype** module
+  (Simplifier package `de.medizininformatikinitiative.kerndatensatz.symptom`
+  2024.0.0-ballot).

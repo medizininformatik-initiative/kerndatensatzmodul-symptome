@@ -47,3 +47,230 @@ ig-stats -> migration-log/preflight-analysis.json  (Artefakte 12, Direktiven 46,
 2026-08-31T19:37:07Z  INFO   5.2  sushi-skeleton  done  cmd=`npx --yes fsh-sushi@3.20.1 .`  exit=0 raw_log=migration-log/sushi-skeleton.log raw_log_lines=46
 2026-08-31T19:38:56Z  INFO   5.3  transfer-artefacts  IN-PLACE migration: module FSH untouched at its source paths (structure-preserving, 0 moves); comm -3 delta = template scaffold ADDITIONS only (aliases.fsh, parameters/manifest.fsh, rulesets/{crmi,extension-context,license,license-terms,meta-profile,test-data-label,translation}.fsh, README/.gitkeep files) - full lists in migration-log/comm3-fsh.txt; fsh-generated committed as pinned-toolchain output (sushi 3.20.1; source never tracked the IG resource json - now tracked per wave requirement #51; profile diffs = sushi implied extension-slicing blocks, known serializer delta)
 2026-08-31T19:38:56Z  INFO   5.3  advisor-qc-merge  advisor.json: template file IS the union (source 5 suppress entries all present + TERMINOLOGY_TX_WARNING@StructureDefinition.*); qc/custom.rules.yaml: template rules substituted for symptom (version 2026.0.0-rc.1 FIXES source rule's 2026.0.0-vs-rc.1 self-contradiction; id/name/url conventions superset of source's incl. bare-space url check source already used); source originals snapshotted in migration-log/source-snapshots/
+2026-08-31T19:39:33Z  INFO   gate-A  summary  identity diff vs source = EMPTY except adjudicated rows: (1) meta 2026.0.x->2026.0.0 pin, (2) basisprofil uri absolute (source uri non-absolute = publisher error), (3) +crmi 2.0.0 / -xver (template machinery), (4) +THO 7.3.0 +extensions.r4 5.3.0 direct pins (injection defense), (5) license: key added = CC-BY-4.0 (matches package.json + meta-license ext; registry-CC0 contradiction hand-recorded), (6) special-url x3 declared (ids/urls untouched), (7) jurisdiction DE + crmi metadata added (template machinery); artifact completeness: 7/7 tracked resources regenerated + IG json newly tracked; comm -3 additions-only
+2026-08-31T19:39:33Z  INFO   5.4c  page-routing  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/page-structure-advice.py --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --target . --out migration-log/page-structure-advice.md --map migration-log/page-map.tsv`  raw_log=migration-log/page-routing.log
+page-structure-advice: 15 source pages (from guide-tree) + 1 union, 22 target pages, 7 artefacts; map 17 rows (1 retired) -> migration-log/page-map.tsv -> migration-log/page-structure-advice.md
+2026-08-31T19:39:33Z  INFO   5.4c  page-routing  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/page-structure-advice.py --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --target . --out migration-log/page-structure-advice.md --map migration-log/page-map.tsv`  exit=0 raw_log=migration-log/page-routing.log raw_log_lines=1
+2026-08-31T19:42:45Z  INFO   5.4c  map-review  human-review pass applied 6 [MAP-EDIT]s: Referenzen+2 folder indexes+Terminologien RETIRED (intentionally blank, 'Diese Seite wurde absichtlich leer gelassen'), Datensaetze retargeted slug-page->logical-models.md (agreed page owns concern), ImplementationGuide-Common annotated (images copied flat to input/images/, tree retires post-Gate-D); generator rows for index/guidance/implementer-guidance/uml/profiles/capability-statements/intro-notes ACCEPTED as generated
+2026-08-31T19:49:20Z  INFO   5.2  venue-change  USER DECISION mid-run (2026-08-31): migration branch + PR land IN-PLACE in medizininformatik-initiative/kerndatensatzmodul-symptome (explicit override of the standing MII-read-only policy for THIS repo; Dokument PR-36 pattern; skill-preferred route). FGDH sandbox route abandoned; GITHUB_ORG/REPO_NAME substitution values corrected sandbox->MII across the tree
+2026-08-31T19:55:39Z  INFO   5.4a  optional-page-decisions  MEASURED (package artifact counts): extensions=0 REMOVE, search-parameters=0 REMOVE, operations=0 REMOVE, value-sets=0 REMOVE, code-systems=0 REMOVE (source Terminologien page intentionally blank), researcher-guidance REMOVE (no researcher content in source), rendering-artifacts+demo/ REMOVE (demo page), metadata REMOVE (module curates no crmi-metadata docs; would ship 3 scaffold decide-me boxes); each removal = page files both languages + pages: entry + menu entries both languages per docs/optional-pages.md; KEPT: uml-diagrams (source UML page), implementer-guidance (Kontext), guidance (Szenarien), logical-models (Datensaetze)
+2026-08-31T19:55:39Z  INFO   5.4b  security-privacy-decision  stage 3 = DEFAULT TEXT adopted verbatim both languages (module introduces no data category with own security/privacy aspects beyond overarching framework); scaffold Person example + ILLUSTRATIVE-EXAMPLE markers deleted both languages; header-comment mention reworded (M11 matches the raw string)
+2026-08-31T19:55:39Z  INFO   5.4d  derived-scan  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  raw_log=migration-log/derived-scan.log
+2026-08-31T19:55:39Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/changes.md:84  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/examples.md:6  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/profiles.md:31  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/translationinfo.md:17  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/changes.md:76  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/capability-statements.md  subject=capability-statements [bridge source=TechnischeImplementierung-1.x/CapabilityStatement.page.md]  marker present in lang=default (input/pagecontent/capability-statements.md:28) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/capability-statements.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/guidance.md  subject=guidance [bridge source=none]  marker present in lang=default (input/pagecontent/guidance.md:6) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/guidance.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/index.md  subject=index [bridge source=none]  marker present in lang=default (input/pagecontent/index.md:92) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/index.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/logical-models.md  subject=logical-models [bridge source=AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md]  marker present in lang=default (input/pagecontent/logical-models.md:20) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/logical-models.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/logical-models.md  subject=logical-models [bridge source=none]  marker present in lang=default (input/pagecontent/logical-models.md:36) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/logical-models.md, same kind and same source
+2026-08-31T19:55:39Z  INFO   11  derived-scan  result  files=30 markers=5 gates=A:0,B:5,C:0 kinds=bridge:5 langs=default findings=10 (malformed=5,twin-missing=5) out=./migration-log/derived-content.tsv exit=1
+2026-08-31T19:55:39Z  WARN   11  derived-scan  derived-scan: 10 finding(s) -- a marker that does not parse, renders no box, or is missing from a language mirror is derived content that is NOT marked where it counts.
+    Every finding above names its file:line and its exact action.
+    The TSV was still written: it is the artefact, not the verdict.
+2026-08-31T19:55:39Z  WARN   5.4d  derived-scan  anticipated-nonzero-exit: EN language twins not yet produced (step 6); re-run after translations  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  exit=1 raw_log=migration-log/derived-scan.log raw_log_lines=25
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict`  raw_log=migration-log/fql-scan.log
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets=input/pagecontent implementation-guides  defaulted=1
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  target  path=implementation-guides  kind=dir  files=15
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/Index.page.md:18  [index-root]
+    found:  {{index:root}}
+    action: Remove -- the table of contents and navigation are generated by the template.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:11  [link]
+    found:  ## {{link}}
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:70  [link]
+    found:  <tab title="Link">{{link}}</tab>
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:11  [link]
+    found:  ## {{link}}
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:98  [link]
+    found:  <tab title="Link">{{link}}</tab>
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/capability-statements.md:4  [render]
+    found:  verbatim transfer). The source's {{render:<canonical>}} directive is replaced by
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/uml-diagrams.md:4  [render]
+    found:  transfer; {{render:}} image copied flat to input/images/). -->
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/UML-1.x.page.md:6  [render]
+    found:  {{render:implementation-guides/ImplementationGuide-Common/images/ig_bilder_UML.p
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/BeschreibungModul-1.x.page.md:6  [render]
+    found:  {{render:implementation-guides/ImplementationGuide-Common/images/17_Abbildung_Sy
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/CapabilityStatement.page.md:18  [render]
+    found:  {{render:https://www.medizininformatik-initiative.de/fhir/modul-symptom/Capabili
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:17  [render]
+    found:  | {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Index.page.md:12  [render]
+    found:  | {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:58  [render]
+    found:  | {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/logical-models.md:5  [tree]
+    found:  The source's {{tree:}} directive and FQL element table referenced the LEGACY
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md:8  [tree]
+    found:  {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/Stru
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:44  [tree]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:72  [tree]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:68  [xml]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: {% include <Type>-<id>-xml.xhtml %} (also {{xml:Example}}).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:96  [xml]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: {% include <Type>-<id>-xml.xhtml %} (also {{xml:Example}}).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:69  [json]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:91  [json]
+    found:  {{json:mii-exa-symptom-vitreoretinochoroidopathy}}
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:97  [json]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:119  [json]
+    found:  {{json:mii-exa-symptom-chestpain}}
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:125  [json]
+    found:  {{json:mii-exa-symptom-arachnodactyly}}
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md:12  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:32  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:46  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:56  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:75  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:60  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:74  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:84  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:103  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:43  [tabs]
+    found:  <tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:44  [tabs]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:45  [tabs]
+    found:  <tab title="Beschreibung"> 
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:67  [tabs]
+    found:  </tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:68  [tabs]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:69  [tabs]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:70  [tabs]
+    found:  <tab title="Link">{{link}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:71  [tabs]
+    found:  </tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:71  [tabs]
+    found:  <tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:72  [tabs]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:73  [tabs]
+    found:  <tab title="Beschreibung"> 
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:95  [tabs]
+    found:  </tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:96  [tabs]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:97  [tabs]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:98  [tabs]
+    found:  <tab title="Link">{{link}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:99  [tabs]
+    found:  </tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  result  mapped=49 unknown=0 files=29 strict=1  exit=1
+    Transform per references/fql-crosswalk.md; when in doubt mark TODO:REVIEW.
+2026-08-31T19:55:40Z  WARN   5.4  fql-scan  anticipated-nonzero-exit: pre-migration measurement: source tree implementation-guides/ retained until Gate D carries the 46 directives  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict`  exit=1 raw_log=migration-log/fql-scan.log raw_log_lines=152
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan-migrated  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  raw_log=migration-log/fql-scan-migrated.log
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets= input/pagecontent input/translations input/intro-notes  defaulted=0
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/translations  kind=dir  files=15
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/intro-notes  kind=dir  files=2
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/intro-notes/StructureDefinition-mii-pr-symptom-observation-intro.md:5  [link]
+    found:  Directive translation: {{link}}/metadata-FQL/tabs dropped (the artifact page bel
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/capability-statements.md:4  [render]
+    found:  verbatim transfer). The source's {{render:<canonical>}} directive is replaced by
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/uml-diagrams.md:4  [render]
+    found:  transfer; {{render:}} image copied flat to input/images/). -->
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/logical-models.md:5  [tree]
+    found:  The source's {{tree:}} directive and FQL element table referenced the LEGACY
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:41Z  INFO   5.4  fql-scan  result  mapped=4 unknown=0 files=31 strict=1  exit=1
+    Transform per references/fql-crosswalk.md; when in doubt mark TODO:REVIEW.
+2026-08-31T19:55:41Z  ERROR  5.4  fql-scan-migrated  failed  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  exit=1 raw_log=migration-log/fql-scan-migrated.log raw_log_lines=18
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/fql-scan-migrated.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan-migrated  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  raw_log=migration-log/fql-scan-migrated.log prev_raw_log=migration-log/fql-scan-migrated.prev.log
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets= input/pagecontent input/translations input/intro-notes  defaulted=0
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/translations  kind=dir  files=15
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/intro-notes  kind=dir  files=2
+2026-08-31T19:56:07Z  INFO   5.4  fql-scan  result  mapped=0 unknown=0 files=31  exit=0  no directives found
+2026-08-31T19:56:07Z  INFO   5.4  fql-scan-migrated  done  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  exit=0 raw_log=migration-log/fql-scan-migrated.log raw_log_lines=5

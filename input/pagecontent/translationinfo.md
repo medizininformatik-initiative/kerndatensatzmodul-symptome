@@ -1,19 +1,24 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung der Quellseite input/pagecontent/translationinfo.md
-     (Englisch ist die Standardsprache der IG). Mechanik: siehe
-     docs/recipes/add-translation.md. -->
-### Übersetzungsinformationen
+<!-- DE-FIRST (Migrationsentscheidung D-1, 2026-08-31): Deutsch ist die
+     Standardsprache dieses Moduls, Englisch die Übersetzung — die Richtung des
+     Template-Gerüsts ist invertiert. Mechanik: docs/recipes/add-translation.md
+     (dort mit vertauschten Rollen lesen). -->
+### Hinweise zur Übersetzung
 
-Dieser Leitfaden ist **englischsprachig** (Standardsprache); **Deutsch** ist die
-Übersetzung. Englisch ist damit sowohl die Basis-Darstellung des Leitfadens als
-auch die `/en/`-Darstellung; über den Sprachumschalter oben rechts wechseln Sie
-zwischen `/en/` und `/de/`.
+Dieser Leitfaden ist **deutschsprachig** (Standardsprache); **Englisch** ist
+die Übersetzung. Deutsch ist damit sowohl die Basis-Darstellung des Leitfadens
+als auch die `/de/`-Darstellung; über den Sprachumschalter oben rechts wechseln
+Sie zwischen `/de/` und `/en/`.
 
-Übersetzte Seiten liegen unter `input/translations/de/pagecontent/` (gleicher
-Dateiname wie die englische Seite); Ressourcen-Übersetzungen als `.po`-Dateien
-unter `input/translations/de/`. Details:
-[`docs/recipes/add-translation.md`](https://github.com/forschungsgruppe-digital-health/mii-kds-symptome-ig-inoffiziell/blob/main/docs/recipes/add-translation.md) in diesem Repository.
+Übersetzte Seiten liegen unter `input/translations/en/pagecontent/` (gleicher
+Dateiname wie die deutsche Seite); die Übersetzung der Seitentitel als
+`.po`-Datei unter `input/translations/en/`.
 
-> [TODO: Vermerken Sie, welche Teile des Moduls bereits ins Deutsche übersetzt
-> sind.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- DERIVED:overview source=none gate=C -->
+> **Written during migration - review before release.** **Stand der
+> Übersetzung:** Die deutschen Seiten sind die von den Modul-Autor:innen
+> verantwortete Quelle (übernommen aus dem Simplifier-Leitfaden „MII IG
+> Symptom v2026"). Die englischen Seiten wurden im Zuge der Migration
+> **maschinell übersetzt** und sind einzeln mit `TODO:REVIEW` markiert, bis
+> sie fachlich geprüft sind (Review-Gate C der Migration).
+{: .ig-highlight .ig-highlight-blue}
