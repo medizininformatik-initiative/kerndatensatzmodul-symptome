@@ -52,7 +52,7 @@ Usage: #definition
 // Observation requirements
 * insert SupportResource(Observation, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Observation)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2026.0.0-rc.1, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2027.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -94,7 +94,7 @@ Usage: #definition
 // Condition requirements
 * insert SupportResource(Condition, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Condition)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2026.0.0-rc.1, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2027.0.0-ballot, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

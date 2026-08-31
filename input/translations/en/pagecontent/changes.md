@@ -77,9 +77,9 @@ section, so the prose explanation and the technical diff sit side by side.</p>
 > (v2026 cycle Jan–Feb 2026, ballot package 2023-11-17).
 {: .ig-highlight .ig-highlight-blue}
 
-#### Version 2026.0.0-rc.1
+#### Version 2027.0.0-ballot
 
-**Date:** 2026-08-31 (working state; not published as a package)
+**Date:** 2026-08-31 (working state for the 2027 ballot line; not published as a package. The v2026 cycle ended at the untagged state 2026.0.0-rc.1; its changes are listed below.)
 
 ##### Changed
 

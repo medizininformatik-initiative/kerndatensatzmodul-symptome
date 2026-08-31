@@ -1,6 +1,6 @@
 // switch version of all conformance resources here
 RuleSet: Version
-* version = "2026.0.0-rc.1"
+* version = "2027.0.0-ballot"
 
 RuleSet: PR_CS_VS_Version
-* ^version = "2026.0.0-rc.1"
+* ^version = "2027.0.0-ballot"

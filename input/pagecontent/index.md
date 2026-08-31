@@ -14,7 +14,7 @@ verbindlichen Form beschrieben.
 | Veröffentlichung |               |
 |------------------|---------------|
 | Datum            | 2026-08-31 |
-| Version          | 2026.0.0-rc.1 (CalVer `JJJJ.n.n`) |
+| Version          | 2027.0.0-ballot (CalVer `JJJJ.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 

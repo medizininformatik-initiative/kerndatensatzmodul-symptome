@@ -85,9 +85,9 @@ werden können.</p>
 > rekonstruiert (v2026-Zyklus Jan–Feb 2026, Ballot-Paket 2023-11-17).
 {: .ig-highlight .ig-highlight-blue}
 
-#### Version 2026.0.0-rc.1
+#### Version 2027.0.0-ballot
 
-**Datum:** 2026-08-31 (Arbeitsstand; als Paket nicht veröffentlicht)
+**Datum:** 2026-08-31 (Arbeitsstand für die Ballot-Linie 2027; als Paket nicht veröffentlicht. Der v2026-Zyklus endete beim ungetaggten Stand 2026.0.0-rc.1; seine Änderungen sind unten aufgeführt.)
 
 ##### Geändert
 
