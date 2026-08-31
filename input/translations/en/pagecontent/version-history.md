@@ -32,9 +32,10 @@ build status; no ordering is inferred among labels.
 
 All released FHIR artifacts in the package carry the same version as the guide
 and its package. An artifact may therefore receive a new version on release even
-when the artifact itself did not change. The computable metadata that declares
-the version algorithm, the versioning policy, the package source and the
-manifest parameters is described on the [Metadata Overview](metadata.html) page.
+when the artifact itself did not change. The computable metadata (version
+algorithm, versioning policy, package source and manifest parameters) is
+declared by this module's
+[ImplementationGuide resource](ImplementationGuide-mii-ig-symptom.html).
 
 #### Release process
 

@@ -6,9 +6,9 @@
 ### Einleitung
 
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des
-Kerndatensatz-Moduls „Symptom/klinischer Phänotyp" der
-Medizininformatik-Initiative. Im Folgenden werden die Use Cases des Moduls
-sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer
+Kerndatensatz-Moduls 'Symptom/klinischer Phänotyp' der
+Medizinformatik-Initative. Im Folgenden werden die Use Cases des Moduls, sowie
+die dazuhegörigen FHIR-Profile und Terminologie-Ressourcen in ihrer
 verbindlichen Form beschrieben.
 
 | Veröffentlichung |               |
@@ -92,7 +92,7 @@ beschrieben.
 <!-- DERIVED:bridge source=none gate=B -->
 > **Written during migration - review before release.** Formale Abhängigkeiten
 > dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): das
-> [Meta-Modul](https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta)
+> [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta)
 > (`2026.0.0`), die
 > [Deutschen Basisprofile](https://ig.fhir.de/basisprofile-de/1.5.4/) (`1.5.4`)
 > und [HL7 Europe Base](http://hl7.eu/fhir/base/) (`0.1.0`). Die fachlichen
@@ -106,9 +106,9 @@ Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
 
 ### Impressum
 
-Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden
+Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt wurden
 und unterliegt per Governance-Prozess dem Abstimmungsverfahren des
-Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V.
+Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
 
 ### Ansprechpartner
 

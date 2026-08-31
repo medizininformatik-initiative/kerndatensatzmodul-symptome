@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Active"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Confirmed"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Autosomal dominant vitreoretinochoroidopathy (disorder)"
+msgstr ""
+

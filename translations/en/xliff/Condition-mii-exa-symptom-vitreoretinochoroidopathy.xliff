@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Condition-mii-exa-symptom-vitreoretinochoroidopathy" original="Resource Condition-mii-exa-symptom-vitreoretinochoroidopathy" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Condition-mii-exa-symptom-vitreoretinochoroidopathy" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Active</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Condition-mii-exa-symptom-vitreoretinochoroidopathy" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Confirmed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Condition-mii-exa-symptom-vitreoretinochoroidopathy" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Autosomal dominant vitreoretinochoroidopathy (disorder)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

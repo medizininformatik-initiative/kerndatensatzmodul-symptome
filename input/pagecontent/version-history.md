@@ -33,9 +33,10 @@ den Vorab- oder Build-Status; zwischen Labels wird keine Reihenfolge abgeleitet.
 Alle veröffentlichten FHIR-Artefakte im Paket tragen dieselbe Version wie der
 Leitfaden und sein Paket. Ein Artefakt kann daher beim Release eine neue Version
 erhalten, obwohl es selbst unverändert geblieben ist. Die maschinenlesbaren
-Metadaten, die Versionsalgorithmus, Versionierungs-Politik, Paketquelle und
-Manifest-Parameter deklarieren, beschreibt die Seite
-[Metadaten-Übersicht](metadata.html).
+Metadaten (Versionsalgorithmus, Versionierungs-Politik, Paketquelle und
+Manifest-Parameter) deklariert die
+[ImplementationGuide-Ressource](ImplementationGuide-mii-ig-symptom.html)
+dieses Moduls.
 
 #### Release-Prozess
 

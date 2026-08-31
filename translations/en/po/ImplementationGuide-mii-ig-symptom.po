@@ -1,0 +1,201 @@
+
+# Coding.display
+#: Coding.display
+msgid "Creative Commons Attribution 4.0 International License"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Package"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Taskforce Core Data Set"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Interoperability Working Group"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "National Steering Committee"
+msgstr ""
+
+# ImplementationGuide.name
+#: ImplementationGuide.name
+msgid "MII_IG_Symptom"
+msgstr ""
+
+# ImplementationGuide.title
+#: ImplementationGuide.title
+msgid "MII IG Symptom"
+msgstr ""
+
+# ImplementationGuide.publisher
+#: ImplementationGuide.publisher
+msgid "Medizininformatik Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik Initiative"
+msgstr ""
+
+# ImplementationGuide.description
+#: ImplementationGuide.description
+msgid "Medizininformatik Initiative - Modul Symptom"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "MII CPS Symptom CapabilityStatement"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Symptom/klinischer Phänotyp der Medizininformatik Initiative zu implementieren."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "MII LM Symptom"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "mii-exa-symptom-arachnodactyly"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Observation Phänotyp Arachnodactyly"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "mii-exa-symptom-chestpain"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Observation Symptom Chest Pain"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "mii-exa-symptom-vitreoretinochoroidopathy"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "mii-param-symptom-manifest"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "MII_PR_Symptom_Condition"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom)."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "MII_PR_Symptom_Observation"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein."
+msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Table of Contents"
+msgstr "Table of Contents"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Startseite"
+msgstr "Home"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Anleitung"
+msgstr "Guidance"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Anleitung für Implementierende"
+msgstr "Guidance for Implementers"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "UML-Diagramme"
+msgstr "UML Diagrams"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Sicherheit und Datenschutz"
+msgstr "Security and Privacy"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Profile"
+msgstr "Profiles"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "CapabilityStatements"
+msgstr "Capability Statements"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Logische Modelle"
+msgstr "Logical Models"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Beispiele"
+msgstr "Examples"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Downloads"
+msgstr "Downloads"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Änderungshistorie"
+msgstr "Changelog"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Versionierung"
+msgstr "Versioning"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "MII ImplementationGuide Ressource"
+msgstr "MII ImplementationGuide Resource"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Hinweise zur Übersetzung"
+msgstr "Translation Information"
+

@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Arachnodactyly"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Present"
+msgstr ""
+

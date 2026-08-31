@@ -88,7 +88,7 @@ dependencies are described at
 <!-- DERIVED:bridge source=none gate=B -->
 > **Written during migration - review before release.** Formal dependencies of
 > this module (see `dependencies` in `sushi-config.yaml`): the
-> [Meta module](https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta)
+> [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta)
 > (`2026.0.0`), the
 > [German base profiles](https://ig.fhir.de/basisprofile-de/1.5.4/) (`1.5.4`)
 > and [HL7 Europe Base](http://hl7.eu/fhir/base/) (`0.1.0`). The subject-matter
