@@ -3,6 +3,8 @@ CapabilityStatement-mii-cps-symptom-capabilitystatement.json  mii-cps-symptom-ca
 Condition-mii-exa-symptom-vitreoretinochoroidopathy.json      mii-exa-symptom-vitreoretinochoroidopathy  Instance  Profiles.fsh             86 - 94
 Observation-mii-exa-symptom-arachnodactyly.json               mii-exa-symptom-arachnodactyly             Instance  Profiles.fsh             35 - 41
 Observation-mii-exa-symptom-chestpain.json                    mii-exa-symptom-chestpain                  Instance  Profiles.fsh             43 - 50
+Patient-example-patient.json                                  example-patient                            Instance  PatientExamples.fsh      18 - 25
+Patient-example.json                                          example                                    Instance  PatientExamples.fsh      9 - 16
 StructureDefinition-mii-lm-symptom.json                       MII_LM_Symptom                             Logical   LogicalModel.fsh         1 - 62
 StructureDefinition-mii-pr-symptom-condition.json             MII_PR_Symptom_Condition                   Profile   Profiles.fsh             52 - 84
 StructureDefinition-mii-pr-symptom-observation.json           MII_PR_Symptom_Observation                 Profile   Profiles.fsh             1 - 33

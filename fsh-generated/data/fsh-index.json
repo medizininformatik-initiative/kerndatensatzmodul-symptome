@@ -32,6 +32,22 @@
     "endLine": 50
   },
   {
+    "outputFile": "Patient-example-patient.json",
+    "fshName": "example-patient",
+    "fshType": "Instance",
+    "fshFile": "PatientExamples.fsh",
+    "startLine": 18,
+    "endLine": 25
+  },
+  {
+    "outputFile": "Patient-example.json",
+    "fshName": "example",
+    "fshType": "Instance",
+    "fshFile": "PatientExamples.fsh",
+    "startLine": 9,
+    "endLine": 16
+  },
+  {
     "outputFile": "StructureDefinition-mii-lm-symptom.json",
     "fshName": "MII_LM_Symptom",
     "fshType": "Logical",

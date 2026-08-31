@@ -15,7 +15,7 @@ _Migrations-/Zustandstreue eines EINEN Moduls über mehrere Stände: Identitäts
 | packageId | de.medizininformatikinitiative.kerndatensatz.symptom | de.medizininformatikinitiative.kerndatensatz.symptom | ✓ identisch |
 | name | MII_IG_Symptom | MII_IG_Symptom | ✓ identisch |
 | title | MII IG Symptom | MII IG Symptom | ✓ identisch |
-| version | 2026.0.0-rc.1 | 2026.0.0-rc.1 | ✓ identisch |
+| version | 2026.0.0-rc.1 | 2027.0.0-ballot.rc1 | ⚠ DIVERGIERT |
 | status | active | active | ✓ identisch |
 | fhirVersion | 4.0.1 | 4.0.1 | ✓ identisch |
 | license | CC-BY-4.0 | CC-BY-4.0 | ✓ identisch |
@@ -29,18 +29,18 @@ _Migrations-/Zustandstreue eines EINEN Moduls über mehrere Stände: Identitäts
 
 | Ebene | symptome-source-master | symptome-migrated |
 |---|---|---|
-| Default-Sprache (input/pagecontent) | 1 / 17 | 14 / 5405 |
-| Übersetzungen (input/translations) | 0 / 0 | 14 / 5836 |
+| Default-Sprache (input/pagecontent) | 1 / 17 | 14 / 5359 |
+| Übersetzungen (input/translations) | 0 / 0 | 14 / 5787 |
 | Plattform-Quellseiten (verbleibend) | 15 / 3115 | 15 / 3115 |
 | sonstige | 0 / 0 | 2 / 1677 |
 
 </div>
 
-_Wort-Abdeckung relativ zur Referenz (Heuristik; ein bilingualer Stand überschreitet 100 %):_  **symptome-migrated: Default 173 % · Übersetzungen 186 %**
+_Wort-Abdeckung relativ zur Referenz (Heuristik; ein bilingualer Stand überschreitet 100 %):_  **symptome-migrated: Default 171 % · Übersetzungen 185 %**
 
 ### Befund
 
-- Identität: **IDENTISCH**
+- Identität: **⚠ 1 Feld(er) DIVERGIEREN**
 - Publizierter Artefakt-Satz (Kategorie+Name): **IDENTISCH** (12 Artefakte)
 - Canonical-URLs der Artefakte: ✓ identisch (4 URLs)
 _Interne FSH-Konstrukte (informativ, kein Befund): symptome-migrated: 0 fehlend, 41 zusätzlich (z.B. Template-Rulesets)._
@@ -57,16 +57,16 @@ _Interne FSH-Konstrukte (informativ, kein Befund): symptome-migrated: 0 fehlend,
 | CodeSystems | 0 | 0 |
 | Beispiele | 7 | 7 |
 | Narrative-Inhalts-Seiten | 11 | 25 |
-| Wörter gesamt | 3068 | 8473 |
+| Wörter gesamt | 3068 | 8427 |
 | Plattform-Direktiven | 46 | 46 |
-| Doppelte Inhaltsblöcke | 1 | 26 |
+| Doppelte Inhaltsblöcke | 1 | 27 |
 | Nicht referenzierte Bilder | 1 | 2 |
 | Dependencies (floating) | 3 (1) | 6 (0) |
-| Ø Wörter / Seite | 278,9 | 338,9 |
+| Ø Wörter / Seite | 278,9 | 337,1 |
 | Median Wörter / Seite | 279 | 311 |
 | Hersteller-Lock-in /100 | 50 | 22 |
 | Standard-Terminologie % | 100 | 100 |
-| Bus-Faktor % (Top-Autor) | 56 | 52 |
+| Bus-Faktor % (Top-Autor) | 56 | 45 |
 
 </div>
 

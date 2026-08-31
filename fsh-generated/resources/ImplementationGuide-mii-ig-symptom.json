@@ -244,6 +244,22 @@
     "resource": [
       {
         "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Beispiel-Patient (synthetisch)",
+        "description": "Synthetischer Minimal-Patient, auf den die Beispiel-Observations dieses Moduls verweisen. Kein realer Patientenbezug.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example-patient"
+        },
+        "name": "Beispiel-Patientin (synthetisch)",
+        "description": "Synthetische Minimal-Patientin, auf die das Beispiel der Condition dieses Moduls verweist. Kein realer Patientenbezug.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/mii-cps-symptom-capabilitystatement"
         },
         "name": "MII CPS Symptom CapabilityStatement",

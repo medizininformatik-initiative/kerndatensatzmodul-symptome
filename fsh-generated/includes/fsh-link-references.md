@@ -1,3 +1,5 @@
+[example]: Patient-example.html
+[example-patient]: Patient-example-patient.html
 [mii-cps-symptom-capabilitystatement]: CapabilityStatement-mii-cps-symptom-capabilitystatement.html
 [MII_LM_Symptom]: StructureDefinition-mii-lm-symptom.html
 [mii-exa-symptom-arachnodactyly]: Observation-mii-exa-symptom-arachnodactyly.html

@@ -3,14 +3,15 @@
 | Side | Measurement |
 |---|---|
 | pre | preflight-analysis.json (symptome-source-master, d4ef9de, 2026-08-31T19:13:44Z) |
-| post | postflight-analysis.json (symptome-migrated, e93a5b0, 2026-08-31T20:14:40Z) |
+| post | postflight-analysis.json (symptome-migrated, a529953, 2026-08-31T21:37:36Z) |
 
-Verdicts: **unchanged** 28 · **improved** 1 · **expected-change** 4 · **REGRESSION** 1 · **not-measurable** 0.
+Verdicts: **unchanged** 27 · **improved** 1 · **expected-change** 4 · **REGRESSION** 2 · **not-measurable** 0.
 
 ## ⛔ Regressions — properties that got WORSE
 
 Each one blocks the migration until it is fixed or explained; an explanation belongs in the migration report, not in a merge commit.
 
+- **`identity.version`**: `2026.0.0-rc.1` → `2027.0.0-ballot.rc1` — machine-identity field changed -- the migrated package is no longer the same package
 - **`licence.contradictory`**: `false` → `true` — the target now declares CONTRADICTORY licences (the target declares: attribution4.0international, cc-by-4.0, creativecommons) -- one file will be read as the licence by someone, and it will be the wrong one
 
 ## Identity
@@ -21,7 +22,7 @@ Each one blocks the migration until it is fixed or explained; an explanation bel
 | `identity.canonical` | https://www.medizininformatik-initiative.de/fhir/modul-symptom | https://www.medizininformatik-initiative.de/fhir/modul-symptom | unchanged |  |
 | `identity.packageId` | de.medizininformatikinitiative.kerndatensatz.symptom | de.medizininformatikinitiative.kerndatensatz.symptom | unchanged |  |
 | `identity.name` | MII_IG_Symptom | MII_IG_Symptom | unchanged |  |
-| `identity.version` | 2026.0.0-rc.1 | 2026.0.0-rc.1 | unchanged |  |
+| `identity.version` | 2026.0.0-rc.1 | 2027.0.0-ballot.rc1 | **REGRESSION** | machine-identity field changed -- the migrated package is no longer the same package |
 | `identity.fhirVersion` | 4.0.1 | 4.0.1 | unchanged |  |
 | `identity.license` | CC-BY-4.0 | CC-BY-4.0 | unchanged |  |
 | `identity.calver` | true | true | unchanged |  |

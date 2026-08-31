@@ -94,6 +94,12 @@
     - "!fsh-index.json"
     - "!menu.xml"
     - "!/**/StructureDefinition-example-patient.json"
+    # MIGRATION EDIT (QA repair): the two synthetic Patient examples must carry
+    # the exact ids the source examples reference (Patient/example,
+    # Patient/example-patient) to resolve the dangling references — those ids
+    # cannot match the mii-*-symptom convention.
+    - "!/**/Patient-example.json"
+    - "!/**/Patient-example-patient.json"
     - "!/**/Patient-ExamplePatientInstance.json"
 
 - name: naming-convention-name

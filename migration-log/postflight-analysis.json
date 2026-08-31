@@ -7,8 +7,8 @@
     "label": "symptome-migrated",
     "project_root_nested": null,
     "project_root_candidates": null,
-    "git_commit": "e93a5b0",
-    "timestamp": "2026-08-31T20:14:40Z"
+    "git_commit": "a529953",
+    "timestamp": "2026-08-31T21:37:36Z"
   },
   "identity": {
     "id": "mii-ig-symptom",
@@ -16,7 +16,7 @@
     "packageId": "de.medizininformatikinitiative.kerndatensatz.symptom",
     "name": "MII_IG_Symptom",
     "title": "MII IG Symptom",
-    "version": "2026.0.0-rc.1",
+    "version": "2027.0.0-ballot.rc1",
     "calver": true,
     "status": "active",
     "fhirVersion": "4.0.1",
@@ -639,14 +639,14 @@
       "intro_notes": true,
       "implementation_guides_tree": true,
       "dual_source": true,
-      "pagecontent_last_commit": "2026-08-31T22:04:30+02:00",
+      "pagecontent_last_commit": "2026-08-31T23:31:03+02:00",
       "implementation_guides_last_commit": "2026-02-20T12:54:54+01:00"
     },
     "qa_baseline": {
       "source": "output/qa.json",
       "errs": 3,
       "warnings": 165,
-      "date": "Mon, 31 Aug, 2026 20:09:21 +0000"
+      "date": "Mon, 31 Aug, 2026 21:31:49 +0000"
     },
     "_comment": "migration Gate-0 aspects; None = not measurable from this tree (obtain it, never assume it)"
   },
@@ -671,11 +671,11 @@
     "pages": 25,
     "pages_all": 29,
     "translation_pages": 14,
-    "translation_words": 5836,
+    "translation_words": 5787,
     "intro_note_pages": 2,
     "intro_note_words": 1677,
-    "words": 8473,
-    "words_all_incl_stubs": 16033,
+    "words": 8427,
+    "words_all_incl_stubs": 15938,
     "images": 8,
     "mandatory_present": [
       "index",
@@ -708,7 +708,7 @@
       },
       {
         "path": "input/pagecontent/changes.md",
-        "words": 642,
+        "words": 658,
         "kind": "target",
         "stub": false
       },
@@ -774,7 +774,7 @@
       },
       {
         "path": "input/pagecontent/version-history.md",
-        "words": 504,
+        "words": 442,
         "kind": "target",
         "stub": false
       },
@@ -894,7 +894,7 @@
       },
       {
         "path": "input/translations/en/pagecontent/changes.md",
-        "words": 705,
+        "words": 724,
         "kind": "translation",
         "stub": false
       },
@@ -960,7 +960,7 @@
       },
       {
         "path": "input/translations/en/pagecontent/version-history.md",
-        "words": 546,
+        "words": 478,
         "kind": "translation",
         "stub": false
       }
@@ -968,8 +968,8 @@
   },
   "linguistics": {
     "content_pages": 25,
-    "words_total": 8473,
-    "words_avg": 338.9,
+    "words_total": 8427,
+    "words_avg": 337.1,
     "words_median": 311,
     "words_min": 88,
     "words_max": 807,
@@ -986,15 +986,11 @@
       },
       {
         "path": "input/pagecontent/changes.md",
-        "words": 642
+        "words": 658
       },
       {
         "path": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-Condition-Relationship.page.md",
         "words": 616
-      },
-      {
-        "path": "input/pagecontent/version-history.md",
-        "words": 504
       },
       {
         "path": "input/pagecontent/implementer-guidance.md",
@@ -1003,6 +999,10 @@
       {
         "path": "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/KontextimGesamtprojektBezgezuanderenModulen-1.x.page.md",
         "words": 457
+      },
+      {
+        "path": "input/pagecontent/version-history.md",
+        "words": 442
       },
       {
         "path": "input/pagecontent/guidance.md",
@@ -1079,7 +1079,7 @@
     ]
   },
   "duplication": {
-    "duplicate_block_count": 26,
+    "duplicate_block_count": 27,
     "duplicate_blocks": [
       {
         "snippet": "um eine dezentrale datenauswertung mittel des deutsche forschungsdatenportal für gesundhei",
@@ -1138,6 +1138,13 @@
         ]
       },
       {
+        "snippet": "die vorliegende spezifikation beschreibt die fhir repräsentation des kerndatensatz moduls ",
+        "locations": [
+          "input/pagecontent/index.md",
+          "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/Index.page.md"
+        ]
+      },
+      {
         "snippet": "zu den nutzungsrechten der zugrunde liegenden fhir technologie siehe die fhir basis spezif",
         "locations": [
           "input/pagecontent/index.md",
@@ -1174,13 +1181,6 @@
       },
       {
         "snippet": "die arbeiten der kerndatensatzspezifikationen basieren, wo möglich, auf internationalen st",
-        "locations": [
-          "input/pagecontent/profiles.md",
-          "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Index.page.md"
-        ]
-      },
-      {
-        "snippet": "alle elemente des kerndatensatzes, angepasst an die details und anforderungen für die use ",
         "locations": [
           "input/pagecontent/profiles.md",
           "implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Index.page.md"
@@ -1649,7 +1649,7 @@
     "dependency_stale_count": 0,
     "dependency_stale": [],
     "dependency_staleness_note": "Heuristik aus CalVer-Jahr; exakt nur via Package-Registry (extern).",
-    "release_cadence_per_year": 16.5,
+    "release_cadence_per_year": 19.1,
     "days_since_last_commit": 0,
     "tags": 1
   },
@@ -1679,18 +1679,18 @@
     "privacy_page_words": 0,
     "privacy_page_substantial": false,
     "examples_contain_pii_like": false,
-    "bus_factor_top_author_pct": 52,
-    "bus_factor_authors": 5,
+    "bus_factor_top_author_pct": 45,
+    "bus_factor_authors": 6,
     "bus_factor_risk": "gering",
     "breaking_change_risk": null,
     "breaking_change_note": "Erfordert Diff gegen die publizierte Vorversion (Build/extern) — statisch nicht erhoben."
   },
   "git": {
-    "commits": 69,
-    "authors": 5,
-    "top_author_share": 52,
+    "commits": 80,
+    "authors": 6,
+    "top_author_share": 45,
     "days_since_last": 0,
-    "commits_per_year": 16.5,
+    "commits_per_year": 19.1,
     "tags": 1,
     "first": "2022-06-27",
     "last": "2026-08-31",
