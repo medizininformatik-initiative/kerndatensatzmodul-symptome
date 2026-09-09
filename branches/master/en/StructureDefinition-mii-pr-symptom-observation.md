@@ -140,7 +140,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-symptom-ob
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Symptom_Observation",
   "status" : "active",
-  "date" : "2026-09-09T11:35:53+00:00",
+  "date" : "2026-09-09T13:47:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
