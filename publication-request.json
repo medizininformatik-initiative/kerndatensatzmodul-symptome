@@ -8,7 +8,7 @@
    "desc" : "Migration of the MII KDS module Symptome onto the IG-Publisher module template",
    "first" : true,
    "title" : "MII Implementation Guide Symptom",
-   "ci-build" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/dev/",
+   "ci-build" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/master/",
    "category" : "Research",
    "introduction" : "Medizininformatik Initiative - Modul Symptom",
    "registry-description" : "MII KDS Modul Symptome/klinischer Zustand",
