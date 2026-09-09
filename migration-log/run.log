@@ -1,0 +1,611 @@
+2026-08-31T19:13:43Z  INFO   log  run-boundary  ===== run 1 starts  run=1 label=Migration kerndatensatzmodul-symptome (master@d4ef9de) -> mii-kds-module-template v0.13.2, skill mii-ig-migration v0.25.0, DE-first, sandbox route (MII org read-only; FGDH sandbox repo pending user permission) cwd=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source log=migration-log/run.log
+    Every line below belongs to run 1; the lines above are earlier invocations.
+    Per-step raw logs (migration-log/<ACTION>.log) hold THIS run only -- `run`
+    truncates each one and rolls the previous attempt over to <ACTION>.prev.log.
+2026-08-31T19:13:43Z  INFO   1  preflight-analysis  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py analyze /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine -o migration-log/preflight-analysis.json --label symptome-source-master`  raw_log=migration-log/preflight-analysis.log
+ig-stats -> migration-log/preflight-analysis.json  (Artefakte 12, Direktiven 46, Inhalts-Seiten 11)
+2026-08-31T19:13:44Z  INFO   1  preflight-analysis  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py analyze /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine -o migration-log/preflight-analysis.json --label symptome-source-master`  exit=0 raw_log=migration-log/preflight-analysis.log raw_log_lines=1
+2026-08-31T19:14:48Z  INFO   pre.2  classify-source-shape  shape=A (sushi-config.yaml + input/fsh at root; hybrid Simplifier-primary: implementation-guides/ tree + committed fsh-generated/, ig.ini gitignored) decision=shape-A per spec 5.1b
+2026-08-31T19:14:48Z  INFO   pre.5  toolchain  sushi=npx fsh-sushi@3.20.1 gofsh=not-needed(shape A, FSH-only source) publisher=2.3.2 sha256=07c576024df917cc1f879b6b5a64147cd0222d5b4129688e8f0ad9ccce58b1d5 jekyll=4.4.1(docker hl7fhir/ig-publisher-base) node=v22.22.3 docker=29.7.2
+2026-08-31T19:14:48Z  WARN   2.2  licence-registry-contradiction  in-tree licence CC-BY-4.0 (package.json + mii-ex-meta-license-codeable ext) UNCONTRADICTED, but registry package 2024.0.0-ballot manifest declares CC0-1.0 (pre-v2026 relicense); invisible to offline tools; owner decision D-3 = CC-BY-4.0 confirmed by user 2026-08-31
+2026-08-31T19:14:48Z  INFO   5.1a  authoritative-tree  implementation-guides/ImplementationGuide-2024.x-DE = ONLY guide tree (dir named 2024.x, guide.yaml updated in place to 'MII IG Symptom v2026'/2026.0.0); newer than input/pagecontent (2026-02-20 vs 2026-01-12, whose index.md is SUSHI boilerplate); no parallel-language trees
+2026-08-31T19:14:48Z  INFO   1  qa-baseline  preflight qa_baseline=null; in-repo gh-pages baseline exists at branches/tech-test-2026-07-23/ (publisher 2.2.11, err=14 warn=163) = SECONDARY evidence; rebuilding primary baseline with pinned 2.3.2 + tx.fhir.org now
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=id value=mii-ig-symptom tier=sushi-config source=sushi-config.yaml:5
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=canonical value=https://www.medizininformatik-initiative.de/fhir/modul-symptom tier=sushi-config source=sushi-config.yaml:6
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=title value=MII IG Symptom tier=sushi-config source=sushi-config.yaml:7
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=name value=MII_IG_Symptom tier=sushi-config source=sushi-config.yaml:8
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=status value=active tier=sushi-config source=sushi-config.yaml:9
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=version value=2026.0.0-rc.1 tier=sushi-config source=sushi-config.yaml:10
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=packageId value=de.medizininformatikinitiative.kerndatensatz.symptom tier=sushi-config source=sushi-config.yaml:11
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=fhirVersion value=4.0.1 tier=sushi-config source=sushi-config.yaml:12
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=copyrightYear value=2022+ tier=sushi-config source=sushi-config.yaml:13
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=releaseLabel value=ci-build tier=sushi-config source=sushi-config.yaml:14
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=publisher value=Medizininformatik Initiative (https://www.medizininformatik-initiative.de/) tier=sushi-config source=sushi-config.yaml:15-17
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  identity-claim  field=license value=CC-BY-4.0 tier=package.json+meta-license-extension source=package.json:license + sushi-config.yaml:36-42 (no license: key in sushi-config)
+2026-08-31T19:20:52Z  INFO   2.1  read-identity  all fields read from sushi-config.yaml (shape A); NO license: key in sushi-config -> licence from package.json + mii-ex-meta-license-codeable extension, both CC-BY-4.0; version contradiction: package.json + qc/custom.rules.yaml version-filled say 2026.0.0 while sushi-config + rulesets/version.fsh say 2026.0.0-rc.1 (sushi-config wins per skill step 2; contradiction reported, not resolved)
+2026-08-31T19:20:52Z  WARN   2.1  identity-contradiction  version: sushi-config.yaml=2026.0.0-rc.1 vs package.json=2026.0.0 vs qc/custom.rules.yaml(version-filled)=2026.0.0 vs rulesets/version.fsh=2026.0.0-rc.1 -- sushi-config wins for the measured window; owner decision D-2 = re-version ALL FOUR to 2027.0.0-ballot in a separate commit AFTER prepost-delta+verification (user 2026-08-31)
+2026-08-31T19:20:52Z  INFO   2.1  resolve-floating-pin  de.medizininformatikinitiative.kerndatensatz.meta 2026.0.x -> 2026.0.0 (packages.simplifier.net versions list: highest 2026.0.x match = 2026.0.0 = dist-tags.latest, measured 2026-08-31; matches merged sibling kerndatensatz-lungenfunktion pin)
+2026-08-31T19:22:16Z  INFO   5.1  source-inventory  start  cmd=`python3 -c 'import json; d=json.load(open('\''migration-log/source-inventory.json'\'')); print('\''artifacts=%d fsh_declarations=%d narrative_pages=%d'\'' % (len(d['\''artifacts'\'']), len(d['\''fsh_declarations'\'']), len(d['\''narrative'\''])))'`  raw_log=migration-log/source-inventory.log
+2026-08-31T19:22:16Z  INFO   5.1  source-inventory  done  cmd=`python3 -c 'import json; d=json.load(open('\''migration-log/source-inventory.json'\'')); print('\''artifacts=%d fsh_declarations=%d narrative_pages=%d'\'' % (len(d['\''artifacts'\'']), len(d['\''fsh_declarations'\'']), len(d['\''narrative'\''])))'`  exit=0 raw_log=migration-log/source-inventory.log raw_log_lines=1
+2026-08-31T19:22:16Z  INFO   2c  page-crosscheck  matched 15 of 15 pages  expected=15 actual=15
+2026-08-31T19:22:16Z  INFO   2c  harvest-decision  in-repo guide tree COMPLETE: 15/15 .page.md name-match the served nodes of simplifier guide mii-ig-modul-symptom-2024-de?version=current (only reachable version; snapshots saved in recon/); content spot-checks: BeschreibungModul first paragraph verbatim-identical to served text; served UML/Beschreibung base64/inline images = Simplifier renderings of in-repo {{render:}} images (ImplementationGuide-Common/images/) -> NO harvest needed (5.1d condition 'narrative not in repository' does not hold); narrative source = authoritative guide tree
+2026-08-31T19:22:16Z  WARN   2c  stale-foreign-canonical  Datensaetze page {{tree:}} + FQL block reference https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom -- NOT the module's own LM url (.../modul-symptom/StructureDefinition/mii-lm-symptom); source oddity -> directive translation targets the module's own LM with TODO:REVIEW + report row (guardrail 1: source FSH untouched)
+2026-08-31T19:35:53Z  INFO   5.2  license-align  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/license-align.py --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --target .`  raw_log=migration-log/license-align.log
+2026-08-31T19:35:53Z  INFO   5.2  license-align  params  source=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine target=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source
+2026-08-31T19:35:53Z  INFO   5.2  license-align  result  already aligned: the target LICENSE reads as the declared CC-BY-4.0  exit=0
+2026-08-31T19:35:53Z  INFO   5.2  license-align  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/license-align.py --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --target .`  exit=0 raw_log=migration-log/license-align.log raw_log_lines=2
+2026-08-31T19:37:02Z  INFO   5.2  skeleton-vendored  ref=v0.13.2 commit=a2390dea3eacf8139b2231713510f38fa558dad5 (overlay onto in-place working branch; scaffold copied minus deletions below)
+2026-08-31T19:37:02Z  INFO   5.2  template-reference  url=https://github.com/medizininformatik-initiative/ig-template-mii-kds release=v1.3.4 (ig.ini URL form; main==v1.3.4 tag at recon time)
+2026-08-31T19:37:02Z  INFO   5.2  skeleton-deletions  skill-5.2 set: ig-template/ sync-ig-template.yml sync-ig-template.sh resolve-ig-template-source.sh (never copied); template first-run-bootstrap REMOVE set: release-please.yml notify-zulip.yml release-demo.yml release-please-config.json .release-please-manifest.json CHANGELOG.md (never copied); guardrail-5 starter examples: example-patient.fsh example-patient-instance.fsh (never copied)
+2026-08-31T19:37:02Z  INFO   5.2  fsh-collision-resolution  SKIPPED whole (module wins, per-file): input/fsh/rulesets/publisher.fsh (RuleSet Publisher+SP_Publisher), input/fsh/rulesets/version.fsh (RuleSet Version+PR_CS_VS_Version), input/fsh/rulesets/cps-rules.fsh (RuleSets SupportResource/Profile/SupportProfile/SupportInteraction/SupportSearchParam collide with module CapabilityStatement.fsh); APPENDED whole: template aliases.fsh (0 alias-name collisions vs module Aliase.fsh - template uses lowercase $-names, module uppercase); template scaffold kept: crmi/license/license-terms/meta-profile/extension-context/translation/test-data-label rulesets + parameters/manifest.fsh (no name collisions)
+2026-08-31T19:37:02Z  INFO   5.2  de-first-swap  DE-FIRST (owner D-1): template pagecontent(EN)->input/translations/en/pagecontent, translations/de/pagecontent(DE)->input/pagecontent, menus swapped likewise; DE .po dropped (direction-obsolete, EN .po generated at 5.5); sushi-config i18n-default-lang=de i18n-lang=[en] translation-sources=[input/translations/en]; pages: titles GERMAN (default-language titles); CI guard language-model-check.sh PATTERNS INVERTED (Studie lesson); convention-check.mjs+test de/en paths swapped; go-publish registry order de,en
+2026-08-31T19:37:02Z  INFO   5.2  workflow-patches  branch filters: convention-check.yml push+PR += master + migration/** (push), security-scan.yml PR += master (source default branch = master; template-issue candidate); secret fallback SU_TERMSERV_CLIENT_* || CDS_DEV_CLIENT_* in ig-publisher/validation/go-publish/module-release (GenetischeTests #52 pattern)
+2026-08-31T19:37:02Z  INFO   5.2  gitignore-edits  template .gitignore replaces source's (ig.ini now tracked); fsh-generated/ ignore narrowed to fsh-generated/includes/menu.xml (lungenfunktion pattern, #51 wave requirement); !migration-log/ exemption vs *.log
+2026-08-31T19:37:02Z  INFO   5.2  merged-config  identity byte-carried from source (id/canonical/name/title/version/packageId/releaseLabel/copyrightYear/publisher/license+meta-license-ext); template machinery added: crmi meta.profile+extensions (dates=2026-08-31 migration snapshot, re-set at first release - queue 2), jurisdiction DE, THO 7.3.0+ext 5.3.0 direct pins, crmi 2.0.0 dep ADDED (required by meta.profile), xver-r5.r4 REMOVED (no R5 usage), meta pinned 2026.0.0, basisprofil uri repaired (non-absolute source uri = measured publisher error, Gate A row), eu.base carried; special-url 3 entries from Gate-0 prediction; NO menu: property (menu.xml); NO manualSliceOrdering (source semantics); topic NCI C4876=Symptom (EVS-verified)
+2026-08-31T19:37:02Z  INFO   pre.4  placeholder-census  grep -rIl '{{' . --exclude-dir=.git: every hit accounted - .github(Actions syntax), docs/scripts/tests/skills/AGENTS.md(mechanism literals, substitution deliberately scoped to input/**+config per Studie lesson), implementation-guides(directives=step-5 material), migration-log(evidence), input READMEs+index comments(generic {{...}} mechanism prose), rendering-artifacts.md+demo/(live Liquid demo, M9-removal candidate); NO unreplaced value placeholder in built surfaces
+2026-08-31T19:37:02Z  INFO   5.2  sushi-skeleton  start  cmd=`npx --yes fsh-sushi@3.20.1 .`  raw_log=migration-log/sushi-skeleton.log
+2026-08-31T19:37:07Z  INFO   5.2  sushi-skeleton  done  cmd=`npx --yes fsh-sushi@3.20.1 .`  exit=0 raw_log=migration-log/sushi-skeleton.log raw_log_lines=46
+2026-08-31T19:38:56Z  INFO   5.3  transfer-artefacts  IN-PLACE migration: module FSH untouched at its source paths (structure-preserving, 0 moves); comm -3 delta = template scaffold ADDITIONS only (aliases.fsh, parameters/manifest.fsh, rulesets/{crmi,extension-context,license,license-terms,meta-profile,test-data-label,translation}.fsh, README/.gitkeep files) - full lists in migration-log/comm3-fsh.txt; fsh-generated committed as pinned-toolchain output (sushi 3.20.1; source never tracked the IG resource json - now tracked per wave requirement #51; profile diffs = sushi implied extension-slicing blocks, known serializer delta)
+2026-08-31T19:38:56Z  INFO   5.3  advisor-qc-merge  advisor.json: template file IS the union (source 5 suppress entries all present + TERMINOLOGY_TX_WARNING@StructureDefinition.*); qc/custom.rules.yaml: template rules substituted for symptom (version 2026.0.0-rc.1 FIXES source rule's 2026.0.0-vs-rc.1 self-contradiction; id/name/url conventions superset of source's incl. bare-space url check source already used); source originals snapshotted in migration-log/source-snapshots/
+2026-08-31T19:39:33Z  INFO   gate-A  summary  identity diff vs source = EMPTY except adjudicated rows: (1) meta 2026.0.x->2026.0.0 pin, (2) basisprofil uri absolute (source uri non-absolute = publisher error), (3) +crmi 2.0.0 / -xver (template machinery), (4) +THO 7.3.0 +extensions.r4 5.3.0 direct pins (injection defense), (5) license: key added = CC-BY-4.0 (matches package.json + meta-license ext; registry-CC0 contradiction hand-recorded), (6) special-url x3 declared (ids/urls untouched), (7) jurisdiction DE + crmi metadata added (template machinery); artifact completeness: 7/7 tracked resources regenerated + IG json newly tracked; comm -3 additions-only
+2026-08-31T19:39:33Z  INFO   5.4c  page-routing  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/page-structure-advice.py --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --target . --out migration-log/page-structure-advice.md --map migration-log/page-map.tsv`  raw_log=migration-log/page-routing.log
+page-structure-advice: 15 source pages (from guide-tree) + 1 union, 22 target pages, 7 artefacts; map 17 rows (1 retired) -> migration-log/page-map.tsv -> migration-log/page-structure-advice.md
+2026-08-31T19:39:33Z  INFO   5.4c  page-routing  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/page-structure-advice.py --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --target . --out migration-log/page-structure-advice.md --map migration-log/page-map.tsv`  exit=0 raw_log=migration-log/page-routing.log raw_log_lines=1
+2026-08-31T19:42:45Z  INFO   5.4c  map-review  human-review pass applied 6 [MAP-EDIT]s: Referenzen+2 folder indexes+Terminologien RETIRED (intentionally blank, 'Diese Seite wurde absichtlich leer gelassen'), Datensaetze retargeted slug-page->logical-models.md (agreed page owns concern), ImplementationGuide-Common annotated (images copied flat to input/images/, tree retires post-Gate-D); generator rows for index/guidance/implementer-guidance/uml/profiles/capability-statements/intro-notes ACCEPTED as generated
+2026-08-31T19:49:20Z  INFO   5.2  venue-change  USER DECISION mid-run (2026-08-31): migration branch + PR land IN-PLACE in medizininformatik-initiative/kerndatensatzmodul-symptome (explicit override of the standing MII-read-only policy for THIS repo; Dokument PR-36 pattern; skill-preferred route). FGDH sandbox route abandoned; GITHUB_ORG/REPO_NAME substitution values corrected sandbox->MII across the tree
+2026-08-31T19:55:39Z  INFO   5.4a  optional-page-decisions  MEASURED (package artifact counts): extensions=0 REMOVE, search-parameters=0 REMOVE, operations=0 REMOVE, value-sets=0 REMOVE, code-systems=0 REMOVE (source Terminologien page intentionally blank), researcher-guidance REMOVE (no researcher content in source), rendering-artifacts+demo/ REMOVE (demo page), metadata REMOVE (module curates no crmi-metadata docs; would ship 3 scaffold decide-me boxes); each removal = page files both languages + pages: entry + menu entries both languages per docs/optional-pages.md; KEPT: uml-diagrams (source UML page), implementer-guidance (Kontext), guidance (Szenarien), logical-models (Datensaetze)
+2026-08-31T19:55:39Z  INFO   5.4b  security-privacy-decision  stage 3 = DEFAULT TEXT adopted verbatim both languages (module introduces no data category with own security/privacy aspects beyond overarching framework); scaffold Person example + ILLUSTRATIVE-EXAMPLE markers deleted both languages; header-comment mention reworded (M11 matches the raw string)
+2026-08-31T19:55:39Z  INFO   5.4d  derived-scan  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  raw_log=migration-log/derived-scan.log
+2026-08-31T19:55:39Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/changes.md:84  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/examples.md:6  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/profiles.md:31  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/translationinfo.md:17  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/changes.md:76  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/capability-statements.md  subject=capability-statements [bridge source=TechnischeImplementierung-1.x/CapabilityStatement.page.md]  marker present in lang=default (input/pagecontent/capability-statements.md:28) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/capability-statements.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/guidance.md  subject=guidance [bridge source=none]  marker present in lang=default (input/pagecontent/guidance.md:6) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/guidance.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/index.md  subject=index [bridge source=none]  marker present in lang=default (input/pagecontent/index.md:92) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/index.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/logical-models.md  subject=logical-models [bridge source=AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md]  marker present in lang=default (input/pagecontent/logical-models.md:20) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/logical-models.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/logical-models.md  subject=logical-models [bridge source=none]  marker present in lang=default (input/pagecontent/logical-models.md:36) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/logical-models.md, same kind and same source
+2026-08-31T19:55:39Z  INFO   11  derived-scan  result  files=30 markers=5 gates=A:0,B:5,C:0 kinds=bridge:5 langs=default findings=10 (malformed=5,twin-missing=5) out=./migration-log/derived-content.tsv exit=1
+2026-08-31T19:55:39Z  WARN   11  derived-scan  derived-scan: 10 finding(s) -- a marker that does not parse, renders no box, or is missing from a language mirror is derived content that is NOT marked where it counts.
+    Every finding above names its file:line and its exact action.
+    The TSV was still written: it is the artefact, not the verdict.
+2026-08-31T19:55:39Z  WARN   5.4d  derived-scan  anticipated-nonzero-exit: EN language twins not yet produced (step 6); re-run after translations  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  exit=1 raw_log=migration-log/derived-scan.log raw_log_lines=25
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict`  raw_log=migration-log/fql-scan.log
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets=input/pagecontent implementation-guides  defaulted=1
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  target  path=implementation-guides  kind=dir  files=15
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/Index.page.md:18  [index-root]
+    found:  {{index:root}}
+    action: Remove -- the table of contents and navigation are generated by the template.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:11  [link]
+    found:  ## {{link}}
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:70  [link]
+    found:  <tab title="Link">{{link}}</tab>
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:11  [link]
+    found:  ## {{link}}
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:98  [link]
+    found:  <tab title="Link">{{link}}</tab>
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/capability-statements.md:4  [render]
+    found:  verbatim transfer). The source's {{render:<canonical>}} directive is replaced by
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/uml-diagrams.md:4  [render]
+    found:  transfer; {{render:}} image copied flat to input/images/). -->
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/UML-1.x.page.md:6  [render]
+    found:  {{render:implementation-guides/ImplementationGuide-Common/images/ig_bilder_UML.p
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/BeschreibungModul-1.x.page.md:6  [render]
+    found:  {{render:implementation-guides/ImplementationGuide-Common/images/17_Abbildung_Sy
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/CapabilityStatement.page.md:18  [render]
+    found:  {{render:https://www.medizininformatik-initiative.de/fhir/modul-symptom/Capabili
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:17  [render]
+    found:  | {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Index.page.md:12  [render]
+    found:  | {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:58  [render]
+    found:  | {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}}
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/logical-models.md:5  [tree]
+    found:  The source's {{tree:}} directive and FQL element table referenced the LEGACY
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md:8  [tree]
+    found:  {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/Stru
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:44  [tree]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:72  [tree]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:68  [xml]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: {% include <Type>-<id>-xml.xhtml %} (also {{xml:Example}}).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:96  [xml]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: {% include <Type>-<id>-xml.xhtml %} (also {{xml:Example}}).
+2026-08-31T19:55:39Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:69  [json]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:91  [json]
+    found:  {{json:mii-exa-symptom-vitreoretinochoroidopathy}}
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:97  [json]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:119  [json]
+    found:  {{json:mii-exa-symptom-chestpain}}
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:125  [json]
+    found:  {{json:mii-exa-symptom-arachnodactyly}}
+    action: {% include <Type>-<id>-json-html.xhtml %} (also {{json:Example}}).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md:12  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:32  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:46  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:56  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:75  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:60  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:74  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:84  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:103  [fql-at]
+    found:  @```
+    action: Simplifier FQL code block: treat as <fql>.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:43  [tabs]
+    found:  <tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:44  [tabs]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:45  [tabs]
+    found:  <tab title="Beschreibung"> 
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:67  [tabs]
+    found:  </tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:68  [tabs]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:69  [tabs]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:70  [tabs]
+    found:  <tab title="Link">{{link}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md:71  [tabs]
+    found:  </tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:71  [tabs]
+    found:  <tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:72  [tabs]
+    found:  <tab title="Darstellung">{{tree, buttons}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:73  [tabs]
+    found:  <tab title="Beschreibung"> 
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:95  [tabs]
+    found:  </tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:96  [tabs]
+    found:  <tab title="XML">{{xml}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:97  [tabs]
+    found:  <tab title="JSON">{{json}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:98  [tabs]
+    found:  <tab title="Link">{{link}}</tab>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/TechnischeImplementierung-1.x/FHIR-Profile-1.x/Observation-1.x.page.md:99  [tabs]
+    found:  </tabs>
+    action: <tabs>/<tab> (rendering/XML/JSON): replace with the matching {% include %} fragments.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  result  mapped=49 unknown=0 files=29 strict=1  exit=1
+    Transform per references/fql-crosswalk.md; when in doubt mark TODO:REVIEW.
+2026-08-31T19:55:40Z  WARN   5.4  fql-scan  anticipated-nonzero-exit: pre-migration measurement: source tree implementation-guides/ retained until Gate D carries the 46 directives  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict`  exit=1 raw_log=migration-log/fql-scan.log raw_log_lines=152
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan-migrated  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  raw_log=migration-log/fql-scan-migrated.log
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets= input/pagecontent input/translations input/intro-notes  defaulted=0
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/translations  kind=dir  files=15
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/intro-notes  kind=dir  files=2
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/intro-notes/StructureDefinition-mii-pr-symptom-observation-intro.md:5  [link]
+    found:  Directive translation: {{link}}/metadata-FQL/tabs dropped (the artifact page bel
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/capability-statements.md:4  [render]
+    found:  verbatim transfer). The source's {{render:<canonical>}} directive is replaced by
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/uml-diagrams.md:4  [render]
+    found:  transfer; {{render:}} image copied flat to input/images/). -->
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/logical-models.md:5  [tree]
+    found:  The source's {{tree:}} directive and FQL element table referenced the LEGACY
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:41Z  INFO   5.4  fql-scan  result  mapped=4 unknown=0 files=31 strict=1  exit=1
+    Transform per references/fql-crosswalk.md; when in doubt mark TODO:REVIEW.
+2026-08-31T19:55:41Z  ERROR  5.4  fql-scan-migrated  failed  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  exit=1 raw_log=migration-log/fql-scan-migrated.log raw_log_lines=18
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/fql-scan-migrated.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan-migrated  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  raw_log=migration-log/fql-scan-migrated.log prev_raw_log=migration-log/fql-scan-migrated.prev.log
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets= input/pagecontent input/translations input/intro-notes  defaulted=0
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/translations  kind=dir  files=15
+2026-08-31T19:56:06Z  INFO   5.4  fql-scan  target  path=input/intro-notes  kind=dir  files=2
+2026-08-31T19:56:07Z  INFO   5.4  fql-scan  result  mapped=0 unknown=0 files=31  exit=0  no directives found
+2026-08-31T19:56:07Z  INFO   5.4  fql-scan-migrated  done  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/fql-scan.sh --strict input/pagecontent input/translations input/intro-notes`  exit=0 raw_log=migration-log/fql-scan-migrated.log raw_log_lines=5
+2026-08-31T19:59:54Z  INFO   5.6  sushi-build  start  cmd=`npx --yes fsh-sushi@3.20.1 .`  raw_log=migration-log/sushi-build.log
+2026-08-31T20:00:00Z  INFO   5.6  sushi-build  done  cmd=`npx --yes fsh-sushi@3.20.1 .`  exit=0 raw_log=migration-log/sushi-build.log raw_log_lines=46
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json migration-log/menu-titles-en-seed.txt en input/translations/en/ImplementationGuide-mii-ig-symptom.po`  raw_log=migration-log/gen-page-title-po.log
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  params  ig=fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json seed=migration-log/menu-titles-en-seed.txt lang=en out=input/translations/en/ImplementationGuide-mii-ig-symptom.po
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  seed  path=migration-log/menu-titles-en-seed.txt  lines=24 entries=24 matched=14 applied=14 unused=10
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Anleitung für Forschende'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Artefakt-Rendering (Demo)'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='CodeSystems'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Extensions'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Inhaltsverzeichnis'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='MII IG Symptom'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Metadaten-Übersicht'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Operationen'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Suchparameter'
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='ValueSets'
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  written  out=input/translations/en/ImplementationGuide-mii-ig-symptom.po pages=15 units=15 translated=14 untranslated=1 carried_over=0 preserved_foreign=0 header_preserved=False
+2026-08-31T20:00:17Z  WARN   5.5  gen-page-title-po  silent-partial-success: 1 of 15 page-title unit(s) have an empty msgstr and fall back to de
+    UNTRANSLATED: Table of Contents
+    Translate these msgstr by hand -- they are pages the seed did not
+    cover (typically pages that are not menu entries), and they belong
+    in the report's ② review queue.
+2026-08-31T20:00:17Z  INFO   5.5  gen-page-title-po  result  exit=1  written with 1 untranslated unit(s)
+2026-08-31T20:00:17Z  ERROR  5.5  gen-page-title-po  failed  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/gen-page-title-po.py fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json migration-log/menu-titles-en-seed.txt en input/translations/en/ImplementationGuide-mii-ig-symptom.po`  exit=1 raw_log=migration-log/gen-page-title-po.log raw_log_lines=19
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/gen-page-title-po.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T20:00:45Z  INFO   5.5  gen-page-title-po  hand-filled the 1 untranslated unit: msgid 'Table of Contents' -> msgstr 'Table of Contents' (SUSHI writes the toc title in English even in a German IG; the EN translation is the identity); 14/15 seeded; 10 unused seed entries = M9-removed pages (expected)
+2026-08-31T20:00:45Z  INFO   5.4d  derived-scan-post  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  raw_log=migration-log/derived-scan-post.log
+2026-08-31T20:00:45Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/changes.md:84  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/examples.md:6  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/profiles.md:31  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/translationinfo.md:17  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/changes.md:76  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/examples.md:5  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/profiles.md:28  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/translationinfo.md:15  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T20:00:45Z  INFO   11  derived-scan  result  files=32 markers=10 gates=A:0,B:10,C:0 kinds=bridge:10 langs=default,en findings=8 (malformed=8) out=./migration-log/derived-content.tsv exit=1
+2026-08-31T20:00:45Z  WARN   11  derived-scan  derived-scan: 8 finding(s) -- a marker that does not parse, renders no box, or is missing from a language mirror is derived content that is NOT marked where it counts.
+    Every finding above names its file:line and its exact action.
+    The TSV was still written: it is the artefact, not the verdict.
+2026-08-31T20:00:45Z  ERROR  5.4d  derived-scan-post  failed  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  exit=1 raw_log=migration-log/derived-scan-post.log raw_log_lines=21
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/derived-scan-post.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T20:01:11Z  INFO   5.4d  derived-scan-post  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  raw_log=migration-log/derived-scan-post.log prev_raw_log=migration-log/derived-scan-post.prev.log
+2026-08-31T20:01:11Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T20:01:11Z  INFO   11  derived-scan  result  files=32 markers=18 gates=A:0,B:16,C:2 kinds=bridge:10,summary:8 langs=default,en findings=0 (none) out=./migration-log/derived-content.tsv exit=0
+2026-08-31T20:01:11Z  INFO   5.4d  derived-scan-post  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/derived-scan.py --target .`  exit=0 raw_log=migration-log/derived-scan-post.log raw_log_lines=2
+2026-08-31T20:02:15Z  INFO   5.6a  sibling-skill-check  start  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/sibling-skill-check.sh --skill-dir /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration`  raw_log=migration-log/sibling-skill-check.log
+2026-08-31T20:02:15Z  INFO   5.6a  sibling-skill-check  sibling-skill-present  skill=fhir-ig-analysis path=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis roots_examined=1 ref=<ref> ref_source=not recorded
+    Identified by its frontmatter name, not by its directory name. §5.6's
+    same-module verification can run; its IDENTISCH lines are the evidence, not
+    this line.
+2026-08-31T20:02:15Z  INFO   5.6a  sibling-skill-check  sibling-skill-present  skill=fhir-ig-analysis path=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis roots_examined=1 ref=<ref> ref_source=not recorded
+    Identified by its frontmatter name, not by its directory name. §5.6's
+    same-module verification can run; its IDENTISCH lines are the evidence, not
+    this line.
+2026-08-31T20:02:15Z  INFO   5.6a  sibling-skill-check  done  cmd=`bash /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/sibling-skill-check.sh --skill-dir /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration`  exit=0 raw_log=migration-log/sibling-skill-check.log raw_log_lines=4
+2026-08-31T20:04:30Z  INFO   5.6  local-ci-emulation  convention-check.yml cannot fire on migration/* pushes upstream until the PR exists -> emulated locally (Studie lesson): node --test scripts/*.test.mjs = 107 pass / 0 fail; convention-check dev PASS + --release PASS; language-model-check exit 0 after DE-first prose sweep (README rewritten module-focused, AGENTS/input-READMEs/workflow-comments updated, 4 ALLOW entries for template-repo-gated tooling); M10 duplicate headings fixed (changes+translationinfo, both languages)
+2026-08-31T20:05:19Z  INFO   11  manifest-restamp  verifier manifests RE-MEASURED at module-template v0.13.2 (shipped ones stamped v0.11.1): template-pages = 21 rows name-identical (ls of tag pagecontent vs shipped rows; + slug-prefix IG page), template-artifacts token example-patient re-verified at tag (vendored ig-template package 1.3.3, both scaffold files present); stamped copies at migration-log/template-pages-v0.13.2.tsv + template-artifacts-v0.13.2.tsv, passed to verify-migration via --template-pages/--template-artifacts
+2026-08-31T20:09:34Z  INFO   5.6  qa-baseline-compare  BASELINE (pristine master + tech-test ig.ini recipe, publisher 2.3.2, tx.fhir.org): err=14 warn=162 info=8 -- 4 classes: 9x special-url id/url-mismatch (3 resources x 3 forms), 2x dependsOn non-absolute basisprofil uri, 3x unresolved Patient subject refs (2x Patient/example, 1x Patient/example-patient). MIGRATED build 1: err=3 = EXACTLY the 3 Patient refs (source-inherent, same element paths Condition.subject/Observation.subject) -- 9 special-url errors cleared by the declared special-url list, 2 dependsOn errors cleared by the repaired dependency block; 4 NEW page-link errors were migration-authored defects (canonical-as-link in index DERIVED box, metadata.html links in version-history after M9 removal) -> FIXED, rebuild running; warn 162->165 delta analyzed after rebuild. Comparison BY ELEMENT PATH (qa messages localization-safe); baseline error list at migration-log/qa-baseline-errors.txt
+2026-08-31T20:14:39Z  INFO   5.6  postflight-analysis  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json --label symptome-migrated`  raw_log=migration-log/postflight-analysis.log
+ig-stats -> migration-log/postflight-analysis.json  (Artefakte 12, Direktiven 46, Inhalts-Seiten 25)
+2026-08-31T20:14:40Z  INFO   5.6  postflight-analysis  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json --label symptome-migrated`  exit=0 raw_log=migration-log/postflight-analysis.log raw_log_lines=1
+2026-08-31T20:14:56Z  INFO   5.6  same-module-compare  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py compare migration-log/preflight-analysis.json migration-log/postflight-analysis.json -o migration-log/same-module-compare.md`  raw_log=migration-log/same-module-compare.log
+Vergleich -> migration-log/same-module-compare.md
+2026-08-31T20:14:56Z  INFO   5.6  same-module-compare  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py compare migration-log/preflight-analysis.json migration-log/postflight-analysis.json -o migration-log/same-module-compare.md`  exit=0 raw_log=migration-log/same-module-compare.log raw_log_lines=1
+2026-08-31T20:15:12Z  INFO   7  prepost-delta  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  raw_log=migration-log/prepost-delta.log
+2026-08-31T20:15:12Z  INFO   7  prepost-delta  params  pre=migration-log/preflight-analysis.json post=migration-log/postflight-analysis.json out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv
+2026-08-31T20:15:12Z  ERROR  7  prepost-delta  delta-regression: licence.contradictory  pre=false post=true
+    why: the target now declares CONTRADICTORY licences (the target declares: attribution4.0international, cc-by-4.0, creativecommons) -- one file will be read as the licence by someone, and it will be the wrong one
+2026-08-31T20:15:12Z  INFO   7  prepost-delta  result  rows=34 unchanged=28 improved=1 expected-change=4 regression=1 not-measurable=0 out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv exit=1
+2026-08-31T20:15:12Z  WARN   7  prepost-delta  prepost-delta: 1 regression(s) -- a property of the module got WORSE between the pre- and post-measurement.
+    Every regression above names its property and both values.
+    The reports were still written: they are the artefact, not the verdict.
+2026-08-31T20:15:12Z  ERROR  7  prepost-delta  failed  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  exit=1 raw_log=migration-log/prepost-delta.log raw_log_lines=7
+    The exit status is preserved and returned -- this step did NOT meet its
+    acceptance criterion. Read migration-log/prepost-delta.log, then either fix and re-run or take it
+    to the report's decision queue (spec §10.3).
+2026-08-31T20:15:52Z  WARN   7  prepost-delta-adjudication  SINGLE regression row licence.contradictory false->true = NORMALIZATION ECHO, ACCEPTED (Dokument precedent): the three 'distinct' values are three spellings of the SAME licence - config CC-BY-4.0, LICENSE file's official title 'Attribution 4.0 International' (written by license-align from the declared id), index.md prose 'Creative Commons Namensnennung 4.0' (source-carried copyright section). Source pre-state read uncontradicted only because it shipped NO LICENSE file and no licence prose. ig-stats cannot equate the spellings (known limitation). Goes to report queue 1 as explained/accepted; verdicts otherwise: 28 unchanged, 1 improved (injection_risk cleared), 4 expected-change
+2026-08-31T20:16:04Z  INFO   11  verify-migration  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  raw_log=migration-log/verify-migration.log
+2026-08-31T20:16:04Z  INFO   11  verify-migration  params  target=. source=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine guide_tree=ImplementationGuide-2024.x-DE rendered=output log=./migration-log/run.log layers=conservation,fidelity,provenance,rendering,log
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C2  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C3  identisch=16 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C4  identisch=3 divergiert=7 nicht_pruefbar=6
+2026-08-31T20:16:04Z  WARN   11  verify-migration  verification-divergence: conservation C4  count=7 subjects=BeschreibungModul-1.x.page.md, BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md, CapabilityStatement.page.md …
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: conservation C4  count=6 subjects=AnwendungsflleInformationsmodell-1.x/Index.page.md, Condition-1.x.page.md, Observation-1.x.page.md …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C5  identisch=4 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C6  identisch=11 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  conservation C7  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: conservation C7  count=2 subjects=Condition-1.x.page.md, Observation-1.x.page.md
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  INFO   11  verify-migration  fidelity F1  identisch=9 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  fidelity F2  identisch=2 divergiert=1 nicht_pruefbar=3
+2026-08-31T20:16:04Z  WARN   11  verify-migration  verification-divergence: fidelity F2  count=1 subjects=de.medizininformatikinitiative.kerndatensatz.meta
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: fidelity F2  count=3 subjects=hl7.fhir.uv.crmi, hl7.fhir.uv.extensions.r4, hl7.terminology.r4
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  INFO   11  verify-migration  fidelity F3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  fidelity F4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  provenance P1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  provenance P2  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  provenance P3  identisch=1 divergiert=0 nicht_pruefbar=1
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: provenance P3  count=1 subjects=IG Publisher currency
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  INFO   11  verify-migration  provenance P4  identisch=0 divergiert=1 nicht_pruefbar=0
+2026-08-31T20:16:04Z  WARN   11  verify-migration  verification-divergence: provenance P4  count=1 subjects=source guide version
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:16:04Z  INFO   11  verify-migration  provenance P5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  rendering R1  identisch=2 divergiert=0 nicht_pruefbar=1
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: rendering R1  count=1 subjects=source-versus-target rendering
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  INFO   11  verify-migration  rendering R2  identisch=0 divergiert=2 nicht_pruefbar=0
+2026-08-31T20:16:04Z  WARN   11  verify-migration  verification-divergence: rendering R2  count=2 subjects=output/de id="ig-status" [{{], output/en id="ig-status" [{{]
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:16:04Z  INFO   11  verify-migration  rendering R3  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  rendering R4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  rendering R5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  log L0  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  log L1  identisch=0 divergiert=1 nicht_pruefbar=0
+2026-08-31T20:16:04Z  WARN   11  verify-migration  verification-divergence: log L1  count=1 subjects=5.5/gen-page-title-po @ 2026-08-31T20:00:17Z
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:16:04Z  INFO   11  verify-migration  log L2  identisch=20 divergiert=1 nicht_pruefbar=4
+2026-08-31T20:16:04Z  WARN   11  verify-migration  verification-divergence: log L2  count=1 subjects=5.6 ig-publisher
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: log L2  count=4 subjects=2.1 package-identity, 2.1 repo-identity, 5.1c simplifier-discover …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  INFO   11  verify-migration  log L3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:16:04Z  INFO   11  verify-migration  log L4  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T20:16:04Z  WARN   11  verify-migration  not-mechanisable: log L4  count=2 subjects=conversion count, page count
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:16:04Z  WARN   11  verify-migration  result  identisch=85 divergiert=13 nicht_pruefbar=19 findings=./migration-log/verification-findings.tsv markdown=./migration-log/verification.md exit=1
+    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
+    because a check could not be mechanised. Neither is a pass.
+2026-08-31T20:16:04Z  WARN   11  verify-migration  anticipated-nonzero-exit: findings are this step OUTPUT (1 = DIVERGIERT, 3 = NICHT PRUEFBAR); exit 0 unattainable for this module (adjudicated rows expected)  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  exit=1 raw_log=migration-log/verify-migration.log raw_log_lines=63
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T20:18:05Z  INFO   5.6  ig-publisher  IG Publisher 2.3.2 (pinned jar sha 07c5760..., docker hl7fhir/ig-publisher-base, -no-sushi, tx.fhir.org): build 1 exit 0 qa err=3 warn=165 + 4 migration-authored page-link errors (fixed: canonical-as-link in index DERIVED box, metadata.html links in version-history); build 2 (final) exit 0 qa err=3 warn=165 info=335, 0 residual link errors; raw logs mig/target-publisher.log + target-publisher-2.log (session scratchpad)
+2026-08-31T20:18:05Z  INFO   5.5  gen-page-title-po  resolved: the 1 untranslated unit (msgid 'Table of Contents') was hand-filled with msgstr 'Table of Contents' (identity translation - SUSHI emits the toc title in English even in a German IG); .po now 15/15 translated
+2026-08-31T20:18:05Z  INFO   11  c4-adjudications  C4 rows adjudicated: (1) RESTORED VERBATIM: index Einleitung + Impressum carried the source's typos back (Medizinformatik-Initative/dazuhegörigen/erstellt wurden - silent typo-correction reverted, typos flagged queue 2); (2) RECORDED DROPS: source input/pagecontent/index.md SUSHI boilerplate, '## Inhaltsverzeichnis'+index:root directive (template generates TOC), Simplifier resolve-link block on CapabilityStatement page (superseded by artifact page); (3) RECORDED ADAPTATION: ObsCondRel 'dieser Seite'->'dieses Abschnitts' (page merged into profiles.md as section); (4) CHECKER-LIMITATION: runs containing markdown links mismatch because the URL words enter the normalized run (known C4 limitation, Dokument/Studie precedent) - ProfIndex IPS sentence, GitHub-issues sentence, BeschreibungModul run split by inserted figure; all text VERBATIM-PRESENT in targets
+2026-08-31T20:18:20Z  INFO   11  verify-migration  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  raw_log=migration-log/verify-migration.log prev_raw_log=migration-log/verify-migration.prev.log
+2026-08-31T20:18:20Z  INFO   11  verify-migration  params  target=. source=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine guide_tree=ImplementationGuide-2024.x-DE rendered=output log=./migration-log/run.log layers=conservation,fidelity,provenance,rendering,log
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C2  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C3  identisch=16 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C4  identisch=3 divergiert=7 nicht_pruefbar=6
+2026-08-31T20:18:20Z  WARN   11  verify-migration  verification-divergence: conservation C4  count=7 subjects=BeschreibungModul-1.x.page.md, BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md, CapabilityStatement.page.md …
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: conservation C4  count=6 subjects=AnwendungsflleInformationsmodell-1.x/Index.page.md, Condition-1.x.page.md, Observation-1.x.page.md …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C5  identisch=4 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C6  identisch=11 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  conservation C7  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: conservation C7  count=2 subjects=Condition-1.x.page.md, Observation-1.x.page.md
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  INFO   11  verify-migration  fidelity F1  identisch=9 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  fidelity F2  identisch=2 divergiert=1 nicht_pruefbar=3
+2026-08-31T20:18:20Z  WARN   11  verify-migration  verification-divergence: fidelity F2  count=1 subjects=de.medizininformatikinitiative.kerndatensatz.meta
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: fidelity F2  count=3 subjects=hl7.fhir.uv.crmi, hl7.fhir.uv.extensions.r4, hl7.terminology.r4
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  INFO   11  verify-migration  fidelity F3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  fidelity F4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  provenance P1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  provenance P2  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  provenance P3  identisch=1 divergiert=0 nicht_pruefbar=1
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: provenance P3  count=1 subjects=IG Publisher currency
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  INFO   11  verify-migration  provenance P4  identisch=0 divergiert=1 nicht_pruefbar=0
+2026-08-31T20:18:20Z  WARN   11  verify-migration  verification-divergence: provenance P4  count=1 subjects=source guide version
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:18:20Z  INFO   11  verify-migration  provenance P5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  rendering R1  identisch=2 divergiert=0 nicht_pruefbar=1
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: rendering R1  count=1 subjects=source-versus-target rendering
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  INFO   11  verify-migration  rendering R2  identisch=0 divergiert=2 nicht_pruefbar=0
+2026-08-31T20:18:20Z  WARN   11  verify-migration  verification-divergence: rendering R2  count=2 subjects=output/de id="ig-status" [{{], output/en id="ig-status" [{{]
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T20:18:20Z  INFO   11  verify-migration  rendering R3  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  rendering R4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  rendering R5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  log L0  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  log L1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  log L2  identisch=21 divergiert=0 nicht_pruefbar=4
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: log L2  count=4 subjects=2.1 package-identity, 2.1 repo-identity, 5.1c simplifier-discover …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  INFO   11  verify-migration  log L3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T20:18:20Z  INFO   11  verify-migration  log L4  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T20:18:20Z  WARN   11  verify-migration  not-mechanisable: log L4  count=2 subjects=conversion count, page count
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T20:18:20Z  WARN   11  verify-migration  result  identisch=87 divergiert=11 nicht_pruefbar=19 findings=./migration-log/verification-findings.tsv markdown=./migration-log/verification.md exit=1
+    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
+    because a check could not be mechanised. Neither is a pass.
+2026-08-31T20:18:20Z  WARN   11  verify-migration  anticipated-nonzero-exit: final pass: remaining non-IDENTISCH rows are adjudicated (report queues)  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  exit=1 raw_log=migration-log/verify-migration.log raw_log_lines=59
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T20:19:36Z  INFO   gate-A  re-version  OWNER-APPROVED RE-VERSION COMMIT (user decision D-2(a) 2026-08-31), applied AFTER prepost-delta + verify-migration on the measured window (prepost-delta treats version as machine identity - no accept flag): 2026.0.0-rc.1 -> 2027.0.0-ballot (wave string, = merged sibling kerndatensatz-lungenfunktion) in ALL FOUR version-bearing files (sushi-config incl. package-source ext + effectivePeriod year, rulesets/version.fsh, package.json, qc version-filled) + narrative version tables/changelog headers both languages; resolves the source's 3-way version self-contradiction; SEPARATE commit with its own rebuild proof (M6 accepts prerelease CalVer since template v0.13.2)
+2026-08-31T20:20:25Z  INFO   gate-A  re-version-cascade  sweep found 2 more version-bearing surfaces, updated in the same re-version commit: publication-request.json (version + publication path) and input/fsh/CapabilityStatement.fsh versioned supported-profile references (|2026.0.0-rc.1 -> |2027.0.0-ballot; the source pins its own profiles' versions in the CS - the pins must follow the package version or the CS references non-existent profile versions)
+2026-08-31T20:22:40Z  INFO   8  qa-checklist  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/qa-checklist.py --log-dir migration-log --out migration-log/qa-checklist.md`  raw_log=migration-log/qa-checklist.log
+qa-checklist: 33 checkbox(es) across 4 gates -> migration-log/qa-checklist.md
+2026-08-31T20:22:40Z  INFO   8  qa-checklist  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/qa-checklist.py --log-dir migration-log --out migration-log/qa-checklist.md`  exit=0 raw_log=migration-log/qa-checklist.log raw_log_lines=1
+2026-08-31T20:22:40Z  INFO   8  comparison-table  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/comparison-table.py --log-dir migration-log --map migration-log/page-map.tsv --template-pages migration-log/template-pages-v0.13.2.tsv --source-guide-url 'https://simplifier.net/guide/mii-ig-modul-symptom-2024-de?version=current' --source-repo-url https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/blob/master --out migration-log/comparison-table.md`  raw_log=migration-log/comparison-table.log
+comparison-table: 17 map row(s) rendered, 0 source link(s) from the harvest -> migration-log/comparison-table.md
+2026-08-31T20:22:40Z  INFO   8  comparison-table  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/comparison-table.py --log-dir migration-log --map migration-log/page-map.tsv --template-pages migration-log/template-pages-v0.13.2.tsv --source-guide-url 'https://simplifier.net/guide/mii-ig-modul-symptom-2024-de?version=current' --source-repo-url https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/blob/master --out migration-log/comparison-table.md`  exit=0 raw_log=migration-log/comparison-table.log raw_log_lines=1
+2026-08-31T20:27:38Z  INFO   gate-A  re-version-rebuild-proof  rebuild after the re-version commit (publisher 2.3.2, same rig): qa err=3 warn=165 info=335 UNCHANGED vs the measured-window build; package now de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot; the 3 errors remain the source-inherent Patient refs; raw log mig/target-publisher-3.log
+2026-08-31T20:37:40Z  INFO   gate-A  re-version-rc1  USER DIRECTION at delivery (2026-08-31): version 2027.0.0-ballot -> 2027.0.0-ballot.rc1 (Dokument-convention ballot RC string; M6 accepts, test-pinned) across the same cascade surfaces + report; branch RENAMED migration/2026.0.0-rc.1-template-v0.13.2 -> migration/2027.0.0-ballot.rc1-template-v0.13.2 per user naming (recorded deviation from the spec's source-version branch scheme; precedent: Dokument branch carries the target ballot version)
+2026-08-31T20:50:26Z  INFO   5.6  advisor-extension  CI SU-TermServ Java validation failed with 26 errors in 2 classes, both TOLERATED-MESSAGE gaps not content defects: (1) UNABLE_TO_INFER_CODESYSTEM@ImplementationGuide.definition.parameter.code x~25 - the IG-Publisher tooling parameter codes (logging/pin-canonicals/pin-manifest/path-expansion-params/suppress-mappings/special-url) are not in R4 guide-parameter-code; advisor already suppressed the SAME phenomenon under Terminology_TX_NoValid_16@ - added the UNABLE_TO_INFER id in the same unindexed style; (2) IG_DEPENDENCY_CLASH_CANONICAL@ImplementationGuide.dependsOn x1 - upstream hl7.fhir.uv.crmi#2.0.0 package metadata declares a packages2.fhir.org URL as its canonical (upstream defect); suppression documented here + report queue 3. Legacy JAVA_FHIR_VALIDATION failure = same validator duplicated via main.yml (retirement-listed D6). Publisher-qa-only delta on CI (31 language-code 'en' errors on the .po-injected page-title translation extensions vs all-languages) = tx-environment class, does not gate any check; local pinned rig = err 3
+2026-08-31T20:51:05Z  INFO   5.6  org-ci-autocommit  the MII shared workflow's FSH-to-FHIR bot auto-committed ITS regeneration of the two profiles onto the remote branch (4a0dab8, -56 lines = the implied extension-slicing blocks my pinned SUSHI 3.20.1 emits and the org toolchain does not - the known cross-SUSHI serializer delta, Dokument gotcha); ACCEPTED as the org pipeline's authoritative output (wave precedent #51), local advisor commit rebased on top; artifact SEMANTICS unchanged (slicing blocks are implied)
+2026-08-31T21:00:36Z  INFO   5.6  packagejson-deps-mirror  CI Java validation crashed WITHOUT output on 8f2cc9e: the meta reusable derives IG_DEPENDENCIES from package.json, which still carried the source's FLOATING meta#2026.0.x (I pinned sushi-config only - the dependencies block of the FHIR package manifest was not mirrored; verifier F2 compares sushi-config vs source and was blind to it). package.json dependencies now MIRROR the merged sushi-config exactly (meta 2026.0.0 pinned, basisprofil 1.5.4, eu.base 0.1.0, + crmi 2.0.0 / THO 7.3.0 / extensions.r4 5.3.0). Upstream skill-finding candidate: spec should mandate the package.json dependencies mirror for hybrid sources
+2026-08-31T21:12:57Z  INFO   5.6  advisor-extension-2  legacy Java validation after advisor+pins fix: 26 -> 1 error(s) after filtering; the last = Unknown_Code_in_Version on ImplementationGuide.extension[4] (template artifact-versionPolicy code 'package' vs tx-resolved artifact-version-policy-codes CS v5.2.0 - template-machinery vs terminology-server-state class); added scoped suppression Unknown_Code_in_Version@ImplementationGuide.extension. NOTE upstream findings: (1) the PINNED meta reusable (1db2e534) assigns javaValidatorOutput=$(java ...) under bash -e and passes no -output options -> a validator error-exit kills the step with ALL output swallowed and the renderer ENOENTs on validation.json (the template validation job crashed this way in every run; the legacy @master reusable writes validation.json and filters properly); (2) verifier F2 blind to package.json dependencies mirror
+2026-08-31T21:18:20Z  INFO   5.6  advisor-extension-3  suppression path-match semantics measured: the filter compares the FULL DE-INDEXED leaf path (working entries: ...definition.parameter.code matched parameter[14..23].code; ...dependsOn matched dependsOn[3] because dependsOn IS the leaf there); my prefix-only 'ImplementationGuide.extension' did not match -> replaced with the full path ImplementationGuide.extension.value.ofType(CodeableConcept).coding.code
+2026-08-31T21:23:23Z  INFO   5.6  validation-output-fix  template FHIR-validation job: validator now SUCCESS 0 errors on every file, but the PINNED meta reusable (1db2e534) writes no validation.json while its renderer step requires it (ENOENT even on success) -> JAVA_VALIDATION_OPTIONS extended with -output validation.json (passed verbatim to validator_cli); upstream fix candidate for ci_java_validation.yml; legacy CI (meta@master) now GREEN with 0 filtered errors
+2026-08-31T21:30:58Z  INFO   gate-B  rendered-page-sweep  FULL RENDERED-PAGE CHECK (192 pages, mechanical sweep + 4-agent content review, deployed build rc1): FIXED IN-BRANCH: (1) BLOCKER intro-note tables rendered as literal markdown - kramdown needs a blank line after the block-level GENERATED comments (em-dashes were kramdown typography inside the mis-parsed paragraph); (2) version-history still said current version 2026.0.0-rc.1 (missed cascade spot) + shipped the template-repo demonstration paragraph (removed both languages). DOCUMENTED CLASSES (not migration-fixable): publisher-own translation-notice banner renders literal [here](translationinfo.html) markdown on all 11 en pages + en/artifacts fallback-banner wording (publisher i18n machinery; upstream candidate); en/toc.html lists German page titles + de breadcrumb 'Table of Contents'/'Germany' (publisher localizes breadcrumb/title via .po but not the toc body; DE-first default-language toc title is SUSHI's English literal - ecosystem gap, template/skill issue candidate); IG page &reg; double-escape + dependency-table tree-line background URL concat (publisher ip-statements/table fragments); CS supported-profile labels garbled 'Nameversion: X)' with VERSIONED refs (publisher CS renderer; baseline publisher didn't render names at all); s-and-p heading double numbering (template scaffold manual numbers + CSS counters, template-wide); '**ALL** elements' constraints literals (standard publisher output). SOURCE-INHERENT (Gate B): LM mapping content typos (dataAbesentReason/Conditon.bodySite/Messunger), capability-statements prose typos, condition description duplicated by intro-note first paragraph, artifacts.html 2 description-less rows (matches qa warnings), en/profiles missing translation banner (publisher banner application inconsistency)
+2026-08-31T21:37:35Z  INFO   5.6  postflight-analysis-final  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json --label symptome-migrated`  raw_log=migration-log/postflight-analysis-final.log
+ig-stats -> migration-log/postflight-analysis.json  (Artefakte 12, Direktiven 46, Inhalts-Seiten 25)
+2026-08-31T21:37:36Z  INFO   5.6  postflight-analysis-final  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py analyze . -o migration-log/postflight-analysis.json --label symptome-migrated`  exit=0 raw_log=migration-log/postflight-analysis-final.log raw_log_lines=1
+2026-08-31T21:37:36Z  INFO   5.6  same-module-compare-final  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py compare migration-log/preflight-analysis.json migration-log/postflight-analysis.json -o migration-log/same-module-compare.md`  raw_log=migration-log/same-module-compare-final.log
+Vergleich -> migration-log/same-module-compare.md
+2026-08-31T21:37:36Z  INFO   5.6  same-module-compare-final  done  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/fhir-ig-analysis/scripts/ig-stats.py compare migration-log/preflight-analysis.json migration-log/postflight-analysis.json -o migration-log/same-module-compare.md`  exit=0 raw_log=migration-log/same-module-compare-final.log raw_log_lines=1
+2026-08-31T21:37:36Z  INFO   7  prepost-delta-final  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  raw_log=migration-log/prepost-delta-final.log
+2026-08-31T21:37:36Z  INFO   7  prepost-delta  params  pre=migration-log/preflight-analysis.json post=migration-log/postflight-analysis.json out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv
+2026-08-31T21:37:36Z  ERROR  7  prepost-delta  delta-regression: identity.version  pre=2026.0.0-rc.1 post=2027.0.0-ballot.rc1
+    why: machine-identity field changed -- the migrated package is no longer the same package
+2026-08-31T21:37:36Z  ERROR  7  prepost-delta  delta-regression: licence.contradictory  pre=false post=true
+    why: the target now declares CONTRADICTORY licences (the target declares: attribution4.0international, cc-by-4.0, creativecommons) -- one file will be read as the licence by someone, and it will be the wrong one
+2026-08-31T21:37:36Z  INFO   7  prepost-delta  result  rows=34 unchanged=27 improved=1 expected-change=4 regression=2 not-measurable=0 out=migration-log/prepost-delta.md tsv=migration-log/prepost-delta.tsv exit=1
+2026-08-31T21:37:36Z  WARN   7  prepost-delta  prepost-delta: 2 regression(s) -- a property of the module got WORSE between the pre- and post-measurement.
+    Every regression above names its property and both values.
+    The reports were still written: they are the artefact, not the verdict.
+2026-08-31T21:37:36Z  WARN   7  prepost-delta-final  anticipated-nonzero-exit: accepted licence normalization echo expected  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/prepost-delta.py --pre migration-log/preflight-analysis.json --post migration-log/postflight-analysis.json --out migration-log/prepost-delta.md --tsv migration-log/prepost-delta.tsv`  exit=1 raw_log=migration-log/prepost-delta-final.log raw_log_lines=9
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).
+2026-08-31T21:39:32Z  INFO   gate-B  intro-table-fix-2  blank-line fix insufficient: the publisher renders intro-notes with its OWN markdown pipeline where the TABLES extension is not active (prose/headings/quotes render; pipe tables stay literal; typography turns --- separators into em-dashes) - affects all 4 intro files both languages; FIX: the 4 generated tables re-emitted as raw HTML tables (class=grid, cells html-escaped) which pass through every pipeline; upstream candidates: skill crosswalk should mandate HTML tables in intro-notes, publisher intro pipeline should enable the tables extension
+2026-08-31T21:39:32Z  WARN   7  final-delta-adjudication  FINAL post-re-version measurements: same-module compare identity 1 field DIVERGENT (version 2026.0.0-rc.1 -> 2027.0.0-ballot.rc1) + prepost-delta 2 REGRESSIONs (identity.version + licence normalization echo) = BOTH the OWNER-SIGNED re-version (D-2a) and the accepted echo showing up in a post-re-version re-measurement; the MEASURED-WINDOW runs (pre-re-version, archived in run.log + prev logs) were clean (identity 10/10 IDENTISCH, delta 1 accepted echo only); artifact set 12/12 + canonicals 4/4 remain IDENTISCH in the final measurement
+2026-08-31T21:43:20Z  INFO   gate-A  qa-error-repairs  USER-DIRECTED QA repairs (supersede D-5 'leave source-inherent'): (1) +2 SYNTHETIC Patient examples with the EXACT referenced ids example/example-patient (Max Mustermann-Testpatient/Erika Musterfrau-Testpatientin, minimal, Usage example) -> the 3 dangling-reference errors resolve; artifact set grows by 2 SANCTIONED additions (final same-module compare will show the set delta as adjudicated); qc naming-convention-id gains 2 file exclusions (ids must match the refs, cannot match the mii-*-symptom convention); (2) Condition example display 'Autosomal dominant vitreoretinochoroidopathy (disorder)' -> preferred term without semantic tag (validator-guided FSN-vs-PT repair, SU-TermServ-path error). Remaining CI-only error class: 30x bcp47 'en' inference on .po-injected page-title translation extensions = SU-TermServ capability gap, not module-fixable (publisher reads no advisor; ignoreWarnings cannot suppress ERRORs)
+2026-08-31T21:54:56Z  INFO   11  verify-migration-final  start  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  raw_log=migration-log/verify-migration-final.log
+2026-08-31T21:54:56Z  INFO   11  verify-migration  params  target=. source=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine guide_tree=ImplementationGuide-2024.x-DE rendered=output log=./migration-log/run.log layers=conservation,fidelity,provenance,rendering,log
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C2  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C3  identisch=16 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C4  identisch=3 divergiert=7 nicht_pruefbar=6
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: conservation C4  count=7 subjects=BeschreibungModul-1.x.page.md, BeschreibungvonSzenarienfrdieAnwendungderModule-1.x.page.md, CapabilityStatement.page.md …
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: conservation C4  count=6 subjects=AnwendungsflleInformationsmodell-1.x/Index.page.md, Condition-1.x.page.md, Observation-1.x.page.md …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C5  identisch=4 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C6  identisch=11 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  conservation C7  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: conservation C7  count=2 subjects=Condition-1.x.page.md, Observation-1.x.page.md
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F1  identisch=8 divergiert=0 nicht_pruefbar=1
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: fidelity F1  count=1 subjects=version
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F2  identisch=2 divergiert=1 nicht_pruefbar=3
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: fidelity F2  count=1 subjects=de.medizininformatikinitiative.kerndatensatz.meta
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: fidelity F2  count=3 subjects=hl7.fhir.uv.crmi, hl7.fhir.uv.extensions.r4, hl7.terminology.r4
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  fidelity F4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P2  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P3  identisch=1 divergiert=0 nicht_pruefbar=1
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: provenance P3  count=1 subjects=IG Publisher currency
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P4  identisch=0 divergiert=1 nicht_pruefbar=0
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: provenance P4  count=1 subjects=source guide version
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  INFO   11  verify-migration  provenance P5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R1  identisch=2 divergiert=0 nicht_pruefbar=1
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: rendering R1  count=1 subjects=source-versus-target rendering
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R2  identisch=0 divergiert=2 nicht_pruefbar=0
+2026-08-31T21:54:56Z  WARN   11  verify-migration  verification-divergence: rendering R2  count=2 subjects=output/de id="ig-status" [{{], output/en id="ig-status" [{{]
+    Each is a row in migration-log/verification-findings.tsv with its evidence and its next action.
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R3  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R4  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  rendering R5  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L0  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L1  identisch=1 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L2  identisch=21 divergiert=0 nicht_pruefbar=4
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: log L2  count=4 subjects=2.1 package-identity, 2.1 repo-identity, 5.1c simplifier-discover …
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L3  identisch=2 divergiert=0 nicht_pruefbar=0
+2026-08-31T21:54:56Z  INFO   11  verify-migration  log L4  identisch=1 divergiert=0 nicht_pruefbar=2
+2026-08-31T21:54:56Z  WARN   11  verify-migration  not-mechanisable: log L4  count=2 subjects=conversion count, page count
+    NOT a pass. Each names the human action it needs; they belong in the
+    report's decision queue, and the exit status distinguishes them (3).
+2026-08-31T21:54:56Z  WARN   11  verify-migration  result  identisch=86 divergiert=11 nicht_pruefbar=20 findings=./migration-log/verification-findings.tsv markdown=./migration-log/verification.md exit=1
+    exit 1 = at least one DIVERGIERT; exit 3 = none, but verification is INCOMPLETE
+    because a check could not be mechanised. Neither is a pass.
+2026-08-31T21:54:56Z  WARN   11  verify-migration-final  anticipated-nonzero-exit: adjudicated rows expected (owner-signed re-version, sanctioned Patient additions, unpinnable guide, publisher-own chrome)  cmd=`python3 /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/scripts/verify-migration.py --target . --source /private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/mig/source-pristine --rendered output --source-lang de --template-latest v0.13.2 --publisher-pin 2.3.2 --template-pages migration-log/template-pages-v0.13.2.tsv --template-artifacts migration-log/template-artifacts-v0.13.2.tsv`  exit=1 raw_log=migration-log/verify-migration-final.log raw_log_lines=62
+    This non-zero status is this step's ANTICIPATED, documented outcome, not a
+    failure to fix -- the acceptance criterion is met AS QUALIFIED (spec
+    §5.1b.4). Escalated, not ignored: every item behind it belongs in the
+    report's ① decision queue, named individually (spec §10.3, §10.6).

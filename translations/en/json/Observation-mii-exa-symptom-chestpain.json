@@ -1,0 +1,13 @@
+{
+  "id" : "Observation-mii-exa-symptom-chestpain",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Symptom",
+      "target" : null
+    }]
+  }]
+}

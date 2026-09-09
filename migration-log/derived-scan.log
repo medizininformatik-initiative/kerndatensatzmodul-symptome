@@ -1,0 +1,25 @@
+2026-08-31T19:55:39Z  INFO   11  derived-scan  params  target=. out=./migration-log/derived-content.tsv markdown=no
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/changes.md:84  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/examples.md:6  subject=examples  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/profiles.md:31  subject=profiles  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/pagecontent/translationinfo.md:17  subject=translationinfo  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-malformed: input/translations/en/pagecontent/changes.md:76  subject=changes  unknown kind 'overview' (allowed: bridge, no-source, stand-in, suggestion, summary)
+    action: fix the marker: <!-- DERIVED:<kind> source=<page|none> gate=<A|B|C> -->
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/capability-statements.md  subject=capability-statements [bridge source=TechnischeImplementierung-1.x/CapabilityStatement.page.md]  marker present in lang=default (input/pagecontent/capability-statements.md:28) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/capability-statements.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/guidance.md  subject=guidance [bridge source=none]  marker present in lang=default (input/pagecontent/guidance.md:6) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/guidance.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/index.md  subject=index [bridge source=none]  marker present in lang=default (input/pagecontent/index.md:92) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/index.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/logical-models.md  subject=logical-models [bridge source=AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md]  marker present in lang=default (input/pagecontent/logical-models.md:20) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/logical-models.md, same kind and same source
+2026-08-31T19:55:39Z  ERROR  11  derived-scan  derived-marker-twin-missing: input/translations/en/pagecontent/logical-models.md  subject=logical-models [bridge source=none]  marker present in lang=default (input/pagecontent/logical-models.md:36) and absent from lang=en -- the mirror renders the same text WITHOUT the box, telling that reader it is sourced
+    action: add the same marker and box to input/translations/en/pagecontent/logical-models.md, same kind and same source
+2026-08-31T19:55:39Z  INFO   11  derived-scan  result  files=30 markers=5 gates=A:0,B:5,C:0 kinds=bridge:5 langs=default findings=10 (malformed=5,twin-missing=5) out=./migration-log/derived-content.tsv exit=1
+2026-08-31T19:55:39Z  WARN   11  derived-scan  derived-scan: 10 finding(s) -- a marker that does not parse, renders no box, or is missing from a language mirror is derived content that is NOT marked where it counts.
+    Every finding above names its file:line and its exact action.
+    The TSV was still written: it is the artefact, not the verdict.

@@ -1,42 +1,209 @@
 # ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# │ MII KDS Modul Symptome — migrated onto mii-kds-module-template v0.13.2                         │
+# │ (skill mii-ig-migration v0.25.0, 2026-08-31).                                                  │
+# │                                                                                                │
+# │ Identity fields (id, canonical, name, title, version, packageId, releaseLabel, publisher,      │
+# │ copyrightYear) are carried BYTE-IDENTICAL from the source sushi-config.yaml @ master d4ef9de   │
+# │ (guardrail: the source wins over template patterns). Template machinery added around them:     │
+# │ CRMI meta.profile + extensions, direct THO/extensions pins, expansion manifest, i18n.          │
+# │ The migration is DE-FIRST (owner decision D-1 2026-08-31): German is the default language,     │
+# │ English the translation — the template default is inverted, see parameters: below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: mii-ig-symptom
 canonical: https://www.medizininformatik-initiative.de/fhir/modul-symptom
-title: "MII IG Symptom"
 name: MII_IG_Symptom
+title: "MII IG Symptom"
+description: "Medizininformatik Initiative - Modul Symptom"
 status: active
-version: 2026.0.0-rc.1
+version: 2027.0.0-ballot.rc1
 packageId: de.medizininformatikinitiative.kerndatensatz.symptom
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: ci-build
+license: CC-BY-4.0
+date: "2026-08-31"
+jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 publisher:
   name: Medizininformatik Initiative
   url: https://www.medizininformatik-initiative.de/
-
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Artifacts: artifacts.html
-dependencies:
-  de.medizininformatikinitiative.kerndatensatz.meta: 
-    uri: https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta
-    version: 2026.0.x
-  de.basisprofil.r4:
-    uri: de.basisprofil.r4
-    version: 1.5.4
-  hl7.fhir.eu.base:
-    uri: http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base
-    version: 0.1.0
-
+meta:
+  profile:
+    - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide
+    - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide
+    - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide
+experimental: false
 extension:
+  # ── source-carried extension (unchanged from the source sushi-config) ──
   - url: https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable
     valueCodeableConcept:
       coding:
         - system: http://spdx.org/licenses/
           code: CC-BY-4.0
           display: Creative Commons Attribution 4.0 International License
+  # ── template CRMI machinery (module-template v0.13.2 scaffold; dates = migration snapshot,
+  #    to be re-set at the first real release via docs/release.md — reviewer queue ②) ──
+  - url: http://hl7.org/fhir/StructureDefinition/resource-approvalDate
+    valueDate: "2026-08-31"
+  - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
+    valueCode: shareable
+  - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
+    valueCode: publishable
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy
+    valueCodeableConcept:
+      coding:
+        - system: http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes
+          code: package
+          display: Package
+  - url: http://hl7.org/fhir/StructureDefinition/package-source
+    extension:
+      - url: packageId
+        valueId: de.medizininformatikinitiative.kerndatensatz.symptom
+      - url: version
+        valueString: "2027.0.0-ballot.rc1"
+      - url: uri
+        valueUri: https://www.medizininformatik-initiative.de/fhir/modul-symptom
+  - url: http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod
+    valuePeriod:
+      start: "2027"
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-author
+    valueContactDetail:
+      telecom:
+        - system: email
+          value: "info@medizininformatik-initiative.de"
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-editor
+    valueContactDetail:
+      name: Taskforce Core Data Set
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-reviewer
+    valueContactDetail:
+      name: Interoperability Working Group
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-reviewer
+    valueContactDetail:
+      name: National Steering Committee
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-endorser
+    valueContactDetail:
+      name: Interoperability Working Group
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-endorser
+    valueContactDetail:
+      name: National Steering Committee
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee
+  - url: http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters
+    valueReference:
+      reference: Parameters/mii-param-symptom-manifest
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm
+    valueCoding:
+      system: http://hl7.org/fhir/version-algorithm
+      code: semver
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-usage
+    valueMarkdown: "Use this ImplementationGuide resource as a computable definition of all the parts of the corresponding module of the Medical Informatics Initiative core data set."
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-purpose
+    valueMarkdown: "Provide the computable publication unit for the MII Core Dataset Symptom module, enabling implementers to discover, validate, version, and apply the specification consistently."
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
+    valueCodeableConcept:
+      coding:
+        - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+          code: "C4876"
+
+# Dependencies: source pins carried (meta floating 2026.0.x PINNED to 2026.0.0 — registry-highest,
+# recorded in migration-log/run.log; de.basisprofil.r4 uri repaired from the source's non-absolute
+# `uri: de.basisprofil.r4`, a measured IG-Publisher error — adjudicated Gate-A row) + template
+# machinery: hl7.fhir.uv.crmi (REQUIRED by the meta.profile claims above), direct THO/extensions
+# pins (defuses the publisher's auto-injection). hl7.fhir.uv.xver-r5.r4 REMOVED (the module has no
+# R5 cross-version usage; the template's own comment says to remove it then).
+dependencies:
+  de.medizininformatikinitiative.kerndatensatz.meta:
+    uri: https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta
+    version: 2026.0.0
+  de.basisprofil.r4: 1.5.4
+  hl7.fhir.eu.base:
+    uri: http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base
+    version: 0.1.0
+  hl7.fhir.uv.crmi: 2.0.0
+  hl7.terminology.r4: 7.3.0
+  hl7.fhir.uv.extensions.r4: 5.3.0
+
+# pages: titles are GERMAN — the DEFAULT language of this DE-first module (the
+# IG resource carries default-language titles; English comes from the IG-level
+# .po under input/translations/en, generated per skill step 5.5).
+pages:
+  index.md:
+    title: Startseite
+  guidance.md:
+    title: Anleitung
+    implementer-guidance.md:
+      title: Anleitung für Implementierende
+    uml-diagrams.md:
+      title: UML-Diagramme
+  security-and-privacy.md:
+    title: Sicherheit und Datenschutz
+  profiles.md:
+    title: Profile
+  capability-statements.md:
+    title: CapabilityStatements
+  logical-models.md:
+    title: Logische Modelle
+  examples.md:
+    title: Beispiele
+  downloads.md:
+    title: Downloads
+  changes.md:
+    title: Änderungshistorie
+  version-history.md:
+    title: Versionierung
+  ImplementationGuide-mii-ig-symptom.md:
+    title: MII ImplementationGuide Ressource
+  translationinfo.md:
+    title: Hinweise zur Übersetzung
+
+parameters:
+  path-resource:
+    - input/predefined-resources
+  path-pages:
+    - input/intro-notes # Custom introductory notes
+  # ── DE-FIRST (inverted from the template default; owner decision D-1, run-log 5.2):
+  #    German is the DEFAULT language of this module's guide; English is the translation. ──
+  i18n-default-lang: de
+  i18n-lang:
+    - en
+  translation-sources:
+    - input/translations/en
+  excludexml: false
+  excludejson: false
+  excludettl: true
+  excludemap: false
+  logging:
+    - init
+    - progress
+    - context
+    - html
+    - tx
+  pin-canonicals: pin-all
+  path-expansion-params: '../../input/resources/Parameters-expansion-manifest.json'
+  pin-manifest: 'mii-param-symptom-manifest'
+  suppress-mappings:
+    - http://hl7.org/v3
+    - http://hl7.org/v3/cda
+  # ── special-url: canonicals this IG DEFINES whose URL does not derive from its id.
+  #    Regenerated per docs/recipes/regenerate-special-url.md from Gate-0's
+  #    special_url_prediction (migration-log/preflight-analysis.json, 3 entries, verbatim).
+  #    ids and urls themselves are UNCHANGED (skill guardrail 1). ──
+  special-url:
+    - https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation
+    - https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition
+    - https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata
+
+# NOTE (deliberate omissions, run-log 5.2):
+# - no `menu:` property — the template uses input/includes/menu.xml (+ per-language mirror),
+#   which competes with a menu: property; the source's menu: (Home/Artifacts) is superseded.
+# - no `instanceOptions.manualSliceOrdering` — the source built with SUSHI defaults; setting the
+#   template's `true` would reorder generated slices and break artifact byte-identity.

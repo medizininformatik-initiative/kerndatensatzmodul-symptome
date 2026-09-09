@@ -1,0 +1,18 @@
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  params  rules=/private/tmp/claude-503/-Users-marcel-Development-cross-hub-patientportal/e5166a98-2808-4386-8dfd-02ed2236a07e/scratchpad/recon/agent-skills-v0.25.0/skills/mii-ig-migration/references/fql-rules.tsv  targets= input/pagecontent input/translations input/intro-notes  defaulted=0
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=14
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/translations  kind=dir  files=15
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  target  path=input/intro-notes  kind=dir  files=2
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/intro-notes/StructureDefinition-mii-pr-symptom-observation-intro.md:5  [link]
+    found:  Directive translation: {{link}}/metadata-FQL/tabs dropped (the artifact page bel
+    action: Artefact link [Text](<Type>-<id>.html).
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/capability-statements.md:4  [render]
+    found:  verbatim transfer). The source's {{render:<canonical>}} directive is replaced by
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/uml-diagrams.md:4  [render]
+    found:  transfer; {{render:}} image copied flat to input/images/). -->
+    action: Image ({{render:file.png|svg|jpg|gif}}) -> copy into input/images/ + <img src="file"> or a Markdown image; otherwise a resource/artefact/bare id ({{render:CapabilityStatement}}, {{render:mii-cs-x}}) -> usually remove (the artefact page is generated) OR {% include <Type>-<id>-<view>.xhtml %}.
+2026-08-31T19:55:40Z  INFO   5.4  fql-scan  finding  at=input/pagecontent/logical-models.md:5  [tree]
+    found:  The source's {{tree:}} directive and FQL element table referenced the LEGACY
+    action: {% include <Type>-<id>-snapshot.xhtml %} (or -dict for the element dictionary / -diff).
+2026-08-31T19:55:41Z  INFO   5.4  fql-scan  result  mapped=4 unknown=0 files=31 strict=1  exit=1
+    Transform per references/fql-crosswalk.md; when in doubt mark TODO:REVIEW.
