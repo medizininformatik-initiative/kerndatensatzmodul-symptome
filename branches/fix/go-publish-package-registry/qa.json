@@ -7,8 +7,8 @@
   "status" : "active",
   "package-id" : "de.medizininformatikinitiative.kerndatensatz.symptom",
   "ig-ver" : "2027.0.0-ballot.rc1",
-  "date" : "Thu, 10 Sep, 2026 07:30:26 +0000",
-  "dateISO8601" : "2026-09-10T07:30:26+00:00",
+  "date" : "Thu, 10 Sep, 2026 07:39:10 +0000",
+  "dateISO8601" : "2026-09-10T07:39:10+00:00",
   "errs" : 0,
   "warnings" : 166,
   "hints" : 334,
@@ -16,5 +16,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1834930256
+  "maxMemory" : 1722134016
 }
