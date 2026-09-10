@@ -661,18 +661,23 @@ jobs:
           test -s site/package-registry.json
 
           # The publisher updates the two feeds declared in publish-setup.json
-          # by copying the existing files; on the first publication they do not
-          # exist yet, so seed empty RSS channels for it to append to.
+          # by editing the existing files; on the first publication they do not
+          # exist yet, so seed empty RSS channels in the exact shape the
+          # reference module's feeds use (PublicationProcess.updateFeed needs
+          # the channel dates to locate its insertion point).
+          feed_date="$(date -u -R)"
           for feed in package publication; do
             cat > "site/${feed}-feed.xml" <<XML
           <?xml version="1.0" encoding="UTF-8"?>
-          <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+          <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
             <channel>
               <title>MII IG Symptom ${feed} feed</title>
-              <description>New ${feed}s for the MII KDS module Symptome / klinischer Zustand</description>
+              <description>${feed} feed for the MII KDS module Symptome / klinischer Zustand</description>
               <link>${PUBLICATION_BASE}</link>
-              <generator>HL7 IG Publisher go-publish bootstrap</generator>
+              <generator>Medical Informatics Initiative (MII)</generator>
+              <lastBuildDate>${feed_date}</lastBuildDate>
               <atom:link href="${PUBLICATION_BASE}/${feed}-feed.xml" rel="self" type="application/rss+xml"/>
+              <pubDate>${feed_date}</pubDate>
               <language>en</language>
               <ttl>600</ttl>
             </channel>
