@@ -13,7 +13,7 @@ resources are described below in their binding form.
 | Publication |               |
 |------------------|---------------|
 | Date             | 2026-08-31 |
-| Version          | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
+| Version          | 2027.0.0-ballot (CalVer `YYYY.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 
@@ -86,12 +86,12 @@ dependencies are described at
 [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
 <!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration - review before release.** Formal dependencies of
+> Formal dependencies of
 > this module (see `dependencies` in `sushi-config.yaml`): the
 > [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta)
-> (`2026.0.0`), the
-> [German base profiles](https://ig.fhir.de/basisprofile-de/1.5.4/) (`1.5.4`)
-> and [HL7 Europe Base](http://hl7.eu/fhir/base/) (`0.1.0`). The subject-matter
+> (`2027.0.0-ballot`), the
+> [German base profiles](https://ig.fhir.de/basisprofile-de/1.6.0/) (`1.6.0`)
+> and [HL7 Europe Base](http://hl7.eu/fhir/base/) (`2.0.0`). The subject-matter
 > relationships to the Diagnosis, Laboratory and Person modules are described
 > in the [Guidance for Implementers](implementer-guidance.html).
 {: .ig-highlight .ig-highlight-blue}

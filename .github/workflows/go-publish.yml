@@ -76,7 +76,7 @@ on:
       release_ref:
         description: "Immutable release tag to publish"
         required: true
-        default: "v2027.0.0-ballot.rc1"
+        default: "v2027.0.0-ballot"
         type: string
       publication_date:
         description: "Publication date (YYYY-MM-DD, must match sushi-config.yaml); blank uses the tagged commit date"
@@ -653,10 +653,46 @@ jobs:
             }' > site/publish-setup.json
           touch site/.nojekyll
 
+          # Publisher 2.3.x refuses -go-publish without a package-registry.json
+          # in the webroot; its own -generate-package-registry mode seeds it
+          # (empty on the first publication, the webroot has no packages yet).
+          java -jar "${RUNNER_TEMP}/publisher.jar" \
+            -generate-package-registry site
+          test -s site/package-registry.json
+
+          # The publisher updates the two feeds declared in publish-setup.json
+          # by editing the existing files; on the first publication they do not
+          # exist yet, so seed empty RSS channels in the exact shape the
+          # reference module's feeds use (PublicationProcess.updateFeed needs
+          # the channel dates to locate its insertion point).
+          feed_date="$(date -u -R)"
+          for feed in package publication; do
+            cat > "site/${feed}-feed.xml" <<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+            <channel>
+              <title>MII IG Symptom ${feed} feed</title>
+              <description>${feed} feed for the MII KDS module Symptome / klinischer Zustand</description>
+              <link>${PUBLICATION_BASE}</link>
+              <generator>Medical Informatics Initiative (MII)</generator>
+              <lastBuildDate>${feed_date}</lastBuildDate>
+              <atom:link href="${PUBLICATION_BASE}/${feed}-feed.xml" rel="self" type="application/rss+xml"/>
+              <pubDate>${feed_date}</pubDate>
+              <language>en</language>
+              <ttl>600</ttl>
+            </channel>
+          </rss>
+          XML
+          done
+          test -s site/package-feed.xml
+          test -s site/publication-feed.xml
+
           {
             echo "### First-publication webroot seeded"
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
+            echo "- Generated package-registry.json via -generate-package-registry"
+            echo "- Seeded empty package-feed.xml and publication-feed.xml"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace
@@ -701,6 +737,7 @@ jobs:
             -zips "${RUNNER_TEMP}/publication-zips" \
             -date "${PUBLICATION_DATE}" \
             -tx "${TX_URL}" \
+            -fhir-settings "${GITHUB_WORKSPACE}/source/.github/fhir-settings.json" \
             2>&1 | tee "${RUNNER_TEMP}/go-publish.log"
 
       - name: Correct and validate FHIR IG registry entry

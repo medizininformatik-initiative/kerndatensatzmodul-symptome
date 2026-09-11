@@ -14,7 +14,7 @@ verbindlichen Form beschrieben.
 | Veröffentlichung |               |
 |------------------|---------------|
 | Datum            | 2026-08-31 |
-| Version          | 2027.0.0-ballot.rc1 (CalVer `JJJJ.n.n`) |
+| Version          | 2027.0.0-ballot (CalVer `JJJJ.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 
@@ -90,12 +90,12 @@ Abhängigkeiten sind unter
 beschrieben.
 
 <!-- DERIVED:bridge source=none gate=B -->
-> **Written during migration - review before release.** Formale Abhängigkeiten
+> Formale Abhängigkeiten
 > dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): das
 > [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta)
-> (`2026.0.0`), die
-> [Deutschen Basisprofile](https://ig.fhir.de/basisprofile-de/1.5.4/) (`1.5.4`)
-> und [HL7 Europe Base](http://hl7.eu/fhir/base/) (`0.1.0`). Die fachlichen
+> (`2027.0.0-ballot`), die
+> [Deutschen Basisprofile](https://ig.fhir.de/basisprofile-de/1.6.0/) (`1.6.0`)
+> und [HL7 Europe Base](http://hl7.eu/fhir/base/) (`2.0.0`). Die fachlichen
 > Bezüge zu den Modulen Diagnose, Labor und Person beschreibt die
 > [Anleitung für Implementierende](implementer-guidance.html).
 {: .ig-highlight .ig-highlight-blue}
