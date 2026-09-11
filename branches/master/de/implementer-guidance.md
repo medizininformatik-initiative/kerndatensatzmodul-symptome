@@ -1,4 +1,4 @@
-# Anleitung für Implementierende - MII IG Symptom v2027.0.0-ballot.rc1
+# Anleitung für Implementierende - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Anleitung**](guidance.md)

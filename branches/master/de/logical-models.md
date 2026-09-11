@@ -1,4 +1,4 @@
-# Logische Modelle - MII IG Symptom v2027.0.0-ballot.rc1
+# Logische Modelle - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Logische Modelle**

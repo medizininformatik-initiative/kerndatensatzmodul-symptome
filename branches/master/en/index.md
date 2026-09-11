@@ -1,4 +1,4 @@
-# Home - MII IG Symptom v2027.0.0-ballot.rc1
+# Home - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/ImplementationGuide/mii-ig-symptom | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-08-31 | *Computable Name*:MII_IG_Symptom |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/ImplementationGuide/mii-ig-symptom | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-11 | *Computable Name*:MII_IG_Symptom |
 
 ### Introduction
 
@@ -17,7 +17,7 @@ This specification describes the FHIR representation of the core data set module
 | | |
 | :--- | :--- |
 | Date | 2026-08-31 |
-| Version | 2027.0.0-ballot.rc1 (CalVer`YYYY.n.n`) |
+| Version | 2027.0.0-ballot (CalVer`YYYY.n.n`) |
 | Status | active |
 | Realm | DE |
 
@@ -55,7 +55,7 @@ Scientists using core-data-set data for medical research.
 
 This module is part of the MII core data set; the other KDS modules and their dependencies are described at [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
-> **Written during migration - review before release.** Formal dependencies of this module (see `dependencies` in `sushi-config.yaml`): the [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta) (`2026.0.0`), the [German base profiles](https://ig.fhir.de/basisprofile-de/1.5.4/) (`1.5.4`) and [HL7 Europe Base](http://hl7.eu/fhir/base/) (`0.1.0`). The subject-matter relationships to the Diagnosis, Laboratory and Person modules are described in the [Guidance for Implementers](implementer-guidance.md).
+> Formal dependencies of this module (see `dependencies` in `sushi-config.yaml`): the [Meta module](https://github.com/medizininformatik-initiative/kerndatensatz-meta) (`2027.0.0-ballot`), the [German base profiles](https://ig.fhir.de/basisprofile-de/1.6.0/) (`1.6.0`) and [HL7 Europe Base](http://hl7.eu/fhir/base/) (`2.0.0`). The subject-matter relationships to the Diagnosis, Laboratory and Person modules are described in the [Guidance for Implementers](implementer-guidance.md).
 
 Further FHIR implementation guides can be found in the official **[FHIR IG Registry](https://fhir.org/guides/registry/)** (source: [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 

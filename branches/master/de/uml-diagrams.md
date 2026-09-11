@@ -1,4 +1,4 @@
-# UML-Diagramme - MII IG Symptom v2027.0.0-ballot.rc1
+# UML-Diagramme - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Anleitung**](guidance.md)

@@ -1,4 +1,4 @@
-# MII CPS Symptom CapabilityStatement - MII IG Symptom v2027.0.0-ballot.rc1
+# MII CPS Symptom CapabilityStatement - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata | *Version*:2027.0.0-ballot |
 | Active Stand: 2026-01-14 | *Maschinenlesbarer Name*:MII_CPS_Symptom_CapabilityStatement |
 
  
@@ -25,7 +25,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
   "resourceType" : "CapabilityStatement",
   "id" : "mii-cps-symptom-capabilitystatement",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/CapabilityStatement/metadata",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_CPS_Symptom_CapabilityStatement",
   "title" : "MII CPS Symptom CapabilityStatement",
   "status" : "active",
@@ -59,7 +59,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
       }],
       "type" : "Observation",
       "profile" : "http://hl7.org/fhir/StructureDefinition/Observation",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2027.0.0-ballot.rc1"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation|2027.0.0-ballot"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -403,7 +403,7 @@ Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktione
       }],
       "type" : "Condition",
       "profile" : "http://hl7.org/fhir/StructureDefinition/Condition",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2027.0.0-ballot.rc1"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition|2027.0.0-ballot"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",

@@ -1,4 +1,4 @@
-# mii-exa-symptom-arachnodactyly - MII IG Symptom v2027.0.0-ballot.rc1
+# mii-exa-symptom-arachnodactyly - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

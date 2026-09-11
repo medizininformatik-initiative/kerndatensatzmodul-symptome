@@ -1,4 +1,4 @@
-# MII_PR_Symptom_Observation - MII IG Symptom v2027.0.0-ballot.rc1
+# MII_PR_Symptom_Observation - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Symptom_Observation |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Symptom_Observation |
 
  
 Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein. 
@@ -152,7 +152,7 @@ Must-Support: 17 elements
 
 This structure refers to these other structures:
 
-* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/0.1.0/StructureDefinition-bodyStructure-eu-core.html)
+* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/2.0.0/StructureDefinition-bodyStructure-eu-core.html)
 
 **Extensions**
 
@@ -189,7 +189,7 @@ Must-Support: 17 elements
 
 This structure refers to these other structures:
 
-* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/0.1.0/StructureDefinition-bodyStructure-eu-core.html)
+* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/2.0.0/StructureDefinition-bodyStructure-eu-core.html)
 
 **Extensions**
 
@@ -211,10 +211,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-sympt
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-symptom-observation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Symptom_Observation",
   "status" : "active",
-  "date" : "2026-09-09T13:47:18+00:00",
+  "date" : "2026-09-11T09:58:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

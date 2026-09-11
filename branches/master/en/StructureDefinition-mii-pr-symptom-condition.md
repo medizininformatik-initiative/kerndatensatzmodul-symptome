@@ -1,4 +1,4 @@
-# MII_PR_Symptom_Condition - MII IG Symptom v2027.0.0-ballot.rc1
+# MII_PR_Symptom_Condition - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Symptom_Condition |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_Symptom_Condition |
 
  
 Klinische Zustände, Probleme, Diagnosen oder andere Ereignisse und Situationen. Conditions können als Beschreibung von Krankheiten von Health Professionals dokumentiert sein. Conditions können im Rahmen einer Anamnese vom Patienten selber geäußert werden (Symptom). 
@@ -122,10 +122,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-symptom-co
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-symptom-condition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Symptom_Condition",
   "status" : "active",
-  "date" : "2026-09-09T13:47:18+00:00",
+  "date" : "2026-09-11T09:58:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

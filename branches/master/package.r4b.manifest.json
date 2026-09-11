@@ -1,6 +1,6 @@
 {
-  "version" : "2027.0.0-ballot.rc1",
-  "date" : "20260909134718",
+  "version" : "2027.0.0-ballot",
+  "date" : "20260911095818",
   "notForPublication" : true,
   "name" : "de.medizininformatikinitiative.kerndatensatz.symptom.r4b"
 }

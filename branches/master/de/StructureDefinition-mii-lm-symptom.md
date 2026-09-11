@@ -1,4 +1,4 @@
-# MII LM Symptom - MII IG Symptom v2027.0.0-ballot.rc1
+# MII LM Symptom - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_LM_Symptom |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_LM_Symptom |
 
  
 Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp 
@@ -73,11 +73,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-sympt
   "resourceType" : "StructureDefinition",
   "id" : "mii-lm-symptom",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_LM_Symptom",
   "title" : "MII LM Symptom",
   "status" : "active",
-  "date" : "2026-09-09T13:47:18+00:00",
+  "date" : "2026-09-11T09:58:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

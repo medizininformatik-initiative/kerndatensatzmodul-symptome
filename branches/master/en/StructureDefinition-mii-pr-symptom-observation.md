@@ -1,4 +1,4 @@
-# MII_PR_Symptom_Observation - MII IG Symptom v2027.0.0-ballot.rc1
+# MII_PR_Symptom_Observation - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Symptom_Observation |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_Symptom_Observation |
 
  
 Messungen oder Zuweisungen zu einem Patienten. Die meisten Beobachtungen sind einfache Entity/Value Paare, sie können aber auch komplex hierarchisch aufgebaut sein. 
@@ -137,10 +137,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-symptom-ob
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-symptom-observation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Symptom_Observation",
   "status" : "active",
-  "date" : "2026-09-09T13:47:18+00:00",
+  "date" : "2026-09-11T09:58:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

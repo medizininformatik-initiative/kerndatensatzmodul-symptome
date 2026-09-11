@@ -1,13 +1,13 @@
 MII_IG_Symptom : Validation Results
 =========================================
 
-err = 0, warn = 166, info = 334
+err = 0, warn = 165, info = 334
 $--
 Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz.symptom#$-- (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
  Build Errors : 0 / 4 / 0
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement : 0 / 1 / 62
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy : 0 / 0 / 2
- /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/ImplementationGuide-mii-ig-symptom : 0 / 7 / 49
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/ImplementationGuide-mii-ig-symptom : 0 / 6 / 49
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly : 0 / 3 / 2
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-chestpain : 0 / 2 / 1
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Patient-example : 0 / 0 / 1
@@ -102,7 +102,6 @@ INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1
 WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[1].uri: Canonical URL 'http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[1]: The canonical URL http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4 doesn't point to an actual ImplementationGuide resource
-WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.eu.base#0.1.0 released on 2025-10-26, but the most recent appropriate version is 2.0.0. This reference is getting old and the more recent version should be considered
 INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
 INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
 INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[5]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
@@ -370,7 +369,7 @@ INFORMATION: StructureDefinition.snapshot.element[19].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[19].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[21].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[21].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition.snapshot.element[23].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+INFORMATION: StructureDefinition.snapshot.element[23].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 2.0.0
 INFORMATION: StructureDefinition.snapshot.element[23].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[24].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[25].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
@@ -383,15 +382,15 @@ INFORMATION: StructureDefinition.snapshot.element[31].constraint[1].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[32].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[34].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition.snapshot.element[35].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+INFORMATION: StructureDefinition.snapshot.element[35].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.6.0
 INFORMATION: StructureDefinition.snapshot.element[35].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
-INFORMATION: StructureDefinition.snapshot.element[35].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[35].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[37].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[39].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[39].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition.snapshot.element[40].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+INFORMATION: StructureDefinition.snapshot.element[40].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.6.0
 INFORMATION: StructureDefinition.snapshot.element[40].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
-INFORMATION: StructureDefinition.snapshot.element[40].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Condition to 4.0.1
+INFORMATION: StructureDefinition.snapshot.element[40].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[42].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[43].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[44].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
@@ -417,9 +416,9 @@ INFORMATION: StructureDefinition.snapshot.element[59].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.differential.element[2].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-assertedDate to 5.3.0
 INFORMATION: StructureDefinition.differential.element[9].binding.valueSet: Pinned the version of http://hl7.org/fhir/ValueSet/body-site to 4.0.1
 INFORMATION: StructureDefinition.differential.element[10].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0
-INFORMATION: StructureDefinition.differential.element[11].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
-INFORMATION: StructureDefinition.differential.element[17].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
-INFORMATION: StructureDefinition.differential.element[19].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.5.4
+INFORMATION: StructureDefinition.differential.element[11].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 2.0.0
+INFORMATION: StructureDefinition.differential.element[17].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.6.0
+INFORMATION: StructureDefinition.differential.element[19].type[0].profile[0]: Pinned the version of http://fhir.de/StructureDefinition/lebensphase to 1.6.0
 WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 WARNING: StructureDefinition/mii-pr-symptom-condition: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate' to 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0'
@@ -482,7 +481,7 @@ INFORMATION: StructureDefinition.snapshot.element[33].constraint[0].source: Pinn
 INFORMATION: StructureDefinition.snapshot.element[33].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[35].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[35].constraint[1].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Extension to 4.0.1
-INFORMATION: StructureDefinition.snapshot.element[37].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+INFORMATION: StructureDefinition.snapshot.element[37].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 2.0.0
 INFORMATION: StructureDefinition.snapshot.element[37].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[38].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
 INFORMATION: StructureDefinition.snapshot.element[39].constraint[0].source: Pinned the version of http://hl7.org/fhir/StructureDefinition/Element to 4.0.1
@@ -520,7 +519,7 @@ INFORMATION: StructureDefinition.differential.element[8].type[0].targetProfile[0
 INFORMATION: StructureDefinition.differential.element[8].type[0].targetProfile[1]: Pinned the version of http://hl7.org/fhir/StructureDefinition/Group to 4.0.1
 INFORMATION: StructureDefinition.differential.element[14].binding.valueSet: Pinned the version of http://hl7.org/fhir/ValueSet/body-site to 4.0.1
 INFORMATION: StructureDefinition.differential.element[15].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0
-INFORMATION: StructureDefinition.differential.element[16].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 0.1.0
+INFORMATION: StructureDefinition.differential.element[16].type[0].targetProfile[0]: Pinned the version of http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core to 2.0.0
 WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo' to 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo|5.3.0'
 WARNING: StructureDefinition/mii-pr-symptom-observation: StructureDefinition.snapshot.element[33].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/bodySite' to 'http://hl7.org/fhir/StructureDefinition/bodySite|5.3.0'

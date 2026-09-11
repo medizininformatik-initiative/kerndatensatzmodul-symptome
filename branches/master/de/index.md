@@ -1,4 +1,4 @@
-# Startseite - MII IG Symptom v2027.0.0-ballot.rc1
+# Startseite - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Startseite**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/ImplementationGuide/mii-ig-symptom | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-08-31 | *Maschinenlesbarer Name*:MII_IG_Symptom |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/ImplementationGuide/mii-ig-symptom | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_IG_Symptom |
 
 ### Einleitung
 
@@ -17,7 +17,7 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 | | |
 | :--- | :--- |
 | Datum | 2026-08-31 |
-| Version | 2027.0.0-ballot.rc1 (CalVer`JJJJ.n.n`) |
+| Version | 2027.0.0-ballot (CalVer`JJJJ.n.n`) |
 | Status | active |
 | Realm | DE |
 
@@ -55,7 +55,7 @@ Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.
 
 Dieses Modul ist Teil des MII-Kerndatensatzes; die weiteren KDS-Module und ihre Abhängigkeiten sind unter [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/) beschrieben.
 
-> **Written during migration - review before release.** Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): das [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta) (`2026.0.0`), die [Deutschen Basisprofile](https://ig.fhir.de/basisprofile-de/1.5.4/) (`1.5.4`) und [HL7 Europe Base](http://hl7.eu/fhir/base/) (`0.1.0`). Die fachlichen Bezüge zu den Modulen Diagnose, Labor und Person beschreibt die [Anleitung für Implementierende](implementer-guidance.md).
+> Formale Abhängigkeiten dieses Moduls (siehe `dependencies` in `sushi-config.yaml`): das [Meta-Modul](https://github.com/medizininformatik-initiative/kerndatensatz-meta) (`2027.0.0-ballot`), die [Deutschen Basisprofile](https://ig.fhir.de/basisprofile-de/1.6.0/) (`1.6.0`) und [HL7 Europe Base](http://hl7.eu/fhir/base/) (`2.0.0`). Die fachlichen Bezüge zu den Modulen Diagnose, Labor und Person beschreibt die [Anleitung für Implementierende](implementer-guidance.md).
 
 Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen **[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle: [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 

@@ -1,4 +1,4 @@
-# Hinweise zur Übersetzung - MII IG Symptom v2027.0.0-ballot.rc1
+# Hinweise zur Übersetzung - MII IG Symptom v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Hinweise zur Übersetzung**
