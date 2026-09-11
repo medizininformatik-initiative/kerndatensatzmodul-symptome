@@ -1,0 +1,869 @@
+{
+  "date" : "Fri, 11 Sep, 2026 10:19:29 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-mii-ig-symptom.json",
+    "size" : 15130,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 62,
+      "length" : 246
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 63,
+      "length" : 17
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 63,
+      "length" : 234
+    },
+    {
+      "activity" : "validate",
+      "start" : 69,
+      "length" : 9622
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 19
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 141
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 365
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 113,
+      "length" : 5
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 127,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement.json",
+    "size" : 27807,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 14
+    },
+    {
+      "activity" : "load",
+      "start" : 62,
+      "length" : 83
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 63,
+      "length" : 3
+    },
+    {
+      "activity" : "loadDepInfo",
+      "start" : 63,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 63,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 63,
+      "length" : 49
+    },
+    {
+      "activity" : "validate",
+      "start" : 69,
+      "length" : 576
+    },
+    {
+      "activity" : "validate",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 107
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 120
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 103,
+      "length" : 1
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 113,
+      "length" : 3
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 127,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy.json",
+    "size" : 899,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 63,
+      "length" : 9
+    },
+    {
+      "activity" : "validate",
+      "start" : 79,
+      "length" : 336
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 41
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly.json",
+    "size" : 516,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 63,
+      "length" : 9
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 79,
+      "length" : 990
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 28
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-symptom-chestpain.json",
+    "size" : 570,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 63,
+      "length" : 1428
+    },
+    {
+      "activity" : "validate",
+      "start" : 80,
+      "length" : 991
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 23
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-example-patient.json",
+    "size" : 202,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 65,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 17
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-example.json",
+    "size" : 190,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 65,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 54
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-lm-symptom.json",
+    "size" : 35467,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 17
+    },
+    {
+      "activity" : "load",
+      "start" : 62,
+      "length" : 29
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 62,
+      "length" : 72
+    },
+    {
+      "activity" : "scan",
+      "start" : 63,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 65,
+      "length" : 512
+    },
+    {
+      "activity" : "validate",
+      "start" : 65,
+      "length" : 1885
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 79,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 82,
+      "length" : 630
+    },
+    {
+      "activity" : "generate2",
+      "start" : 86,
+      "length" : 2182
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 2053
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 113,
+      "length" : 11
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 127,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-symptom-condition.json",
+    "size" : 6924,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 61,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 62,
+      "length" : 12
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 62,
+      "length" : 88
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 63,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 65,
+      "length" : 109
+    },
+    {
+      "activity" : "validate",
+      "start" : 67,
+      "length" : 707
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 83,
+      "length" : 470
+    },
+    {
+      "activity" : "generate2",
+      "start" : 88,
+      "length" : 1476
+    },
+    {
+      "activity" : "generate2",
+      "start" : 94,
+      "length" : 270
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 113,
+      "length" : 8
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 127,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-symptom-observation.json",
+    "size" : 5515,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 62,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 62,
+      "length" : 8
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 62,
+      "length" : 87
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 65,
+      "length" : 56
+    },
+    {
+      "activity" : "validate",
+      "start" : 68,
+      "length" : 683
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 79,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 83,
+      "length" : 377
+    },
+    {
+      "activity" : "generate2",
+      "start" : 90,
+      "length" : 1174
+    },
+    {
+      "activity" : "generate2",
+      "start" : 94,
+      "length" : 232
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 113,
+      "length" : 9
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 127,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "input/resources/Parameters-expansion-manifest.json",
+    "size" : 512,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 62,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 63,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 65,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 30
+    },
+    {
+      "activity" : "processProvenanceDetails",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 81,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 83,
+      "length" : 20
+    },
+    {
+      "activity" : "generate2",
+      "start" : 91,
+      "length" : 432
+    }]
+  },
+  {
+    "name" : "/input/includes/menu.xml",
+    "size" : 3100,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 726,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-symptom-condition-intro.md",
+    "size" : 11058,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-symptom-observation-intro.md",
+    "size" : 9964,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 2
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 113,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/version-history.md",
+    "size" : 4078,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/profiles.md",
+    "size" : 7602,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/downloads.md",
+    "size" : 2967,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/examples.md",
+    "size" : 1536,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/security-and-privacy.md",
+    "size" : 2760,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/logical-models.md",
+    "size" : 2523,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/ImplementationGuide-mii-ig-symptom.md",
+    "size" : 3348,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/translationinfo.md",
+    "size" : 1290,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/guidance.md",
+    "size" : 3630,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/changes.md",
+    "size" : 6202,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/capability-statements.md",
+    "size" : 1992,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/uml-diagrams.md",
+    "size" : 1051
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 7768,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/implementer-guidance.md",
+    "size" : 4099,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-symptom-condition-intro.md",
+    "size" : 11058,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-symptom-observation-intro.md",
+    "size" : 9964,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 69,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/17_Abbildung_Symptome_de.jpg",
+    "size" : 67715
+  },
+  {
+    "name" : "/input/images/Warning.jpg",
+    "size" : 20392,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/18_Abbildung_Symptome_en.jpg",
+    "size" : 66594,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/ig_bilder_UML.png",
+    "size" : 514296,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 81,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 92,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 8705
+  }]
+}
