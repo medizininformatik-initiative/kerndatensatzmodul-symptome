@@ -139,6 +139,38 @@ test("validates an entry that is already corrected", () => {
   assert.equal(readFileSync(files.registry, "utf8"), files.source);
 });
 
+test("accepts the Publisher's ballot edition name for ballot publications", () => {
+  const files = fixture(
+    targetEntry({
+      history,
+      language: ["en", "de"],
+      editions: [
+        {
+          name: `${request.sequence} Ballot`,
+          "ig-version": request.version,
+          package: `${packageId}#${request.version}`,
+          "fhir-version": ["4.0.1"],
+          url: request.path,
+        },
+      ],
+    }),
+  );
+  writeFileSync(
+    files.requestFile,
+    JSON.stringify({ ...request, status: "ballot" }),
+  );
+  const result = fixIgRegistryEntry(
+    files.registry,
+    files.requestFile,
+    files.packageFile,
+    canonical,
+    history,
+    ["en", "de"],
+  );
+
+  assert.equal(result.changed, false);
+});
+
 test("rejects placeholder or mismatched generated metadata before writing", () => {
   const placeholder = fixture(targetEntry({ authority: "??" }));
   assert.throws(
