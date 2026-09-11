@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-symptom.cs
   "name" : "MII_LM_Symptom",
   "title" : "MII LM Symptom",
   "status" : "active",
-  "date" : "2026-09-11T09:58:18+00:00",
+  "date" : "2026-09-11T10:46:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
