@@ -265,12 +265,13 @@ function validateEntry(
     );
   } else {
     const edition = editions[0];
-    assertEqual(
-      edition.name,
-      requiredString(request, "sequence", "Publication request"),
-      "edition.name",
-      errors,
-    );
+    // The Publisher derives the edition name from the sequence and, for a
+    // ballot publication, appends " Ballot" (e.g. "2027 Ballot") — matching
+    // the free-form ballot edition names in the upstream registry.
+    const sequence = requiredString(request, "sequence", "Publication request");
+    const expectedEditionName =
+      request.status === "ballot" ? `${sequence} Ballot` : sequence;
+    assertEqual(edition.name, expectedEditionName, "edition.name", errors);
     assertEqual(edition.package, `${packageId}#${version}`, "edition.package", errors);
     assertEqual(
       normalizeUrl(edition.url ?? "", "Generated edition URL"),
