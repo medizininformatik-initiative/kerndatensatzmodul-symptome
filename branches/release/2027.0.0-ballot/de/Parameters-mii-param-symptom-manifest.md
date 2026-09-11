@@ -283,11 +283,11 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core|0.1.0"
+    "valueCanonical" : "http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core|2.0.0"
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "http://fhir.de/StructureDefinition/lebensphase|1.5.4"
+    "valueCanonical" : "http://fhir.de/StructureDefinition/lebensphase|1.6.0"
   },
   {
     "name" : "default-canonical-version",

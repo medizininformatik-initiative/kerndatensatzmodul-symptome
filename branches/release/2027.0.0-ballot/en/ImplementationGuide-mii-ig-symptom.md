@@ -27,6 +27,7 @@ This IG contains the following dependencies on other IGs.
 
 
 
+
 > **Where the versions come from.** Every package in the table is pinned directly in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/blob/main/sushi-config.yaml) (`dependencies:`) — including `hl7.terminology.r4` (THO) and `hl7.fhir.uv.extensions.r4`, and those two deliberately so: the IG Publisher's [automatic-packages rule](https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages) consults only this guide's **own** dependency list, so without a direct pin every build would silently inject the latest THO/extensions release — a version pinned by the MII meta package alone cannot control the build (verified in the publisher source at the pinned release). A weekly check warns when these two pins drift from what the pinned meta package ships, and the exact versions a concrete build used are recorded in its `qa-versions.json` output.
 
 ### Global Profiles
@@ -41,12 +42,12 @@ This publication includes IP covered under the following statements.
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [MII_CPS_Symptom_CapabilityStatement](CapabilityStatement-mii-cps-symptom-capabilitystatement.md), [MII_IG_Symptom](index.md), [MII_LM_Symptom](StructureDefinition-mii-lm-symptom.md), [MII_PR_Symptom_Condition](StructureDefinition-mii-pr-symptom-condition.md) and [MII_PR_Symptom_Observation](StructureDefinition-mii-pr-symptom-observation.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.3.0/CodeSystem-ISO3166Part1.html): [MII_CPS_Symptom_CapabilityStatement](CapabilityStatement-mii-cps-symptom-capabilitystatement.md), [MII_IG_Symptom](index.md), [MII_LM_Symptom](StructureDefinition-mii-lm-symptom.md), [MII_PR_Symptom_Condition](StructureDefinition-mii-pr-symptom-condition.md) and [MII_PR_Symptom_Observation](StructureDefinition-mii-pr-symptom-observation.md)
 
 
 * This material contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the [license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
-* [LOINC](http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html): [Observation/mii-exa-symptom-arachnodactyly](Observation-mii-exa-symptom-arachnodactyly.md) and [Observation/mii-exa-symptom-chestpain](Observation-mii-exa-symptom-chestpain.md)
+* [LOINC](http://terminology.hl7.org/6.3.0/CodeSystem-v3-loinc.html): [Observation/mii-exa-symptom-arachnodactyly](Observation-mii-exa-symptom-arachnodactyly.md) and [Observation/mii-exa-symptom-chestpain](Observation-mii-exa-symptom-chestpain.md)
 
 
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
@@ -252,13 +253,13 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_basisprofil_r4",
     "uri" : "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
     "packageId" : "de.basisprofil.r4",
-    "version" : "1.5.4"
+    "version" : "1.6.0"
   },
   {
     "id" : "hl7_fhir_eu_base",
     "uri" : "http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base",
     "packageId" : "hl7.fhir.eu.base",
-    "version" : "0.1.0"
+    "version" : "2.0.0"
   },
   {
     "id" : "hl7_fhir_uv_crmi",

@@ -44,11 +44,12 @@ Mark such entries clearly (for example, prefix them with **BREAKING:**) so a rea
 
 #### Version 2027.0.0-ballot
 
-**Date:** 2026-08-31 (working state for the 2027 ballot line; not published as a package. The v2026 cycle ended at the untagged state 2026.0.0-rc.1; its changes are listed below.)
+**Date:** 2026-09-11 (ballot release of the 2027 line. The v2026 cycle ended at the untagged state 2026.0.0-rc.1; its changes are listed below.)
 
 ##### Changed
 
 * **Migration of the implementation guide from Simplifier to the HL7 IG Publisher** using the MII KDS module template (2026-08-31; details in the migration report of the corresponding pull request).
+* Dependencies raised for the 2027 ballot line: Meta module `2026.0.0` → `2027.0.0-ballot`, German base profiles `1.5.4` → `1.6.0`, `hl7.fhir.eu.base` `0.1.0` → `2.0.0`.
 * Module canonical URL moved from `.../fhir/ext/modul-symptom` to `.../fhir/modul-symptom` (v2026 cycle).
 * Both profiles (`MII_PR_Symptom_Observation`, `MII_PR_Symptom_Condition`) marked **abstract**.
 * German base profiles raised from 1.4.0 to 1.5.4; `hl7.fhir.eu.base` (EU core BodyStructure) added.

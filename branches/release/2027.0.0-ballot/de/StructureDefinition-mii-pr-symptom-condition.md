@@ -137,7 +137,7 @@ Must-Support: 22 elements
 
 This structure refers to these other structures:
 
-* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/0.1.0/StructureDefinition-bodyStructure-eu-core.html)
+* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/2.0.0/StructureDefinition-bodyStructure-eu-core.html)
 
 **Extensions**
 
@@ -145,7 +145,7 @@ This structure refers to these extensions:
 
 * [http://hl7.org/fhir/StructureDefinition/condition-assertedDate](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-condition-assertedDate.html)
 * [http://hl7.org/fhir/StructureDefinition/bodySite](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-bodySite.html)
-* [http://fhir.de/StructureDefinition/lebensphase](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/lebensphase)
+* [http://fhir.de/StructureDefinition/lebensphase](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/StructureDefinition/lebensphase)
 
 **Slices**
 
@@ -181,7 +181,7 @@ Must-Support: 22 elements
 
 This structure refers to these other structures:
 
-* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/0.1.0/StructureDefinition-bodyStructure-eu-core.html)
+* [BodyStructure (EU core) (http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core)](http://hl7.eu/fhir/base/2.0.0/StructureDefinition-bodyStructure-eu-core.html)
 
 **Extensions**
 
@@ -189,7 +189,7 @@ This structure refers to these extensions:
 
 * [http://hl7.org/fhir/StructureDefinition/condition-assertedDate](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-condition-assertedDate.html)
 * [http://hl7.org/fhir/StructureDefinition/bodySite](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-bodySite.html)
-* [http://fhir.de/StructureDefinition/lebensphase](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/lebensphase)
+* [http://fhir.de/StructureDefinition/lebensphase](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.6.0&canonical=http://fhir.de/StructureDefinition/lebensphase)
 
 **Slices**
 
@@ -213,7 +213,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-sympt
   "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Symptom_Condition",
   "status" : "active",
-  "date" : "2026-09-11T08:17:54+00:00",
+  "date" : "2026-09-11T09:25:48+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

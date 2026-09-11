@@ -185,13 +185,13 @@
     "id" : "de_basisprofil_r4",
     "uri" : "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
     "packageId" : "de.basisprofil.r4",
-    "version" : "1.5.4"
+    "version" : "1.6.0"
   },
   {
     "id" : "hl7_fhir_eu_base",
     "uri" : "http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base",
     "packageId" : "hl7.fhir.eu.base",
-    "version" : "0.1.0"
+    "version" : "2.0.0"
   },
   {
     "id" : "hl7_fhir_uv_crmi",
