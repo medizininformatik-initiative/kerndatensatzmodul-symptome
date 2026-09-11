@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-symptom-condition",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "name": "MII_PR_Symptom_Condition",
   "status": "active",
   "publisher": "Medizininformatik Initiative",
@@ -25,6 +25,20 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Condition.extension",
+        "path": "Condition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
       {
         "id": "Condition.extension:assertedDate",
         "path": "Condition.extension",
@@ -146,6 +160,20 @@
         "mustSupport": true
       },
       {
+        "id": "Condition.onset[x]:onsetPeriod.start.extension",
+        "path": "Condition.onset[x].start.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
         "path": "Condition.onset[x].start.extension",
         "sliceName": "lebensphase-von",
@@ -160,6 +188,20 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Condition.onset[x]:onsetPeriod.end.extension",
+        "path": "Condition.onset[x].end.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
         "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis",
