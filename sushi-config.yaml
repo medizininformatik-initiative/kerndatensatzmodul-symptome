@@ -124,10 +124,10 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.meta:
     uri: https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta
     version: 2027.0.0-ballot
-  de.basisprofil.r4: 1.5.4
+  de.basisprofil.r4: 1.6.0
   hl7.fhir.eu.base:
     uri: http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base
-    version: 0.1.0
+    version: 2.0.0
   hl7.fhir.uv.crmi: 2.0.0
   hl7.terminology.r4: 7.3.0
   hl7.fhir.uv.extensions.r4: 5.3.0

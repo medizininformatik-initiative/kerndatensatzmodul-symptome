@@ -87,13 +87,16 @@ werden können.</p>
 
 #### Version 2027.0.0-ballot
 
-**Datum:** 2026-08-31 (Arbeitsstand für die Ballot-Linie 2027; als Paket nicht veröffentlicht. Der v2026-Zyklus endete beim ungetaggten Stand 2026.0.0-rc.1; seine Änderungen sind unten aufgeführt.)
+**Datum:** 2026-09-11 (Ballot-Release der Linie 2027. Der v2026-Zyklus endete beim ungetaggten Stand 2026.0.0-rc.1; seine Änderungen sind unten aufgeführt.)
 
 ##### Geändert
 
 * **Migration des Implementierungsleitfadens von Simplifier auf den HL7 IG
   Publisher** mit dem MII-KDS-Modul-Template (2026-08-31; Details im
   Migrationsbericht des zugehörigen Pull Requests).
+* Abhängigkeiten für die Ballot-Linie 2027 angehoben: Meta-Modul
+  `2026.0.0` → `2027.0.0-ballot`, Deutsche Basisprofile `1.5.4` → `1.6.0`,
+  `hl7.fhir.eu.base` `0.1.0` → `2.0.0`.
 * Kanonische URL des Moduls von `.../fhir/ext/modul-symptom` auf
   `.../fhir/modul-symptom` umgestellt (v2026-Zyklus).
 * Beide Profile (`MII_PR_Symptom_Observation`, `MII_PR_Symptom_Condition`) als
