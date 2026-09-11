@@ -1,0 +1,24 @@
+{
+  "list" : [{
+    "version" : "current",
+    "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/master/",
+    "status" : "ci-build",
+    "sequence" : "ci-build",
+    "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
+  },
+  {
+    "version" : "2027.0.0-ballot",
+    "path" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot",
+    "status" : "ballot",
+    "sequence" : "2027",
+    "fhirversion" : "4.0.1",
+    "date" : "2026-09-11",
+    "current" : true,
+    "desc" : "Ballot release of the MII KDS module Symptome on the IG-Publisher module template"
+  }],
+  "package-id" : "de.medizininformatikinitiative.kerndatensatz.symptom",
+  "canonical" : "https://www.medizininformatik-initiative.de/fhir/modul-symptom",
+  "title" : "MII Implementation Guide Symptom",
+  "category" : "Research",
+  "introduction" : "Medizininformatik Initiative - Modul Symptom"
+}
