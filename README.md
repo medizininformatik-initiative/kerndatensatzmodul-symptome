@@ -13,7 +13,28 @@ gebaut — **deutschsprachig führend** (Deutsch ist die Standardsprache, Englis
 die Übersetzung). Die frühere Simplifier-Projektstruktur ist in der
 Git-Historie erhalten.
 
-## Leitfaden
+[![FHIR-Validierung](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/actions/workflows/validation.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/actions/workflows/validation.yml)
+[![IG-Vorschau](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/actions/workflows/ig-publisher.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-symptome/actions/workflows/ig-publisher.yml)
+
+## Veröffentlichter Implementierungsleitfaden
+
+### Build-Versionen
+
+- **Aktuelle Veröffentlichung**: https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/
+- **Entwicklungsstand (`master`)**: https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/master/
+
+### Ballot-Release
+
+- **Release 2027.0.0-ballot**: https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/
+
+### Frühere Releases (Simplifier)
+
+- **Releases bis 2024.0.0-ballot**: https://simplifier.net/guide/mii-ig-modul-symptom-2024-de
+
+Alle Versionen mit Status und Datum: [Versionshistorie](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/history.html).
+Versionsübersicht aller Module: [Kerndatensatz-Module im Wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/%C3%9Cbersicht-%C3%BCber-Versionen-der-Kerndatensatz%E2%80%90Module).
+
+## Build
 
 Der Leitfaden wird aus diesem Repository mit SUSHI + HL7 IG Publisher gebaut:
 
@@ -24,12 +45,7 @@ java -jar publisher.jar -ig ig.ini
 ```
 
 CI baut jeden Branch und veröffentlicht eine Vorschau unter
-`gh-pages/branches/<branch>/` (Deutsch unter `/`, Englisch unter `/en/`).
-
-Veröffentlichte Fassungen:
-
-- [2027.0.0-ballot](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/) (IG Publisher)
-- [v2026 auf Simplifier](https://simplifier.net/guide/mii-ig-modul-symptom-2024-de?version=current) (Vorgängerfassung)
+`https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/<branch>/` (Deutsch unter `/`, Englisch unter `/en/`).
 
 Die generierten FHIR-Ressourcen (`fsh-generated/`) werden nicht auf `master`
 eingecheckt; `publish-fsh-generated.yml` legt sie bei jedem Push auf `master`
