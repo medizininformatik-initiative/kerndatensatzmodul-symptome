@@ -1,0 +1,75 @@
+# Ballot-Kommentierung 2027.0.0-ballot - MII IG Symptom v2027.0.0-ballot
+
+* [**Table of Contents**](toc.md)
+* **Ballot-Kommentierung 2027.0.0-ballot**
+
+## Ballot-Kommentierung 2027.0.0-ballot
+
+Diese Seite ist ein **Arbeitsdokument** für die Bearbeitung der Ballot-Kommentare zur Version `2027.0.0-ballot` des MII-Kerndatensatzmoduls Symptom/klinischer Phänotyp. Sie listet die offenen Tickets aus dem Ballot von HL7 Deutschland ([Jira-Abfrage](https://hl7germany.atlassian.net/issues/?jql=project+%3D+HDB+AND+created+%3E%3D+-200d+AND+statusCategory+%21%3D+Done+AND+%22Project%5BDropdown%5D%22+in+%28%22MII+-+Modul+Symptom+%2F+klinischer+Ph%C3%A4notyp%22%29+ORDER+BY+created+DESC)) nach Kategorie gruppiert mit einem **vorgeschlagenen** Vorgehen auf. Alle Vorschläge sind Entwürfe und werden in der Sitzung bestätigt oder verworfen.
+
+#### Legende
+
+| | |
+| :--- | :--- |
+| **Vorschlag: annehmen** | Vorschlag, die Änderung für`2027.0.0`umzusetzen; Bestätigung in der Sitzung. |
+| **Vorschlag: annehmen (Doku)** | Vorschlag, nur Dokumentation oder Implementierungshinweise zu ändern, keine Änderung an Artefakten; Bestätigung in der Sitzung. |
+| **Diskussion** | Grundsatzfrage; ein Vorschlag liegt vor, die Entscheidung fällt in der Sitzung. |
+| **Antwort geplant** | Rückfrage oder modulübergreifendes Thema; eine Antwort in Jira ist geplant (Entwurf angegeben), keine Änderung an Artefakten in diesem Leitfaden. |
+
+**Breaking** = **ja**, wenn Instanzen, die zur letzten veröffentlichten Version (Paket `2024.0.0-ballot`) konform sind, nach der Änderung nicht mehr validieren. Neue Must-Support-Kennzeichnungen machen keine Daten ungültig, erweitern aber die Pflichten von Implementierungen; sie sind als **nein (MS)** vermerkt.
+
+Zur Einordnung: Gegenüber `2024.0.0-ballot` sind in `2027.0.0-ballot` bereits zwei Breaking Changes enthalten, die Umstellung der kanonischen URL (`…/fhir/ext/modul-symptom` → `…/fhir/modul-symptom`) und die Kennzeichnung beider Profile als abstrakt (siehe HDB-1096 und HDB-1079).
+
+-------
+
+### A. Profiländerungen – Condition
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| [HDB-1082](https://hl7germany.atlassian.net/browse/HDB-1082) | Condition.code: Kardinalität und Codesysteme | `code`1..1 mit Invariante`code.coding.exists() or code.text.exists()`. Offenes Slicing von`code.coding`nach`system`mit MS-Slices analog zum Modul Diagnose:`sct`(Binding auf ein SNOMED-CT-Findings-ValueSet),`icd10-gm`(`CodingICD10GM`der Basisprofile inkl. Mehrfachcodierung, Seitenlokalisation, Diagnosesicherheit),`orphanet`,`hpo`(siehe HDB-1083), optional`alpha-id`. Das Logical Model nennt diese Systeme bereits; MedDRA bleibt ohne eigenen Slice zulässig. Hängt von der Abgrenzung zum Modul Diagnose ab (HDB-1084). | Vorschlag: annehmen | **ja**(Conditions ohne`code`werden ungültig) |
+| [HDB-1081](https://hl7germany.atlassian.net/browse/HDB-1081) | Condition.onset/abatement: Mapping und Must Support | (a)**annehmen:**`abatement[x]`MS mit Slices`abatementDateTime`und`abatementPeriod`; das Mapping von`KlinischRelevanterZeitraum.Zeitraum.end`von`onsetPeriod.end`auf`abatement[x]`korrigieren (heute:`onsetPeriod.end`ist das Ende des Zeitraums, in dem der Beginn lag). (b)**annehmen:**Slices`onsetDateTime`und`onsetAge`als MS ergänzen, wie im Modul Diagnose. (c)**ändern:**Die Lebensphase-Extension nicht an`onsetAge`/`abatementAge`, sondern an`onsetRange`/`abatementRange`zulassen. Der Kontext der Extension in`de.basisprofil.r4`1.6.0 erlaubt nur`dateTime`,`Period.start`,`Period.end`und`Range`; Basis verschiebt sie aus demselben Grund (HDB-1075). | Vorschlag: annehmen | nein (MS) |
+| [HDB-1092](https://hl7germany.atlassian.net/browse/HDB-1092) | Kardinalitäten und Codesysteme: LM vs. Profile | `recordedDate`1..1 wie im Modul Diagnose. LM-`Status`von 1..1 auf 0..1 an`clinicalStatus`angleichen:`clinicalStatus`kann nicht 1..1 werden, weil FHIR ihn bei`verificationStatus = entered-in-error`verbietet (Invariante`con-5`). Die Codesystem-Angabe für`Verifikationsstatus`im LM von SNOMED CT auf`condition-ver-status`korrigieren (das Profil bindet required). | Vorschlag: annehmen | **ja**(`recordedDate`1..1) |
+| [HDB-1093](https://hl7germany.atlassian.net/browse/HDB-1093) | targetProfile und Slice-Namen | `evidence.detail`auf`Reference(Observation)`einschränken; sobald konkrete Profile vorliegen (HDB-1079), auf das Observation-Profil dieses Moduls.`stage.assessment`ist im FHIR-Basisstandard bereits auf`ClinicalImpression`,`DiagnosticReport`und`Observation`beschränkt; hier ist keine Änderung nötig. Den Slice`assertedDate`in`Feststellungsdatum`umbenennen, wie im Modul Diagnose (Slice-Namen erscheinen nicht in Instanzen). | Vorschlag: annehmen | **ja**(`evidence.detail`auf andere Ressourcentypen wird ungültig) |
+| [HDB-1095](https://hl7germany.atlassian.net/browse/HDB-1095) | Condition.bodySite: Harmonisierung mit Modul Diagnose | `bodySite.coding`nach`system`slicen und den MS-Slice`snomed-ct`mit dem ValueSet`mii-vs-diagnose-bodystructure-snomed`ergänzen, wie im Modul Diagnose; das bisher unversionierte Binding`body-site`entfällt damit. Das ValueSet liegt im Paket des Basismoduls, das dieses Modul heute nicht als Abhängigkeit führt.**Entscheidung nötig:**Abhängigkeit auf`de.medizininformatikinitiative.kerndatensatz.base`aufnehmen oder das ValueSet modulübergreifend ins Meta-Modul verlagern. Den Zielprofil-Verweis auf EU-Core-BodyStructure an die Entscheidung im Basismodul anpassen (HDB-1074,`hl7.fhir.eu.base`2.0.1). | Vorschlag: annehmen | **ja**(SNOMED-Codes außerhalb des ValueSets werden ungültig) |
+
+### B. Profiländerungen – Observation und beide Profile
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| [HDB-1086](https://hl7germany.atlassian.net/browse/HDB-1086) | Patienten- und Fallbezug (subject, encounter) | In beiden Profilen`subject`1..1 auf`Reference(Patient)`mit`subject.reference`1..1 MS (`Group`entfällt; im Modul gibt es keinen Anwendungsfall für Gruppen).`Observation.encounter`MS. In den Profilbeschreibungen den Bezug zu den Modulen Person und Fall dokumentieren, inkl. der gemeinten Kontaktebene (Einrichtungskontakt, wie im Modul Diagnose). | Vorschlag: annehmen | **ja**(`Observation.subject`wird Pflicht,`Group`entfällt) |
+| [HDB-1091](https://hl7germany.atlassian.net/browse/HDB-1091) | Fehlende Must-Support-Elemente | `Condition.note`,`Observation.note`,`Observation.bodySite`und`performer`in beiden Profilen als MS kennzeichnen; damit sind alle LM-Elemente (Kommentar, Lokalisation) und die auf der Profilseite geforderte Provenienz abgedeckt. | Vorschlag: annehmen | nein (MS) |
+| [HDB-1087](https://hl7germany.atlassian.net/browse/HDB-1087) | Observation.effective[x] / value[x]: MS auf Choice-Typen | `effective[x]`auf`dateTime`oder`Period`einschränken, wie im Logical Model (`Zeitspanne`). Bei`value[x]`und`component.value[x]`alle Typen zulassen, MS aber nur für`Quantity`,`CodeableConcept`,`string`,`boolean`,`integer`und`Range`setzen (Typ-MS statt Ausschluss, damit bestehende Daten valide bleiben). | Vorschlag: annehmen | **ja**(`effective[x]`mit`Timing`/`instant`wird ungültig) |
+| [HDB-1094](https://hl7germany.atlassian.net/browse/HDB-1094) | Extension associatedSymptomOrCondition | Die Kritik trifft zu:`workflow-supportingInfo`bedeutet „Information, die diese Observation stützt“. Vorschlag:`Condition.evidence.detail`als einzigen verbindlichen Mechanismus festlegen und den Slice`associatedSymptomOrCondition`entfernen; eine passende Extension aus dem HL7 FHIR Symptoms IG kann nach dessen Publikation erneut geprüft werden. Hängt mit HDB-1080 zusammen. | Diskussion | nein (die Extension bleibt als nicht profilierte Extension zulässig) |
+| [HDB-1083](https://hl7germany.atlassian.net/browse/HDB-1083) | HPO-CodeSystem-URL | Alias`$HPO`auf`http://human-phenotype-ontology.org`umstellen (wie HL7 Terminology und das Modul Molekulargenetik), das Beispiel`mii-exa-symptom-arachnodactyly`anpassen und den Slice`hpo`mit`patternCoding.system`anlegen (siehe HDB-1082). | Vorschlag: annehmen | nein |
+
+### C. Grundsätzliche Modellierungsentscheidungen
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| [HDB-1079](https://hl7germany.atlassian.net/browse/HDB-1079) | Abstrakte Profile vs. CapabilityStatement | Die Kritik trifft zu: Es gibt kein konkretes abgeleitetes Profil, das CapabilityStatement fordert die abstrakten Profile, und die Beispiele tragen kein`meta.profile`. Vorschlag: Beide Profile wieder**konkret**ausliefern, wie in`2024.0.0-ballot`und in den übrigen KDS-Modulen; konkrete Unterprofile (z. B. Symptom, Phänotyp, Messung) können später ergänzt werden. Damit entfällt auch eine der beiden Breaking Changes aus HDB-1096. | Diskussion | nein (Rücknahme einer Änderung) |
+| [HDB-1080](https://hl7germany.atlassian.net/browse/HDB-1080) | Symptom als Condition oder Observation? | Eine verbindliche Regel festlegen. Vorschlag: Ein Symptom als klinische Aussage wird als**Condition**mit SNOMED-CT-Finding abgebildet; eine**Observation**nur für Attribut-Wert-Paare (Vorhandensein, Schweregrad, Messwert). Den aus dem HL7 FHIR Symptoms IG übernommenen Abschnitt „Beziehung zwischen Observation und Condition“ auf der Seite Profile als informativ kennzeichnen (das Symptoms IG ist noch im Ballot) und ein paralleles Condition-Beispiel zum Brustschmerz ergänzen. | Diskussion | nein (Doku) |
+| [HDB-1084](https://hl7germany.atlassian.net/browse/HDB-1084) | Abgrenzung zum Modul Diagnose | Entscheidungskriterium für die Ausleitung festlegen. Vorschlag: Mit ICD-10-GM kodierte Diagnosen werden immer im Modul Diagnose geführt; Symptome, Befunde und nicht ICD-kodierte Zustände in diesem Modul. Die Zuordnung wird über`meta.profile`erkennbar (setzt konkrete Profile voraus, HDB-1079). Den Satz „Es muss daher parallel zu Einträgen im Modul Diagnosen ausgewertet werden“ auf der Seite Anleitung für Implementierende entsprechend umformulieren und klarstellen, dass eine Diagnose nur in einem Modul geführt wird. | Diskussion | abhängig von der Entscheidung |
+| [HDB-1028](https://hl7germany.atlassian.net/browse/HDB-1028) | Prä- vs. Postkoordination (FHIR Symptoms IG) | In der Anleitung eine Präferenz aussprechen. Entwurf: präkoordinierte SNOMED-CT-Konzepte verwenden, wo vorhanden; Postkoordination nur, wenn kein passendes präkoordiniertes Konzept existiert. Die Gegenüberstellung im[FHIR Symptoms IG](https://build.fhir.org/ig/HL7/fhir-symptoms-ig/en/index.html)verlinken. Laut Ticket empfiehlt die Vorlage Postkoordination; das ist in der Sitzung zu klären. | Diskussion | nein (Doku) |
+
+### D. CapabilityStatement und Terminologie
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| [HDB-1085](https://hl7germany.atlassian.net/browse/HDB-1085) | CapabilityStatement: Umfang der SHALL-Suchparameter | Die Kritik trifft zu: Heute sind alle Basis-Suchparameter SHALL (Observation 35, Condition 23), ohne`_include`/`_revinclude`. Vorschlag: SHALL nur für Suchparameter auf MS-Elementen (`_id`,`_lastUpdated`,`_profile`,`patient`/`subject`,`encounter`,`code`,`category`, Status-Parameter, Datums-Parameter,`identifier`), die übrigen SHOULD bzw. MAY.`_include`/`_revinclude`ergänzen, z. B.`Condition:subject`,`Observation:encounter`,`Condition:evidence-detail`. | Vorschlag: annehmen | nein (Lockerung für Server) |
+| [HDB-1090](https://hl7germany.atlassian.net/browse/HDB-1090) | SNOMED-CT-Edition im CRMI-Manifest | Entwurf: Die International Edition ist beabsichtigt und entspricht dem Manifest des Basismoduls (`900000000000207008`, dort Version`20260701`); ein Wechsel auf die German Edition ist eine modulübergreifende Entscheidung (Meta-Modul, Terminology Version Policy). Die Version wird auf`20260701`angehoben, wie im Basismodul. CRMI ist erforderlich, weil alle Artefakte der KDS-Module 2027 die CRMI-Profile in`meta.profile`führen. | Antwort geplant | nein |
+
+### E. Beispiele
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| [HDB-1088](https://hl7germany.atlassian.net/browse/HDB-1088) | Beispiele unvollständig | Je Szenario der Seite Anleitung ein vollständiges Beispiel (Symptom, Messung mit Komponenten, Phänotyp, Condition mit`evidence.detail`auf eine Observation, Lebensphase) mit`meta.profile`,`category`,`encounter`, Zeitangaben,`performer`und`display`. Die Beispielseite korrigieren (die Instanz nutzt den Answer-Code`LA9633-4`, nicht die Answer List`LL1937-3`). Die Patient-Beispiele in`mii-exa-symptom-patient`umbenennen; das MII-Patient-Profil setzt dieselbe Abhängigkeit voraus wie HDB-1095. | Vorschlag: annehmen | nein |
+
+### F. Dokumentation und Redaktionelles
+
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| [HDB-1097](https://hl7germany.atlassian.net/browse/HDB-1097) | Redaktionelles | **Annehmen:**Tippfehler in den Mapping-Pfaden (`Conditon.*`,`dataAbesentReason`) und im Text korrigieren (alle genannten Stellen gefunden in`index.md`,`guidance.md`,`capability-statements.md`, im Logical Model und in den Intro-Notes);`BezugVonIstTeilVon`→`derivedFrom`sprachlich klarstellen („abgeleitet aus“); einheitlich „Erweiterungsmodul“ (auch im LM);`title`für beide Profile ergänzen (beiden fehlt er); CapabilityStatement-Canonical an die id angleichen (`…/CapabilityStatement/mii-cps-symptom-capabilitystatement`).**Antwort:**`jurisdiction`ist bereits`urn:iso:std:iso:3166#DE`; die IG-id`mii-ig-symptom`folgt der MII-Konvention (`mii-ig-base`,`mii-ig-medikation`) und muss nicht der Package-ID entsprechen;`dependsOn.uri`der Basisprofile ist die von SUSHI erzeugte Paket-URI, weil das Paket keine IG-Canonical veröffentlicht. | Vorschlag: annehmen (Doku) | nein |
+| [HDB-1096](https://hl7germany.atlassian.net/browse/HDB-1096) | Änderungshistorie: Breaking Changes | Die Kritik trifft zu. Im Abschnitt`2027.0.0-ballot`die Umstellung der kanonischen URL und die Kennzeichnung als abstrakt (falls nach HDB-1079 beibehalten) mit**BREAKING:**kennzeichnen, die Auswirkungen auf bestehende Daten (`meta.profile`mit alter Canonical validiert nicht mehr) und den Migrationspfad beschreiben; die Entfernung des GCS-Profils begründen (es war in keinem veröffentlichten Paket enthalten). Alle in dieser Ballot-Runde angenommenen Breaking Changes ebenso aufführen. | Vorschlag: annehmen (Doku) | nein |
+| [HDB-1089](https://hl7germany.atlassian.net/browse/HDB-1089) | Migrationsmarker und Status im Ballot | **Annehmen:**Die Marker „Written during migration - review before release“ (acht Stellen auf sieben Seiten, je Sprache) nach inhaltlicher Prüfung entfernen.**Antwort:**`status: active`und`experimental: false`entsprechen den übrigen KDS-Modulen (Basis, Medikation); der Ballot-Status wird über`publication-request.json`(`status: ballot`) ausgedrückt. Der Publikationspfad weicht absichtlich von der Canonical ab (Veröffentlichung auf GitHub Pages, Canonical auf medizininformatik-initiative.de). | Vorschlag: annehmen (Doku) | nein |
+| [HDB-1029](https://hl7germany.atlassian.net/browse/HDB-1029) | Update Link Basisprofile | Link auf der Seite Profile von`basisprofile-de/1.4.0`auf`1.6.0`aktualisieren (die Startseite verlinkt bereits 1.6.0). | Vorschlag: annehmen (Doku) | nein |
+

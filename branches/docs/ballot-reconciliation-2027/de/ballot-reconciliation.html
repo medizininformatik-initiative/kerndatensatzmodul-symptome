@@ -1,0 +1,679 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Ballot-Kommentierung 2027.0.0-ballot - MII IG Symptom v2027.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" src="assets/images/logo-num-diz-de.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Schriftgröße">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Schriftgröße: Standard">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Schriftgröße: größer">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Schriftgröße: am größten">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Zurück zum Seitenanfang">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Symptom</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-ballot - 
+
+
+
+  Germany
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- German translation of input/includes/menu.xml.
+     Keep the href targets IDENTICAL to the source menu; translate only labels.
+     Structure notes (OPTIONAL entries, link-only entries, the interim
+     meta-wiki links) are documented in the source menu's header and in
+     docs/page-structure.md / docs/optional-pages.md. -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Startseite</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Anleitung</a></li>
+      <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
+      <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
+      <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
+      <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Konformität<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a></li>
+      <li><a href="security-and-privacy.html">Sicherheit und Datenschutz</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artefakte<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artefakt-Übersicht</a></li>
+      <li><a href="profiles.html">Profile</a></li>
+      <li><a href="capability-statements.html">CapabilityStatements</a></li>
+      <li><a href="logical-models.html">Logische Modelle</a></li>
+      <li><a href="examples.html">Beispiele</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Änderungshistorie</a></li>
+  <li class="dropdown">
+    <!-- Der Eltern-Eintrag verlinkt bewusst das PFLICHT-Kind (Versionierung):
+         die Metadaten-Übersicht ist optional. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadaten<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="version-history.html">Versionierung</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Sprache:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+
+    <div><a href="../en/ballot-reconciliation.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Ballot-Kommentierung 2027.0.0-ballot</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Symptom - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-symptom/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Ballot-Kommentierung 2027.0.0-ballot</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#a-profiländerungen--condition" id="markdown-toc-a-profiländerungen--condition">A. Profiländerungen – Condition</a></li>
+  <li><a href="#b-profiländerungen--observation-und-beide-profile" id="markdown-toc-b-profiländerungen--observation-und-beide-profile">B. Profiländerungen – Observation und beide Profile</a></li>
+  <li><a href="#c-grundsätzliche-modellierungsentscheidungen" id="markdown-toc-c-grundsätzliche-modellierungsentscheidungen">C. Grundsätzliche Modellierungsentscheidungen</a></li>
+  <li><a href="#d-capabilitystatement-und-terminologie" id="markdown-toc-d-capabilitystatement-und-terminologie">D. CapabilityStatement und Terminologie</a></li>
+  <li><a href="#e-beispiele" id="markdown-toc-e-beispiele">E. Beispiele</a></li>
+  <li><a href="#f-dokumentation-und-redaktionelles" id="markdown-toc-f-dokumentation-und-redaktionelles">F. Dokumentation und Redaktionelles</a></li>
+</ul>
+
+</div>
+<!-- markdownlint-disable MD041 -->
+<!-- TEMPORÄRE SEITE: lebt nur auf dem Branch docs/ballot-reconciliation-2027,
+     wird nicht nach master gemergt und nach der Ballot-Bearbeitung mit dem
+     Branch gelöscht. Englische Fassung:
+     input/translations/en/pagecontent/ballot-reconciliation.md -->
+
+<p>Diese Seite ist ein <strong>Arbeitsdokument</strong> für die Bearbeitung der Ballot-Kommentare zur Version <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> des MII-Kerndatensatzmoduls Symptom/klinischer Phänotyp. Sie listet die offenen Tickets aus dem Ballot von HL7 Deutschland (<a href="https://hl7germany.atlassian.net/issues/?jql=project+%3D+HDB+AND+created+%3E%3D+-200d+AND+statusCategory+%21%3D+Done+AND+%22Project%5BDropdown%5D%22+in+%28%22MII+-+Modul+Symptom+%2F+klinischer+Ph%C3%A4notyp%22%29+ORDER+BY+created+DESC">Jira-Abfrage</a>) nach Kategorie gruppiert mit einem <strong>vorgeschlagenen</strong> Vorgehen auf. Alle Vorschläge sind Entwürfe und werden in der Sitzung bestätigt oder verworfen.</p>
+
+<h4 id="legende">Legende</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Vorschlag: annehmen</strong></td>
+      <td>Vorschlag, die Änderung für <code class="language-plaintext highlighter-rouge">2027.0.0</code> umzusetzen; Bestätigung in der Sitzung.</td>
+    </tr>
+    <tr>
+      <td><strong>Vorschlag: annehmen (Doku)</strong></td>
+      <td>Vorschlag, nur Dokumentation oder Implementierungshinweise zu ändern, keine Änderung an Artefakten; Bestätigung in der Sitzung.</td>
+    </tr>
+    <tr>
+      <td><strong>Diskussion</strong></td>
+      <td>Grundsatzfrage; ein Vorschlag liegt vor, die Entscheidung fällt in der Sitzung.</td>
+    </tr>
+    <tr>
+      <td><strong>Antwort geplant</strong></td>
+      <td>Rückfrage oder modulübergreifendes Thema; eine Antwort in Jira ist geplant (Entwurf angegeben), keine Änderung an Artefakten in diesem Leitfaden.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Breaking</strong> = <em>ja</em>, wenn Instanzen, die zur letzten veröffentlichten Version (Paket <code class="language-plaintext highlighter-rouge">2024.0.0-ballot</code>) konform sind, nach der Änderung nicht mehr validieren. Neue Must-Support-Kennzeichnungen machen keine Daten ungültig, erweitern aber die Pflichten von Implementierungen; sie sind als <em>nein (MS)</em> vermerkt.</p>
+
+<p>Zur Einordnung: Gegenüber <code class="language-plaintext highlighter-rouge">2024.0.0-ballot</code> sind in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> bereits zwei Breaking Changes enthalten, die Umstellung der kanonischen URL (<code class="language-plaintext highlighter-rouge">…/fhir/ext/modul-symptom</code> → <code class="language-plaintext highlighter-rouge">…/fhir/modul-symptom</code>) und die Kennzeichnung beider Profile als abstrakt (siehe HDB-1096 und HDB-1079).</p>
+
+<hr />
+
+<h3 id="a-profiländerungen--condition">A. Profiländerungen – Condition</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Thema</th>
+      <th>Vorgeschlagenes Vorgehen</th>
+      <th>Status</th>
+      <th>Breaking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1082">HDB-1082</a></td>
+      <td>Condition.code: Kardinalität und Codesysteme</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> 1..1 mit Invariante <code class="language-plaintext highlighter-rouge">code.coding.exists() or code.text.exists()</code>. Offenes Slicing von <code class="language-plaintext highlighter-rouge">code.coding</code> nach <code class="language-plaintext highlighter-rouge">system</code> mit MS-Slices analog zum Modul Diagnose: <code class="language-plaintext highlighter-rouge">sct</code> (Binding auf ein SNOMED-CT-Findings-ValueSet), <code class="language-plaintext highlighter-rouge">icd10-gm</code> (<code class="language-plaintext highlighter-rouge">CodingICD10GM</code> der Basisprofile inkl. Mehrfachcodierung, Seitenlokalisation, Diagnosesicherheit), <code class="language-plaintext highlighter-rouge">orphanet</code>, <code class="language-plaintext highlighter-rouge">hpo</code> (siehe HDB-1083), optional <code class="language-plaintext highlighter-rouge">alpha-id</code>. Das Logical Model nennt diese Systeme bereits; MedDRA bleibt ohne eigenen Slice zulässig. Hängt von der Abgrenzung zum Modul Diagnose ab (HDB-1084).</td>
+      <td>Vorschlag: annehmen</td>
+      <td><strong>ja</strong> (Conditions ohne <code class="language-plaintext highlighter-rouge">code</code> werden ungültig)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1081">HDB-1081</a></td>
+      <td>Condition.onset/abatement: Mapping und Must Support</td>
+      <td>(a) <strong>annehmen:</strong> <code class="language-plaintext highlighter-rouge">abatement[x]</code> MS mit Slices <code class="language-plaintext highlighter-rouge">abatementDateTime</code> und <code class="language-plaintext highlighter-rouge">abatementPeriod</code>; das Mapping von <code class="language-plaintext highlighter-rouge">KlinischRelevanterZeitraum.Zeitraum.end</code> von <code class="language-plaintext highlighter-rouge">onsetPeriod.end</code> auf <code class="language-plaintext highlighter-rouge">abatement[x]</code> korrigieren (heute: <code class="language-plaintext highlighter-rouge">onsetPeriod.end</code> ist das Ende des Zeitraums, in dem der Beginn lag). (b) <strong>annehmen:</strong> Slices <code class="language-plaintext highlighter-rouge">onsetDateTime</code> und <code class="language-plaintext highlighter-rouge">onsetAge</code> als MS ergänzen, wie im Modul Diagnose. (c) <strong>ändern:</strong> Die Lebensphase-Extension nicht an <code class="language-plaintext highlighter-rouge">onsetAge</code>/<code class="language-plaintext highlighter-rouge">abatementAge</code>, sondern an <code class="language-plaintext highlighter-rouge">onsetRange</code>/<code class="language-plaintext highlighter-rouge">abatementRange</code> zulassen. Der Kontext der Extension in <code class="language-plaintext highlighter-rouge">de.basisprofil.r4</code> 1.6.0 erlaubt nur <code class="language-plaintext highlighter-rouge">dateTime</code>, <code class="language-plaintext highlighter-rouge">Period.start</code>, <code class="language-plaintext highlighter-rouge">Period.end</code> und <code class="language-plaintext highlighter-rouge">Range</code>; Basis verschiebt sie aus demselben Grund (HDB-1075).</td>
+      <td>Vorschlag: annehmen</td>
+      <td>nein (MS)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1092">HDB-1092</a></td>
+      <td>Kardinalitäten und Codesysteme: LM vs. Profile</td>
+      <td><code class="language-plaintext highlighter-rouge">recordedDate</code> 1..1 wie im Modul Diagnose. LM-<code class="language-plaintext highlighter-rouge">Status</code> von 1..1 auf 0..1 an <code class="language-plaintext highlighter-rouge">clinicalStatus</code> angleichen: <code class="language-plaintext highlighter-rouge">clinicalStatus</code> kann nicht 1..1 werden, weil FHIR ihn bei <code class="language-plaintext highlighter-rouge">verificationStatus = entered-in-error</code> verbietet (Invariante <code class="language-plaintext highlighter-rouge">con-5</code>). Die Codesystem-Angabe für <code class="language-plaintext highlighter-rouge">Verifikationsstatus</code> im LM von SNOMED CT auf <code class="language-plaintext highlighter-rouge">condition-ver-status</code> korrigieren (das Profil bindet required).</td>
+      <td>Vorschlag: annehmen</td>
+      <td><strong>ja</strong> (<code class="language-plaintext highlighter-rouge">recordedDate</code> 1..1)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1093">HDB-1093</a></td>
+      <td>targetProfile und Slice-Namen</td>
+      <td><code class="language-plaintext highlighter-rouge">evidence.detail</code> auf <code class="language-plaintext highlighter-rouge">Reference(Observation)</code> einschränken; sobald konkrete Profile vorliegen (HDB-1079), auf das Observation-Profil dieses Moduls. <code class="language-plaintext highlighter-rouge">stage.assessment</code> ist im FHIR-Basisstandard bereits auf <code class="language-plaintext highlighter-rouge">ClinicalImpression</code>, <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> und <code class="language-plaintext highlighter-rouge">Observation</code> beschränkt; hier ist keine Änderung nötig. Den Slice <code class="language-plaintext highlighter-rouge">assertedDate</code> in <code class="language-plaintext highlighter-rouge">Feststellungsdatum</code> umbenennen, wie im Modul Diagnose (Slice-Namen erscheinen nicht in Instanzen).</td>
+      <td>Vorschlag: annehmen</td>
+      <td><strong>ja</strong> (<code class="language-plaintext highlighter-rouge">evidence.detail</code> auf andere Ressourcentypen wird ungültig)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1095">HDB-1095</a></td>
+      <td>Condition.bodySite: Harmonisierung mit Modul Diagnose</td>
+      <td><code class="language-plaintext highlighter-rouge">bodySite.coding</code> nach <code class="language-plaintext highlighter-rouge">system</code> slicen und den MS-Slice <code class="language-plaintext highlighter-rouge">snomed-ct</code> mit dem ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-diagnose-bodystructure-snomed</code> ergänzen, wie im Modul Diagnose; das bisher unversionierte Binding <code class="language-plaintext highlighter-rouge">body-site</code> entfällt damit. Das ValueSet liegt im Paket des Basismoduls, das dieses Modul heute nicht als Abhängigkeit führt. <strong>Entscheidung nötig:</strong> Abhängigkeit auf <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code> aufnehmen oder das ValueSet modulübergreifend ins Meta-Modul verlagern. Den Zielprofil-Verweis auf EU-Core-BodyStructure an die Entscheidung im Basismodul anpassen (HDB-1074, <code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code> 2.0.1).</td>
+      <td>Vorschlag: annehmen</td>
+      <td><strong>ja</strong> (SNOMED-Codes außerhalb des ValueSets werden ungültig)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="b-profiländerungen--observation-und-beide-profile">B. Profiländerungen – Observation und beide Profile</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Thema</th>
+      <th>Vorgeschlagenes Vorgehen</th>
+      <th>Status</th>
+      <th>Breaking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1086">HDB-1086</a></td>
+      <td>Patienten- und Fallbezug (subject, encounter)</td>
+      <td>In beiden Profilen <code class="language-plaintext highlighter-rouge">subject</code> 1..1 auf <code class="language-plaintext highlighter-rouge">Reference(Patient)</code> mit <code class="language-plaintext highlighter-rouge">subject.reference</code> 1..1 MS (<code class="language-plaintext highlighter-rouge">Group</code> entfällt; im Modul gibt es keinen Anwendungsfall für Gruppen). <code class="language-plaintext highlighter-rouge">Observation.encounter</code> MS. In den Profilbeschreibungen den Bezug zu den Modulen Person und Fall dokumentieren, inkl. der gemeinten Kontaktebene (Einrichtungskontakt, wie im Modul Diagnose).</td>
+      <td>Vorschlag: annehmen</td>
+      <td><strong>ja</strong> (<code class="language-plaintext highlighter-rouge">Observation.subject</code> wird Pflicht, <code class="language-plaintext highlighter-rouge">Group</code> entfällt)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1091">HDB-1091</a></td>
+      <td>Fehlende Must-Support-Elemente</td>
+      <td><code class="language-plaintext highlighter-rouge">Condition.note</code>, <code class="language-plaintext highlighter-rouge">Observation.note</code>, <code class="language-plaintext highlighter-rouge">Observation.bodySite</code> und <code class="language-plaintext highlighter-rouge">performer</code> in beiden Profilen als MS kennzeichnen; damit sind alle LM-Elemente (Kommentar, Lokalisation) und die auf der Profilseite geforderte Provenienz abgedeckt.</td>
+      <td>Vorschlag: annehmen</td>
+      <td>nein (MS)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1087">HDB-1087</a></td>
+      <td>Observation.effective[x] / value[x]: MS auf Choice-Typen</td>
+      <td><code class="language-plaintext highlighter-rouge">effective[x]</code> auf <code class="language-plaintext highlighter-rouge">dateTime</code> oder <code class="language-plaintext highlighter-rouge">Period</code> einschränken, wie im Logical Model (<code class="language-plaintext highlighter-rouge">Zeitspanne</code>). Bei <code class="language-plaintext highlighter-rouge">value[x]</code> und <code class="language-plaintext highlighter-rouge">component.value[x]</code> alle Typen zulassen, MS aber nur für <code class="language-plaintext highlighter-rouge">Quantity</code>, <code class="language-plaintext highlighter-rouge">CodeableConcept</code>, <code class="language-plaintext highlighter-rouge">string</code>, <code class="language-plaintext highlighter-rouge">boolean</code>, <code class="language-plaintext highlighter-rouge">integer</code> und <code class="language-plaintext highlighter-rouge">Range</code> setzen (Typ-MS statt Ausschluss, damit bestehende Daten valide bleiben).</td>
+      <td>Vorschlag: annehmen</td>
+      <td><strong>ja</strong> (<code class="language-plaintext highlighter-rouge">effective[x]</code> mit <code class="language-plaintext highlighter-rouge">Timing</code>/<code class="language-plaintext highlighter-rouge">instant</code> wird ungültig)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1094">HDB-1094</a></td>
+      <td>Extension associatedSymptomOrCondition</td>
+      <td>Die Kritik trifft zu: <code class="language-plaintext highlighter-rouge">workflow-supportingInfo</code> bedeutet „Information, die diese Observation stützt“. Vorschlag: <code class="language-plaintext highlighter-rouge">Condition.evidence.detail</code> als einzigen verbindlichen Mechanismus festlegen und den Slice <code class="language-plaintext highlighter-rouge">associatedSymptomOrCondition</code> entfernen; eine passende Extension aus dem HL7 FHIR Symptoms IG kann nach dessen Publikation erneut geprüft werden. Hängt mit HDB-1080 zusammen.</td>
+      <td>Diskussion</td>
+      <td>nein (die Extension bleibt als nicht profilierte Extension zulässig)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1083">HDB-1083</a></td>
+      <td>HPO-CodeSystem-URL</td>
+      <td>Alias <code class="language-plaintext highlighter-rouge">$HPO</code> auf <code class="language-plaintext highlighter-rouge">http://human-phenotype-ontology.org</code> umstellen (wie HL7 Terminology und das Modul Molekulargenetik), das Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-symptom-arachnodactyly</code> anpassen und den Slice <code class="language-plaintext highlighter-rouge">hpo</code> mit <code class="language-plaintext highlighter-rouge">patternCoding.system</code> anlegen (siehe HDB-1082).</td>
+      <td>Vorschlag: annehmen</td>
+      <td>nein</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="c-grundsätzliche-modellierungsentscheidungen">C. Grundsätzliche Modellierungsentscheidungen</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Thema</th>
+      <th>Vorgeschlagenes Vorgehen</th>
+      <th>Status</th>
+      <th>Breaking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1079">HDB-1079</a></td>
+      <td>Abstrakte Profile vs. CapabilityStatement</td>
+      <td>Die Kritik trifft zu: Es gibt kein konkretes abgeleitetes Profil, das CapabilityStatement fordert die abstrakten Profile, und die Beispiele tragen kein <code class="language-plaintext highlighter-rouge">meta.profile</code>. Vorschlag: Beide Profile wieder <strong>konkret</strong> ausliefern, wie in <code class="language-plaintext highlighter-rouge">2024.0.0-ballot</code> und in den übrigen KDS-Modulen; konkrete Unterprofile (z. B. Symptom, Phänotyp, Messung) können später ergänzt werden. Damit entfällt auch eine der beiden Breaking Changes aus HDB-1096.</td>
+      <td>Diskussion</td>
+      <td>nein (Rücknahme einer Änderung)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1080">HDB-1080</a></td>
+      <td>Symptom als Condition oder Observation?</td>
+      <td>Eine verbindliche Regel festlegen. Vorschlag: Ein Symptom als klinische Aussage wird als <strong>Condition</strong> mit SNOMED-CT-Finding abgebildet; eine <strong>Observation</strong> nur für Attribut-Wert-Paare (Vorhandensein, Schweregrad, Messwert). Den aus dem HL7 FHIR Symptoms IG übernommenen Abschnitt „Beziehung zwischen Observation und Condition“ auf der Seite Profile als informativ kennzeichnen (das Symptoms IG ist noch im Ballot) und ein paralleles Condition-Beispiel zum Brustschmerz ergänzen.</td>
+      <td>Diskussion</td>
+      <td>nein (Doku)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1084">HDB-1084</a></td>
+      <td>Abgrenzung zum Modul Diagnose</td>
+      <td>Entscheidungskriterium für die Ausleitung festlegen. Vorschlag: Mit ICD-10-GM kodierte Diagnosen werden immer im Modul Diagnose geführt; Symptome, Befunde und nicht ICD-kodierte Zustände in diesem Modul. Die Zuordnung wird über <code class="language-plaintext highlighter-rouge">meta.profile</code> erkennbar (setzt konkrete Profile voraus, HDB-1079). Den Satz „Es muss daher parallel zu Einträgen im Modul Diagnosen ausgewertet werden“ auf der Seite Anleitung für Implementierende entsprechend umformulieren und klarstellen, dass eine Diagnose nur in einem Modul geführt wird.</td>
+      <td>Diskussion</td>
+      <td>abhängig von der Entscheidung</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1028">HDB-1028</a></td>
+      <td>Prä- vs. Postkoordination (FHIR Symptoms IG)</td>
+      <td>In der Anleitung eine Präferenz aussprechen. Entwurf: präkoordinierte SNOMED-CT-Konzepte verwenden, wo vorhanden; Postkoordination nur, wenn kein passendes präkoordiniertes Konzept existiert. Die Gegenüberstellung im <a href="https://build.fhir.org/ig/HL7/fhir-symptoms-ig/en/index.html">FHIR Symptoms IG</a> verlinken. Laut Ticket empfiehlt die Vorlage Postkoordination; das ist in der Sitzung zu klären.</td>
+      <td>Diskussion</td>
+      <td>nein (Doku)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="d-capabilitystatement-und-terminologie">D. CapabilityStatement und Terminologie</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Thema</th>
+      <th>Vorgeschlagenes Vorgehen</th>
+      <th>Status</th>
+      <th>Breaking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1085">HDB-1085</a></td>
+      <td>CapabilityStatement: Umfang der SHALL-Suchparameter</td>
+      <td>Die Kritik trifft zu: Heute sind alle Basis-Suchparameter SHALL (Observation 35, Condition 23), ohne <code class="language-plaintext highlighter-rouge">_include</code>/<code class="language-plaintext highlighter-rouge">_revinclude</code>. Vorschlag: SHALL nur für Suchparameter auf MS-Elementen (<code class="language-plaintext highlighter-rouge">_id</code>, <code class="language-plaintext highlighter-rouge">_lastUpdated</code>, <code class="language-plaintext highlighter-rouge">_profile</code>, <code class="language-plaintext highlighter-rouge">patient</code>/<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">encounter</code>, <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">category</code>, Status-Parameter, Datums-Parameter, <code class="language-plaintext highlighter-rouge">identifier</code>), die übrigen SHOULD bzw. MAY. <code class="language-plaintext highlighter-rouge">_include</code>/<code class="language-plaintext highlighter-rouge">_revinclude</code> ergänzen, z. B. <code class="language-plaintext highlighter-rouge">Condition:subject</code>, <code class="language-plaintext highlighter-rouge">Observation:encounter</code>, <code class="language-plaintext highlighter-rouge">Condition:evidence-detail</code>.</td>
+      <td>Vorschlag: annehmen</td>
+      <td>nein (Lockerung für Server)</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1090">HDB-1090</a></td>
+      <td>SNOMED-CT-Edition im CRMI-Manifest</td>
+      <td>Entwurf: Die International Edition ist beabsichtigt und entspricht dem Manifest des Basismoduls (<code class="language-plaintext highlighter-rouge">900000000000207008</code>, dort Version <code class="language-plaintext highlighter-rouge">20260701</code>); ein Wechsel auf die German Edition ist eine modulübergreifende Entscheidung (Meta-Modul, Terminology Version Policy). Die Version wird auf <code class="language-plaintext highlighter-rouge">20260701</code> angehoben, wie im Basismodul. CRMI ist erforderlich, weil alle Artefakte der KDS-Module 2027 die CRMI-Profile in <code class="language-plaintext highlighter-rouge">meta.profile</code> führen.</td>
+      <td>Antwort geplant</td>
+      <td>nein</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="e-beispiele">E. Beispiele</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Thema</th>
+      <th>Vorgeschlagenes Vorgehen</th>
+      <th>Status</th>
+      <th>Breaking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1088">HDB-1088</a></td>
+      <td>Beispiele unvollständig</td>
+      <td>Je Szenario der Seite Anleitung ein vollständiges Beispiel (Symptom, Messung mit Komponenten, Phänotyp, Condition mit <code class="language-plaintext highlighter-rouge">evidence.detail</code> auf eine Observation, Lebensphase) mit <code class="language-plaintext highlighter-rouge">meta.profile</code>, <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">encounter</code>, Zeitangaben, <code class="language-plaintext highlighter-rouge">performer</code> und <code class="language-plaintext highlighter-rouge">display</code>. Die Beispielseite korrigieren (die Instanz nutzt den Answer-Code <code class="language-plaintext highlighter-rouge">LA9633-4</code>, nicht die Answer List <code class="language-plaintext highlighter-rouge">LL1937-3</code>). Die Patient-Beispiele in <code class="language-plaintext highlighter-rouge">mii-exa-symptom-patient</code> umbenennen; das MII-Patient-Profil setzt dieselbe Abhängigkeit voraus wie HDB-1095.</td>
+      <td>Vorschlag: annehmen</td>
+      <td>nein</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="f-dokumentation-und-redaktionelles">F. Dokumentation und Redaktionelles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Thema</th>
+      <th>Vorgeschlagenes Vorgehen</th>
+      <th>Status</th>
+      <th>Breaking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1097">HDB-1097</a></td>
+      <td>Redaktionelles</td>
+      <td><strong>Annehmen:</strong> Tippfehler in den Mapping-Pfaden (<code class="language-plaintext highlighter-rouge">Conditon.*</code>, <code class="language-plaintext highlighter-rouge">dataAbesentReason</code>) und im Text korrigieren (alle genannten Stellen gefunden in <code class="language-plaintext highlighter-rouge">index.md</code>, <code class="language-plaintext highlighter-rouge">guidance.md</code>, <code class="language-plaintext highlighter-rouge">capability-statements.md</code>, im Logical Model und in den Intro-Notes); <code class="language-plaintext highlighter-rouge">BezugVonIstTeilVon</code> → <code class="language-plaintext highlighter-rouge">derivedFrom</code> sprachlich klarstellen („abgeleitet aus“); einheitlich „Erweiterungsmodul“ (auch im LM); <code class="language-plaintext highlighter-rouge">title</code> für beide Profile ergänzen (beiden fehlt er); CapabilityStatement-Canonical an die id angleichen (<code class="language-plaintext highlighter-rouge">…/CapabilityStatement/mii-cps-symptom-capabilitystatement</code>). <strong>Antwort:</strong> <code class="language-plaintext highlighter-rouge">jurisdiction</code> ist bereits <code class="language-plaintext highlighter-rouge">urn:iso:std:iso:3166#DE</code>; die IG-id <code class="language-plaintext highlighter-rouge">mii-ig-symptom</code> folgt der MII-Konvention (<code class="language-plaintext highlighter-rouge">mii-ig-base</code>, <code class="language-plaintext highlighter-rouge">mii-ig-medikation</code>) und muss nicht der Package-ID entsprechen; <code class="language-plaintext highlighter-rouge">dependsOn.uri</code> der Basisprofile ist die von SUSHI erzeugte Paket-URI, weil das Paket keine IG-Canonical veröffentlicht.</td>
+      <td>Vorschlag: annehmen (Doku)</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1096">HDB-1096</a></td>
+      <td>Änderungshistorie: Breaking Changes</td>
+      <td>Die Kritik trifft zu. Im Abschnitt <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> die Umstellung der kanonischen URL und die Kennzeichnung als abstrakt (falls nach HDB-1079 beibehalten) mit <strong>BREAKING:</strong> kennzeichnen, die Auswirkungen auf bestehende Daten (<code class="language-plaintext highlighter-rouge">meta.profile</code> mit alter Canonical validiert nicht mehr) und den Migrationspfad beschreiben; die Entfernung des GCS-Profils begründen (es war in keinem veröffentlichten Paket enthalten). Alle in dieser Ballot-Runde angenommenen Breaking Changes ebenso aufführen.</td>
+      <td>Vorschlag: annehmen (Doku)</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1089">HDB-1089</a></td>
+      <td>Migrationsmarker und Status im Ballot</td>
+      <td><strong>Annehmen:</strong> Die Marker „Written during migration - review before release“ (acht Stellen auf sieben Seiten, je Sprache) nach inhaltlicher Prüfung entfernen. <strong>Antwort:</strong> <code class="language-plaintext highlighter-rouge">status: active</code> und <code class="language-plaintext highlighter-rouge">experimental: false</code> entsprechen den übrigen KDS-Modulen (Basis, Medikation); der Ballot-Status wird über <code class="language-plaintext highlighter-rouge">publication-request.json</code> (<code class="language-plaintext highlighter-rouge">status: ballot</code>) ausgedrückt. Der Publikationspfad weicht absichtlich von der Canonical ab (Veröffentlichung auf GitHub Pages, Canonical auf medizininformatik-initiative.de).</td>
+      <td>Vorschlag: annehmen (Doku)</td>
+      <td>nein</td>
+    </tr>
+    <tr>
+      <td><a href="https://hl7germany.atlassian.net/browse/HDB-1029">HDB-1029</a></td>
+      <td>Update Link Basisprofile</td>
+      <td>Link auf der Seite Profile von <code class="language-plaintext highlighter-rouge">basisprofile-de/1.4.0</code> auf <code class="language-plaintext highlighter-rouge">1.6.0</code> aktualisieren (die Startseite verlinkt bereits 1.6.0).</td>
+      <td>Vorschlag: annehmen (Doku)</td>
+      <td>nein</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Tue, Nov 10, 2026 11:13+0000">2026-11-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/impressum">Impressum</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
