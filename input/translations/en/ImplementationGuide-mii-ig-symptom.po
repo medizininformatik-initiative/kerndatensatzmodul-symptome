@@ -90,6 +90,11 @@ msgstr "Downloads"
 msgid "Änderungshistorie"
 msgstr "Changelog"
 
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Ballot-Kommentierung 2027.0.0-ballot"
+msgstr "Ballot Reconciliation 2027.0.0-ballot"
+
 # A short title used to represent this page in navigational structures such
 # as table of contents, bread crumbs, etc.
 #: ImplementationGuide.definition.page.title

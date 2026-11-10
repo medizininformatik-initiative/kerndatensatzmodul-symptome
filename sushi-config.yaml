@@ -156,6 +156,8 @@ pages:
     title: Downloads
   changes.md:
     title: Änderungshistorie
+  ballot-reconciliation.md:
+    title: Ballot-Kommentierung 2027.0.0-ballot
   version-history.md:
     title: Versionierung
   ImplementationGuide-mii-ig-symptom.md:
