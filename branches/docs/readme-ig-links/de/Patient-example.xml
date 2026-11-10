@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Patient example</b></p><a name="example"> </a><a name="hcexample"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Max Mustermann-Testpatient  (no stated gender), DoB: 1970-01-01</p><hr/></div>
+  </text>
+  <name>
+    <family value="Mustermann-Testpatient"/>
+    <given value="Max"/>
+  </name>
+  <birthDate value="1970-01-01"/>
+</Patient>
