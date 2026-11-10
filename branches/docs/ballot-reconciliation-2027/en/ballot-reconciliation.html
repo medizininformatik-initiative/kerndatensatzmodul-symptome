@@ -388,9 +388,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1082">HDB-1082</a></td>
       <td>Condition.code: cardinality and code systems</td>
-      <td><code class="language-plaintext highlighter-rouge">code</code> 1..1 with the invariant <code class="language-plaintext highlighter-rouge">code.coding.exists() or code.text.exists()</code>. Open slicing of <code class="language-plaintext highlighter-rouge">code.coding</code> by <code class="language-plaintext highlighter-rouge">system</code> with MS slices as in the Diagnose module: <code class="language-plaintext highlighter-rouge">sct</code> (bound to a SNOMED CT findings ValueSet), <code class="language-plaintext highlighter-rouge">icd10-gm</code> (<code class="language-plaintext highlighter-rouge">CodingICD10GM</code> from the German base profiles, incl. multiple coding, laterality, diagnostic certainty), <code class="language-plaintext highlighter-rouge">orphanet</code>, <code class="language-plaintext highlighter-rouge">hpo</code> (see HDB-1083), optionally <code class="language-plaintext highlighter-rouge">alpha-id</code>. The logical model already names these systems; MedDRA stays allowed without its own slice. Depends on the delineation from the Diagnose module (HDB-1084).</td>
-      <td>Proposed: accept</td>
-      <td><strong>yes</strong> (Conditions without <code class="language-plaintext highlighter-rouge">code</code> become invalid)</td>
+      <td>The ticket does not take into account that the Condition profile is <strong>abstract</strong>: it cannot be instantiated directly and only serves as the basis for concrete profiles derived from it. To be decided: which constraints apply at the abstract level (and thus bind every future sub-profile) and which are left to the concrete profiles. For discussion: <code class="language-plaintext highlighter-rouge">code</code> 1..1 with the invariant <code class="language-plaintext highlighter-rouge">code.coding.exists() or code.text.exists()</code> at the abstract level; code-system slices as in the Diagnose module (<code class="language-plaintext highlighter-rouge">sct</code>, <code class="language-plaintext highlighter-rouge">icd10-gm</code>, <code class="language-plaintext highlighter-rouge">orphanet</code>, <code class="language-plaintext highlighter-rouge">hpo</code>, optionally <code class="language-plaintext highlighter-rouge">alpha-id</code>) rather in the concrete profiles. Depends on the delineation from the Diagnose module (HDB-1084).</td>
+      <td>Discuss</td>
+      <td><strong>yes</strong>, if <code class="language-plaintext highlighter-rouge">code</code> 1..1 at the abstract level</td>
     </tr>
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1081">HDB-1081</a></td>
@@ -409,16 +409,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1093">HDB-1093</a></td>
       <td>targetProfile and slice names</td>
-      <td>Restrict <code class="language-plaintext highlighter-rouge">evidence.detail</code> to <code class="language-plaintext highlighter-rouge">Reference(Observation)</code>; once concrete profiles exist (HDB-1079), to this module's Observation profile. <code class="language-plaintext highlighter-rouge">stage.assessment</code> is already restricted to <code class="language-plaintext highlighter-rouge">ClinicalImpression</code>, <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> and <code class="language-plaintext highlighter-rouge">Observation</code> by the FHIR base standard; no change needed there. Rename the slice <code class="language-plaintext highlighter-rouge">assertedDate</code> to <code class="language-plaintext highlighter-rouge">Feststellungsdatum</code>, as in the Diagnose module (slice names do not appear in instances).</td>
-      <td>Proposed: accept</td>
-      <td><strong>yes</strong> (<code class="language-plaintext highlighter-rouge">evidence.detail</code> to other resource types becomes invalid)</td>
+      <td>The ticket does not take into account that both profiles are <strong>abstract</strong>: a <code class="language-plaintext highlighter-rouge">targetProfile</code> pointing to an abstract profile only fixes the common basis; which concrete sub-profile is referenced is decided by the derived profiles. For discussion: restrict <code class="language-plaintext highlighter-rouge">evidence.detail</code> to <code class="language-plaintext highlighter-rouge">Reference(Observation)</code> and leave the restriction to concrete profiles to the sub-profiles. <code class="language-plaintext highlighter-rouge">stage.assessment</code> is already restricted to <code class="language-plaintext highlighter-rouge">ClinicalImpression</code>, <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> and <code class="language-plaintext highlighter-rouge">Observation</code> by the FHIR base standard. Rename the slice <code class="language-plaintext highlighter-rouge">assertedDate</code> to <code class="language-plaintext highlighter-rouge">Feststellungsdatum</code>, as in the Diagnose module (slice names do not appear in instances).</td>
+      <td>Discuss</td>
+      <td><strong>yes</strong>, if <code class="language-plaintext highlighter-rouge">evidence.detail</code> is restricted</td>
     </tr>
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1095">HDB-1095</a></td>
       <td>Condition.bodySite: harmonisation with the Diagnose module</td>
-      <td>Slice <code class="language-plaintext highlighter-rouge">bodySite.coding</code> by <code class="language-plaintext highlighter-rouge">system</code> and add the MS slice <code class="language-plaintext highlighter-rouge">snomed-ct</code> bound to the ValueSet <code class="language-plaintext highlighter-rouge">mii-vs-diagnose-bodystructure-snomed</code>, as in the Diagnose module; this replaces the unversioned <code class="language-plaintext highlighter-rouge">body-site</code> binding. The ValueSet lives in the Basis module's package, which this module does not depend on today. <strong>Decision needed:</strong> add a dependency on <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code>, or move the ValueSet to the Meta module for all modules. Align the EU core BodyStructure target with the Basis module's decision (HDB-1074, <code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code> 2.0.1).</td>
-      <td>Proposed: accept</td>
-      <td><strong>yes</strong> (SNOMED codes outside the ValueSet become invalid)</td>
+      <td>The ticket does not take into account that the Condition profile is <strong>abstract</strong>: a SNOMED slice with a required binding at the abstract level would bind every future sub-profile. For discussion: the <code class="language-plaintext highlighter-rouge">snomed-ct</code> slice bound to <code class="language-plaintext highlighter-rouge">mii-vs-diagnose-bodystructure-snomed</code> (as in the Diagnose module) at the abstract level or only in concrete profiles; either way, version the currently unversioned <code class="language-plaintext highlighter-rouge">body-site</code> binding. The ValueSet lives in the Basis module's package, which this module does not depend on today: add a dependency on <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.base</code> or move the ValueSet to the Meta module. Align the EU core BodyStructure target with the Basis module's decision (HDB-1074, <code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code> 2.0.1).</td>
+      <td>Discuss</td>
+      <td><strong>yes</strong>, if a required binding is introduced at the abstract level</td>
     </tr>
   </tbody>
 </table>
@@ -490,9 +490,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1079">HDB-1079</a></td>
       <td>Abstract profiles vs. CapabilityStatement</td>
-      <td>The comment is correct: there is no concrete derived profile, the CapabilityStatement requires the abstract profiles, and the examples carry no <code class="language-plaintext highlighter-rouge">meta.profile</code>. Proposal: ship both profiles as <strong>concrete</strong> again, as in <code class="language-plaintext highlighter-rouge">2024.0.0-ballot</code> and in the other KDS modules; concrete sub-profiles (e.g. symptom, phenotype, measurement) can be added later. This also removes one of the two breaking changes from HDB-1096.</td>
-      <td>Discuss</td>
-      <td>no (reverts a change)</td>
+      <td>Draft: the profiles are <strong>abstract by design</strong>. They define the common basis for symptom and phenotype data; instances always use a concrete profile derived from them (e.g. in use-case or project-specific specifications). Conformance is declared and validated against those concrete sub-profiles. <strong>Open points the ticket rightly raises:</strong> (1) the CapabilityStatement lists the abstract profiles as <code class="language-plaintext highlighter-rouge">supportedProfile</code>; reword it so that servers must support instances of the derived profiles. (2) The examples cannot declare an abstract profile in <code class="language-plaintext highlighter-rouge">meta.profile</code>; they show the base structure (see HDB-1088). (3) Explain the decision for "abstract" in the change history (HDB-1096).</td>
+      <td>Planned reply</td>
+      <td>no</td>
     </tr>
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1080">HDB-1080</a></td>
@@ -504,7 +504,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1084">HDB-1084</a></td>
       <td>Delineation from the Diagnose module</td>
-      <td>Define a decision criterion for data extraction. Proposal: diagnoses coded with ICD-10-GM always go to the Diagnose module; symptoms, findings and conditions not coded with ICD-10 go to this module. The assignment is recognisable via <code class="language-plaintext highlighter-rouge">meta.profile</code> (requires concrete profiles, HDB-1079). Reword the sentence "It must therefore be evaluated in parallel to entries in the Diagnose module" on the implementer guidance page accordingly, and state that a diagnosis is held in one module only.</td>
+      <td>Define a decision criterion for data extraction. Proposal: diagnoses coded with ICD-10-GM always go to the Diagnose module; symptoms, findings and conditions not coded with ICD-10 go to this module. Reword the sentence "It must therefore be evaluated in parallel to entries in the Diagnose module" on the implementer guidance page accordingly, and state that a diagnosis is held in one module only.</td>
       <td>Discuss</td>
       <td>depends on the decision</td>
     </tr>
@@ -564,7 +564,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1088">HDB-1088</a></td>
       <td>Incomplete examples</td>
-      <td>One complete example per scenario on the guidance page (symptom, measurement with components, phenotype, Condition with <code class="language-plaintext highlighter-rouge">evidence.detail</code> to an Observation, life phase) with <code class="language-plaintext highlighter-rouge">meta.profile</code>, <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">encounter</code>, timing, <code class="language-plaintext highlighter-rouge">performer</code> and <code class="language-plaintext highlighter-rouge">display</code>. Correct the examples page (the instance uses the answer code <code class="language-plaintext highlighter-rouge">LA9633-4</code>, not the answer list <code class="language-plaintext highlighter-rouge">LL1937-3</code>). Rename the Patient examples to <code class="language-plaintext highlighter-rouge">mii-exa-symptom-patient</code>; the MII Patient profile needs the same dependency as HDB-1095.</td>
+      <td>One complete example per scenario on the guidance page (symptom, measurement with components, phenotype, Condition with <code class="language-plaintext highlighter-rouge">evidence.detail</code> to an Observation, life phase) with <code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">encounter</code>, timing, <code class="language-plaintext highlighter-rouge">performer</code> and <code class="language-plaintext highlighter-rouge">display</code>. No <code class="language-plaintext highlighter-rouge">meta.profile</code>: the profiles are abstract (HDB-1079), so the examples show the base structure that concrete sub-profiles take over. Correct the examples page (the instance uses the answer code <code class="language-plaintext highlighter-rouge">LA9633-4</code>, not the answer list <code class="language-plaintext highlighter-rouge">LL1937-3</code>). Rename the Patient examples to <code class="language-plaintext highlighter-rouge">mii-exa-symptom-patient</code>; the MII Patient profile needs the same dependency as HDB-1095.</td>
       <td>Proposed: accept</td>
       <td>no</td>
     </tr>
@@ -594,7 +594,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="https://hl7germany.atlassian.net/browse/HDB-1096">HDB-1096</a></td>
       <td>Change history: breaking changes</td>
-      <td>The comment is correct. In the <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> section, mark the canonical URL change and the abstract flag (if kept after HDB-1079) with <strong>BREAKING:</strong>, describe the impact on existing data (<code class="language-plaintext highlighter-rouge">meta.profile</code> with the old canonical no longer validates) and the migration path, and explain the removal of the GCS profile (it was in no published package). List every breaking change accepted in this ballot round the same way.</td>
+      <td>The comment is correct. In the <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> section, mark the canonical URL change and the abstract flag with <strong>BREAKING:</strong>, explain the deliberate decision for abstract profiles (HDB-1079), describe the impact on existing data (<code class="language-plaintext highlighter-rouge">meta.profile</code> with the old canonical no longer validates) and the migration path, and explain the removal of the GCS profile (it was in no published package). List every breaking change accepted in this ballot round the same way.</td>
       <td>Proposed: accept (docs)</td>
       <td>no</td>
     </tr>
@@ -640,7 +640,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Nov 10, 2026 11:46+0000">2026-11-10</span>
+          Generated <span title="Tue, Nov 10, 2026 12:37+0000">2026-11-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

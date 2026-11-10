@@ -77,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-sympt
   "name" : "MII_LM_Symptom",
   "title" : "MII LM Symptom",
   "status" : "active",
-  "date" : "2026-11-10T11:46:44+00:00",
+  "date" : "2026-11-10T12:37:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
