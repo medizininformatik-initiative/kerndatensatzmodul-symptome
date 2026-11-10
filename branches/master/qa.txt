@@ -1,13 +1,13 @@
 MII_IG_Symptom : Validation Results
 =========================================
 
-err = 0, warn = 165, info = 334
-IG Publisher Version: 2.3.2 Out of date - current version is 2.3.4
-Generated Fri Sep 11 10:48:29 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
+err = 0, warn = 168, info = 334
+IG Publisher Version: 2.3.2 Out of date - current version is 3.0.3
+Generated Tue Nov 10 10:31:31 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.symptom#2027.0.0-ballot (canonical = https://www.medizininformatik-initiative.de/fhir/modul-symptom)
  Build Errors : 0 / 4 / 0
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/CapabilityStatement-mii-cps-symptom-capabilitystatement : 0 / 1 / 62
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Condition-mii-exa-symptom-vitreoretinochoroidopathy : 0 / 0 / 2
- /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/ImplementationGuide-mii-ig-symptom : 0 / 6 / 49
+ /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/ImplementationGuide-mii-ig-symptom : 0 / 9 / 49
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-arachnodactyly : 0 / 3 / 2
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Observation-mii-exa-symptom-chestpain : 0 / 2 / 1
  /home/runner/work/kerndatensatzmodul-symptome/kerndatensatzmodul-symptome/fsh-generated/resources/Patient-example : 0 / 0 / 1
@@ -102,6 +102,9 @@ INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1
 WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[1].uri: Canonical URL 'http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[1]: The canonical URL http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4 doesn't point to an actual ImplementationGuide resource
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.eu.base#2.0.0 released on 2026-04-27, but the most recent appropriate version is 2.0.1. This reference is getting old and the more recent version should be considered
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.terminology.r4#7.3.0 released on 2026-07-27, but the most recent appropriate version is 7.5.0. This reference is getting old and the more recent version should be considered
+WARNING: ImplementationGuide/mii-ig-symptom: ImplementationGuide.dependsOn[5]: The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0 released on 2026-05-16, but the most recent appropriate version is 5.4.0. This reference is getting old and the more recent version should be considered
 INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
 INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.
 INFORMATION: ImplementationGuide/mii-ig-symptom: ImplementationGuide.extension[5]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0 überein.

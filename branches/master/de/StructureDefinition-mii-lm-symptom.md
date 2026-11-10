@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/mii-lm-symptom | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_LM_Symptom |
+| Active Stand: 2026-11-10 | *Maschinenlesbarer Name*:MII_LM_Symptom |
 
  
 Logische Repräsentation des Basismoduls Symptom/klinischer Phänotyp 
@@ -77,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-sympt
   "name" : "MII_LM_Symptom",
   "title" : "MII LM Symptom",
   "status" : "active",
-  "date" : "2026-09-11T10:46:22+00:00",
+  "date" : "2026-11-10T10:28:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

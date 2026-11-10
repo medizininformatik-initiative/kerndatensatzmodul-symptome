@@ -3,19 +3,19 @@
 ## Pages
 
 * [Startseite](de/index.md)
-* [Sicherheit und Datenschutz](de/security-and-privacy.md)
-* [Änderungshistorie](de/changes.md)
 * [Beispiele](de/examples.md)
-* [CapabilityStatements](de/capability-statements.md)
-* [Artefaktübersicht](de/artifacts.md)
+* [Profile](de/profiles.md)
 * [UML-Diagramme](de/uml-diagrams.md)
 * [Hinweise zur Übersetzung](de/translationinfo.md)
-* [Downloads](de/downloads.md)
-* [Anleitung](de/guidance.md)
-* [Profile](de/profiles.md)
-* [Versionierung](de/version-history.md)
+* [CapabilityStatements](de/capability-statements.md)
+* [Artefaktübersicht](de/artifacts.md)
 * [Anleitung für Implementierende](de/implementer-guidance.md)
+* [Anleitung](de/guidance.md)
+* [Versionierung](de/version-history.md)
+* [Sicherheit und Datenschutz](de/security-and-privacy.md)
+* [Änderungshistorie](de/changes.md)
 * [Logische Modelle](de/logical-models.md)
+* [Downloads](de/downloads.md)
 
 ## Resources
 
