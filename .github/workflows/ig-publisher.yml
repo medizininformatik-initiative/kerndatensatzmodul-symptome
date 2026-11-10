@@ -25,6 +25,14 @@
 #            to 'false' to skip the whole workflow (jobs show as "skipped", not
 #            failed).
 #
+# QA summary: vars.ENABLE_QA_SUMMARY — ON by default. Renders output/qa.xml
+#            with patrick-werner/validation-outcome-markdown-renderer as
+#            annotations + a job-summary table (report-only, never fails the
+#            build). vars.QA_SUMMARY_INCLUDE picks the severities (errors |
+#            warnings | all; default errors); vars.QA_SUMMARY_FILTERS takes
+#            line-separated `filename|messageId|detailsWildcard|location`
+#            rules for known issues.
+#
 # Pages two modes (vars.PAGES_ACTIONS_ENABLED):
 #            - unset / not 'true' (default): the preview is served by "Deploy
 #              from a branch → gh-pages" (Settings → Pages). This workflow only
@@ -103,7 +111,7 @@ env:
   # fails the build if they drift apart.
   PUBLISHER_VERSION: "2.3.2"
   PUBLISHER_SHA256: "07c576024df917cc1f879b6b5a64147cd0222d5b4129688e8f0ad9ccce58b1d5"
-  SUSHI_VERSION: "3.20.1"
+  SUSHI_VERSION: "3.21.0"
   JEKYLL_VERSION: "4.4.1"
 
 jobs:
@@ -215,6 +223,9 @@ jobs:
         if: ${{ steps.build.outputs.mode == 'full' }}
         shell: bash
         env:
+          # Beide Namensschemata: das Template nennt sie SU_TERMSERV_*, die
+          # MII-Organisation fuehrt sie als CDS_DEV_* (Passwort dort
+          # _CERT_PASSWORD). Der Schritt unten nimmt den erstbesten Wert.
           SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT || secrets.CDS_DEV_CLIENT_CERT }}
           SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY || secrets.CDS_DEV_CLIENT_KEY }}
           SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD || secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
@@ -286,6 +297,23 @@ jobs:
             -fhir-settings "${GITHUB_WORKSPACE}/.github/fhir-settings.json"
           test -s output/index.html
           jq empty output/qa.json
+
+      - name: Render IG Publisher QA (qa.xml) as job summary
+        # The publisher's own validation result, rendered as annotations and a
+        # summary table — for repos that run neither of the MII reusable
+        # validation workflows. Runs even when the build step failed, as long
+        # as the publisher got far enough to write output/qa.xml. Report-only:
+        # the renderer fails on remaining errors, continue-on-error keeps that
+        # from failing the preview. The summary file goes to RUNNER_TEMP so it
+        # never lands in the published preview.
+        if: ${{ !cancelled() && steps.build.outputs.mode == 'full' && vars.ENABLE_QA_SUMMARY != 'false' && hashFiles('output/qa.xml') != '' }}
+        continue-on-error: true
+        uses: patrick-werner/validation-outcome-markdown-renderer@09f430c50c24c4d8666158efa4922dd300de6b1b # v1.5.0
+        with:
+          bundle-file: output/qa.xml
+          include: ${{ vars.QA_SUMMARY_INCLUDE || 'errors' }}
+          filters: ${{ vars.QA_SUMMARY_FILTERS }}
+          pr-summary-path: ${{ runner.temp }}/qa-summary.md
 
       - name: Template-repo self-check DEMO — render the version-comparison report
         # Demonstrates what a version delta looks like and where it lives,
@@ -445,20 +473,6 @@ jobs:
           cp -R "output/." "${branch_dir}/"
           # Marker consumed by cleanup-gh-pages.yml to detect deleted branches.
           echo "${BRANCH}" > "${branch_dir}/.branch-name"
-          # TEMPLATE REPOSITORY ONLY: (re)generate the root index — a plain
-          # autoindex-style listing of branches/dev/ + the latest demo/<tag>/ —
-          # so it heals on every preview deploy. A created module's site root
-          # stays reserved for the gated -go-publish output, so the generator
-          # never runs there (same guard as release-demo.yml's job).
-          case "${REPO}" in
-            */mii-kds-module-template)
-              if [ -f scripts/gen-pages-index.mjs ]; then
-                node scripts/gen-pages-index.mjs gh-pages "${REPO}"
-              else
-                echo "gen-pages-index.mjs not on this branch yet - root index unchanged (rebase onto dev/main to heal it)"
-              fi
-              ;;
-          esac
           cd gh-pages
           if [[ "${PAGES_ACTIONS_ENABLED}" == "true" ]]; then
             bytes="$(du --bytes --summarize --exclude=.git . | cut -f1)"

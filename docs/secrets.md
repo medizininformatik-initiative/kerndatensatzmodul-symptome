@@ -132,7 +132,13 @@ certificate fails the handshake, so rotate before `notAfter`.
 
 ## Simplifier login (the .NET validation job)
 
-`validation.yml` calls the MII reusable `ci_dotnet_validation.yml` with
+> **This module does not call the .NET job.** Its final step commits
+> `fsh-generated/resources/` back to the PR branch, which fails since
+> `fsh-generated/` is gitignored here (mii-kds-module-template#53);
+> `validation.yml` runs the Java validation only, as kerndatensatz-basis and
+> kerndatensatzmodul-medikation do. The secrets below are therefore unused.
+
+In the template, `validation.yml` calls the MII reusable `ci_dotnet_validation.yml` with
 `secrets: inherit`; its Simplifier Quality-Control step signs in to
 [Simplifier](https://simplifier.net) with two repository secrets:
 

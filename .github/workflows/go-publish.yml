@@ -65,8 +65,9 @@
 #   on the first push) and the CI preview advertised as `ci-build` in
 #   publication-request.json has been deployed.
 #
-# Placeholders to replace when creating a module: {{MODULE_SLUG}},
-#   {{GITHUB_ORG}}, {{REPO_NAME}} (see sushi-config.yaml for the full table).
+# Module identity (set when the module was created from the template; see
+#   sushi-config.yaml): slug symptom, org medizininformatik-initiative,
+#   repo kerndatensatzmodul-symptome.
 # =============================================================================
 name: Publish release with IG Publisher
 
@@ -109,7 +110,7 @@ env:
   # scripts/toolchain-pins.test.mjs fails the build if they drift apart.
   PUBLISHER_VERSION: "2.3.2"
   PUBLISHER_SHA256: "07c576024df917cc1f879b6b5a64147cd0222d5b4129688e8f0ad9ccce58b1d5"
-  SUSHI_VERSION: "3.20.1"
+  SUSHI_VERSION: "3.21.0"
   JEKYLL_VERSION: "4.4.1"
   JEKYLL_GEM_SHA256: "4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1"
 
@@ -619,6 +620,8 @@ jobs:
         env:
           CANONICAL: ${{ steps.release.outputs.canonical }}
           PUBLICATION_BASE: ${{ steps.release.outputs.publication_base }}
+          # Wird fuer lastBuildDate/pubDate der beiden RSS-Feeds gebraucht.
+          PUBLICATION_DATE: ${{ steps.release.outputs.publication_date }}
         run: |
           set -euo pipefail
           # The very first -go-publish needs the webroot configuration that
@@ -653,46 +656,75 @@ jobs:
             }' > site/publish-setup.json
           touch site/.nojekyll
 
-          # Publisher 2.3.x refuses -go-publish without a package-registry.json
-          # in the webroot; its own -generate-package-registry mode seeds it
-          # (empty on the first publication, the webroot has no packages yet).
-          java -jar "${RUNNER_TEMP}/publisher.jar" \
-            -generate-package-registry site
-          test -s site/package-registry.json
-
-          # The publisher updates the two feeds declared in publish-setup.json
-          # by editing the existing files; on the first publication they do not
-          # exist yet, so seed empty RSS channels in the exact shape the
-          # reference module's feeds use (PublicationProcess.updateFeed needs
-          # the channel dates to locate its insertion point).
-          feed_date="$(date -u -R)"
-          for feed in package publication; do
-            cat > "site/${feed}-feed.xml" <<XML
+          # publish-setup.json written just above DECLARES under "feeds", but that
+          # nothing here creates. -go-publish reads the declaration, looks for the
+          # files and dies:
+          #   java.lang.Error: Attempt to copy .../site/package-feed.xml but it
+          #   doesn't exist   (PublicationProcess.updateFeed)
+          # The reference module keeps them as checked-in files under
+          # publication/webroot/; a generated module has no such folder, so they are
+          # seeded here in the same shape: an empty channel the Publisher fills.
+          # First publication only — afterwards the feeds live on in the webroot.
+          # LC_ALL=C: RFC-822 dates in RSS need English day and month abbreviations.
+          # Without it a localised runner writes "Do., 03 Sep. 2026" instead of
+          # "Wed, 02 Sep 2026". Caught by running this block on a German-locale machine,
+          # where the GNU -d form also silently fell through to the fallback and used
+          # today instead of the publication date.
+          feed_date="$(LC_ALL=C date -u -d "${PUBLICATION_DATE}" '+%a, %d %b %Y 00:00:00 GMT')"
+          seed_feed() {
+            local file="$1" title="$2" description="$3"
+            [[ -e "site/${file}" ]] && return 0
+            cat > "site/${file}" <<XML
           <?xml version="1.0" encoding="UTF-8"?>
-          <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+          <rss xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:content="http://purl.org/rss/1.0/modules/content/"
+               xmlns:fhir="http://hl7.org/fhir/feed"
+               xmlns:atom="http://www.w3.org/2005/Atom"
+               version="2.0">
             <channel>
-              <title>MII IG Symptom ${feed} feed</title>
-              <description>${feed} feed for the MII KDS module Symptome / klinischer Zustand</description>
+              <title>${title}</title>
+              <description>${description}</description>
               <link>${PUBLICATION_BASE}</link>
               <generator>Medical Informatics Initiative (MII)</generator>
               <lastBuildDate>${feed_date}</lastBuildDate>
-              <atom:link href="${PUBLICATION_BASE}/${feed}-feed.xml" rel="self" type="application/rss+xml"/>
+              <atom:link href="${PUBLICATION_BASE}/${file}"
+                         rel="self"
+                         type="application/rss+xml"/>
               <pubDate>${feed_date}</pubDate>
               <language>en</language>
               <ttl>600</ttl>
             </channel>
           </rss>
           XML
-          done
-          test -s site/package-feed.xml
-          test -s site/publication-feed.xml
+            test -s "site/${file}"
+          }
+          seed_feed package-feed.xml \
+            "${EXPECTED_PACKAGE_ID} FHIR packages" \
+            "FHIR packages published by the Medical Informatics Initiative"
+          seed_feed publication-feed.xml \
+            "${EXPECTED_PACKAGE_ID} FHIR publications" \
+            "FHIR Implementation Guide releases published by the Medical Informatics Initiative"
+
+
+          # package-registry.json — REQUIRED by -go-publish, and not created by
+          # anything above. Without it the Publisher stops before doing any work:
+          #   "ERROR @ parameters: There is no package-registry.json file. Create
+          #    one by running the publisher -generate-package-registry {folder}"
+          # Only the FIRST publication hits this: every follow-up finds the file
+          # already in the webroot, which is why it stayed unnoticed. The command
+          # is the one the Publisher's own error message prescribes.
+          if [[ ! -e site/package-registry.json ]]; then
+            java -Xmx6g -jar "${RUNNER_TEMP}/publisher.jar" \
+              -generate-package-registry "${GITHUB_WORKSPACE}/site"
+            test -s site/package-registry.json
+          fi
 
           {
             echo "### First-publication webroot seeded"
             echo
             echo "- Generated publish-setup.json for ${PUBLICATION_BASE}"
-            echo "- Generated package-registry.json via -generate-package-registry"
-            echo "- Seeded empty package-feed.xml and publication-feed.xml"
+            echo "- Generated package-registry.json (required by -go-publish)"
+            echo "- Generated package-feed.xml and publication-feed.xml (declared in publish-setup.json)"
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Prepare publication workspace
@@ -753,7 +785,7 @@ jobs:
           tar -xOzf source/output/package.tgz package/package.json \
             > "${RUNNER_TEMP}/built-package.json"
           # Registry languages: German first (this module renders DE-first,
-          # i18n-default-lang: de — owner decision D-1 2026-08-31), English second.
+          # i18n-default-lang: de), English second.
           node automation/scripts/fix-ig-registry-entry.mjs \
             publication/ig-registry/fhir-ig-list.json \
             source/publication-request.json \
