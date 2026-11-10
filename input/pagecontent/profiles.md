@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migrated from implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/
+<!-- Migrated from the Simplifier guide mii-ig-modul-symptom-2024-de, page 
      TechnischeImplementierung-1.x/FHIR-Profile-1.x/Index.page.md (family overview,
      page-map branch 2) + Observation-Condition-Relationship.page.md (subsection of the
      family overview). The source's Warning.jpg note table renders as an ig-highlight box. -->

@@ -1,5 +1,4 @@
-// MIGRATION ADDITION (QA repair, owner-directed 2026-08-31; supersedes the
-// earlier Gate-A decision to leave the refs dangling): the three source
+// Added during the 2026-08-31 migration to the IG Publisher: the three
 // examples reference Patient/example and Patient/example-patient, which never
 // existed in the package (the pre-migration QA baseline carried the same three
 // unresolved-reference errors). These two minimal SYNTHETIC patients carry the

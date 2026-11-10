@@ -1,13 +1,12 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migrated from implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/
+<!-- Migrated from the Simplifier guide mii-ig-modul-symptom-2024-de, page 
      AnwendungsflleInformationsmodell-1.x/Datenstzeinkl.Beschreibungen-1.x.page.md
      (page-map [MAP-EDIT]: an agreed page owns the concern; verbatim transfer).
      The source's tree-directive and FQL element table referenced the LEGACY
      canonical .../fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Symptom —
      this module's Logical Model is mii-lm-symptom; the artifact page renders its
      element tree and definitions natively. TODO:REVIEW — confirm the legacy-canonical
-     reference carried no additional semantics (migration-log/run.log, 2c
-     stale-foreign-canonical). -->
+     reference carried no additional semantics. -->
 
 ### Datensätze inkl. Beschreibungen
 

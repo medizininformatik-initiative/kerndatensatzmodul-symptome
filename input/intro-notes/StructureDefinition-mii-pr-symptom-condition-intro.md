@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migrated from implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/
+<!-- Migrated from the Simplifier guide mii-ig-modul-symptom-2024-de, page 
      TechnischeImplementierung-1.x/FHIR-Profile-1.x/Condition-1.x.page.md (page-map
      branch 1; verbatim transfer). Directive translation as for the Observation intro
      (see that file's header comment). -->

@@ -10,7 +10,7 @@ visible.
 > **Why the module starts on the interim form:** the IG Publisher needs a template to
 > build, and while the template package has no registry entry a module cannot
 > reference one — see [concepts.md § 2](../concepts.md#2-how-it-references-the-mii-template--url-now-published-package-later)
-> and [org-move.md](../org-move.md) for whether it is published yet.
+> and the [ig-template-mii-kds releases](https://github.com/medizininformatik-initiative/ig-template-mii-kds/releases) for whether it is published yet.
 > After this cleanup your module tracks a versioned dependency like every other
 > package, and the scheduled dependency checker proposes upgrades for you.
 

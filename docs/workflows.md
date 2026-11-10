@@ -17,16 +17,11 @@ not in one of these tables is undocumented, and that is a defect.
 
 ## Branching (both layers)
 
-Same model as described in [CONTRIBUTING.md](../CONTRIBUTING.md): `main` (stable,
-default) · `dev` (integration) · short-lived `feature|change|fix/*` off `dev`;
-`dev → main` is a **merge commit**. A **new module starts with `main` only** unless
-you tick *Include all branches* or run the [first-run bootstrap](recipes/first-run-setup.md),
-which creates `dev` for you.
-
-In *this* repository the two branches diverged once and were reconciled on
-2026-08-06; anything landing on `main` directly has to be back-merged into `dev`
-— [org-move.md](org-move.md#branch-state--main-and-dev-are-reconciled)
-has the history and the rule.
+The template repository uses `main` (stable, default) · `dev` (integration) ·
+short-lived `feature|change|fix/*` off `dev`. **This module** works on `master`
+only: short-lived branches off `master`, PRs into `master`, `release/**` for
+release preparation — see [CONTRIBUTING.md](../CONTRIBUTING.md). Where the
+tables below say `dev`/`main`, read `master` for this module.
 
 ---
 
@@ -66,14 +61,15 @@ Everything below **propagates** to a module (the bootstrap keeps it). This is ho
 
 | Workflow | Trigger | What it does | Output | Toggle (default) | Human-gated? |
 | --- | --- | --- | --- | --- | --- |
-| `ig-publisher.yml` | push to any branch except `main`/`gh-pages`/`fsh-generated`; `workflow_dispatch` | Builds the IG (SUSHI + IG Publisher) and deploys a preview. **On this template repo only**, the self-check build also demonstrates a version comparison at `comparison-demo/` in the preview, rendered with the FHIR validator's `-compare` (the publisher's own `version-comparison` needs a formal publication history at the canonical, which the scaffold never has): the last dev preview's package is relabelled `2027.0.0-draft.0` and compared to the build — on `dev` a self-comparison (what a no-changes report looks like), on a feature branch the real delta against `dev`. A created module enables `version-comparison` from its second formal publication. **On this template repo only**, every preview deploy also regenerates the `gh-pages` root index (`scripts/gen-pages-index.mjs`) | `gh-pages/branches/<branch>/` + PR comment | `ENABLE_PREVIEW` (ON) · `ENABLE_VERSION_COMPARISON` (ON; `false` disables the whole feature — the publisher's `version-comparison` in every build workflow, including `release-demo.yml`, *and* the template repo's demo report) | no |
+| `ig-publisher.yml` | push to any branch except `main`/`gh-pages`/`fsh-generated`; `workflow_dispatch` | Builds the IG (SUSHI + IG Publisher) and deploys a preview. **On this template repo only**, the self-check build also demonstrates a version comparison at `comparison-demo/` in the preview, rendered with the FHIR validator's `-compare` (the publisher's own `version-comparison` needs a formal publication history at the canonical, which the scaffold never has): the last dev preview's package is relabelled `2027.0.0-draft.0` and compared to the build — on `dev` a self-comparison (what a no-changes report looks like), on a feature branch the real delta against `dev`. A created module enables `version-comparison` from its second formal publication. | `gh-pages/branches/<branch>/` + PR comment | `ENABLE_PREVIEW` (ON) · `ENABLE_VERSION_COMPARISON` (ON; `false` disables the whole feature — the publisher's `version-comparison` in every build workflow, including `release-demo.yml`, *and* the template repo's demo report) | no |
 | `cleanup-gh-pages.yml` | schedule (Sun 00:00 UTC); `workflow_dispatch` (input `dry_run`: list stale previews without deleting) | Prunes previews of deleted branches; keeps root + version paths | pruned `gh-pages` | `ENABLE_PREVIEW` (ON) | no |
-| `validation.yml` | push to `dev`/`main`; any pull request; `workflow_dispatch` | Runs the **MII reusable validation** workflows | validation report | `ENABLE_VALIDATION` (ON) | no (skips on the template repo itself) |
-| `convention-check.yml` | push/PR to `dev`/`main`/`release/**`; `workflow_dispatch` (input `strict`: force release mode) | The **single** convention checker: metadata-contract patterns (hard on release branches) + the optional-page decision gate (M9, `docs/optional-pages.md`) + the language-model guard (`scripts/language-model-check.sh`) + the offline test suites (`scripts/*.test.mjs`, and on the template repo `scripts/*.template-test.mjs`); the advisory repo ↔ MII-wiki drift review is a manual review, not part of this workflow | check result | `ENABLE_CONVENTION_CHECK` (ON) | no |
+| `validation.yml` | push to `master`; any pull request; `workflow_dispatch` | Runs the **MII reusable validation** workflows | validation report | `ENABLE_VALIDATION` (ON) | no (skips on the template repo itself) |
+| `convention-check.yml` | push/PR to `master`/`release/**`; `workflow_dispatch` (input `strict`: force release mode) | The **single** convention checker: metadata-contract patterns (hard on release branches) + the optional-page decision gate (M9, `docs/optional-pages.md`) + the language-model guard (`scripts/language-model-check.sh`) + the offline test suites (`scripts/*.test.mjs`, and on the template repo `scripts/*.template-test.mjs`); the advisory repo ↔ MII-wiki drift review is a manual review, not part of this workflow | check result | `ENABLE_CONVENTION_CHECK` (ON) | no |
 | `module-release.yml` | push of a CalVer tag `vYYYY.n.n`; `release: published` (the announcement); `workflow_dispatch` (dry run) | Builds, creates the GitHub Release, announces to the MII Zulip (topic *Releases*), hands off to `go-publish` | release | `ENABLE_MODULE_RELEASE` (ON) · `ENABLE_ZULIP_ANNOUNCE` (ON) | production publish is gated |
+| `publish-fsh-generated.yml` | push to `master`/`release/**`; `workflow_dispatch` | **Module-specific (Symptome).** Compiles FSH with the SUSHI pinned in `ig-publisher.yml` and publishes `fsh-generated/resources/` + `package.json` to the orphan branch `fsh-generated` (kerndatensatz-basis idiom, as in kerndatensatzmodul-medikation). Source branches never commit `fsh-generated/` | `fsh-generated` branch | — | no |
 | `go-publish.yml` | `workflow_dispatch` **only** | Production `-go-publish`; `publish:false` = full dry run by default | published IG | — | **always human-triggered** |
 | `dependency-check.yml` | schedule (Mon 06:00 UTC); `workflow_dispatch` | Version drift (IG Publisher, SUSHI, Jekyll, both templates, FHIR deps) → one tracking issue | `dependencies` issue | `ENABLE_DEPENDENCY_CHECK` (ON) | proposals only |
-| `security-scan.yml` | schedule (Mon 07:00 UTC); PR to `dev`; `workflow_dispatch` | OSV + Trivy (fs + dev-container image) | SARIF in Security tab | `ENABLE_SECURITY_SCAN` (ON) | no |
+| `security-scan.yml` | schedule (Mon 07:00 UTC); PR to `master`; `workflow_dispatch` | OSV + Trivy (fs + dev-container image) | SARIF in Security tab | `ENABLE_SECURITY_SCAN` (ON) | no |
 | `sync-ig-template.yml` | schedule (Mon 05:00 UTC); `workflow_dispatch`; PR to `dev` (check only) | Keeps the vendored `ig-template/` (the offline/reproducibility fallback behind the URL default in `ig.ini`) in step with `ig-template-mii-kds@dev`; opens a PR on drift, fails a PR whose mirror is stale | sync PR | `ENABLE_TEMPLATE_SYNC` (ON) | never auto-merges |
 
 Notes:
@@ -84,6 +80,8 @@ Notes:
   carries `{{MODULE_SLUG}}`/`{{MODULE_NAME}}`/`{{CALVER_VERSION}}` placeholders
   like the rest of the scaffold. The .NET job is configured upstream to always
   pass, so a naming violation appears in its log, not as a red check.
+  **This module calls only the Java job** (see the `validation.yml` header), so
+  `qc/custom.rules.yaml` is currently unread.
 - **Terminology** is auto-selected, not a toggle: builds use **SU-TermServ** when the
   client-cert secrets are present, else fall back to HL7 `tx.fhir.org` with a notice.
 - **Pages mode** (`vars.PAGES_ACTIONS_ENABLED`) chooses the gh-pages push vs the

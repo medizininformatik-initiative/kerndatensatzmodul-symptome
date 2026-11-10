@@ -16,7 +16,7 @@ Skills that belong to the org catalog are not kept as copies here; install them 
 | [`docs-steward/`](docs-steward/SKILL.md) | Checks and repairs this repository's documentation — links, paths and factual claims verified against the repo itself. |
 
 Edit these here. Report-only by design: they propose, a human decides, and any change lands as a
-pull request targeting `dev`.
+pull request targeting `master`.
 
 ## From the org catalog — install, do not copy
 

@@ -6,7 +6,7 @@
    "status" : "ballot",
    "sequence" : "2027",
    "desc" : "Ballot release of the MII KDS module Symptome on the IG-Publisher module template",
-   "first" : true,
+   "first" : false,
    "title" : "MII Implementation Guide Symptom",
    "ci-build" : "https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/branches/master/",
    "category" : "Research",

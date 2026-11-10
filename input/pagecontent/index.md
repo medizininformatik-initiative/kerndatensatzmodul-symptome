@@ -1,7 +1,6 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migrated from implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/Index.page.md
-     + BeschreibungModul-1.x.page.md (page-map branch 3, verbatim transfer; skill mii-ig-migration
-     v0.25.0, 2026-08-31). German is this module's DEFAULT language (DE-first, owner decision D-1). -->
+<!-- Migrated from the Simplifier guide mii-ig-modul-symptom-2024-de, page Index.page.md
+     + BeschreibungModul-1.x.page.md (verbatim transfer, 2026-08-31). German is this module's DEFAULT language (DE-first). -->
 
 ### Einleitung
 
