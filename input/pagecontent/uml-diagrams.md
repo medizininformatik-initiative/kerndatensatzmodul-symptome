@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migrated from implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/
+<!-- Migrated from the Simplifier guide mii-ig-modul-symptom-2024-de, page 
      AnwendungsflleInformationsmodell-1.x/UML-1.x.page.md (page-map branch 3, verbatim
      transfer; render-directive image copied flat to input/images/). -->
 

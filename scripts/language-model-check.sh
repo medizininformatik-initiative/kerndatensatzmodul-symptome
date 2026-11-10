@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # language-model-check.sh — guard the GERMAN-default / English-translation model.
 #
-# MIGRATION EDIT (DE-first, owner decision D-1 2026-08-31; skill mii-ig-migration
-# v0.25.0 run, see migration-log/run.log 5.2): this module renders in GERMAN by
+# This module (DE-first since the 2026-08-31 migration to the IG Publisher)
+# renders in GERMAN by
 # default (sushi-config.yaml `i18n-default-lang: de`) with an ENGLISH translation
 # under `input/translations/en/` — the INVERSE of the template default, per the
 # MII meta-wiki Release-2027 note "IG Umbau — DE First" and the source guide
@@ -21,9 +21,7 @@
 # Not scanned: input/translations/en/** (the English translation itself),
 # docs/** (template-inherited recipes that describe the TEMPLATE's en-default
 # model in general terms — kept verbatim; the module's own language model is
-# stated in README.md and sushi-config.yaml), implementation-guides/** (the
-# retained pre-Gate-D Simplifier source tree), migration-log/** (the migration
-# evidence quotes both models), and this file. Binary files are skipped by
+# stated in README.md and sushi-config.yaml), and this file. Binary files are skipped by
 # `git grep -I`.
 #
 # Bash 3.2 compatible.
@@ -70,9 +68,6 @@ done
 hits="$(git grep -n -I -i -E "${args[@]}" -- . \
   ':(exclude)input/translations/en' \
   ':(exclude)docs' \
-  ':(exclude)implementation-guides' \
-  ':(exclude)migration-log' \
-  ':(exclude)README.simplifier-legacy.md' \
   ':(exclude)scripts/language-model-check.sh')"
 rc=$?
 

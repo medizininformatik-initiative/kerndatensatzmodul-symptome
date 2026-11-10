@@ -1,8 +1,7 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Migrated from implementation-guides/ImplementationGuide-2024.x-DE/MIIIGModulSymptom/
+<!-- Migrated from the Simplifier guide mii-ig-modul-symptom-2024-de, page 
      KontextimGesamtprojektBezgezuanderenModulen-1.x.page.md (page-map branch 3, verbatim
-     transfer). The source page 'Referenzen' was intentionally blank and is retired
-     (migration-log/page-map.tsv). -->
+     transfer). The source page 'Referenzen' was intentionally blank and is retired. -->
 
 ### Kontext im Gesamtprojekt / Bezüge zu anderen Modulen
 

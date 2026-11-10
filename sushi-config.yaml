@@ -114,9 +114,7 @@ extension:
         - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
           code: "C4876"
 
-# Dependencies: source pins carried (meta floating 2026.0.x PINNED to 2026.0.0 — registry-highest,
-# recorded in migration-log/run.log; de.basisprofil.r4 uri repaired from the source's non-absolute
-# `uri: de.basisprofil.r4`, a measured IG-Publisher error — adjudicated Gate-A row) + template
+# Dependencies: fixed pins only (no floating versions) — the module dependencies plus template
 # machinery: hl7.fhir.uv.crmi (REQUIRED by the meta.profile claims above), direct THO/extensions
 # pins (defuses the publisher's auto-injection). hl7.fhir.uv.xver-r5.r4 REMOVED (the module has no
 # R5 cross-version usage; the template's own comment says to remove it then).
@@ -170,7 +168,7 @@ parameters:
     - input/predefined-resources
   path-pages:
     - input/intro-notes # Custom introductory notes
-  # ── DE-FIRST (inverted from the template default; owner decision D-1, run-log 5.2):
+  # ── DE-FIRST (inverted from the template default):
   #    German is the DEFAULT language of this module's guide; English is the translation. ──
   i18n-default-lang: de
   i18n-lang:
@@ -194,9 +192,8 @@ parameters:
     - http://hl7.org/v3
     - http://hl7.org/v3/cda
   # ── special-url: canonicals this IG DEFINES whose URL does not derive from its id.
-  #    Regenerated per docs/recipes/regenerate-special-url.md from Gate-0's
-  #    special_url_prediction (migration-log/preflight-analysis.json, 3 entries, verbatim).
-  #    ids and urls themselves are UNCHANGED (skill guardrail 1). ──
+  #    Regenerate per docs/recipes/regenerate-special-url.md.
+  #    ids and urls of published artifacts must stay UNCHANGED. ──
   special-url:
     - https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-observation
     - https://www.medizininformatik-initiative.de/fhir/modul-symptom/StructureDefinition/finding-condition

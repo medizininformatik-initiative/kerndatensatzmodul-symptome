@@ -7,23 +7,18 @@ der Medizininformatik-Initiative (MII).
 - **Package:** `de.medizininformatikinitiative.kerndatensatz.symptom`
 - **Lizenz:** [CC BY 4.0](LICENSE) — Copyright © 2022+ TMF e. V.
 
-> **Hinweis zur Migration (2026-08-31):** Dieser Implementierungsleitfaden
-> wurde von Simplifier auf den **HL7 IG Publisher** mit dem
-> [MII-KDS-Modul-Template](https://github.com/medizininformatik-initiative/mii-kds-module-template)
-> (v0.13.2) migriert — **deutschsprachig führend** (Deutsch ist die
-> Standardsprache, Englisch die Übersetzung). Der vollständige
-> Migrationsbericht liegt im zugehörigen Pull Request; die Evidenz in
-> [`migration-log/`](migration-log/). Die bisherige Simplifier-Projektstruktur
-> (`implementation-guides/`, altes CI) bleibt bis zur Abnahme (Gate D)
-> unangetastet im Repository. Das alte README:
-> [README.simplifier-legacy.md](README.simplifier-legacy.md).
+Der Leitfaden wird seit 2026-08-31 mit dem **HL7 IG Publisher** auf Basis des
+[MII-KDS-Modul-Templates](https://github.com/medizininformatik-initiative/mii-kds-module-template)
+gebaut — **deutschsprachig führend** (Deutsch ist die Standardsprache, Englisch
+die Übersetzung). Die frühere Simplifier-Projektstruktur ist in der
+Git-Historie erhalten.
 
 ## Leitfaden
 
 Der Leitfaden wird aus diesem Repository mit SUSHI + HL7 IG Publisher gebaut:
 
 ```sh
-npx fsh-sushi .            # FSH → FHIR-Ressourcen (fsh-generated/)
+npx fsh-sushi .            # FSH → FHIR-Ressourcen (fsh-generated/, nicht versioniert)
 # IG Publisher (Version/Pins siehe .github/workflows/ig-publisher.yml):
 java -jar publisher.jar -ig ig.ini
 ```
@@ -31,8 +26,14 @@ java -jar publisher.jar -ig ig.ini
 CI baut jeden Branch und veröffentlicht eine Vorschau unter
 `gh-pages/branches/<branch>/` (Deutsch unter `/`, Englisch unter `/en/`).
 
-Die bisher veröffentlichte Fassung:
-[MII IG Symptom v2026 auf Simplifier](https://simplifier.net/guide/mii-ig-modul-symptom-2024-de?version=current).
+Veröffentlichte Fassungen:
+
+- [2027.0.0-ballot](https://medizininformatik-initiative.github.io/kerndatensatzmodul-symptome/2027.0.0-ballot/) (IG Publisher)
+- [v2026 auf Simplifier](https://simplifier.net/guide/mii-ig-modul-symptom-2024-de?version=current) (Vorgängerfassung)
+
+Die generierten FHIR-Ressourcen (`fsh-generated/`) werden nicht auf `master`
+eingecheckt; `publish-fsh-generated.yml` legt sie bei jedem Push auf `master`
+in den Branch [`fsh-generated`](../../tree/fsh-generated) ab.
 
 ## Struktur
 
@@ -45,8 +46,6 @@ Die bisher veröffentlichte Fassung:
 | `input/intro-notes/` | Einführungstexte, die auf den Artefakt-Seiten rendern |
 | `input/includes/menu.xml` | Navigationsmenü (eine Datei je Sprache) |
 | `qc/custom.rules.yaml`, `advisor.json` | Regeln/Toleranzen der MII-Validierung |
-| `migration-log/` | Evidenz der Template-Migration (run.log, Ledger, Bericht) |
-| `implementation-guides/` | **Legacy:** Simplifier-Leitfaden-Quelle (Rückbau nach Gate D) |
 | `docs/` | Anleitungen und Rezepte des Modul-Templates |
 | `scripts/`, `tests/` | Konventions-Checks und Validierungs-Testfälle |
 

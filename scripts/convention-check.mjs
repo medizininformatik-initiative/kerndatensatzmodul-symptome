@@ -355,8 +355,8 @@ function readIfExists(path) {
 
 /** Scan the two pagecontent trees for OPTIONAL-PAGE markers and pair the
  * languages per page name. Exported for the unit test.
- * MIGRATION EDIT (DE-first, D-1 2026-08-31): this module is German-default with
- * the English translation under input/translations/en/ — the two trees swap. */
+ * This module is German-default (DE-first) with the English translation under
+ * input/translations/en/ — the two trees are swapped against the template. */
 export function scanOptionalPages(root) {
   const dirs = {
     de: join(root, "input", "pagecontent"),
